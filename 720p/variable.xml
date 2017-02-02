@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<includes>
+  <variable name="TextColor1">
+    <value condition="!IsEmpty(Skin.String(TextColor1))">$INFO[Skin.String(TextColor1)]</value>
+    <value>white</value>
+  </variable>
+  <variable name="FullscreenBG">
+    <value condition="Player.HasVideo + !VideoPlayer.Content(LiveTV)">special://skin/backgrounds/videos.jpg</value>
+    <value condition="Player.HasVideo + VideoPlayer.Content(LiveTV)">special://skin/backgrounds/tv.jpg</value>
+    <value condition="Player.HasAudio">special://skin/backgrounds/music.jpg</value>
+    <value>special://skin/backgrounds/SKINDEFAULT.jpg</value>
+  </variable>
+</includes>
