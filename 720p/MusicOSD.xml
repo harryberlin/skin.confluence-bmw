@@ -9,6 +9,7 @@
 		<top>0</top>
 	</coordinates>
 	<controls>
+		<!-- the close Button -->
 		<control type="button">
 			<description>Close Window button</description>
 			<left>84r</left>
