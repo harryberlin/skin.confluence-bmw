@@ -129,7 +129,7 @@
 				<top>20</top>
 				<width>726</width>
 				<height>30</height>
-				<font>font16</font>
+				<font>bmw_title</font>
 				<label>$INFO[Control.GetLabel(2)] - $LOCALIZE[5]</label>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -179,7 +179,7 @@
 				<top>532</top>
 				<width>736</width>
 				<height>83</height>
-				<font>font12</font>
+				<font>bmw_small</font>
 				<align>justify</align>
 				<textcolor>white</textcolor>
 				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
@@ -193,7 +193,7 @@
 			<textoffsetx>20</textoffsetx>
 			<align>right</align>
 			<aligny>center</aligny>
-			<font>font13_title</font>
+			<font>bmw_title</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<texturefocus border="5">MenuItemFO.png</texturefocus>
@@ -205,7 +205,7 @@
 			<left>0</left>
 			<top>0</top>
 			<height>40</height>
-			<font>font13</font>
+			<font>bmw</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<invalidcolor>invalid</invalidcolor>
@@ -217,7 +217,7 @@
 			<left>0</left>
 			<top>0</top>
 			<height>40</height>
-			<font>font13</font>
+			<font>bmw</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
@@ -228,7 +228,7 @@
 			<left>0</left>
 			<top>0</top>
 			<height>40</height>
-			<font>font13</font>
+			<font>bmw</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
@@ -241,7 +241,7 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<height>40</height>
-			<font>font13</font>
+			<font>bmw</font>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
@@ -257,11 +257,11 @@
 			<description>Default Label</description>
 			<left>0</left>
 			<top>0</top>
-			<height>30</height>
+			<height>50</height>
 			<label>-</label>
 			<align>center</align>
 			<aligny>bottom</aligny>
-			<font>font13_title</font>
+			<font>bmw_title</font>
 			<textcolor>grey</textcolor>
 			<shadowcolor>black</shadowcolor>
 		</control>
