@@ -8,8 +8,8 @@
   <include>dialogeffect</include>
   <depth>DepthDialog+</depth>
   <animation condition="true" type="Conditional">
-    <effect type="zoom" start="0" end="140" time="0">Conditional</effect>
-    <effect type="slide" start="0,0" end="-205,-150" time="0">Conditional</effect>
+    <effect type="zoom" start="0" end="130" time="0">Conditional</effect>
+    <effect type="slide" start="0,0" end="-180,-75" time="0">Conditional</effect>
   </animation>
   <controls>
     <control type="group">
