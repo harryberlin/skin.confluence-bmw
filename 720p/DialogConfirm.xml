@@ -20,11 +20,11 @@
 			<description>text</description>
 			<left>30</left>
 			<top>62</top>
-			<width>590</width>
+			<width>660</width>
 			<height>98</height>
 			<align>left</align>
 			<label>-</label>
-			<font>font13</font>
+			<font>bmw</font>
 			<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 		</control>
 		<control type="progress" id="20">
@@ -48,7 +48,7 @@
 				<width>200</width>
 				<height>40</height>
 				<label>107</label>
-				<font>font12_title</font>
+				<font>bmw_title</font>
 				<textcolor>white</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<align>center</align>
@@ -58,7 +58,7 @@
 				<width>200</width>
 				<height>40</height>
 				<label>106</label>
-				<font>font12_title</font>
+				<font>bmw_title</font>
 				<textcolor>white</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<align>center</align>
@@ -68,7 +68,7 @@
 				<width>200</width>
 				<height>40</height>
 				<label>106</label>
-				<font>font12_title</font>
+				<font>bmw_title</font>
 				<textcolor>white</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<align>center</align>

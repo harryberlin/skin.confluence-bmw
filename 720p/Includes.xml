@@ -259,7 +259,7 @@
       <top>20</top>
       <width>$PARAM[DialogHeaderWidth]</width>
       <height>30</height>
-      <font>bmw_title</font>
+      <font>bmw_big</font>
       <label>$PARAM[DialogHeaderLabel]</label>
       <align>center</align>
       <aligny>center</aligny>
