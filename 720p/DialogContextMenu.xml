@@ -11,15 +11,15 @@
 			<description>background image</description>
 			<left>0</left>
 			<top>0</top>
-			<width>340</width>
+			<width>700</width>
 			<height>720</height>
-			<texture border="20">DialogBack.png</texture>
+			<texture border="70">DialogBack.png</texture>
 		</control>
 		<control type="grouplist" id="996">
 			<description>grouplist for context buttons</description>
 			<left>20</left>
 			<top>30</top>
-			<width>300</width>
+			<width>660</width>
 			<height max="670">auto</height>
 			<itemgap>2</itemgap>
 		</control>
@@ -44,9 +44,9 @@
 			<description>button template</description>
 			<left>-</left>
 			<top>-</top>
-			<width>300</width>
-			<height>38</height>
-			<font>fontContextMenu</font>
+			<width>660</width>
+			<height>55</height>
+			<font>bmw_big</font>
 			<align>center</align>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
