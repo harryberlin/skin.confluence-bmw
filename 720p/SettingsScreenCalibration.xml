@@ -86,7 +86,7 @@
 				<width>1240</width>
 				<label>-</label>
 				<align>center</align>
-				<font>bmw</font>
+				<font>font30</font>
 			</control>
 			<control type="label" id="3">
 				<description>help information</description>
@@ -95,7 +95,7 @@
 				<width>1240</width>
 				<label>-</label>
 				<align>center</align>
-				<font>bmw</font>
+				<font>font30</font>
 			</control>
 		</control>
 	</controls>
