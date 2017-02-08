@@ -87,7 +87,7 @@
 						<top>0</top>
 						<width>240</width>
 						<height>55</height>
-						<font>bmw_title</font>
+						<font>font30_title</font>
 						<textcolor>grey3</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -107,7 +107,7 @@
 						<top>0</top>
 						<width>240</width>
 						<height>55</height>
-						<font>bmw_title</font>
+						<font>font30_title</font>
 						<textcolor>white</textcolor>
 						<align>right</align>
 						<aligny>center</aligny>
@@ -179,7 +179,7 @@
 				<top>20</top>
 				<width>740</width>
 				<height>30</height>
-				<font>bmw</font>
+				<font>font30</font>
 				<label>$LOCALIZE[31000] $LOCALIZE[5]</label>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -224,7 +224,7 @@
 				<top>522</top>
 				<width>740</width>
 				<height>98</height>
-				<font>bmw_small</font>
+				<font>font16</font>
 				<label>$INFO[Container(9000).ListItem.Label2]</label>
 				<align>left</align>
 				<textcolor>white</textcolor>
