@@ -13,7 +13,7 @@
         <effect type="zoom" start="0" end="200" time="0">Conditional</effect>
         <effect type="slide" start="0,0" end="-240,-35" time="0">Conditional</effect>
       </animation>
-      <animation effect="slide" start="0,0" end="-190,0" time="150" condition="Window.IsVisible(BusyDialog)">conditional</animation>
+      <animation_off effect="slide" start="0,0" end="-190,0" time="150" condition="Window.IsVisible(BusyDialog)">conditional</animation_off>
       <control type="image">
         <left>0</left>
         <top>0</top>
