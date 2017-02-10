@@ -778,6 +778,10 @@
         <effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="225" />
         <effect type="fade" start="100" end="0" time="225" />
       </animation>
+      <animation condition="true" type="Conditional">
+        <effect type="zoom" start="0" end="140" time="0">Conditional</effect>
+        <effect type="slide" start="0,0" end="-293,-170" time="0">Conditional</effect>
+      </animation>
       <control type="group" id="9001">
         <depth>DepthMenu-</depth>
         <left>0</left>
@@ -872,9 +876,9 @@
         <texture>HomeOverlay1.png</texture>
       </control>
       <control type="fixedlist" id="9000">
-        <left>-110</left>
+        <left>300</left>
         <top>5</top>
-        <width>1500</width>
+        <width>910</width>
         <height>60</height>
         <onleft>9000</onleft>
         <onright>9000</onright>
@@ -883,7 +887,7 @@
         <ondown>9001</ondown>
         <pagecontrol>-</pagecontrol>
         <scrolltime>300</scrolltime>
-        <focusposition>2</focusposition>
+        <focusposition>1</focusposition>
         <movement>1</movement>
         <orientation>Horizontal</orientation>
         <itemlayout height="60" width="300">
