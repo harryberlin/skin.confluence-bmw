@@ -54,7 +54,7 @@
       <control type="grouplist" id="9000">
         <left>0</left>
         <top>60</top>
-        <width>250</width>
+        <width>450</width>
         <height>650</height>
         <onleft>9000</onleft>
         <onright>50</onright>
@@ -63,9 +63,9 @@
         <onback>50</onback>
         <itemgap>0</itemgap>
         <control type="label" id="200">
-          <width>250</width>
-          <height>35</height>
-          <font>font30</font>
+          <width>450</width>
+          <height>40</height>
+          <font>font30_title</font>
           <label>31006</label>
           <textcolor>blue</textcolor>
           <align>center</align>
@@ -73,18 +73,18 @@
         </control>
         <control type="button" id="2">
           <description>View As button</description>
-          <textwidth>235</textwidth>
-          <include>ButtonCommonValues</include>
+          <textwidth>435</textwidth>
+          <include>SideBladeButtonCommonValues</include>
           <label>-</label>
         </control>
         <control type="button" id="3">
           <description>Sort by button</description>
-          <include>ButtonCommonValues</include>
+          <include>SideBladeButtonCommonValues</include>
           <label>103</label>
         </control>
         <control type="togglebutton" id="4">
           <description>Sort asc</description>
-          <include>ButtonCommonValues</include>
+          <include>SideBladeButtonCommonValues</include>
           <alttexturefocus border="5">button-focus.png</alttexturefocus>
           <alttexturenofocus>-</alttexturenofocus>
           <label>31051</label>
@@ -94,14 +94,15 @@
         <control type="edit" id="19">
           <visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
           <description>Filter</description>
-          <textwidth>230</textwidth>
-          <include>ButtonCommonValues</include>
+          <include>SideBladeButtonCommonValues</include>
+          <textwidth>430</textwidth>
           <label>587</label>
         </control>
         <control type="radiobutton" id="98">
           <visible>Container.CanFilterAdvanced</visible>
           <description>Filter</description>
-          <include>ButtonCommonValues</include>
+          <include>SideBladeButtonCommonValues</include>
+          <textwidth>230</textwidth>
           <label>587</label>
           <selected>Container.Filtered</selected>
           <onclick>right</onclick>
@@ -110,16 +111,16 @@
         <control type="radiobutton" id="99">
           <description>Show Info Toggle</description>
           <textwidth>170</textwidth>
-          <include>ButtonCommonValues</include>
+          <include>SideBladeButtonCommonValues</include>
           <label>31005</label>
           <onclick>Skin.ToggleSetting(View508HideInfo)</onclick>
           <selected>Skin.HasSetting(View508HideInfo)</selected>
           <visible>Control.IsVisible(508)</visible>
         </control>
         <control type="label" id="201">
-          <width>250</width>
-          <height>35</height>
-          <font>font30</font>
+          <width>450</width>
+          <height>40</height>
+          <font>font30_title</font>
           <label>31026</label>
           <textcolor>blue</textcolor>
           <align>center</align>
@@ -127,34 +128,34 @@
         </control>
         <control type="radiobutton" id="14">
           <description>Watched Toggle</description>
-          <textwidth>170</textwidth>
-          <include>ButtonCommonValues</include>
+          <textwidth>370</textwidth>
+          <include>SideBladeButtonCommonValues</include>
           <label>20367</label>
         </control>
         <control type="button" id="8">
           <description>Search</description>
-          <include>ButtonCommonValues</include>
+          <include>SideBladeButtonCommonValues</include>
           <label>137</label>
         </control>
         <control type="radiobutton" id="16">
           <description>PartyMode</description>
           <label>589</label>
-          <include>ButtonCommonValues</include>
+          <include>SideBladeButtonCommonValues</include>
           <visible>Container.Content(MusicVideos)</visible>
         </control>
         <control type="radiobutton" id="11">
           <description>Unlock Shares</description>
-          <textwidth>170</textwidth>
-          <include>ButtonCommonValues</include>
+          <textwidth>370</textwidth>
+          <include>SideBladeButtonCommonValues</include>
           <label>20336</label>
           <onclick>mastermode</onclick>
           <selected>system.ismaster</selected>
           <visible>system.haslocks</visible>
         </control>
         <control type="label" id="203">
-          <width>250</width>
-          <height>35</height>
-          <font>font30</font>
+          <width>450</width>
+          <height>40</height>
+          <font>font30_title</font>
           <label>31039</label>
           <textcolor>blue</textcolor>
           <align>center</align>
@@ -162,8 +163,8 @@
         </control>
         <control type="togglebutton" id="20">
           <description>Update library</description>
-          <textwidth>235</textwidth>
-          <include>ButtonCommonValues</include>
+          <textwidth>435</textwidth>
+          <include>SideBladeButtonCommonValues</include>
           <label>653</label>
           <altlabel>13353</altlabel>
           <alttexturefocus border="5">button-focus.png</alttexturefocus>
@@ -172,8 +173,8 @@
         </control>
         <control type="button" id="204">
           <description>Get more</description>
-          <textwidth>235</textwidth>
-          <include>ButtonCommonValues</include>
+          <textwidth>435</textwidth>
+          <include>SideBladeButtonCommonValues</include>
           <label>21452</label>
           <onclick>ActivateWindow(addonbrowser,addons://more/video/,return)</onclick>
           <visible>Container.Content(addons)</visible>
