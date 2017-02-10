@@ -112,8 +112,8 @@
     <top>200</top>
     <width>300</width>
     <height>42</height>
-    <radiowidth>24</radiowidth>
-    <radioheight>24</radioheight>
+    <radiowidth>35</radiowidth>
+    <radioheight>35</radioheight>
     <textureradioonfocus>radiobutton-focus.png</textureradioonfocus>
     <textureradioonnofocus>radiobutton-focus.png</textureradioonnofocus>
     <textureradioofffocus>radiobutton-nofocus.png</textureradioofffocus>
