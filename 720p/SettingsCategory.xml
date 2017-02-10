@@ -193,7 +193,7 @@
       <textoffsetx>20</textoffsetx>
       <align>right</align>
       <aligny>center</aligny>
-      <font>font16_title</font>
+      <font>font30_title</font>
       <textcolor>grey2</textcolor>
       <focusedcolor>white</focusedcolor>
       <texturefocus border="5">MenuItemFO.png</texturefocus>
@@ -205,7 +205,7 @@
       <left>0</left>
       <top>0</top>
       <height>40</height>
-      <font>font16</font>
+      <font>font24_title</font>
       <textcolor>grey2</textcolor>
       <focusedcolor>white</focusedcolor>
       <invalidcolor>invalid</invalidcolor>
@@ -217,7 +217,7 @@
       <left>0</left>
       <top>0</top>
       <height>40</height>
-      <font>font16</font>
+      <font>font24_title</font>
       <textcolor>grey2</textcolor>
       <focusedcolor>white</focusedcolor>
       <texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
@@ -228,7 +228,7 @@
       <left>0</left>
       <top>0</top>
       <height>40</height>
-      <font>font16</font>
+      <font>font24_title</font>
       <textcolor>grey2</textcolor>
       <focusedcolor>white</focusedcolor>
       <texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
@@ -241,7 +241,7 @@
       <posx>0</posx>
       <posy>0</posy>
       <height>40</height>
-      <font>font16</font>
+      <font>font24_title</font>
       <textcolor>grey2</textcolor>
       <focusedcolor>white</focusedcolor>
       <texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
@@ -261,7 +261,7 @@
       <label>-</label>
       <align>center</align>
       <aligny>bottom</aligny>
-      <font>font16_title</font>
+      <font>font24_title</font>
       <textcolor>grey</textcolor>
       <shadowcolor>black</shadowcolor>
     </control>
