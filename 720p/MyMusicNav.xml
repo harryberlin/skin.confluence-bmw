@@ -5,7 +5,7 @@
   <onload condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(1112)</onload>
   <views>50,51,500,550,551,509,506,511,512,513</views>
   <controls>
-    <include>CommonBackground</include>
+    <include>MusicBackground</include>
     <include>ContentPanelBackgrounds</include>
     <control type="group">
       <include>Window_OpenClose_Animation</include>
