@@ -481,12 +481,13 @@
       <ondown>608</ondown>
       <visible>false</visible>
     </control>
+    <!--Player Fullscreen Controls-->
     <control type="group">
       <depth>DepthMenu-</depth>
       <description>Controls for currently playing media</description>
       <left>545r</left>
       <top>370</top>
-      <animation effect="slide" start="0,0" end="365,0" time="225" condition="!Player.HasMedia">conditional</animation>
+      <animation effect="slide" start="0,0" end="730,0" time="225" condition="!Player.HasMedia">conditional</animation>
       <animation type="WindowOpen" reversible="false">
         <effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="225" />
         <effect type="fade" start="0" end="100" time="225" />
@@ -494,6 +495,10 @@
       <animation type="WindowClose" reversible="false">
         <effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="225" />
         <effect type="fade" start="100" end="0" time="225" />
+      </animation>
+      <animation condition="true" type="Conditional">
+        <effect type="zoom" start="0" end="200" time="0">Conditional</effect>
+        <effect type="slide" start="0,0" end="-640,-191" time="0">Conditional</effect>
       </animation>
       <visible>String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
       <control type="image">
@@ -767,6 +772,7 @@
         <enable>Player.HasMedia</enable>
       </control>
     </control>
+    <!--Menus-->
     <control type="group">
       <depth>DepthMenu</depth>
       <top>400</top>
@@ -780,8 +786,9 @@
       </animation>
       <animation condition="true" type="Conditional">
         <effect type="zoom" start="0" end="140" time="0">Conditional</effect>
-        <effect type="slide" start="0,0" end="-293,-170" time="0">Conditional</effect>
+        <effect type="slide" start="0,0" end="-293,-100" time="0">Conditional</effect>
       </animation>
+      <!--Submenus-->
       <control type="group" id="9001">
         <depth>DepthMenu-</depth>
         <left>0</left>
@@ -875,6 +882,7 @@
         <height>6</height>
         <texture>HomeOverlay1.png</texture>
       </control>
+      <!--MainMenu-->
       <control type="fixedlist" id="9000">
         <left>300</left>
         <top>5</top>
@@ -962,20 +970,21 @@
         </content>
       </control>
       <control type="image">
-        <left>-10</left>
+        <left>290</left>
         <top>6</top>
         <width>138</width>
         <height>63</height>
         <texture>SideFade.png</texture>
       </control>
       <control type="image">
-        <left>128r</left>
+        <left>200r</left>
         <top>6</top>
         <width>138</width>
         <height>63</height>
         <texture flipx="true">SideFade.png</texture>
       </control>
     </control>
+    <!--Widgets-->
     <control type="group" id="9002">
       <depth>DepthMenu</depth>
       <onup>9001</onup>
@@ -1029,6 +1038,7 @@
         </content>
       </control>
     </control>
+    <!--RSS Feeds-->
     <control type="group">
       <depth>DepthMenu-</depth>
       <left>0</left>
