@@ -354,7 +354,13 @@
       <label>14261</label>
       <onclick>ActivateWindow(SkinSettings)</onclick>
     </control>
-    <control type="image" id="90128">
+    <control type="button" id="90128">
+      <include>ButtonHomeSubCommonValues</include>
+      <label>My OSMC</label>
+      <onclick>RunScript(service.osmc.settings)</onclick>
+      <visible>System.HasAddon(service.osmc.settings)</visible>
+    </control>
+    <control type="image" id="90129">
       <width>35</width>
       <height>35</height>
       <texture border="0,0,0,3">HomeSubEnd.png</texture>
@@ -1586,146 +1592,173 @@
         <height>63</height>
         <texture flipx="true">SideFade.png</texture>
       </control>
-      <!--Widgets-->
-      <control type="group" id="9002">
-        <depth>DepthMenu</depth>
+    </control>
+    <!--Widgets-->
+    <control type="group" id="9002">
+      <depth>DepthMenu</depth>
+      <onup>9001</onup>
+      <ondown>20</ondown>
+      <control type="fixedlist" id="700">
+        <animation effect="slide" start="0,0" end="-91,0" time="0" condition="String.IsEqual(Container(700).NumItems,2) | String.IsEqual(Container(700).NumItems,4)">conditional</animation>
+        <visible>Container(9000).HasFocus(2) | Container(9000).HasFocus(10) | Container(9000).HasFocus(11)</visible>
+        <onleft>700</onleft>
+        <onright>700</onright>
         <onup>9001</onup>
         <ondown>20</ondown>
-        <control type="fixedlist" id="700">
-          <animation effect="slide" start="0,0" end="-91,0" time="0" condition="String.IsEqual(Container(700).NumItems,2) | String.IsEqual(Container(700).NumItems,4)">conditional</animation>
-          <visible>Container(9000).HasFocus(2) | Container(9000).HasFocus(10) | Container(9000).HasFocus(11)</visible>
-          <onleft>700</onleft>
-          <onright>700</onright>
-          <onup>9001</onup>
-          <ondown>20</ondown>
-          <include>HomeAddonsCommonLayout</include>
-          <content>
-            <include>HomeAddonItemsVideos</include>
-          </content>
-        </control>
-        <control type="fixedlist" id="703">
-          <animation effect="slide" start="0,0" end="-91,0" time="0" condition="String.IsEqual(Container(703).NumItems,2) | String.IsEqual(Container(703).NumItems,4)">conditional</animation>
-          <visible>Container(9000).HasFocus(3)</visible>
-          <onleft>703</onleft>
-          <onright>703</onright>
-          <onup>9001</onup>
-          <ondown>20</ondown>
-          <include>HomeAddonsCommonLayout</include>
-          <content>
-            <include>HomeAddonItemsMusic</include>
-          </content>
-        </control>
-        <control type="fixedlist" id="704">
-          <animation effect="slide" start="0,0" end="-91,0" time="0" condition="String.IsEqual(Container(704).NumItems,2) | String.IsEqual(Container(704).NumItems,4)">conditional</animation>
-          <visible>Container(9000).HasFocus(4)</visible>
-          <onleft>704</onleft>
-          <onright>704</onright>
-          <onup>9001</onup>
-          <ondown>20</ondown>
-          <include>HomeAddonsCommonLayout</include>
-          <content>
-            <include>HomeAddonItemsPictures</include>
-          </content>
-        </control>
-        <control type="fixedlist" id="705">
-          <animation effect="slide" start="0,0" end="-91,0" time="0" condition="String.IsEqual(Container(705).NumItems,2) | String.IsEqual(Container(705).NumItems,4)">conditional</animation>
-          <visible>Container(9000).HasFocus(1)</visible>
-          <onleft>705</onleft>
-          <onright>705</onright>
-          <onup>9001</onup>
-          <ondown>20</ondown>
-          <include>HomeAddonsCommonLayout</include>
-          <content>
-            <include>HomeAddonItemsPrograms</include>
-          </content>
-        </control>
+        <include>HomeAddonsCommonLayout</include>
+        <content>
+          <include>HomeAddonItemsVideos</include>
+        </content>
       </control>
-      <!--RSS Feeds-->
-      <control type="group">
-        <depth>DepthMenu-</depth>
-        <left>0</left>
-        <top>33r</top>
-        <visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
-        <include>Window_OpenClose_Animation</include>
-        <control type="rss">
-          <description>RSS feed</description>
-          <left>100</left>
-          <top>0</top>
-          <height>30</height>
-          <width>1145</width>
-          <font>font12</font>
-          <urlset>1</urlset>
-          <textcolor>blue</textcolor>
-          <titlecolor>blue</titlecolor>
-          <headlinecolor>white</headlinecolor>
-        </control>
-        <control type="image">
-          <description>RSS background</description>
-          <left>1250</left>
-          <top>2</top>
-          <width>24</width>
-          <height>24</height>
-          <texture>icon-rss.png</texture>
-        </control>
+      <control type="fixedlist" id="703">
+        <animation effect="slide" start="0,0" end="-91,0" time="0" condition="String.IsEqual(Container(703).NumItems,2) | String.IsEqual(Container(703).NumItems,4)">conditional</animation>
+        <visible>Container(9000).HasFocus(3)</visible>
+        <onleft>703</onleft>
+        <onright>703</onright>
+        <onup>9001</onup>
+        <ondown>20</ondown>
+        <include>HomeAddonsCommonLayout</include>
+        <content>
+          <include>HomeAddonItemsMusic</include>
+        </content>
       </control>
-      <!--Power / Fav Button-->
-      <control type="group" id="10">
-        <depth>DepthFooter</depth>
-        <left>20</left>
-        <top>55r</top>
-        <include>Window_OpenClose_Animation</include>
-        <control type="button" id="20">
-          <description>Power push button</description>
-          <left>55</left>
-          <top>0</top>
-          <width>45</width>
-          <height>45</height>
-          <label>31003</label>
-          <font>-</font>
-          <onclick>ActivateWindow(ShutdownMenu)</onclick>
-          <texturefocus border="5">floor_buttonFO.png</texturefocus>
-          <texturenofocus border="5">floor_button.png</texturenofocus>
-          <onleft>21</onleft>
-          <onright>21</onright>
-          <onup>9002</onup>
-          <ondown>9003</ondown>
-        </control>
-        <control type="image">
-          <description>Power Icon</description>
-          <left>60</left>
-          <top>5</top>
-          <width>35</width>
-          <height>35</height>
-          <aspectratio>keep</aspectratio>
-          <texture>icon_power.png</texture>
-        </control>
-        <control type="button" id="21">
-          <description>Favourites push button</description>
-          <left>0</left>
-          <top>0</top>
-          <width>45</width>
-          <height>45</height>
-          <label>1036</label>
-          <font>-</font>
-          <onclick>ActivateWindow(Favourites)</onclick>
-          <texturefocus border="5">floor_buttonFO.png</texturefocus>
-          <texturenofocus border="5">floor_button.png</texturenofocus>
-          <onleft>20</onleft>
-          <onright>20</onright>
-          <onup>9002</onup>
-          <ondown>9003</ondown>
-        </control>
-        <control type="image">
-          <description>Favourites Icon</description>
-          <left>5</left>
-          <top>5</top>
-          <width>35</width>
-          <height>35</height>
-          <aspectratio>keep</aspectratio>
-          <texture>icon_favourites.png</texture>
-        </control>
+      <control type="fixedlist" id="704">
+        <animation effect="slide" start="0,0" end="-91,0" time="0" condition="String.IsEqual(Container(704).NumItems,2) | String.IsEqual(Container(704).NumItems,4)">conditional</animation>
+        <visible>Container(9000).HasFocus(4)</visible>
+        <onleft>704</onleft>
+        <onright>704</onright>
+        <onup>9001</onup>
+        <ondown>20</ondown>
+        <include>HomeAddonsCommonLayout</include>
+        <content>
+          <include>HomeAddonItemsPictures</include>
+        </content>
+      </control>
+      <control type="fixedlist" id="705">
+        <animation effect="slide" start="0,0" end="-91,0" time="0" condition="String.IsEqual(Container(705).NumItems,2) | String.IsEqual(Container(705).NumItems,4)">conditional</animation>
+        <visible>Container(9000).HasFocus(1)</visible>
+        <onleft>705</onleft>
+        <onright>705</onright>
+        <onup>9001</onup>
+        <ondown>20</ondown>
+        <include>HomeAddonsCommonLayout</include>
+        <content>
+          <include>HomeAddonItemsPrograms</include>
+        </content>
       </control>
     </control>
+    <!--RSS Feeds-->
+    <control_off type="group">
+      <depth>DepthMenu-</depth>
+      <left>0</left>
+      <top>33r</top>
+      <visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+      <include>Window_OpenClose_Animation</include>
+      <control type="rss">
+        <description>RSS feed</description>
+        <left>100</left>
+        <top>0</top>
+        <height>30</height>
+        <width>1145</width>
+        <font>font12</font>
+        <urlset>1</urlset>
+        <textcolor>blue</textcolor>
+        <titlecolor>blue</titlecolor>
+        <headlinecolor>white</headlinecolor>
+      </control>
+      <control type="image">
+        <description>RSS background</description>
+        <left>1250</left>
+        <top>2</top>
+        <width>24</width>
+        <height>24</height>
+        <texture>icon-rss.png</texture>
+      </control>
+    </control_off>
+    <control type="group">
+      <depth>DepthMenu-</depth>
+      <left>0</left>
+      <top>45r</top>
+      <visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+      <include>Window_OpenClose_Animation</include>
+      <control type="rss">
+        <description>RSS feed</description>
+        <left>0</left>
+        <top>-10</top>
+        <height>30</height>
+        <width>1245</width>
+        <font>font38_title</font>
+        <urlset>1</urlset>
+        <textcolor>blue</textcolor>
+        <titlecolor>blue</titlecolor>
+        <headlinecolor>white</headlinecolor>
+      </control>
+      <control type="image">
+        <description>RSS background</description>
+        <left>1235</left>
+        <top>0</top>
+        <width>40</width>
+        <height>40</height>
+        <texture>icon-rss.png</texture>
+      </control>
+    </control>
+    <!--Power / Fav Button-->
+    <control_off type="group" id="10">
+      <depth>DepthFooter</depth>
+      <left>20</left>
+      <top>55r</top>
+      <include>Window_OpenClose_Animation</include>
+      <control type="button" id="20">
+        <description>Power push button</description>
+        <left>55</left>
+        <top>0</top>
+        <width>45</width>
+        <height>45</height>
+        <label>31003</label>
+        <font>-</font>
+        <onclick>ActivateWindow(ShutdownMenu)</onclick>
+        <texturefocus border="5">floor_buttonFO.png</texturefocus>
+        <texturenofocus border="5">floor_button.png</texturenofocus>
+        <onleft>21</onleft>
+        <onright>21</onright>
+        <onup>9002</onup>
+        <ondown>9003</ondown>
+      </control>
+      <control type="image">
+        <description>Power Icon</description>
+        <left>60</left>
+        <top>5</top>
+        <width>35</width>
+        <height>35</height>
+        <aspectratio>keep</aspectratio>
+        <texture>icon_power.png</texture>
+      </control>
+      <control type="button" id="21">
+        <description>Favourites push button</description>
+        <left>0</left>
+        <top>0</top>
+        <width>45</width>
+        <height>45</height>
+        <label>1036</label>
+        <font>-</font>
+        <onclick>ActivateWindow(Favourites)</onclick>
+        <texturefocus border="5">floor_buttonFO.png</texturefocus>
+        <texturenofocus border="5">floor_button.png</texturenofocus>
+        <onleft>20</onleft>
+        <onright>20</onright>
+        <onup>9002</onup>
+        <ondown>9003</ondown>
+      </control>
+      <control type="image">
+        <description>Favourites Icon</description>
+        <left>5</left>
+        <top>5</top>
+        <width>35</width>
+        <height>35</height>
+        <aspectratio>keep</aspectratio>
+        <texture>icon_favourites.png</texture>
+      </control>
+    </control_off>
   </include>
   <!--VERTICAL-->
   <include name="MainMenuVertical"></include>
