@@ -58,7 +58,7 @@
     <!--VERTICAL-->
     <include condition="!Skin.HasSetting(MainMenuHorizontal)">MainMenuVertical</include>
     <!--H/V ENDE-->
-    <!--Logo / Weather / Clock / Date-->
+    <!--Logo / Weather / Ousidetemp / Clock / Date / Repeat-->
     <control type="group">
       <depth>DepthHeader</depth>
       <!--Logo-->
@@ -356,6 +356,41 @@
           <textcolor>$VAR[TextColor1]</textcolor>
           <shadowcolor>black</shadowcolor>
           <label>$INFO[System.Date(dd.mm.yyyy)]</label>
+        </control>
+      </control>
+      <!--Repeat-->
+      <control type="group">
+        <posx>1180</posx>
+        <posy>120</posy>
+        <visible>Playlist.IsRepeatOne | Playlist.IsRepeat</visible>
+        <animation effect="slide" start="0,0" end="110,0" time="200">WindowClose</animation>
+        <animation effect="slide" start="110,0" end="0,0" time="400">WindowOpen</animation>
+        <animation effect="slide" start="110,0" end="0,0" time="400">VisibleChange</animation>
+        <control type="group">
+          <control type="image">
+            <description>repeat background</description>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>100</width>
+            <height>60</height>
+            <texture flipx="true" border="32,0,0,0">bmw/header.png</texture>
+          </control>
+          <control type="image">
+            <posx>30</posx>
+            <posy>-2</posy>
+            <width>60</width>
+            <height>60</height>
+            <texture>OSDRepeatAllNF.png</texture>
+            <visible>!Playlist.IsRepeatOne</visible>
+          </control>
+          <control type="image">
+            <posx>30</posx>
+            <posy>-2</posy>
+            <width>60</width>
+            <height>60</height>
+            <texture>OSDRepeatOneNF.png</texture>
+            <visible>Playlist.IsRepeatOne</visible>
+          </control>
         </control>
       </control>
     </control>

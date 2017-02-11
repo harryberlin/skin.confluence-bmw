@@ -278,6 +278,25 @@
             <selected>Skin.HasSetting(HideEPGwithRDS)</selected>
             <textwidth>690</textwidth>
           </control>
+          <control type="button" id="114">
+            <posx>0</posx>
+            <posy>45</posy>
+            <description>Change Color</description>
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <label>Choose TextColor1</label>
+            <label2>$VAR[TextColor1]</label2>
+            <onup>313</onup>
+            <ondown>308</ondown>
+            <onclick>RunScript("special://skin/scripts/changecolor.py")</onclick>
+            <onleft>9000</onleft>
+            <onright>62</onright>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>$VAR[TextColor1]</focusedcolor>
+          </control>
         </control>
         <control type="scrollbar" id="60">
           <left>1060</left>

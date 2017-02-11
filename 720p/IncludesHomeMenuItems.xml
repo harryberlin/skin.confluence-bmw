@@ -1761,5 +1761,604 @@
     </control_off>
   </include>
   <!--VERTICAL-->
-  <include name="MainMenuVertical"></include>
+  <include name="MainMenuVertical">
+    <control type="button" id="9003">
+      <description>Hidden Button to pass through navigation when recently added is disabled</description>
+      <left>-20</left>
+      <top>-20</top>
+      <width>1</width>
+      <height>1</height>
+      <label>-</label>
+      <font>-</font>
+      <texturefocus>-</texturefocus>
+      <texturenofocus>-</texturenofocus>
+      <onleft>9000</onleft>
+      <onright>9000</onright>
+      <onup>20</onup>
+      <ondown>608</ondown>
+      <visible>false</visible>
+    </control>
+    <!--MAIN MENU UP-->
+    <control type="group">
+      <!--Submenu-->
+      <animation effect="slide" end="-650,0" time="300" tween="quadratic" easing="out">WindowClose</animation>
+      <animation effect="slide" start="-450,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
+      <control type="group">
+        <left>380</left>
+        <animation effect="slide" end="-228,0" time="300" tween="quadratic" easing="out">WindowClose</animation>
+        <control type="button" id="9002">
+          <posx>0</posx>
+          <posy>296</posy>
+          <width>42</width>
+          <height>128</height>
+          <font>-</font>
+          <texturefocus>HasSub.png</texturefocus>
+          <texturenofocus>HasSub.png</texturenofocus>
+          <visible>Container(9000).HasFocus(1) | Container(9000).HasFocus(2) | Container(9000).HasFocus(3) | Container(9000).HasFocus(4) | Container(9000).HasFocus(5) | Container(9000).HasFocus(6) | Container(9000).HasFocus(10) | Container(9000).HasFocus(11) | Container(9000).HasFocus(12) | Container(9000).HasFocus(13) | Container(9000).HasFocus(17)</visible>
+          <animation effect="fade" time="200" delay="100">VisibleChange</animation>
+          <animation effect="fade" time="0" condition="![ControlGroup(9001).HasFocus | Control.HasFocus(9002)]">Conditional</animation>
+          <animation_off effect="slide" end="190,0" time="200" condition="ControlGroup(9001).HasFocus | Control.HasFocus(9002)">Conditional</animation_off>
+          <include_off>VisibleFadeEffect</include_off>
+        </control>
+      </control>
+      <control type="group">
+        <left>385</left>
+        <width>280</width>
+        <animation effect="zoom" start="385,0,1,720" end="385,0,220,720" time="150" condition="ControlGroup(9001).HasFocus | Control.HasFocus(9002)">Conditional</animation>
+        <animation effect="zoom" start="385,0,220,720" end="385,0,1,720" time="200" condition="![ControlGroup(9001).HasFocus | Control.HasFocus(9002)]">Conditional</animation>
+        <control type="image">
+          <width>400</width>
+          <height>720</height>
+          <texture border="0,0,20,0">MediaBladeSub.png</texture>
+        </control>
+      </control>
+      <control type="group" id="9001">
+        <left>386</left>
+        <top>0</top>
+        <onleft>9000</onleft>
+        <onright>9001</onright>
+        <animation effect="fade" start="100" end="0" time="0" condition="![ControlGroup(9001).HasFocus | Control.HasFocus(9002)]">conditional</animation>
+        <animation effect="fade" start="0" end="100" delay="300" time="200" condition="ControlGroup(9001).HasFocus | Control.HasFocus(9002)">conditional</animation>
+        <animation_off effect="fade" start="100" end="0" time="0" condition="ControlGroup(9001).HasFocus | Control.HasFocus(9002)">WindowClose</animation_off>
+        <animation_off effect="slide" start="0,0" end="210,0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus | Control.HasFocus(9002)">conditional</animation_off>
+        <control type="grouplist" id="9010">
+          <include>HomeSubMenuCommonValues</include>
+          <onup>9010</onup>
+          <ondown>9010</ondown>
+          <visible>Container(9000).HasFocus(2)</visible>
+          <!-- Buttons for the grouplist -->
+          <include>HomeSubMenuVideos</include>
+        </control>
+        <control type="grouplist" id="9016">
+          <include>HomeSubMenuCommonValues</include>
+          <onup>9016</onup>
+          <ondown>9016</ondown>
+          <visible>Container(9000).HasFocus(10)</visible>
+          <!-- Buttons for the grouplist -->
+          <include>HomeSubMenuMovies</include>
+        </control>
+        <control type="grouplist" id="9011">
+          <include>HomeSubMenuCommonValues</include>
+          <onup>9011</onup>
+          <ondown>9011</ondown>
+          <visible>Container(9000).HasFocus(3)</visible>
+          <!-- Buttons for the grouplist -->
+          <include>HomeSubMenuMusic</include>
+        </control>
+        <control type="grouplist" id="9017">
+          <include>HomeSubMenuCommonValues</include>
+          <onup>9017</onup>
+          <ondown>9017</ondown>
+          <visible>Container(9000).HasFocus(11)</visible>
+          <!-- Buttons for the grouplist -->
+          <include>HomeSubMenuTVShows</include>
+        </control>
+        <control type="grouplist" id="9012">
+          <include>HomeSubMenuCommonValues</include>
+          <onup>9012</onup>
+          <ondown>9012</ondown>
+          <visible>Container(9000).HasFocus(5)</visible>
+          <!-- Buttons for the grouplist -->
+          <include>HomeSubMenuSystem</include>
+        </control>
+        <control type="grouplist" id="9013">
+          <include>HomeSubMenuCommonValues</include>
+          <onup>9013</onup>
+          <ondown>9013</ondown>
+          <visible>Container(9000).HasFocus(6)</visible>
+          <!-- Buttons for the grouplist -->
+          <include>HomeSubMenuPlayDisc</include>
+        </control>
+        <control type="grouplist" id="9014">
+          <include>HomeSubMenuCommonValues</include>
+          <onup>9014</onup>
+          <ondown>9014</ondown>
+          <visible>Container(9000).HasFocus(12)</visible>
+          <!-- Buttons for the grouplist -->
+          <include>HomeSubMenuTV</include>
+        </control>
+        <control type="grouplist" id="9015">
+          <include>HomeSubMenuCommonValues</include>
+          <onup>9015</onup>
+          <ondown>9015</ondown>
+          <visible>Container(9000).HasFocus(4)</visible>
+          <!-- Buttons for the grouplist -->
+          <include>HomeSubMenuPictures</include>
+        </control>
+        <control type="grouplist" id="9016">
+          <include>HomeSubMenuCommonValues</include>
+          <onup>9016</onup>
+          <ondown>9016</ondown>
+          <visible>Container(9000).HasFocus(13)</visible>
+          <!-- Buttons for the grouplist -->
+          <include>HomeSubMenuRadio</include>
+        </control>
+        <control type="grouplist" id="9018">
+          <include>HomeSubMenuCommonValues</include>
+          <onup>9018</onup>
+          <ondown>9018</ondown>
+          <visible>Container(9000).HasFocus(1)</visible>
+          <!-- Buttons for the grouplist -->
+          <include>HomeSubMenuPrograms</include>
+        </control>
+        <control type="grouplist" id="9017">
+          <defaultcontrol always="true">1</defaultcontrol>
+          <posx>0</posx>
+          <posy>0</posy>
+          <width>240</width>
+          <height>720</height>
+          <align>center</align>
+          <itemgap>0</itemgap>
+          <onleft>9000</onleft>
+          <onup>SetFocus(3)</onup>
+          <ondown>SetFocus(2)</ondown>
+          <visible>Container(9000).HasFocus(17)</visible>
+          <!-- Buttons for the grouplist -->
+          <control type="button" id="3">
+            <description>normal Font</description>
+            <height>300</height>
+            <width>238</width>
+            <textoffsetx>20</textoffsetx>
+            <textwidth>195</textwidth>
+            <aligny>center</aligny>
+            <font>font_MainMenu</font>
+            <textcolor_off>$VAR[TextColor1]</textcolor_off>
+            <label>Vol +</label>
+            <pulseonselect>false</pulseonselect>
+            <align>center</align>
+            <onclick_off>left</onclick_off>
+            <onfocus>VolumeUp</onfocus>
+            <onfocus>AlarmClock(SwitchbacktoBtn1,SetFocus(1),00:00.700,silent)</onfocus>
+            <animation_off effect="fade" end="60" time="0">WindowOpen</animation_off>
+            <animation_off effect="fade" start="100" end="60" time="300">UnFocus</animation_off>
+          </control>
+          <control type="button" id="1">
+            <height>720</height>
+            <width>220</width>
+            <textoffsetx>20</textoffsetx>
+            <textwidth>195</textwidth>
+            <aligny>center</aligny>
+            <font>font40caps_title</font>
+            <visible allowhiddenfocus="true">no</visible>
+            <label>-</label>
+            <pulseonselect>false</pulseonselect>
+            <texturefocus border="5">button-focus.png</texturefocus>
+            <texturenofocus border="5">button-nofocus.png</texturenofocus>
+            <align>center</align>
+            <onclick>left</onclick>
+          </control>
+          <control type="button" id="2">
+            <height>300</height>
+            <width>238</width>
+            <textoffsetx>20</textoffsetx>
+            <textwidth>195</textwidth>
+            <aligny>center</aligny>
+            <font>font_MainMenu</font>
+            <textcolor_off>$VAR[TextColor1]</textcolor_off>
+            <label>Vol -</label>
+            <pulseonselect>false</pulseonselect>
+            <texturefocus border="5">button-focus.png</texturefocus>
+            <texturenofocus border="5">button-nofocus.png</texturenofocus>
+            <align>center</align>
+            <onclick_off>left</onclick_off>
+            <onfocus>VolumeDown</onfocus>
+            <onfocus>AlarmClock(SwitchbacktoBtn1,SetFocus(1),00:00.700,silent)</onfocus>
+            <animation_off effect="fade" end="60" time="0">WindowOpen</animation_off>
+            <animation_off effect="fade" start="100" end="60" time="300">UnFocus</animation_off>
+          </control>
+        </control>
+        <!--Icon for Addons-->
+        <control type="group">
+          <top>536</top>
+          <left>29</left>
+          <width>180</width>
+          <height>180</height>
+          <control type="image">
+            <visible>Control.HasFocus(9004) + !IsEmpty(Container(9004).ListItem.Icon)</visible>
+            <include>VisibleFadeEffect</include>
+            <aspectratio aligny="bottom">keep</aspectratio>
+            <bordertexture border="5">button-nofocus.png</bordertexture>
+            <bordersize>3</bordersize>
+            <texture>$INFO[Container(9004).ListItem.Icon]</texture>
+          </control>
+          <control type="image">
+            <visible>Control.HasFocus(9005) + !IsEmpty(Container(9004).ListItem.Icon)</visible>
+            <include>VisibleFadeEffect</include>
+            <aspectratio aligny="bottom">keep</aspectratio>
+            <bordertexture border="5">button-nofocus.png</bordertexture>
+            <bordersize>3</bordersize>
+            <texture>$INFO[Container(9005).ListItem.Icon]</texture>
+          </control>
+          <control type="image">
+            <visible>Control.HasFocus(9006) + !IsEmpty(Container(9004).ListItem.Icon)</visible>
+            <include>VisibleFadeEffect</include>
+            <aspectratio aligny="bottom">keep</aspectratio>
+            <bordertexture border="5">button-nofocus.png</bordertexture>
+            <bordersize>3</bordersize>
+            <texture>$INFO[Container(9006).ListItem.Icon]</texture>
+          </control>
+          <control type="image">
+            <visible>Control.HasFocus(9007) + !IsEmpty(Container(9004).ListItem.Icon)</visible>
+            <include>VisibleFadeEffect</include>
+            <aspectratio aligny="bottom">keep</aspectratio>
+            <bordertexture border="5">button-nofocus.png</bordertexture>
+            <bordersize>3</bordersize>
+            <texture>$INFO[Container(9007).ListItem.Icon]</texture>
+          </control>
+        </control>
+      </control>
+      <!--MAINMENU-->
+      <control_off type="fixedlist" id="9000">
+        <left>-110</left>
+        <top>5</top>
+        <width>1500</width>
+        <height>60</height>
+        <onleft>9000</onleft>
+        <onright>9000</onright>
+        <onup condition="System.HasAddon(script.globalsearch)">608</onup>
+        <onup condition="!System.HasAddon(script.globalsearch)">603</onup>
+        <ondown>9001</ondown>
+        <pagecontrol>-</pagecontrol>
+        <scrolltime>300</scrolltime>
+        <focusposition>2</focusposition>
+        <movement>1</movement>
+        <orientation>Horizontal</orientation>
+        <itemlayout height="60" width="300">
+          <control type="image">
+            <left>0</left>
+            <top>4</top>
+            <width>1</width>
+            <height>52</height>
+            <texture>HomeSeperator.png</texture>
+          </control>
+          <control type="image">
+            <left>299</left>
+            <top>4</top>
+            <width>1</width>
+            <height>52</height>
+            <texture>HomeSeperator.png</texture>
+          </control>
+          <control type="label">
+            <left>5</left>
+            <top>0</top>
+            <width>290</width>
+            <height>60</height>
+            <font>font_MainMenu</font>
+            <textcolor>grey3</textcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+        </itemlayout>
+        <focusedlayout height="60" width="300">
+          <control type="image">
+            <left>0</left>
+            <top>4</top>
+            <width>1</width>
+            <height>52</height>
+            <texture>HomeSeperator.png</texture>
+          </control>
+          <control type="image">
+            <left>299</left>
+            <top>4</top>
+            <width>1</width>
+            <height>52</height>
+            <texture>HomeSeperator.png</texture>
+          </control>
+          <control type="label">
+            <left>5</left>
+            <top>0</top>
+            <width>290</width>
+            <height>60</height>
+            <font>font_MainMenu</font>
+            <textcolor>grey3</textcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+          <control type="label">
+            <left>5</left>
+            <top>0</top>
+            <width>290</width>
+            <height>60</height>
+            <font>font_MainMenu</font>
+            <textcolor>blue</textcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+            <visible>Control.HasFocus(9000)</visible>
+            <include>VisibleFadeEffect</include>
+          </control>
+        </focusedlayout>
+        <content>
+          <item id="7">
+            <label>31950</label>
+            <onclick>ActivateWindow(Weather)</onclick>
+            <icon>-</icon>
+            <thumb>-</thumb>
+            <visible>!Skin.HasSetting(HomeMenuNoWeatherButton) + !IsEmpty(Weather.Plugin)</visible>
+          </item>
+          <item id="4">
+            <label>31951</label>
+            <onclick>ActivateWindow(Pictures)</onclick>
+            <icon>-</icon>
+            <thumb>-</thumb>
+            <visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
+          </item>
+          <item id="13">
+            <label>31960</label>
+            <onclick>ActivateWindow(RadioChannels)</onclick>
+            <icon>-</icon>
+            <thumb>-</thumb>
+            <visible>PVR.HasRadioChannels</visible>
+          </item>
+          <item id="12">
+            <label>31952</label>
+            <onclick>ActivateWindow(TVChannels)</onclick>
+            <icon>-</icon>
+            <thumb>-</thumb>
+            <visible>PVR.HasTVChannels</visible>
+          </item>
+          <item id="2">
+            <label>31953</label>
+            <onclick condition="StringCompare(Window.Property(VideosDirectLink),True)">ActivateWindow(Videos)</onclick>
+            <onclick condition="!StringCompare(Window.Property(VideosDirectLink),True)">ActivateWindow(Videos,root)</onclick>
+            <icon>-</icon>
+            <thumb>-</thumb>
+            <visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
+          </item>
+          <item id="10">
+            <label>31954</label>
+            <onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
+            <icon>-</icon>
+            <thumb>-</thumb>
+            <visible>!Skin.HasSetting(HomeMenuNoMovieButton) + Library.HasContent(Movies)</visible>
+          </item>
+          <item id="11">
+            <label>31955</label>
+            <onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
+            <icon>-</icon>
+            <thumb>-</thumb>
+            <visible>!Skin.HasSetting(HomeMenuNoTVShowButton) + Library.HasContent(TVShows)</visible>
+          </item>
+          <item id="3">
+            <label>31956</label>
+            <onclick>ActivateWindow(Music)</onclick>
+            <icon>-</icon>
+            <thumb>-</thumb>
+            <visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
+          </item>
+          <item id="1">
+            <label>31957</label>
+            <onclick condition="!System.Platform.Android">ActivateWindow(Programs,Addons,return)</onclick>
+            <onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
+            <icon>-</icon>
+            <thumb>-</thumb>
+            <visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
+          </item>
+          <item id="6">
+            <label>31958</label>
+            <onclick>PlayDVD()</onclick>
+            <icon>-</icon>
+            <thumb>-</thumb>
+            <visible>System.HasMediaDVD</visible>
+          </item>
+          <item id="5">
+            <label>31959</label>
+            <onclick>ActivateWindow(Settings)</onclick>
+            <icon>-</icon>
+            <thumb>-</thumb>
+          </item>
+        </content>
+      </control_off>
+      <control type="image">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>390</width>
+        <height>720</height>
+        <colordiffuse>DAFFFFFF</colordiffuse>
+        <texture border="0,0,10,0">MediaBladeSub.png</texture>
+      </control>
+      <control type="image">
+        <description>highlightbar</description>
+        <posx>0</posx>
+        <posy>397</posy>
+        <width>390</width>
+        <height>120</height>
+        <texture colordiffuse="33FFFFFF">floor_mainmenu.png</texture>
+        <animation effect="slide" end="0,-204" time="300" condition="Container(9000).Row(1)">conditional</animation>
+        <animation effect="slide" end="0,-102" time="300" condition="Container(9000).Row(2)">conditional</animation>
+        <animation effect="slide" end="0,102" time="300" condition="Container(9000).Row(4)">conditional</animation>
+        <animation effect="slide" end="0,204" time="300" condition="Container(9000).Row(5)">conditional</animation>
+      </control>
+      <control type="fixedlist" id="9000">
+        <left>-10</left>
+        <top>100</top>
+        <width>380</width>
+        <height>520</height>
+        <onleft>10</onleft>
+        <onright>9001</onright>
+        <onup>9000</onup>
+        <ondown>9000</ondown>
+        <pagecontrol>-</pagecontrol>
+        <scrolltime>300</scrolltime>
+        <focusposition>2</focusposition>
+        <movement>1</movement>
+        <itemlayout height="102" width="380">
+          <control type="label">
+            <right>0</right>
+            <top>0</top>
+            <width>380</width>
+            <height>102</height>
+            <font>font_MainMenu</font>
+            <textcolor>grey3</textcolor>
+            <align>right</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+            <animation effect="zoom" start="85" end="85" center="380,51" time="0" condition="true">Conditional</animation>
+            <animation effect="fade" start="100" end="30" time="200" condition="Window.IsVisible(1113) | ControlGroup(9001).HasFocus | ControlGroup(10).HasFocus | Control.HasFocus(9002)">conditional</animation>
+          </control>
+        </itemlayout>
+        <focusedlayout height="102" width="380">
+          <pulseonselect>yes</pulseonselect>
+          <control type="label">
+            <right>0</right>
+            <top>0</top>
+            <width>380</width>
+            <height>102</height>
+            <font>font_MainMenu</font>
+            <textcolor colordiffuse="AAFFFFFF">$VAR[TextColor1]</textcolor>
+            <align>right</align>
+            <aligny>center</aligny>
+            <animation type="Focus">
+              <effect type="zoom" start="85" end="120" center="380,51" time="200"></effect>
+              <effect type="fade" start="70" end="100" time="200" />
+            </animation>
+            <animation type="UnFocus">
+              <effect type="zoom" start="120" end="85" center="380,51" time="200"></effect>
+              <effect type="fade" start="100" end="70" time="200" />
+            </animation>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+          <control type="label">
+            <right>0</right>
+            <top>0</top>
+            <width>380</width>
+            <height>102</height>
+            <font>font_MainMenu</font>
+            <textcolor>$VAR[TextColor1]</textcolor>
+            <align>right</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+            <visible>Control.HasFocus(9000)</visible>
+            <include>VisibleFadeEffect</include>
+            <animation effect="zoom" start="85" end="120" center="380,51" time="200">Focus</animation>
+            <animation effect="zoom" start="120" end="85" center="380,51" time="200">UnFocus</animation>
+          </control>
+        </focusedlayout>
+        <content>
+          <include>HomeMenuItems</include>
+        </content>
+      </control>
+      <control_off type="image">
+        <description>highlightbar</description>
+        <posx>0</posx>
+        <posy>-105</posy>
+        <width>390</width>
+        <height>930</height>
+        <texture>HomeBlade_middle.png</texture>
+        <animation effect="slide" end="0,-204" time="300" condition="Container(9000).Row(1)">conditional</animation>
+        <animation effect="slide" end="0,-102" time="300" condition="Container(9000).Row(2)">conditional</animation>
+        <animation effect="slide" end="0,102" time="300" condition="Container(9000).Row(4)">conditional</animation>
+        <animation effect="slide" end="0,204" time="300" condition="Container(9000).Row(5)">conditional</animation>
+      </control_off>
+      <control_off type="image">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>390</width>
+        <height>350</height>
+        <colordiffuse>FFFFFFFF</colordiffuse>
+        <texture>bmw/TopFade.png</texture>
+      </control_off>
+      <control_off type="image">
+        <posx>0</posx>
+        <posy>350r</posy>
+        <width>390</width>
+        <height>350</height>
+        <colordiffuse>FFFFFFFF</colordiffuse>
+        <texture flipy="true">bmw/TopFade.png</texture>
+      </control_off>
+      <!--logo background-->
+      <control type="image">
+        <posx>-218</posx>
+        <posy>0</posy>
+        <width>602</width>
+        <height>300</height>
+        <colordiffuse>CCFFFFFF</colordiffuse>
+        <texture border="0,0,0,270">GlassOverlay.png</texture>
+      </control>
+      <control_test type="image">
+        <posx>-200</posx>
+        <posy>0</posy>
+        <width>602</width>
+        <height>300</height>
+        <colordiffuse>CCFFFFFF</colordiffuse>
+        <texture border="0,0,0,246">GlassOverlay.png</texture>
+      </control_test>
+      <control_off type="image">
+        <posx>-450</posx>
+        <posy>0</posy>
+        <width>846</width>
+        <height>720</height>
+        <texture>HomeBlade_top.png</texture>
+        <visible_off>!Skin.HasSetting(HomeMenuNoLogoSplash) + !Skin.HasSetting(EnableSkinDebugging)</visible_off>
+      </control_off>
+      <control type="image">
+        <Description>mstripe</Description>
+        <posx>374</posx>
+        <posy>0</posy>
+        <width>16</width>
+        <height>720</height>
+        <texture>bmw/mstripe.png</texture>
+        <visible>Skin.HasSetting(HomeMenuShowMLogo)</visible>
+      </control>
+      <control type="image">
+        <Description>BMW Logo Nav</Description>
+        <posx>0</posx>
+        <posy>55r</posy>
+        <width>385</width>
+        <height>54</height>
+        <texture>bmw/BMWLogoNAV.png</texture>
+        <visible_off>Skin.HasSetting(HomeMenuShowMLogo)</visible_off>
+      </control>
+    </control>
+    <!--RSS Feeds-->
+    <control type="group">
+      <depth>DepthMenu-</depth>
+      <left>0</left>
+      <top>45r</top>
+      <visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+      <include>Window_OpenClose_Animation</include>
+      <control type="rss">
+        <description>RSS feed</description>
+        <left>385</left>
+        <top>-10</top>
+        <height>30</height>
+        <width>860</width>
+        <font>font38_title</font>
+        <urlset>1</urlset>
+        <textcolor>blue</textcolor>
+        <titlecolor>blue</titlecolor>
+        <headlinecolor>white</headlinecolor>
+      </control>
+      <control type="image">
+        <description>RSS background</description>
+        <left>1235</left>
+        <top>0</top>
+        <width>40</width>
+        <height>40</height>
+        <texture>icon-rss.png</texture>
+      </control>
+    </control>
+  </include>
 </includes>
