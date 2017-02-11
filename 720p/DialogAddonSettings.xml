@@ -22,34 +22,66 @@
     </include>
     <control type="grouplist" id="9">
       <description>button area</description>
-      <left>45</left>
+      <left>40</left>
       <top>70</top>
-      <width>710</width>
+      <width>720</width>
       <height>40</height>
       <itemgap>5</itemgap>
       <align>center</align>
       <orientation>horizontal</orientation>
       <onleft>9</onleft>
       <onright>9</onright>
-      <onup>2</onup>
+      <onup>9</onup>
       <ondown>2</ondown>
     </control>
-    <control type="image">
+    <control_off type="image">
       <description>Has Previous</description>
-      <left>25</left>
+      <left>20</left>
       <top>80</top>
       <width>20</width>
       <height>20</height>
       <texture>scroll-left-focus.png</texture>
       <visible>Container(9).HasPrevious</visible>
-    </control>
-    <control type="image">
+    </control_off>
+    <control_off type="image">
       <description>Has Next</description>
-      <left>755</left>
+      <left>760</left>
       <top>80</top>
       <width>20</width>
       <height>20</height>
       <texture>scroll-right-focus.png</texture>
+      <visible>Container(9).HasNext</visible>
+    </control_off>
+    <control type="button" id="14">
+      <description>Has Previous</description>
+      <left>20</left>
+      <top>80</top>
+      <width>20</width>
+      <height>20</height>
+      <texturefocus>scroll-left-focus.png</texturefocus>
+      <texturenofocus>scroll-left-focus.png</texturenofocus>
+      <pulseonselect>no</pulseonselect>
+      <onleft>9</onleft>
+      <onright>9</onright>
+      <onup>9</onup>
+      <ondown>9</ondown>
+      <onclick>Control.Move(9,-1)</onclick>
+      <visible>Container(9).HasPrevious</visible>
+    </control>
+    <control type="button" id="15">
+      <description>Has Next</description>
+      <left>760</left>
+      <top>80</top>
+      <width>20</width>
+      <height>20</height>
+      <texturefocus>scroll-right-focus.png</texturefocus>
+      <texturenofocus>scroll-right-focus.png</texturenofocus>
+      <pulseonselect>no</pulseonselect>
+      <onleft>9</onleft>
+      <onright>9</onright>
+      <onup>9</onup>
+      <ondown>9</ondown>
+      <onclick>Control.Move(9,1)</onclick>
       <visible>Container(9).HasNext</visible>
     </control>
     <control type="grouplist" id="2">
@@ -132,17 +164,17 @@
     <control type="button" id="13">
       <description>Default Category Button</description>
       <height>40</height>
-      <width>173</width>
+      <width>320</width>
       <align>center</align>
       <aligny>center</aligny>
-      <font>font12_title</font>
+      <font>font24_title</font>
       <textcolor>white</textcolor>
       <pulseonselect>false</pulseonselect>
     </control>
     <control type="button" id="3">
       <description>Default Button</description>
       <height>40</height>
-      <font>font13</font>
+      <font>font24_title</font>
       <textcolor>grey2</textcolor>
       <focusedcolor>white</focusedcolor>
       <texturefocus border="5">button-focus2.png</texturefocus>
@@ -150,11 +182,12 @@
     <control type="radiobutton" id="4">
       <description>Default RadioButton</description>
       <height>40</height>
-      <font>font13</font>
+      <font>font24_title</font>
       <textwidth>668</textwidth>
       <textcolor>grey2</textcolor>
       <focusedcolor>white</focusedcolor>
       <texturefocus border="5">button-focus2.png</texturefocus>
+      <textwidth>700</textwidth>
     </control>
     <control type="spincontrolex" id="5">
       <description>Default spincontrolex</description>
@@ -163,13 +196,13 @@
       <focusedcolor>white</focusedcolor>
       <texturenofocus border="5">button-nofocus.png</texturenofocus>
       <texturefocus border="5">button-focus2.png</texturefocus>
-      <font>font13</font>
+      <font>font24_title</font>
       <aligny>center</aligny>
       <reverse>yes</reverse>
     </control>
     <control type="label" id="7">
       <height>35</height>
-      <font>font13_title</font>
+      <font>font24_title</font>
       <label>-</label>
       <textcolor>blue</textcolor>
       <shadowcolor>black</shadowcolor>
@@ -184,7 +217,7 @@
     <control type="sliderex" id="8">
       <description>Default Slider</description>
       <height>40</height>
-      <font>font13</font>
+      <font>font24_title</font>
       <textwidth>518</textwidth>
       <textcolor>grey2</textcolor>
       <focusedcolor>white</focusedcolor>

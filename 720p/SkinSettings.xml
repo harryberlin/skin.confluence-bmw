@@ -224,6 +224,7 @@
             <texturenofocus>MenuItemNF.png</texturenofocus>
             <onclick>Skin.ToggleSetting(AutoScroll)</onclick>
             <selected>Skin.HasSetting(AutoScroll)</selected>
+            <textwidth>690</textwidth>
           </control>
           <control type="radiobutton" id="102">
             <width>750</width>
@@ -236,6 +237,7 @@
             <texturenofocus>MenuItemNF.png</texturenofocus>
             <onclick>Skin.ToggleSetting(Show_SlideShow_Paused)</onclick>
             <selected>!Skin.HasSetting(Show_SlideShow_Paused)</selected>
+            <textwidth>690</textwidth>
           </control>
           <control type="radiobutton" id="112">
             <width>750</width>
@@ -248,6 +250,7 @@
             <texturenofocus>MenuItemNF.png</texturenofocus>
             <onclick>Skin.ToggleSetting(WindowedTrailer)</onclick>
             <selected>Skin.HasSetting(WindowedTrailer)</selected>
+            <textwidth>690</textwidth>
           </control>
           <control type="radiobutton" id="113">
             <width>750</width>
@@ -260,6 +263,7 @@
             <texturenofocus>MenuItemNF.png</texturenofocus>
             <onclick>Skin.ToggleSetting(HideFilenameFlagging)</onclick>
             <selected>Skin.HasSetting(HideFilenameFlagging)</selected>
+            <textwidth>690</textwidth>
           </control>
           <control type="radiobutton" id="116">
             <width>750</width>
@@ -272,6 +276,7 @@
             <texturenofocus>MenuItemNF.png</texturenofocus>
             <onclick>Skin.ToggleSetting(HideEPGwithRDS)</onclick>
             <selected>Skin.HasSetting(HideEPGwithRDS)</selected>
+            <textwidth>690</textwidth>
           </control>
         </control>
         <control type="scrollbar" id="60">
@@ -323,6 +328,7 @@
             <selected>Skin.HasSetting(MainMenuHorizontal)</selected>
             <texturefocus>MenuItemFO.png</texturefocus>
             <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
           </control>
           <control type="radiobutton" id="202">
             <description>enable video info</description>
@@ -336,6 +342,7 @@
             <selected>!Skin.HasSetting(homepageVideoinfo)</selected>
             <texturefocus>MenuItemFO.png</texturefocus>
             <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
           </control>
           <control type="radiobutton" id="203">
             <description>enable music info</description>
@@ -349,6 +356,7 @@
             <selected>!Skin.HasSetting(homepageMusicinfo)</selected>
             <texturefocus>MenuItemFO.png</texturefocus>
             <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
           </control>
           <control type="radiobutton" id="204">
             <description>enable weather info</description>
@@ -363,6 +371,7 @@
             <texturefocus>MenuItemFO.png</texturefocus>
             <texturenofocus>MenuItemNF.png</texturenofocus>
             <visible>!String.IsEmpty(Weather.Plugin)</visible>
+            <textwidth>690</textwidth>
           </control>
           <control type="radiobutton" id="205">
             <description>Show Recently added Video info</description>
@@ -376,6 +385,7 @@
             <selected>!Skin.HasSetting(HomepageHideRecentlyAddedVideo)</selected>
             <texturefocus>MenuItemFO.png</texturefocus>
             <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
           </control>
           <control type="radiobutton" id="206">
             <description>Show Recently added info</description>
@@ -389,6 +399,7 @@
             <selected>!Skin.HasSetting(HomepageHideRecentlyAddedAlbums)</selected>
             <texturefocus>MenuItemFO.png</texturefocus>
             <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
           </control>
           <control type="label" id="220">
             <width>750</width>
@@ -412,6 +423,7 @@
             <selected>Skin.HasSetting(HomeMenuNoVideosButton)</selected>
             <texturefocus>MenuItemFO.png</texturefocus>
             <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
           </control>
           <control type="radiobutton" id="222">
             <description>Hide Movies Button</description>
@@ -426,6 +438,7 @@
             <texturefocus>MenuItemFO.png</texturefocus>
             <texturenofocus>MenuItemNF.png</texturenofocus>
             <enable>Library.HasContent(Movies)</enable>
+            <textwidth>690</textwidth>
           </control>
           <control type="radiobutton" id="223">
             <description>Hide TV Shows Button</description>
@@ -440,6 +453,7 @@
             <texturefocus>MenuItemFO.png</texturefocus>
             <texturenofocus>MenuItemNF.png</texturenofocus>
             <enable>Library.HasContent(TVShows)</enable>
+            <textwidth>690</textwidth>
           </control>
           <control type="radiobutton" id="224">
             <description>Hide Music Button</description>
@@ -453,6 +467,7 @@
             <selected>Skin.HasSetting(HomeMenuNoMusicButton)</selected>
             <texturefocus>MenuItemFO.png</texturefocus>
             <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
           </control>
           <control type="radiobutton" id="225">
             <description>Hide Pictures Button</description>
@@ -466,6 +481,7 @@
             <selected>Skin.HasSetting(HomeMenuNoPicturesButton)</selected>
             <texturefocus>MenuItemFO.png</texturefocus>
             <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
           </control>
           <control type="radiobutton" id="226">
             <description>Hide Programs Button</description>
@@ -479,6 +495,7 @@
             <selected>Skin.HasSetting(HomeMenuNoProgramsButton)</selected>
             <texturefocus>MenuItemFO.png</texturefocus>
             <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
           </control>
           <control type="radiobutton" id="228">
             <description>Hide Weather Button</description>
@@ -492,6 +509,7 @@
             <selected>Skin.HasSetting(HomeMenuNoWeatherButton)</selected>
             <texturefocus>MenuItemFO.png</texturefocus>
             <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
           </control>
           <control type="radiobutton" id="229">
             <description>Hide Favourites Button</description>
@@ -505,6 +523,7 @@
             <selected>Skin.HasSetting(HomeMenuNoFavouritesButton)</selected>
             <texturefocus>MenuItemFO.png</texturefocus>
             <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
           </control>
           <control type="radiobutton" id="230">
             <description>Hide Volume Button</description>
@@ -518,6 +537,7 @@
             <selected>Skin.HasSetting(HomeMenuNoVolumeButton)</selected>
             <texturefocus>MenuItemFO.png</texturefocus>
             <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
           </control>
           <control type="radiobutton" id="231">
             <description>Hide Power Button</description>
@@ -531,6 +551,7 @@
             <selected>Skin.HasSetting(HomeMenuNoPowerButton)</selected>
             <texturefocus>MenuItemFO.png</texturefocus>
             <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
           </control>
         </control>
         <control type="scrollbar" id="60">
@@ -582,6 +603,7 @@
             <texturenofocus>MenuItemNF.png</texturenofocus>
             <onclick>Skin.ToggleSetting(HideBackGroundFanart)</onclick>
             <selected>Skin.HasSetting(HideBackGroundFanart)</selected>
+            <textwidth>690</textwidth>
           </control>
           <control type="radiobutton" id="302">
             <width>750</width>
@@ -594,6 +616,7 @@
             <texturenofocus>MenuItemNF.png</texturenofocus>
             <onclick>Skin.ToggleSetting(HideVisualizationFanart)</onclick>
             <selected>Skin.HasSetting(HideVisualizationFanart)</selected>
+            <textwidth>690</textwidth>
           </control>
           <control type="radiobutton" id="303">
             <width>750</width>
@@ -606,6 +629,7 @@
             <texturenofocus>MenuItemNF.png</texturenofocus>
             <onclick>Skin.ToggleSetting(ShowBackgroundVideo)</onclick>
             <selected>!Skin.HasSetting(ShowBackgroundVideo)</selected>
+            <textwidth>690</textwidth>
           </control>
           <control type="radiobutton" id="304">
             <width>750</width>
@@ -618,6 +642,7 @@
             <texturenofocus>MenuItemNF.png</texturenofocus>
             <onclick>Skin.ToggleSetting(ShowBackgroundVis)</onclick>
             <selected>!Skin.HasSetting(ShowBackgroundVis)</selected>
+            <textwidth>690</textwidth>
           </control>
           <control type="label" id="310">
             <width>750</width>
@@ -640,6 +665,7 @@
             <texturenofocus>MenuItemNF.png</texturenofocus>
             <onclick>Skin.ToggleSetting(UseCustomBackground)</onclick>
             <selected>Skin.HasSetting(UseCustomBackground)</selected>
+            <textwidth>690</textwidth>
           </control>
           <control type="button" id="312">
             <width>750</width>

@@ -222,6 +222,7 @@
       <focusedcolor>white</focusedcolor>
       <texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
       <texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
+      <textwidth>690</textwidth>
     </control>
     <control type="spincontrolex" id="9">
       <description>Default SpinControlex</description>
