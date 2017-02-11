@@ -38,7 +38,7 @@
           </control>
           <control type="label">
             <left>280</left>
-            <top>0</top>
+            <top>-5</top>
             <width>400</width>
             <height>60</height>
             <font>font55_title</font>
@@ -51,7 +51,7 @@
           </control>
           <control type="label">
             <left>220</left>
-            <top>0</top>
+            <top>-5</top>
             <width>400</width>
             <height>60</height>
             <font>font55_title</font>
@@ -131,10 +131,10 @@
           </control>
           <control type="label">
             <left>280</left>
-            <top>0</top>
+            <top>-5</top>
             <width>400</width>
             <height>60</height>
-            <font>font35_title</font>
+            <font>font55_title</font>
             <textcolor>grey2</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>right</align>
@@ -144,10 +144,10 @@
           </control>
           <control type="label">
             <left>220</left>
-            <top>0</top>
+            <top>-5</top>
             <width>400</width>
             <height>60</height>
-            <font>font35_title</font>
+            <font>font55_title</font>
             <textcolor>grey2</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>right</align>
@@ -639,7 +639,7 @@
           </control>
           <control type="label">
             <left>60</left>
-            <top>0</top>
+            <top>-5</top>
             <width>1000</width>
             <height>60</height>
             <font>font55_title</font>
@@ -652,7 +652,7 @@
           </control>
           <control type="label">
             <left>65</left>
-            <top>0</top>
+            <top>-5</top>
             <width>940</width>
             <height>60</height>
             <font>font55_title</font>
