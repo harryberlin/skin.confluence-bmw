@@ -1,3 +1,6 @@
+[B]1.0.6[/B]
+- buggi Vertical Home Menu
+
 [B]1.0.2[/B]
 - changed Keyboard, Numpad und Addonsettings
 
