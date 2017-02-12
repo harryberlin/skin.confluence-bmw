@@ -58,52 +58,9 @@
     <!--VERTICAL-->
     <include condition="!Skin.HasSetting(MainMenuHorizontal)">MainMenuVertical</include>
     <!--H/V ENDE-->
-    <!--Logo / Weather / Ousidetemp / Clock / Date / Repeat-->
+    <!--Weather / Ousidetemp / Clock / Date / Repeat-->
     <control type="group">
       <depth>DepthHeader</depth>
-      <!--Logo-->
-      <control_off type="image">
-        <description>LOGO</description>
-        <left>10</left>
-        <top>5</top>
-        <width>120</width>
-        <height>49</height>
-        <aspectratio aligny="top" align="left">keep</aspectratio>
-        <texture>kodi-logo.png</texture>
-        <include>VisibleFadeEffect</include>
-        <include>Window_OpenClose_Animation</include>
-        <visible>!Skin.HasSetting(homepageWeatherinfo)</visible>
-      </control_off>
-      <control type="group">
-        <animation effect="zoom" start="150" end="150" time="0" condition="true">Conditional</animation>
-        <control type="image">
-          <description>LOGO</description>
-          <left>10</left>
-          <top>-3</top>
-          <width>120</width>
-          <height>49</height>
-          <aspectratio aligny="top" align="left">keep</aspectratio>
-          <texture>kodi-logo.png</texture>
-          <include>VisibleFadeEffect</include>
-          <include>Window_OpenClose_Animation</include>
-          <visible>!Skin.HasSetting(homepageWeatherinfo)</visible>
-        </control>
-        <control type="label">
-          <description>BMW</description>
-          <left>13</left>
-          <top>37</top>
-          <width>280</width>
-          <height>15</height>
-          <align>left</align>
-          <font>font12</font>
-          <textcolor>white</textcolor>
-          <shadowcolor>black</shadowcolor>
-          <label>BMWRaspControl</label>
-          <visible>!Skin.HasSetting(homepageWeatherinfo)</visible>
-          <include>VisibleFadeEffect</include>
-          <include>Window_OpenClose_Animation</include>
-        </control>
-      </control>
       <!--Weather-->
       <control_off type="group">
         <left>20</left>
@@ -258,7 +215,7 @@
         <posx>440r</posx>
         <posy>0</posy>
         <visible>!IsEmpty(Window(10000).Property(IBUSCOMMUNICATOR_OBC_OUTTEMP))</visible>
-        <animation effect="slide" start="0,0" end="-80,0" delay="0" time="300" condition="Window.IsVisible(MuteBug)">conditional</animation>
+        <animation effect="slide" start="0,0" end="-90,0" delay="0" time="300" condition="Player.Muted">conditional</animation>
         <animation effect="slide" start="460,0" end="0,0" delay="0" time="200">VisibleChange</animation>
         <animation effect="slide" start="0,0" end="460,0" delay="0" time="400">WindowClose</animation>
         <animation effect="slide" start="460,0" end="0,0" delay="0" time="400">WindowOpen</animation>
@@ -333,7 +290,7 @@
       <control type="group">
         <posx>430r</posx>
         <posy>0</posy>
-        <animation effect="slide" start="0,0" end="-80,0" delay="0" time="300" condition="Window.IsVisible(MuteBug)">conditional</animation>
+        <animation effect="slide" start="0,0" end="-90,0" delay="0" time="300" condition="Player.Muted">conditional</animation>
         <animation effect="slide" start="0,0" end="420,0" delay="0" time="300">WindowClose</animation>
         <animation effect="slide" start="420,0" end="0,0" delay="0" time="300">WindowOpen</animation>
         <control type="image">
@@ -392,6 +349,31 @@
             <visible>Playlist.IsRepeatOne</visible>
           </control>
         </control>
+      </control>
+    </control>
+    <!--Mute-->
+    <control type="group">
+      <posx>90r</posx>
+      <posy>0</posy>
+      <visible>Player.Muted</visible>
+      <animation effect="slide" end="100,0" time="300">Hidden</animation>
+      <animation effect="slide" end="100,0" time="300" condition="Player.Muted">WindowClose</animation>
+      <animation effect="slide" start="100,0" time="300">Visible</animation>
+      <animation effect="slide" start="100,0" time="300" condition="Player.Muted">WindowOpen</animation>
+      <control type="image">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>100</width>
+        <height>60</height>
+        <texture flipx="true" border="32,0,0,0">bmw/header.png</texture>
+      </control>
+      <control type="image">
+        <posx>25</posx>
+        <posy>0</posy>
+        <width>62</width>
+        <height>62</height>
+        <aspectratio>keep</aspectratio>
+        <texture>icon-mute.png</texture>
       </control>
     </control>
   </controls>

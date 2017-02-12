@@ -78,7 +78,7 @@
     </item>
     <item>
       <label>TEST</label>
-      <onclick>ActivateWindow(favourites)</onclick>
+      <onclick>Mute</onclick>
       <icon>-</icon>
       <thumb>-</thumb>
       <visible>true</visible>
@@ -1355,6 +1355,37 @@
         <enable>Player.HasMedia</enable>
       </control>
     </control>
+    <!--Logo-->
+    <control type="group">
+      <animation effect="zoom" start="150" end="150" time="0" condition="true">Conditional</animation>
+      <control type="image">
+        <description>LOGO</description>
+        <left>10</left>
+        <top>-3</top>
+        <width>120</width>
+        <height>49</height>
+        <aspectratio aligny="top" align="left">keep</aspectratio>
+        <texture>kodi-logo.png</texture>
+        <include>VisibleFadeEffect</include>
+        <include>Window_OpenClose_Animation</include>
+        <visible>!Skin.HasSetting(homepageWeatherinfo)</visible>
+      </control>
+      <control type="label">
+        <description>BMW</description>
+        <left>13</left>
+        <top>37</top>
+        <width>280</width>
+        <height>15</height>
+        <align>left</align>
+        <font>font12</font>
+        <textcolor>white</textcolor>
+        <shadowcolor>black</shadowcolor>
+        <label>BMWRaspControl</label>
+        <visible>!Skin.HasSetting(homepageWeatherinfo)</visible>
+        <include>VisibleFadeEffect</include>
+        <include>Window_OpenClose_Animation</include>
+      </control>
+    </control>
     <!--Menus-->
     <control type="group">
       <depth>DepthMenu</depth>
@@ -2297,6 +2328,37 @@
         <colordiffuse>CCFFFFFF</colordiffuse>
         <texture border="0,0,0,270">GlassOverlay.png</texture>
       </control>
+      <!--Logo-->
+      <control type="group">
+        <animation effect="zoom" start="150" end="150" time="0" condition="true">Conditional</animation>
+        <control type="image">
+          <description>LOGO</description>
+          <left>10</left>
+          <top>-3</top>
+          <width>120</width>
+          <height>49</height>
+          <aspectratio aligny="top" align="left">keep</aspectratio>
+          <texture>kodi-logo.png</texture>
+          <include>VisibleFadeEffect</include>
+          <include>Window_OpenClose_Animation</include>
+          <visible>!Skin.HasSetting(homepageWeatherinfo)</visible>
+        </control>
+        <control type="label">
+          <description>BMW</description>
+          <left>13</left>
+          <top>37</top>
+          <width>280</width>
+          <height>15</height>
+          <align>left</align>
+          <font>font12</font>
+          <textcolor>white</textcolor>
+          <shadowcolor>black</shadowcolor>
+          <label>BMWRaspControl</label>
+          <visible>!Skin.HasSetting(homepageWeatherinfo)</visible>
+          <include>VisibleFadeEffect</include>
+          <include>Window_OpenClose_Animation</include>
+        </control>
+      </control>
       <control_test type="image">
         <posx>-200</posx>
         <posy>0</posy>
@@ -2325,9 +2387,9 @@
       <control type="image">
         <Description>BMW Logo Nav</Description>
         <posx>0</posx>
-        <posy>55r</posy>
+        <posy>50r</posy>
         <width>385</width>
-        <height>54</height>
+        <height>49</height>
         <texture>bmw/BMWLogoNAV.png</texture>
         <visible_off>Skin.HasSetting(HomeMenuShowMLogo)</visible_off>
       </control>
