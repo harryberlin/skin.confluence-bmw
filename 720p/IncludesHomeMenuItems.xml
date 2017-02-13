@@ -74,7 +74,7 @@
       <onclick condition="System.HasAddon(plugin.script.ibuscommunicator)">XBMC.RunScript(plugin.script.ibuscommunicator,obc)</onclick>
       <icon>special://skin/backgrounds/bordcomputer.jpg</icon>
       <thumb>-</thumb>
-      <visible>System.HasAddon(plugin.script.helgeinterface)|System.HasAddon(plugin.script.ibuscommunicator)</visible>
+      <visible>[System.HasAddon(plugin.script.helgeinterface) + !System.HasAddon(plugin.script.ibuscommunicator)]| [!System.HasAddon(plugin.script.helgeinterface) + System.HasAddon(plugin.script.ibuscommunicator)]</visible>
     </item>
     <item>
       <label>TEST</label>
@@ -2210,7 +2210,7 @@
         <colordiffuse>DAFFFFFF</colordiffuse>
         <texture border="0,0,10,0">MediaBladeSub.png</texture>
       </control>
-      <control type="image">
+      <control_off type="image">
         <description>highlightbar</description>
         <posx>0</posx>
         <posy>397</posy>
@@ -2221,7 +2221,7 @@
         <animation effect="slide" end="0,-102" time="300" condition="Container(9000).Row(2)">conditional</animation>
         <animation effect="slide" end="0,102" time="300" condition="Container(9000).Row(4)">conditional</animation>
         <animation effect="slide" end="0,204" time="300" condition="Container(9000).Row(5)">conditional</animation>
-      </control>
+      </control_off>
       <control type="fixedlist" id="9000">
         <left>-10</left>
         <top>100</top>
@@ -2259,7 +2259,6 @@
             <height>102</height>
             <font>font_MainMenu</font>
             <textcolor colordiffuse="AAFFFFFF">$VAR[TextColor1]</textcolor>
-            <shadowcolor>black</shadowcolor>
             <align>right</align>
             <aligny>center</aligny>
             <animation type="Focus">
@@ -2279,7 +2278,6 @@
             <height>102</height>
             <font>font_MainMenu</font>
             <textcolor>$VAR[TextColor1]</textcolor>
-            <shadowcolor>black</shadowcolor>
             <align>right</align>
             <aligny>center</aligny>
             <label>$INFO[ListItem.Label]</label>
@@ -2296,9 +2294,9 @@
       <control type="image">
         <description>highlightbar</description>
         <posx>0</posx>
-        <posy>-198</posy>
+        <posy>-398</posy>
         <width>385</width>
-        <height>1320</height>
+        <height>1720</height>
         <texture>bmw/MenuLightbar.png</texture>
         <animation effect="slide" end="0,-204" time="300" condition="Container(9000).Row(1)">conditional</animation>
         <animation effect="slide" end="0,-102" time="300" condition="Container(9000).Row(2)">conditional</animation>
