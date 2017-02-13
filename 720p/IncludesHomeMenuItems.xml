@@ -1378,7 +1378,7 @@
         <height>15</height>
         <align>left</align>
         <font>font12</font>
-        <textcolor>white</textcolor>
+        <textcolor>$VAR[TextColor1]</textcolor>
         <shadowcolor>black</shadowcolor>
         <label>BMWRaspControl</label>
         <visible>!Skin.HasSetting(homepageWeatherinfo)</visible>
@@ -2259,6 +2259,7 @@
             <height>102</height>
             <font>font_MainMenu</font>
             <textcolor colordiffuse="AAFFFFFF">$VAR[TextColor1]</textcolor>
+            <shadowcolor>black</shadowcolor>
             <align>right</align>
             <aligny>center</aligny>
             <animation type="Focus">
@@ -2278,6 +2279,7 @@
             <height>102</height>
             <font>font_MainMenu</font>
             <textcolor>$VAR[TextColor1]</textcolor>
+            <shadowcolor>black</shadowcolor>
             <align>right</align>
             <aligny>center</aligny>
             <label>$INFO[ListItem.Label]</label>
@@ -2291,34 +2293,18 @@
           <include>HomeMenuItems</include>
         </content>
       </control>
-      <control_off type="image">
+      <control type="image">
         <description>highlightbar</description>
         <posx>0</posx>
-        <posy>-105</posy>
-        <width>390</width>
-        <height>930</height>
-        <texture>HomeBlade_middle.png</texture>
+        <posy>-198</posy>
+        <width>385</width>
+        <height>1320</height>
+        <texture>bmw/MenuLightbar.png</texture>
         <animation effect="slide" end="0,-204" time="300" condition="Container(9000).Row(1)">conditional</animation>
         <animation effect="slide" end="0,-102" time="300" condition="Container(9000).Row(2)">conditional</animation>
         <animation effect="slide" end="0,102" time="300" condition="Container(9000).Row(4)">conditional</animation>
         <animation effect="slide" end="0,204" time="300" condition="Container(9000).Row(5)">conditional</animation>
-      </control_off>
-      <control_off type="image">
-        <posx>0</posx>
-        <posy>0</posy>
-        <width>390</width>
-        <height>350</height>
-        <colordiffuse>FFFFFFFF</colordiffuse>
-        <texture>bmw/TopFade.png</texture>
-      </control_off>
-      <control_off type="image">
-        <posx>0</posx>
-        <posy>350r</posy>
-        <width>390</width>
-        <height>350</height>
-        <colordiffuse>FFFFFFFF</colordiffuse>
-        <texture flipy="true">bmw/TopFade.png</texture>
-      </control_off>
+      </control>
       <!--logo background-->
       <control type="image">
         <posx>-218</posx>
@@ -2351,7 +2337,7 @@
           <height>15</height>
           <align>left</align>
           <font>font12</font>
-          <textcolor>white</textcolor>
+          <textcolor>$VAR[TextColor1]</textcolor>
           <shadowcolor>black</shadowcolor>
           <label>BMWRaspControl</label>
           <visible>!Skin.HasSetting(homepageWeatherinfo)</visible>
