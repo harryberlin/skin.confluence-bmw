@@ -66,7 +66,7 @@
         <top>20</top>
         <width>770</width>
         <height>30</height>
-        <font>font13_title</font>
+        <font>font24_title</font>
         <label>$LOCALIZE[13406]</label>
         <align>center</align>
         <aligny>center</aligny>
@@ -118,7 +118,7 @@
             <top>0</top>
             <width>510</width>
             <height>40</height>
-            <font>font13</font>
+            <font>font24_title</font>
             <textcolor>grey2</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>left</align>
@@ -150,7 +150,7 @@
             <top>0</top>
             <width>510</width>
             <height>40</height>
-            <font>font13</font>
+            <font>font24_title</font>
             <textcolor>white</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>left</align>
@@ -193,7 +193,7 @@
             <top>2</top>
             <width>450</width>
             <height>30</height>
-            <font>font13</font>
+            <font>font24_title</font>
             <textcolor>grey</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>left</align>
@@ -205,7 +205,7 @@
             <top>34</top>
             <width>450</width>
             <height>48</height>
-            <font>font12</font>
+            <font>font24_title</font>
             <textcolor>grey</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>left</align>
@@ -246,7 +246,7 @@
             <top>2</top>
             <width>450</width>
             <height>30</height>
-            <font>font13</font>
+            <font>font24_title</font>
             <textcolor>white</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>left</align>
@@ -258,7 +258,7 @@
             <top>34</top>
             <width>450</width>
             <height>48</height>
-            <font>font12</font>
+            <font>font24_title</font>
             <textcolor>grey</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>left</align>
@@ -312,7 +312,7 @@
             <width>200</width>
             <height>40</height>
             <label>-</label>
-            <font>font12_title</font>
+            <font>font24_title</font>
             <textcolor>white</textcolor>
             <focusedcolor>white</focusedcolor>
             <align>center</align>
@@ -322,7 +322,7 @@
             <width>200</width>
             <height>40</height>
             <label>-</label>
-            <font>font12_title</font>
+            <font>font24_title</font>
             <textcolor>white</textcolor>
             <focusedcolor>white</focusedcolor>
             <align>center</align>

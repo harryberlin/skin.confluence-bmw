@@ -38,10 +38,10 @@
           </control>
           <control type="label">
             <left>280</left>
-            <top>-5</top>
+            <top>0</top>
             <width>400</width>
             <height>60</height>
-            <font>font55_title</font>
+            <font>font24_title</font>
             <textcolor>grey2</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>right</align>
@@ -51,10 +51,10 @@
           </control>
           <control type="label">
             <left>220</left>
-            <top>-5</top>
+            <top>0</top>
             <width>400</width>
             <height>60</height>
-            <font>font55_title</font>
+            <font>font24_title</font>
             <textcolor>grey2</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>right</align>
@@ -75,16 +75,16 @@
           <control type="image">
             <left>665</left>
             <top>14</top>
-            <width>24</width>
-            <height>24</height>
+            <width>44</width>
+            <height>44</height>
             <texture>OverlayWatching.png</texture>
             <visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
           </control>
           <control type="image">
             <left>665</left>
             <top>14</top>
-            <width>30</width>
-            <height>24</height>
+            <width>50</width>
+            <height>44</height>
             <texture>$INFO[ListItem.Overlay]</texture>
             <aspectratio>keep</aspectratio>
             <visible>Window.IsVisible(Videos)</visible>
@@ -123,7 +123,7 @@
             <width>580</width>
             <height>60</height>
             <font>font55_title</font>
-            <textcolor>white</textcolor>
+            <textcolor>$VAR[TextColor2]</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>left</align>
             <aligny>center</aligny>
@@ -131,10 +131,10 @@
           </control>
           <control type="label">
             <left>280</left>
-            <top>-5</top>
+            <top>0</top>
             <width>400</width>
             <height>60</height>
-            <font>font55_title</font>
+            <font>font24_title</font>
             <textcolor>grey2</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>right</align>
@@ -144,10 +144,10 @@
           </control>
           <control type="label">
             <left>220</left>
-            <top>-5</top>
+            <top>0</top>
             <width>400</width>
             <height>60</height>
-            <font>font55_title</font>
+            <font>font24_title</font>
             <textcolor>grey2</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>right</align>
@@ -168,16 +168,16 @@
           <control type="image">
             <left>665</left>
             <top>14</top>
-            <width>24</width>
-            <height>24</height>
+            <width>44</width>
+            <height>44</height>
             <texture>OverlayWatching.png</texture>
             <visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
           </control>
           <control type="image">
             <left>665</left>
             <top>14</top>
-            <width>30</width>
-            <height>24</height>
+            <width>50</width>
+            <height>44</height>
             <texture>$INFO[ListItem.Overlay]</texture>
             <aspectratio>keep</aspectratio>
             <visible>Window.IsVisible(Videos)</visible>
@@ -541,7 +541,7 @@
             <top>0</top>
             <width>1000</width>
             <height>60</height>
-            <font>font55_title</font>
+            <font>font24_title</font>
             <textcolor>grey2</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>right</align>
@@ -554,7 +554,7 @@
             <top>0</top>
             <width>940</width>
             <height>60</height>
-            <font>font55_title</font>
+            <font>font24_title</font>
             <textcolor>grey2</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>right</align>
@@ -575,16 +575,16 @@
           <control type="image">
             <left>1050</left>
             <top>14</top>
-            <width>24</width>
-            <height>24</height>
+            <width>44</width>
+            <height>44</height>
             <texture>OverlayWatching.png</texture>
             <visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
           </control>
           <control type="image">
             <left>1050</left>
             <top>14</top>
-            <width>30</width>
-            <height>24</height>
+            <width>50</width>
+            <height>44</height>
             <texture>$INFO[ListItem.Overlay]</texture>
             <aspectratio>keep</aspectratio>
             <visible>Window.IsVisible(Videos)</visible>
@@ -631,7 +631,7 @@
             <width>950</width>
             <height>60</height>
             <font>font55_title</font>
-            <textcolor>white</textcolor>
+            <textcolor>$VAR[TextColor2]</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>left</align>
             <aligny>center</aligny>
@@ -639,10 +639,10 @@
           </control>
           <control type="label">
             <left>60</left>
-            <top>-5</top>
+            <top>0</top>
             <width>1000</width>
             <height>60</height>
-            <font>font55_title</font>
+            <font>font24_title</font>
             <textcolor>grey2</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>right</align>
@@ -652,10 +652,10 @@
           </control>
           <control type="label">
             <left>65</left>
-            <top>-5</top>
+            <top>0</top>
             <width>940</width>
             <height>60</height>
-            <font>font55_title</font>
+            <font>font24_title</font>
             <textcolor>grey2</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>right</align>
@@ -676,16 +676,16 @@
           <control type="image">
             <left>1050</left>
             <top>14</top>
-            <width>24</width>
-            <height>24</height>
+            <width>44</width>
+            <height>44</height>
             <texture>OverlayWatching.png</texture>
             <visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
           </control>
           <control type="image">
             <left>1050</left>
             <top>14</top>
-            <width>30</width>
-            <height>24</height>
+            <width>50</width>
+            <height>44</height>
             <texture>$INFO[ListItem.Overlay]</texture>
             <aspectratio>keep</aspectratio>
             <visible>Window.IsVisible(Videos)</visible>

@@ -4,6 +4,14 @@
     <value condition="!IsEmpty(Skin.String(TextColor1))">$INFO[Skin.String(TextColor1)]</value>
     <value>white</value>
   </variable>
+  <variable name="TextColor2">
+    <value condition="!IsEmpty(Skin.String(TextColor2))">$INFO[Skin.String(TextColor2)]</value>
+    <value>white</value>
+  </variable>
+  <variable name="TextColor3">
+    <value condition="!IsEmpty(Skin.String(TextColor3))">$INFO[Skin.String(TextColor3)]</value>
+    <value>white</value>
+  </variable>
   <variable name="FullscreenBG">
     <value condition="Player.HasVideo + !VideoPlayer.Content(LiveTV)">special://skin/backgrounds/videos.jpg</value>
     <value condition="Player.HasVideo + VideoPlayer.Content(LiveTV)">special://skin/backgrounds/tv.jpg</value>

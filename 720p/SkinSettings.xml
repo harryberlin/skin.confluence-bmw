@@ -278,24 +278,71 @@
             <selected>Skin.HasSetting(HideEPGwithRDS)</selected>
             <textwidth>690</textwidth>
           </control>
+          <control type="label" id="115">
+            <width>750</width>
+            <height>45</height>
+            <font>font30_title</font>
+            <label_off>31106</label_off>
+            <label>Highlight Textcolor</label>
+            <textcolor>blue</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+          </control>
           <control type="button" id="114">
-            <posx>0</posx>
-            <posy>45</posy>
             <description>Change Color</description>
             <width>750</width>
             <height>40</height>
             <font>font24_title</font>
-            <label>Choose TextColor1</label>
+            <label>Main Menu</label>
             <label2>$VAR[TextColor1]</label2>
             <onup>313</onup>
             <ondown>308</ondown>
-            <onclick>RunScript("special://skin/scripts/changecolor.py")</onclick>
+            <onclick>RunScript("special://skin/scripts/changecolor.py","TextColor1")</onclick>
             <onleft>9000</onleft>
             <onright>62</onright>
             <texturefocus>MenuItemFO.png</texturefocus>
             <texturenofocus>MenuItemNF.png</texturenofocus>
             <textcolor>grey2</textcolor>
             <focusedcolor>$VAR[TextColor1]</focusedcolor>
+          </control>
+          <control type="button" id="117">
+            <posx>0</posx>
+            <posy>45</posy>
+            <description>Change Color</description>
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <label>Browse Files</label>
+            <label2>$VAR[TextColor2]</label2>
+            <onup>313</onup>
+            <ondown>308</ondown>
+            <onclick>RunScript("special://skin/scripts/changecolor.py","TextColor2")</onclick>
+            <onleft>9000</onleft>
+            <onright>62</onright>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>$VAR[TextColor2]</focusedcolor>
+          </control>
+          <control type="button" id="118">
+            <posx>0</posx>
+            <posy>45</posy>
+            <description>Change Color</description>
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <label>Something</label>
+            <label2>$VAR[TextColor3]</label2>
+            <onup>313</onup>
+            <ondown>308</ondown>
+            <onclick>RunScript("special://skin/scripts/changecolor.py","TextColor3")</onclick>
+            <onleft>9000</onleft>
+            <onright>62</onright>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>$VAR[TextColor3]</focusedcolor>
           </control>
         </control>
         <control type="scrollbar" id="60">

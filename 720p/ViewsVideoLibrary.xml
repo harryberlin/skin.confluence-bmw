@@ -1212,20 +1212,20 @@
         <pagecontrol>60</pagecontrol>
         <scrolltime>200</scrolltime>
         <visible>Container.Content(TVShows) | Container.Content(Movies) | Container.Content(Episodes) | Container.Content(Videos)</visible>
-        <itemlayout height="40" width="580">
+        <itemlayout height="60" width="580">
           <control type="image">
             <left>0</left>
             <top>0</top>
             <width>580</width>
-            <height>41</height>
+            <height>61</height>
             <texture border="0,2,0,2">MenuItemNF.png</texture>
           </control>
           <control type="label">
             <left>10</left>
-            <top>0</top>
+            <top>-5</top>
             <width>520</width>
-            <height>40</height>
-            <font>font13</font>
+            <height>60</height>
+            <font>font55_title</font>
             <textcolor>grey2</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>left</align>
@@ -1236,8 +1236,8 @@
             <left>10</left>
             <top>0</top>
             <width>500</width>
-            <height>40</height>
-            <font>font12</font>
+            <height>60</height>
+            <font>font50_title</font>
             <textcolor>grey2</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>right</align>
@@ -1249,8 +1249,8 @@
           <control type="image">
             <left>515</left>
             <top>8</top>
-            <width>40</width>
-            <height>26</height>
+            <width>60</width>
+            <height>46</height>
             <texture>$VAR[MediaInfoOverlayVar]</texture>
             <aspectratio>keep</aspectratio>
             <visible>Container.Content(Movies) | Container.Content(Sets) | Container.Content(Episodes) | Container.Content(MusicVideos)</visible>
@@ -1258,26 +1258,26 @@
           <control type="image">
             <left>555</left>
             <top>14</top>
-            <width>16</width>
-            <height>16</height>
+            <width>36</width>
+            <height>36</height>
             <texture>OverlayWatching.png</texture>
             <visible>ListItem.IsResumable</visible>
           </control>
           <control type="image">
             <left>555</left>
             <top>14</top>
-            <width>16</width>
-            <height>16</height>
+            <width>36</width>
+            <height>36</height>
             <texture>$INFO[ListItem.Overlay]</texture>
             <aspectratio align="left">keep</aspectratio>
           </control>
         </itemlayout>
-        <focusedlayout height="40" width="580">
+        <focusedlayout height="60" width="580">
           <control type="image">
             <left>0</left>
             <top>0</top>
             <width>580</width>
-            <height>41</height>
+            <height>61</height>
             <texture border="0,2,0,2">MenuItemNF.png</texture>
             <visible>!Control.HasFocus(504)</visible>
             <include>VisibleFadeEffect</include>
@@ -1286,7 +1286,7 @@
             <left>0</left>
             <top>0</top>
             <width>580</width>
-            <height>41</height>
+            <height>61</height>
             <texture border="0,2,0,2">MenuItemFO.png</texture>
             <visible>Control.HasFocus(504)</visible>
             <include>VisibleFadeEffect</include>
@@ -1295,17 +1295,17 @@
             <left>380</left>
             <top>5</top>
             <width>200</width>
-            <height>31</height>
+            <height>51</height>
             <texture border="0,0,14,0">MediaItemDetailBG.png</texture>
             <visible>Control.HasFocus(504) + !String.IsEmpty(ListItem.Label2)</visible>
           </control>
           <control type="label">
             <left>10</left>
-            <top>0</top>
+            <top>-5</top>
             <width>520</width>
-            <height>40</height>
-            <font>font13</font>
-            <textcolor>white</textcolor>
+            <height>60</height>
+            <font>font55_title</font>
+            <textcolor>$VAR[TextColor2]</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>left</align>
             <aligny>center</aligny>
@@ -1315,8 +1315,8 @@
             <left>10</left>
             <top>0</top>
             <width>500</width>
-            <height>40</height>
-            <font>font12</font>
+            <height>60</height>
+            <font>font50_title</font>
             <textcolor>grey2</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>right</align>
@@ -1328,8 +1328,8 @@
           <control type="image">
             <left>515</left>
             <top>8</top>
-            <width>40</width>
-            <height>26</height>
+            <width>60</width>
+            <height>46</height>
             <texture>$VAR[MediaInfoOverlayVar]</texture>
             <aspectratio>keep</aspectratio>
             <visible>Container.Content(Movies) | Container.Content(Sets) | Container.Content(Episodes) | Container.Content(MusicVideos)</visible>
@@ -1337,16 +1337,16 @@
           <control type="image">
             <left>555</left>
             <top>14</top>
-            <width>16</width>
-            <height>16</height>
+            <width>36</width>
+            <height>36</height>
             <texture>OverlayWatching.png</texture>
             <visible>ListItem.IsResumable</visible>
           </control>
           <control type="image">
             <left>555</left>
             <top>14</top>
-            <width>16</width>
-            <height>16</height>
+            <width>36</width>
+            <height>36</height>
             <texture>$INFO[ListItem.Overlay]</texture>
             <aspectratio align="left">keep</aspectratio>
           </control>
@@ -1612,20 +1612,20 @@
         <pagecontrol>60</pagecontrol>
         <scrolltime>200</scrolltime>
         <visible>Container.Content(TVShows) | Container.Content(Movies) | Container.Content(Episodes) | Container.Content(Seasons)</visible>
-        <itemlayout height="40" width="345">
+        <itemlayout height="60" width="345">
           <control type="image">
             <left>0</left>
             <top>0</top>
             <width>345</width>
-            <height>41</height>
+            <height>61</height>
             <texture border="0,2,0,2">MenuItemNF.png</texture>
           </control>
           <control type="label">
             <left>10</left>
-            <top>0</top>
+            <top>-5</top>
             <width>310</width>
-            <height>40</height>
-            <font>font13</font>
+            <height>60</height>
+            <font>font55_title</font>
             <textcolor>grey2</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>left</align>
@@ -1635,26 +1635,26 @@
           <control type="image">
             <left>320</left>
             <top>14</top>
-            <width>16</width>
-            <height>16</height>
+            <width>36</width>
+            <height>36</height>
             <texture>OverlayWatching.png</texture>
             <visible>ListItem.IsResumable</visible>
           </control>
           <control type="image">
             <left>320</left>
             <top>14</top>
-            <width>20</width>
-            <height>16</height>
+            <width>40</width>
+            <height>36</height>
             <texture>$INFO[ListItem.Overlay]</texture>
             <aspectratio>keep</aspectratio>
           </control>
         </itemlayout>
-        <focusedlayout height="40" width="345">
+        <focusedlayout height="60" width="345">
           <control type="image">
             <left>0</left>
             <top>0</top>
             <width>345</width>
-            <height>41</height>
+            <height>61</height>
             <texture border="0,2,0,2">MenuItemNF.png</texture>
             <visible>!Control.HasFocus(515)</visible>
             <include>VisibleFadeEffect</include>
@@ -1663,18 +1663,18 @@
             <left>0</left>
             <top>0</top>
             <width>345</width>
-            <height>41</height>
+            <height>61</height>
             <texture border="0,2,0,2">MenuItemFO.png</texture>
             <visible>Control.HasFocus(515)</visible>
             <include>VisibleFadeEffect</include>
           </control>
           <control type="label">
             <left>10</left>
-            <top>0</top>
+            <top>-5</top>
             <width>310</width>
-            <height>40</height>
-            <font>font13</font>
-            <textcolor>white</textcolor>
+            <height>60</height>
+            <font>font55_title</font>
+            <textcolor>$VAR[TextColor2]</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>left</align>
             <aligny>center</aligny>
@@ -1683,16 +1683,16 @@
           <control type="image">
             <left>320</left>
             <top>14</top>
-            <width>16</width>
-            <height>16</height>
+            <width>36</width>
+            <height>36</height>
             <texture>OverlayWatching.png</texture>
             <visible>ListItem.IsResumable</visible>
           </control>
           <control type="image">
             <left>320</left>
             <top>14</top>
-            <width>20</width>
-            <height>16</height>
+            <width>40</width>
+            <height>36</height>
             <texture>$INFO[ListItem.Overlay]</texture>
             <aspectratio>keep</aspectratio>
           </control>
