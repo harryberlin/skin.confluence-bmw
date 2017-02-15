@@ -30,13 +30,16 @@ def set_color(skinstring):
     # print Farben['blue']
     Farbliste = sorted(Farben.keys())
     Wertliste = Farben.values()
+    # [COLOR=blue]$INFO[Container(450).NumItems][/COLOR]
+
+
     print 'Farbe 0: %s' % Farbliste[0]
     print Farben[Farbliste[0]]
     print Wertliste
 
     # Farbliste.extend(['USERDEFINED'])
 
-    ret = xbmcgui.Dialog().select('Choose a Color', Farbliste)
+    ret = xbmcgui.Dialog().select('Choose a Color', ['[COLOR='+farbe+']'+farbe+'[/COLOR]' for farbe in Farbliste])
 
     print ret
     print 'selected: ' + Farbliste[ret]
