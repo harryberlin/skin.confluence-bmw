@@ -467,6 +467,59 @@
             <texturenofocus>MenuItemNF.png</texturenofocus>
             <textwidth>690</textwidth>
           </control>
+          <control type="label" id="240">
+            <width>750</width>
+            <height>45</height>
+            <font>font30_title</font>
+            <label>Logos</label>
+            <textcolor>blue</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+          </control>
+          <control type="radiobutton" id="241">
+            <description>Hide Kodi Logo</description>
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>Hide Kodi Logo</label>
+            <onclick>Skin.ToggleSetting(HomeMenuHideKodiLogo)</onclick>
+            <selected>Skin.HasSetting(HomeMenuHideKodiLogo)</selected>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
+          </control>
+          <control type="radiobutton" id="242">
+            <description>Show BMW Logos</description>
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>Show BMW Logos</label>
+            <onclick>Skin.ToggleSetting(HomeMenuShowBMWLogos)</onclick>
+            <selected>Skin.HasSetting(HomeMenuShowBMWLogos)</selected>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
+          </control>
+          <control type="radiobutton" id="243">
+            <description>Show M Logo</description>
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>Show ///M Logo</label>
+            <onclick>Skin.ToggleSetting(HomeMenuShowMLogo)</onclick>
+            <selected>Skin.HasSetting(HomeMenuShowMLogo)</selected>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
+            <visible>Skin.HasSetting(HomeMenuShowBMWLogos)</visible>
+          </control>
           <control type="label" id="220">
             <width>750</width>
             <height>45</height>

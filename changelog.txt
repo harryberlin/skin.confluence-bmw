@@ -1,3 +1,6 @@
+[B]1.0.7[/B]
+- some color changes
+
 [B]1.0.6[/B]
 - buggi Vertical Home Menu
 

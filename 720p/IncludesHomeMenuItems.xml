@@ -2235,6 +2235,7 @@
         <scrolltime>300</scrolltime>
         <focusposition>2</focusposition>
         <movement>1</movement>
+        <animation effect="slide" start="0,0" end="-10,0" time="0" condition="Skin.HasSetting(HomeMenuShowMLogo)">Conditional</animation>
         <itemlayout height="102" width="380">
           <control type="label">
             <right>0</right>
@@ -2310,10 +2311,12 @@
         <width>602</width>
         <height>300</height>
         <colordiffuse>CCFFFFFF</colordiffuse>
+        <visible>!Skin.HasSetting(HomeMenuHideKodiLogo) | Skin.HasSetting(homepageWeatherinfo)</visible>
         <texture border="0,0,0,270">GlassOverlay.png</texture>
       </control>
       <!--Logo-->
       <control type="group">
+        <visible>!Skin.HasSetting(HomeMenuHideKodiLogo)</visible>
         <animation effect="zoom" start="150" end="150" time="0" condition="true">Conditional</animation>
         <control type="image">
           <description>LOGO</description>
@@ -2328,7 +2331,7 @@
           <visible>!Skin.HasSetting(homepageWeatherinfo)</visible>
         </control>
         <control type="label">
-          <description>BMW</description>
+          <description>BMWRaspControl</description>
           <left>13</left>
           <top>37</top>
           <width>280</width>
@@ -2366,7 +2369,7 @@
         <width>16</width>
         <height>720</height>
         <texture>bmw/mstripe.png</texture>
-        <visible>Skin.HasSetting(HomeMenuShowMLogo)</visible>
+        <visible>Skin.HasSetting(HomeMenuShowBMWLogos) + Skin.HasSetting(HomeMenuShowMLogo)</visible>
       </control>
       <control type="image">
         <Description>BMW Logo Nav</Description>
@@ -2375,8 +2378,10 @@
         <width>385</width>
         <height>49</height>
         <texture>bmw/BMWLogoNAV.png</texture>
-        <visible_off>Skin.HasSetting(HomeMenuShowMLogo)</visible_off>
+        <visible>Skin.HasSetting(HomeMenuShowBMWLogos) + !Skin.HasSetting(HomeMenuShowMLogo)</visible>
+        <animation effect="fade" start="40" time="5000" condition="Control.HasFocus(9000)" pulse="true">Conditional</animation>
       </control>
+      <control type="image">Visible<description>M-LOGO</description><posx>70</posx><posy>95r</posy><width>250</width><height>70</height><texture>bmw/M_LOGO.png</texture><visible>Skin.HasSetting(HomeMenuShowBMWLogos) + Skin.HasSetting(HomeMenuShowMLogo)</visible><animation effect="fade" start="40" time="5000" condition="Control.HasFocus(9000)" pulse="true">Conditional</animation></control>
     </control>
     <!--RSS Feeds-->
     <control type="group">

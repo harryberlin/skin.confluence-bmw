@@ -212,16 +212,14 @@
       </control>
       <!--OUTSIDETEMP-->
       <control type="group">
-        <posx>440r</posx>
-        <posy>0</posy>
         <visible>!IsEmpty(Window(10000).Property(IBUSCOMMUNICATOR_OBC_OUTTEMP))</visible>
         <animation effect="slide" start="0,0" end="-90,0" delay="0" time="300" condition="Player.Muted">conditional</animation>
-        <animation effect="slide" start="460,0" end="0,0" delay="0" time="200">VisibleChange</animation>
+        <animation effect="slide" start="490,0" end="0,0" delay="0" time="200">VisibleChange</animation>
         <animation effect="slide" start="0,0" end="460,0" delay="0" time="400">WindowClose</animation>
         <animation effect="slide" start="460,0" end="0,0" delay="0" time="400">WindowOpen</animation>
         <control type="image">
           <description>temp background</description>
-          <posx>455r</posx>
+          <posx>465r</posx>
           <posy>0</posy>
           <width>260</width>
           <height>60</height>
@@ -229,7 +227,7 @@
         </control>
         <control type="label">
           <description>temp label</description>
-          <posx>440r</posx>
+          <posx>450r</posx>
           <posy>0</posy>
           <width>190</width>
           <height>55</height>
