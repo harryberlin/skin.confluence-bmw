@@ -1,16 +1,20 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+# nice colorsets
+# http://www.computerhope.com/cgi-bin/htmlcolor.pl?c=BDBD3C
+
 import xbmc
 import xbmcgui
 import xbmcaddon
 import re
 
+bDebug = False
 
 # -- for skin --
 
 def set_color(skinstring):
-    bDebug = False
+
 
     Farben = {}
     print xbmcaddon.Addon(xbmc.getSkinDir()).getAddonInfo('path').decode('utf-8')
@@ -39,15 +43,22 @@ def set_color(skinstring):
 
     # Farbliste.extend(['USERDEFINED'])
 
-    ret = xbmcgui.Dialog().select('Choose a Color', ['[COLOR='+farbe+']'+farbe+'[/COLOR]' for farbe in Farbliste])
+    farbliste_tmp = ['[COLOR=' + farbe + ']' + farbe + '[/COLOR]' for farbe in Farbliste]
+    farbliste_tmp.append('- RESET -')
+
+    ret = xbmcgui.Dialog().select('Choose a Color', farbliste_tmp)
 
     print ret
-    print 'selected: ' + Farbliste[ret]
+    print 'selected: ' + farbliste_tmp[ret]
     if bDebug:
-        xbmcgui.Dialog().ok("Choosed color", Farbliste[ret])
+        xbmcgui.Dialog().ok("Choosed color", farbliste_tmp[ret])
 
-    if ret >= 0:
+        xbmcgui.Dialog().ok('', "Return: %s, Len: %s" % (ret, len(Farbliste)))
+
+    if ret >= 0 and ret < len(Farbliste):
         xbmc.executebuiltin('Skin.SetString(%s,%s)' % (skinstring, Farbliste[ret]))
+    elif ret == len(Farbliste):
+        xbmc.executebuiltin('Skin.Reset(%s)' % skinstring)
 
 
 def main():
