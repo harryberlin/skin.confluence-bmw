@@ -76,6 +76,13 @@
       <thumb>-</thumb>
       <visible>[System.HasAddon(plugin.script.helgeinterface) + !System.HasAddon(plugin.script.ibuscommunicator)]| [!System.HasAddon(plugin.script.helgeinterface) + System.HasAddon(plugin.script.ibuscommunicator)]</visible>
     </item>
+    <item id="18">
+      <label>SERVICES</label>
+      <onclick>XBMC.RunScript(script.bmwdsa)</onclick>
+      <icon>special://home/addons/script.bmwdsa/fanart.jpg</icon>
+      <thumb>-</thumb>
+      <visible>System.HasAddon(script.bmwdsa)</visible>
+    </item>
     <item>
       <label>TEST</label>
       <onclick>Mute</onclick>
