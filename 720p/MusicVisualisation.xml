@@ -10,7 +10,7 @@
       <width>1280</width>
       <height>720</height>
     </control>
-    <include>MusicBackground</include>
+    <include>CommonBackground</include>
     <!-- the Album Cover -->
     <control type="image">
       <description>cover image</description>
