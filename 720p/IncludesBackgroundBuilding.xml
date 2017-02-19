@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <includes>
   <variable name="CommonBackground">
-    <!--Programs-->
-    <value condition="Window.IsVisible(music) | Window.IsVisible(musicplaylist)">special://skin/backgrounds/music.jpg</value>
-    <!--Videos-->
-    <value condition="Window.IsVisible(videos) | Window.IsVisible(videoplaylist)">special://skin/backgrounds/videos.jpg</value>
     <!--Music-->
+    <value condition="Window.IsVisible(music) | Window.IsVisible(musicplaylist) | Window.IsVisible(visualisation) + Player.HasAudio">special://skin/backgrounds/music.jpg</value>
+    <!--Videos-->
+    <value condition="Window.IsVisible(videos) | Window.IsVisible(videoplaylist) | Window.IsVisible(visualisation) + Player.HasVideo">special://skin/backgrounds/videos.jpg</value>
+    <!--Programs-->
     <value condition="Window.IsVisible(programs)">special://skin/backgrounds/programs.jpg</value>
     <!--Settings-->
     <value condition="Window.IsVisible(Settings) | Window.IsVisible(Systeminfo) | Window.IsVisible(systemsettings) | Window.IsVisible(servicesettings) | Window.IsVisible(playersettings) | Window.IsVisible(mediasettings) | Window.IsVisible(interfacesettings) | Window.IsVisible(skinsettings) | Window.IsVisible(profiles)">special://skin/backgrounds/settings.jpg</value>
