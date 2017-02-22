@@ -27,7 +27,7 @@
       <!-- the music title -->
       <control type="label">
         <top>230r</top>
-        <width>910</width>
+        <width>1240</width>
         <height>50</height>
         <font>font55_title</font>
         <align>left</align>
@@ -39,7 +39,7 @@
       <control type="label" id="1">
         <description>Artist label</description>
         <top>160r</top>
-        <width>910</width>
+        <width>1240</width>
         <height>50</height>
         <align>left</align>
         <font>font35_title</font>
@@ -65,7 +65,7 @@
       <top>75r</top>
       <width>1280</width>
       <height>70</height>
-      <font>font35_title</font>
+      <font>font50_title</font>
       <align>center</align>
       <aligny>center</aligny>
       <label>$INFO[Player.Time(hh:mm:ss)] / $INFO[Player.Duration(hh:mm:ss)]</label>
