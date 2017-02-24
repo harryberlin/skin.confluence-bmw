@@ -100,6 +100,16 @@
       <visible>[Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)] | [Player.HasAudio + !Skin.HasSetting(ShowBackgroundVis)] | [!Skin.HasSetting(HideBackGroundFanart) + !IsEmpty(ListItem.Property(Fanart_Image))]</visible>
       <include>VisibleFadeEffect</include>
     </control>
+    <control type="image">
+      <description>Dimmed Background Option</description>
+      <left>0</left>
+      <top>0</top>
+      <width>1280</width>
+      <height>720</height>
+      <texture colordiffuse="88FFFFFF">bmw/1px_black.png</texture>
+      <visible>false</visible>
+      <include>VisibleFadeEffect</include>
+    </control>
   </include>
   <include name="ContentPanelBackgrounds">
     <control type="image">

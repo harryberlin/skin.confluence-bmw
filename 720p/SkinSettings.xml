@@ -837,6 +837,23 @@
             <onclick>Skin.SetImage(CustomBackgroundPath)</onclick>
             <enable>Skin.HasSetting(UseCustomBackground)</enable>
           </control>
+          <control type="sliderex" id="313">
+            <height>40</height>
+            <textoffsetx>7</textoffsetx>
+            <aligny>center</aligny>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <label>Dimmer Test (under construction)</label>
+            <font>font24_title</font>
+            <sliderwidth>150</sliderwidth>
+            <sliderheight>20</sliderheight>
+            <texturesliderbar>osd_slider_bg.png</texturesliderbar>
+            <textureslidernib>osd_slider_nibNF.png</textureslidernib>
+            <textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+            <textcolor>grey2</textcolor>
+            <action>Notification(Dimmer,$INFO[Control.GetLabel(313)])</action>
+            <disabledcolor>grey3</disabledcolor>
+          </control>
         </control>
         <control type="group">
           <control type="grouplist" id="9004">
