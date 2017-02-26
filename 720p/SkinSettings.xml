@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <window>
   <defaultcontrol always="true">9000</defaultcontrol>
+  <onload>skin.setstring(background_dimmer,35)</onload>
   <controls>
     <include>CommonBackground</include>
     <control type="image">
@@ -837,13 +838,14 @@
             <onclick>Skin.SetImage(CustomBackgroundPath)</onclick>
             <enable>Skin.HasSetting(UseCustomBackground)</enable>
           </control>
-          <control type="sliderex" id="313">
+          <control_off type="sliderex" id="313">
             <height>40</height>
             <textoffsetx>7</textoffsetx>
             <aligny>center</aligny>
+            <info>skin.string(background_dimmer)</info>
             <texturefocus>MenuItemFO.png</texturefocus>
             <texturenofocus>MenuItemNF.png</texturenofocus>
-            <label>Dimmer Test (under construction)</label>
+            <label>Dimmer Test ($INFO[skin.string(background_dimmer)])</label>
             <font>font24_title</font>
             <sliderwidth>150</sliderwidth>
             <sliderheight>20</sliderheight>
@@ -851,9 +853,9 @@
             <textureslidernib>osd_slider_nibNF.png</textureslidernib>
             <textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
             <textcolor>grey2</textcolor>
-            <action>Notification(Dimmer,$INFO[Control.GetLabel(313)])</action>
+            <onSelect>Notification(Dimmer,$INFO[Control.GetLabel(313)])</onSelect>
             <disabledcolor>grey3</disabledcolor>
-          </control>
+          </control_off>
         </control>
         <control type="group">
           <control type="grouplist" id="9004">
