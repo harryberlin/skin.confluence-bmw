@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="100001">
+  <defaultcontrol>2</defaultcontrol>
+  <allowoverlay>yes</allowoverlay>
+  <visible>StringCompare(Window(10000).Property(IBUSCOMMUNICATOR_PDC_SHOW),1)</visible>
+  <zorder>99</zorder>
+  <coordinates>
+    <posx>0</posx>
+    <posy>0</posy>
+  </coordinates>
+  <controls>
+    <control type="group">
+      <posx>350r</posx>
+      <posy>10</posy>
+      <animation effect="slide" end="400,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
+      <animation effect="slide" start="400,0" time="500" tween="quadratic" easing="out" condition_off="Skin.HasSetting(ShowPDC)">WindowOpen</animation>
+      <control type="image">
+        <posx>15</posx>
+        <posy>0</posy>
+        <width>345</width>
+        <height>700</height>
+        <colordiffuse_off>EEFFFFFF</colordiffuse_off>
+        <colordiffuse_off>$INFO[Skin.String(MenuTextColor)]</colordiffuse_off>
+        <texture border="12">special://home/addons/plugin.script.ibuscommunicator/resources/skins/Default/media/OverlayDialogBackground.png</texture>
+      </control>
+      <!--Sensor Graphic Background-->
+      <control type="image">
+        <posx>40</posx>
+        <posy>55</posy>
+        <width>296</width>
+        <background>true</background>
+        <height>580</height>
+        <texture fallback="special://home/addons/plugin.script.ibuscommunicator/resources/skins/Default/media/pdc/BGs/default.png">$INFO[Window(10000).Property(IBUSCOMMUNICATOR_PDC_BG_IMG)]</texture>
+      </control>
+      <!--Sensor Value Labels-->
+      <control type="group">
+        <description>Front Sensor Labels</description>
+        <posx>0</posx>
+        <posy>15</posy>
+        <control type="label">
+          <description>FLS</description>
+          <posx>45</posx>
+          <posy>0</posy>
+          <height>30</height>
+          <width>80</width>
+          <label>$INFO[Window(10000).Property(IBUSCOMMUNICATOR_PDC_FLS)]</label>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>font16_title</font>
+          <textcolor>$INFO[Skin.String(MenuTextColor)]</textcolor>
+          <textcolor_off>white</textcolor_off>
+          <shadowcolor>$INFO[Skin.String(MenuTextColor)]</shadowcolor>
+          <shadowcolor_off>grey2</shadowcolor_off>
+        </control>
+        <control type="label">
+          <description>FLC</description>
+          <posx>115</posx>
+          <posy>0</posy>
+          <height>30</height>
+          <width>80</width>
+          <label>$INFO[Window(10000).Property(IBUSCOMMUNICATOR_PDC_FLC)]</label>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>font16_title</font>
+          <textcolor_off>white</textcolor_off>
+          <shadowcolor_off>grey2</shadowcolor_off>
+          <textcolor>$INFO[Skin.String(MenuTextColor)]</textcolor>
+          <shadowcolor>$INFO[Skin.String(MenuTextColor)]</shadowcolor>
+        </control>
+        <control type="label">
+          <description>FRC</description>
+          <posx>180</posx>
+          <posy>0</posy>
+          <height>30</height>
+          <width>80</width>
+          <label>$INFO[Window(10000).Property(IBUSCOMMUNICATOR_PDC_FRC)]</label>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>font16_title</font>
+          <textcolor_off>white</textcolor_off>
+          <shadowcolor_off>grey2</shadowcolor_off>
+          <textcolor>$INFO[Skin.String(MenuTextColor)]</textcolor>
+          <shadowcolor>$INFO[Skin.String(MenuTextColor)]</shadowcolor>
+        </control>
+        <control type="label">
+          <description>FRS</description>
+          <posx>250</posx>
+          <posy>0</posy>
+          <height>30</height>
+          <width>80</width>
+          <label>$INFO[Window(10000).Property(IBUSCOMMUNICATOR_PDC_FRS)]</label>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>font16_title</font>
+          <textcolor_off>white</textcolor_off>
+          <shadowcolor_off>grey2</shadowcolor_off>
+          <textcolor>$INFO[Skin.String(MenuTextColor)]</textcolor>
+          <shadowcolor>$INFO[Skin.String(MenuTextColor)]</shadowcolor>
+        </control>
+      </control>
+      <control type="group">
+        <description>Back Sensor Labels</description>
+        <posx>0</posx>
+        <posy>60r</posy>
+        <control type="label">
+          <description>RLS</description>
+          <posx>45</posx>
+          <posy>0</posy>
+          <height>30</height>
+          <width>80</width>
+          <label>$INFO[Window(10000).Property(IBUSCOMMUNICATOR_PDC_RLS)]</label>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>font16_title</font>
+          <textcolor_off>white</textcolor_off>
+          <shadowcolor_off>grey2</shadowcolor_off>
+          <textcolor>$INFO[Skin.String(MenuTextColor)]</textcolor>
+          <shadowcolor>$INFO[Skin.String(MenuTextColor)]</shadowcolor>
+        </control>
+        <control type="label">
+          <description>RLC</description>
+          <posx>115</posx>
+          <posy>0</posy>
+          <height>30</height>
+          <width>80</width>
+          <label>$INFO[Window(10000).Property(IBUSCOMMUNICATOR_PDC_RLC)]</label>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>font16_title</font>
+          <textcolor_off>white</textcolor_off>
+          <shadowcolor_off>grey2</shadowcolor_off>
+          <textcolor>$INFO[Skin.String(MenuTextColor)]</textcolor>
+          <shadowcolor>$INFO[Skin.String(MenuTextColor)]</shadowcolor>
+        </control>
+        <control type="label">
+          <description>RRC</description>
+          <posx>180</posx>
+          <posy>0</posy>
+          <height>30</height>
+          <width>80</width>
+          <label>$INFO[Window(10000).Property(IBUSCOMMUNICATOR_PDC_RRC)]</label>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>font16_title</font>
+          <textcolor_off>white</textcolor_off>
+          <shadowcolor_off>grey2</shadowcolor_off>
+          <textcolor>$INFO[Skin.String(MenuTextColor)]</textcolor>
+          <shadowcolor>$INFO[Skin.String(MenuTextColor)]</shadowcolor>
+        </control>
+        <control type="label">
+          <description>RRS</description>
+          <posx>250</posx>
+          <posy>0</posy>
+          <height>30</height>
+          <width>80</width>
+          <label>$INFO[Window(10000).Property(IBUSCOMMUNICATOR_PDC_RRS)]</label>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>font16_title</font>
+          <textcolor_off>white</textcolor_off>
+          <shadowcolor_off>grey2</shadowcolor_off>
+          <textcolor>$INFO[Skin.String(MenuTextColor)]</textcolor>
+          <shadowcolor>$INFO[Skin.String(MenuTextColor)]</shadowcolor>
+        </control>
+      </control>
+      <!--Sensor Value Images-->
+      <control type="group">
+        <description>Front Sensor Images</description>
+        <posx>0</posx>
+        <posy>0</posy>
+        <control type="multiimage">
+          <description>FLS</description>
+          <posx>58</posx>
+          <posy>62</posy>
+          <width>58</width>
+          <height>118</height>
+          <fadetime>0</fadetime>
+          <timeperimage>2000</timeperimage>
+          <randomize>true</randomize>
+          <imagepath>$INFO[Window(10000).Property(IBUSCOMMUNICATOR_PDC_FLS_IMG)]</imagepath>
+        </control>
+        <control type="multiimage">
+          <description>FLC</description>
+          <posx>125</posx>
+          <posy>58</posy>
+          <width>58</width>
+          <height>118</height>
+          <fadetime>0</fadetime>
+          <timeperimage>2000</timeperimage>
+          <randomize>true</randomize>
+          <imagepath>$INFO[Window(10000).Property(IBUSCOMMUNICATOR_PDC_FLC_IMG)]</imagepath>
+        </control>
+        <control type="multiimage">
+          <description>FRC</description>
+          <posx>193</posx>
+          <posy>58</posy>
+          <width>58</width>
+          <height>118</height>
+          <fadetime>0</fadetime>
+          <timeperimage>2000</timeperimage>
+          <randomize>true</randomize>
+          <imagepath flipx="true">$INFO[Window(10000).Property(IBUSCOMMUNICATOR_PDC_FRC_IMG)]</imagepath>
+        </control>
+        <control type="multiimage">
+          <description>FRS</description>
+          <posx>260</posx>
+          <posy>62</posy>
+          <width>58</width>
+          <height>118</height>
+          <fadetime>0</fadetime>
+          <timeperimage>2000</timeperimage>
+          <randomize>true</randomize>
+          <imagepath flipx="true">$INFO[Window(10000).Property(IBUSCOMMUNICATOR_PDC_FRS_IMG)]</imagepath>
+        </control>
+      </control>
+      <control type="group">
+        <description>Back Sensor Images</description>
+        <posx>0</posx>
+        <posy>450</posy>
+        <control type="multiimage">
+          <description>RLS</description>
+          <posx>58</posx>
+          <posy>62</posy>
+          <width>58</width>
+          <height>118</height>
+          <fadetime>0</fadetime>
+          <timeperimage>2000</timeperimage>
+          <randomize>true</randomize>
+          <imagepath flipy="true">$INFO[Window(10000).Property(IBUSCOMMUNICATOR_PDC_RLS_IMG)]</imagepath>
+        </control>
+        <control type="multiimage">
+          <description>RLC</description>
+          <posx>125</posx>
+          <posy>64</posy>
+          <width>58</width>
+          <height>118</height>
+          <fadetime>0</fadetime>
+          <timeperimage>2000</timeperimage>
+          <randomize>true</randomize>
+          <imagepath flipy="true">$INFO[Window(10000).Property(IBUSCOMMUNICATOR_PDC_RLC_IMG)]</imagepath>
+        </control>
+        <control type="multiimage">
+          <description>RRC</description>
+          <posx>193</posx>
+          <posy>64</posy>
+          <width>58</width>
+          <height>118</height>
+          <fadetime>0</fadetime>
+          <timeperimage>2000</timeperimage>
+          <randomize>true</randomize>
+          <imagepath flipx="true" flipy="true">$INFO[Window(10000).Property(IBUSCOMMUNICATOR_PDC_RRC_IMG)]</imagepath>
+        </control>
+        <control type="multiimage">
+          <description>RRS</description>
+          <posx>260</posx>
+          <posy>62</posy>
+          <width>58</width>
+          <height>118</height>
+          <fadetime>0</fadetime>
+          <timeperimage>2000</timeperimage>
+          <randomize>true</randomize>
+          <imagepath flipx="true" flipy="true">$INFO[Window(10000).Property(IBUSCOMMUNICATOR_PDC_RRS_IMG)]</imagepath>
+        </control>
+      </control>
+    </control>
+  </controls>
+</window>
