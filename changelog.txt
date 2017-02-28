@@ -1,3 +1,9 @@
+[B]1.0.9[/B]
+- some more Colorsettings
+- Dim Level for Background
+- MFL und PDC Screen for plugin.script.ibuscommunicator integrated
+
+
 [B]1.0.8[/B]
 - changed Music Fullscreen
 
