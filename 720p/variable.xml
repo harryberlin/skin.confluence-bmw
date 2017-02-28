@@ -26,4 +26,27 @@
     <value condition="Player.HasAudio">special://skin/backgrounds/music.jpg</value>
     <value>special://skin/backgrounds/SKINDEFAULT.jpg</value>
   </variable>
+  <variable name="background_color_diffuse">
+    <value condition="Stringcompare(skin.string(background_color_diffuse),5)">0CFFFFFF</value>
+    <value condition="Stringcompare(skin.string(background_color_diffuse),10)">18FFFFFF</value>
+    <value condition="Stringcompare(skin.string(background_color_diffuse),15)">24FFFFFF</value>
+    <value condition="Stringcompare(skin.string(background_color_diffuse),20)">30FFFFFF</value>
+    <value condition="Stringcompare(skin.string(background_color_diffuse),25)">3CFFFFFF</value>
+    <value condition="Stringcompare(skin.string(background_color_diffuse),30)">48FFFFFF</value>
+    <value condition="Stringcompare(skin.string(background_color_diffuse),35)">54FFFFFF</value>
+    <value condition="Stringcompare(skin.string(background_color_diffuse),40)">60FFFFFF</value>
+    <value condition="Stringcompare(skin.string(background_color_diffuse),45)">6CFFFFFF</value>
+    <value condition="Stringcompare(skin.string(background_color_diffuse),50)">78FFFFFF</value>
+    <value condition="Stringcompare(skin.string(background_color_diffuse),55)">84FFFFFF</value>
+    <value condition="Stringcompare(skin.string(background_color_diffuse),60)">90FFFFFF</value>
+    <value condition="Stringcompare(skin.string(background_color_diffuse),65)">9CFFFFFF</value>
+    <value condition="Stringcompare(skin.string(background_color_diffuse),70)">A8FFFFFF</value>
+    <value condition="Stringcompare(skin.string(background_color_diffuse),75)">B4FFFFFF</value>
+    <value condition="Stringcompare(skin.string(background_color_diffuse),80)">C0FFFFFF</value>
+    <value condition="Stringcompare(skin.string(background_color_diffuse),85)">CCFFFFFF</value>
+    <value condition="Stringcompare(skin.string(background_color_diffuse),90)">D8FFFFFF</value>
+    <value condition="Stringcompare(skin.string(background_color_diffuse),95)">E4FFFFFF</value>
+    <value condition="Stringcompare(skin.string(background_color_diffuse),100)">FFFFFFFF</value>
+    <value>00FFFFFF</value>
+  </variable>
 </includes>

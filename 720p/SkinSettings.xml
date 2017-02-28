@@ -838,24 +838,59 @@
             <onclick>Skin.SetImage(CustomBackgroundPath)</onclick>
             <enable>Skin.HasSetting(UseCustomBackground)</enable>
           </control>
-          <control_off type="sliderex" id="313">
+          <control type="button" id="313">
+            <width>750</width>
             <height>40</height>
-            <textoffsetx>7</textoffsetx>
-            <aligny>center</aligny>
-            <info>skin.string(background_dimmer)</info>
+            <font>font24_title</font>
+            <label>Dim Level</label>
+            <label2>[COLOR=selected]$INFO[Skin.String(background_color_diffuse)] %[/COLOR]</label2>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
             <texturefocus>MenuItemFO.png</texturefocus>
             <texturenofocus>MenuItemNF.png</texturenofocus>
-            <label>Dimmer Test ($INFO[skin.string(background_dimmer)])</label>
-            <font>font24_title</font>
-            <sliderwidth>150</sliderwidth>
-            <sliderheight>20</sliderheight>
-            <texturesliderbar>osd_slider_bg.png</texturesliderbar>
-            <textureslidernib>osd_slider_nibNF.png</textureslidernib>
-            <textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
-            <textcolor>grey2</textcolor>
-            <onSelect>Notification(Dimmer,$INFO[Control.GetLabel(313)])</onSelect>
-            <disabledcolor>grey3</disabledcolor>
-          </control_off>
+            <!--5-->
+            <onclick>skin.setstring(background_color_diffuse,5)</onclick>
+            <!-- 10 -->
+            <onclick condition="Stringcompare(skin.string(background_color_diffuse),5)">skin.setstring(background_color_diffuse,10)</onclick>
+            <!-- 15 -->
+            <onclick condition="Stringcompare(skin.string(background_color_diffuse),10)">skin.setstring(background_color_diffuse,15)</onclick>
+            <!-- 20 -->
+            <onclick condition="Stringcompare(skin.string(background_color_diffuse),15)">skin.setstring(background_color_diffuse,20)</onclick>
+            <!-- 25 -->
+            <onclick condition="Stringcompare(skin.string(background_color_diffuse),20)">skin.setstring(background_color_diffuse,25)</onclick>
+            <!-- 30 -->
+            <onclick condition="Stringcompare(skin.string(background_color_diffuse),25)">skin.setstring(background_color_diffuse,30)</onclick>
+            <!-- 35 -->
+            <onclick condition="Stringcompare(skin.string(background_color_diffuse),30)">skin.setstring(background_color_diffuse,35)</onclick>
+            <!-- 40 -->
+            <onclick condition="Stringcompare(skin.string(background_color_diffuse),35)">skin.setstring(background_color_diffuse,40)</onclick>
+            <!-- 45 -->
+            <onclick condition="Stringcompare(skin.string(background_color_diffuse),40)">skin.setstring(background_color_diffuse,45)</onclick>
+            <!-- 50 -->
+            <onclick condition="Stringcompare(skin.string(background_color_diffuse),45)">skin.setstring(background_color_diffuse,50)</onclick>
+            <!-- 55 -->
+            <onclick condition="Stringcompare(skin.string(background_color_diffuse),50)">skin.setstring(background_color_diffuse,55)</onclick>
+            <!-- 60 -->
+            <onclick condition="Stringcompare(skin.string(background_color_diffuse),55)">skin.setstring(background_color_diffuse,60)</onclick>
+            <!-- 65 -->
+            <onclick condition="Stringcompare(skin.string(background_color_diffuse),60)">skin.setstring(background_color_diffuse,65)</onclick>
+            <!-- 70 -->
+            <onclick condition="Stringcompare(skin.string(background_color_diffuse),65)">skin.setstring(background_color_diffuse,70)</onclick>
+            <!-- 75 -->
+            <onclick condition="Stringcompare(skin.string(background_color_diffuse),70)">skin.setstring(background_color_diffuse,75)</onclick>
+            <!-- 80 -->
+            <onclick condition="Stringcompare(skin.string(background_color_diffuse),75)">skin.setstring(background_color_diffuse,80)</onclick>
+            <!-- 85 -->
+            <onclick condition="Stringcompare(skin.string(background_color_diffuse),80)">skin.setstring(background_color_diffuse,85)</onclick>
+            <!-- 90 -->
+            <onclick condition="Stringcompare(skin.string(background_color_diffuse),85)">skin.setstring(background_color_diffuse,90)</onclick>
+            <!-- 95 -->
+            <onclick condition="Stringcompare(skin.string(background_color_diffuse),90)">skin.setstring(background_color_diffuse,95)</onclick>
+            <!-- 100 -->
+            <onclick condition="Stringcompare(skin.string(background_color_diffuse),95)">skin.setstring(background_color_diffuse,100)</onclick>
+            <!-- BACK to 0 -->
+            <onclick condition="Stringcompare(skin.string(background_color_diffuse),100)">skin.setstring(background_color_diffuse,0)</onclick>
+          </control>
         </control>
         <control type="group">
           <control type="grouplist" id="9004">

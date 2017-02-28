@@ -106,8 +106,8 @@
       <top>0</top>
       <width>1280</width>
       <height>720</height>
-      <texture colordiffuse="88FFFFFF">bmw/1px_black.png</texture>
-      <visible>false</visible>
+      <texture colordiffuse="$VAR[background_color_diffuse]">bmw/1px_black.png</texture>
+      <visible>true</visible>
       <include>VisibleFadeEffect</include>
     </control>
   </include>
