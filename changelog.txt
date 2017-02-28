@@ -1,3 +1,6 @@
+[B]1.0.10[/B]
+- changed Home Sub Menus for Vertical Layout
+
 [B]1.0.9[/B]
 - some more Colorsettings
 - Dim Level for Background
