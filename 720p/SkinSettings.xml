@@ -284,7 +284,7 @@
             <height>45</height>
             <font>font30_title</font>
             <label_off>31106</label_off>
-            <label>Highlight Textcolor</label>
+            <label>Color Settings</label>
             <textcolor>blue</textcolor>
             <shadowcolor>black</shadowcolor>
             <align>left</align>
@@ -295,7 +295,7 @@
             <width>750</width>
             <height>40</height>
             <font>font24_title</font>
-            <label>Main Menu</label>
+            <label>Main Menu Itemtext</label>
             <label2>$VAR[TextColor1]</label2>
             <onup>313</onup>
             <ondown>308</ondown>
@@ -314,7 +314,7 @@
             <width>750</width>
             <height>40</height>
             <font>font24_title</font>
-            <label>Browse Files</label>
+            <label>Browse Files Highlight Itemtext</label>
             <label2>$VAR[TextColor2]</label2>
             <onup>313</onup>
             <ondown>308</ondown>
@@ -333,7 +333,7 @@
             <width>750</width>
             <height>40</height>
             <font>font24_title</font>
-            <label>Something 1</label>
+            <label>Player Progressbar</label>
             <label2>$VAR[TextColor3]</label2>
             <onup>313</onup>
             <ondown>308</ondown>
