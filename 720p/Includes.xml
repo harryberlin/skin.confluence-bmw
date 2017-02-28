@@ -342,6 +342,10 @@
     <pulseonselect>false</pulseonselect>
   </include>
   <include name="ButtonHomeSubCommonValues">
+    <include condition="!Skin.HasSetting(MainMenuHorizontal)">ButtonHomeSubCommonValuesVertical</include>
+    <include condition="Skin.HasSetting(MainMenuHorizontal)">ButtonHomeSubCommonValuesHorizontal</include>
+  </include>
+  <include name="ButtonHomeSubCommonValuesHorizontal">
     <height>35</height>
     <width>180</width>
     <textwidth>195</textwidth>
@@ -355,7 +359,25 @@
     <texturenofocus border="5">HomeSubNF.png</texturenofocus>
     <pulseonselect>false</pulseonselect>
   </include>
+  <include name="ButtonHomeSubCommonValuesVertical">
+    <height>45</height>
+    <width>238</width>
+    <textwidth>225</textwidth>
+    <align>center</align>
+    <aligny>center</aligny>
+    <font>font24_title</font>
+    <textcolor>grey2</textcolor>
+    <focusedcolor>white</focusedcolor>
+    <scroll>true</scroll>
+    <texturefocus border="5">HomeSubFO.png</texturefocus>
+    <texturenofocus_off border="5">HomeSubNF.png</texturenofocus_off>
+    <pulseonselect>false</pulseonselect>
+  </include>
   <include name="HomeSubMenuCommonValues">
+    <include condition="Skin.HasSetting(MainMenuHorizontal)">HomeSubMenuCommonValuesHorizontal</include>
+    <include condition="!Skin.HasSetting(MainMenuHorizontal)">HomeSubMenuCommonValuesVertical</include>
+  </include>
+  <include name="HomeSubMenuCommonValuesHorizontal">
     <left>293</left>
     <top>0</top>
     <width>915</width>
@@ -367,6 +389,17 @@
     <orientation>Horizontal</orientation>
     <animation effect="slide" start="0,-40" end="0,0" delay="150" time="150" tween="quadratic" easing="out">Visible</animation>
     <animation effect="slide" start="0,0" end="0,-40" time="150" tween="quadratic" easing="out">Hidden</animation>
+  </include>
+  <include name="HomeSubMenuCommonValuesVertical">
+    <left>0</left>
+    <top>0</top>
+    <width>240</width>
+    <height>720</height>
+    <align>center</align>
+    <onleft>9000</onleft>
+    <onright>9001</onright>
+    <itemgap>0</itemgap>
+    <orientation>Vertical</orientation>
   </include>
   <include name="ButtonInfoDialogsCommonValues">
     <height>40</height>
