@@ -2,6 +2,11 @@
 <window id="1113" type="dialog">
   <defaultcontrol>9002</defaultcontrol>
   <zorder>0</zorder>
+  <onload condition="StringCompare(Window(10000).Property(AddonWidgetMode),1)">SetFocus(705)</onload>
+  <onload condition="StringCompare(Window(10000).Property(AddonWidgetMode),2)">SetFocus(700)</onload>
+  <onload condition="StringCompare(Window(10000).Property(AddonWidgetMode),3)">SetFocus(703)</onload>
+  <onload condition="StringCompare(Window(10000).Property(AddonWidgetMode),4)">SetFocus(704)</onload>
+  <!--reset property-->
   <onunload>SetProperty(AddonWidgetMode,0,10000)</onunload>
   <controls>
     <control type="group">
