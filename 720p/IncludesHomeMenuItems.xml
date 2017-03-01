@@ -391,6 +391,7 @@
     <control type="button" id="90128">
       <include>ButtonHomeSubCommonValues</include>
       <label>My OSMC</label>
+      <onclick>left</onclick>
       <onclick>RunScript(service.osmc.settings)</onclick>
       <visible>System.HasAddon(service.osmc.settings)</visible>
     </control>

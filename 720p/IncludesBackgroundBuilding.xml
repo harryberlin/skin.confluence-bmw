@@ -45,6 +45,17 @@
       <include>VisibleFadeEffect</include>
     </control>
     <control type="image">
+      <description>osmc</description>
+      <left>0</left>
+      <top>0</top>
+      <width>1280</width>
+      <height>720</height>
+      <aspectratio>scale</aspectratio>
+      <texture>special://skin/backgrounds/OSMC_Background.jpg</texture>
+      <visible>![Skin.HasSetting(UseCustomBackground) + !IsEmpty(Skin.String(CustomBackgroundPath))] + Window.IsVisible(Home) + !Skin.HasSetting(HideBackGroundFanart) + !Control.HasFocus(9000) + ControlGroup(9012).HasFocus(90128)</visible>
+      <include>VisibleFadeEffect</include>
+    </control>
+    <control type="image">
       <description>User Set Background Image</description>
       <left>0</left>
       <top>0</top>
