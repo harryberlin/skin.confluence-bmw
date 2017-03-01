@@ -19,7 +19,7 @@
         <height>720</height>
         <texture border="0,0,20,0">MediaBladeSub.png</texture>
       </control>
-      <control type="button">
+      <control_off type="button">
         <description>Close Window button</description>
         <left>200</left>
         <top>0</top>
@@ -31,7 +31,7 @@
         <texturefocus>DialogCloseButton-focus.png</texturefocus>
         <texturenofocus>DialogCloseButton.png</texturenofocus>
         <visible>system.getbool(input.enablemouse) + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(Addon)]</visible>
-      </control>
+      </control_off>
     </control>
     <control type="group" id="9002">
       <animation effect="fade" time="200" delay="150">WindowOpen</animation>
