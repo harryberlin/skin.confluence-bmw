@@ -166,7 +166,16 @@
       <label>24001</label>
       <onclick>ActivateWindow(Videos,Addons,return)</onclick>
     </control>
-    <control type="image" id="90108">
+    <control type="button" id="90108">
+      <label>Addon Widgets</label>
+      <onclick>SetProperty(AddonWidgetMode,2,10000)</onclick>
+      <onright>SetProperty(AddonWidgetMode,2,10000)</onright>
+      <onclick>ActivateWindow(1113)</onclick>
+      <onright>ActivateWindow(1113)</onright>
+      <include>ButtonHomeSubCommonValues</include>
+      <visible>!Skin.HasSetting(MainMenuHorizontal) + [!String.IsEmpty(Skin.String(HomeVideosButton1))|!String.IsEmpty(Skin.String(HomeVideosButton2))|!String.IsEmpty(Skin.String(HomeVideosButton3))|!String.IsEmpty(Skin.String(HomeVideosButton4))|!String.IsEmpty(Skin.String(HomeVideosButton5))]</visible>
+    </control>
+    <control type="image" id="90109">
       <width>35</width>
       <height>35</height>
       <texture border="0,0,0,3">HomeSubEnd.png</texture>
@@ -325,7 +334,16 @@
       <onclick>ActivateWindow(Music,$INFO[Container(90110).ListItemNoWrap(5).FileNameAndPath],return)</onclick>
       <visible>!String.IsEmpty(Container(90110).ListItemNoWrap(5).Label)</visible>
     </control>
-    <control type="image" id="90119">
+    <control type="button" id="90119">
+      <label>Addon Widgets</label>
+      <onright>SetProperty(AddonWidgetMode,3,10000)</onright>
+      <onclick>SetProperty(AddonWidgetMode,3,10000)</onclick>
+      <onright>ActivateWindow(1113)</onright>
+      <onclick>ActivateWindow(1113)</onclick>
+      <include>ButtonHomeSubCommonValues</include>
+      <visible>!Skin.HasSetting(MainMenuHorizontal) + [!String.IsEmpty(Skin.String(HomeMusicButton1))|!String.IsEmpty(Skin.String(HomeMusicButton2))|!String.IsEmpty(Skin.String(HomeMusicButton3))|!String.IsEmpty(Skin.String(HomeMusicButton4))|!String.IsEmpty(Skin.String(HomeMusicButton5))]</visible>
+    </control>
+    <control type="image" id="90120">
       <width>35</width>
       <height>35</height>
       <texture border="0,0,0,3">HomeSubEnd.png</texture>
@@ -383,46 +401,6 @@
       <visible>Skin.HasSetting(MainMenuHorizontal)</visible>
     </control>
   </include>
-  <include name="HomeSubMenuPrograms">
-    <control type="image" id="90179">
-      <width>35</width>
-      <height>35</height>
-      <visible>Skin.HasSetting(MainMenuHorizontal)</visible>
-      <texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
-    </control>
-    <control type="button" id="90180">
-      <label>7</label>
-      <include>ButtonHomeSubCommonValues</include>
-      <onclick>ActivateWindow(FileManager)</onclick>
-    </control>
-    <control type="button" id="90181">
-      <label>13200</label>
-      <onclick>ActivateWindow(Profiles)</onclick>
-      <include>ButtonHomeSubCommonValues</include>
-    </control>
-    <control type="button" id="90182">
-      <label>130</label>
-      <onclick>ActivateWindow(SystemInfo)</onclick>
-      <include>ButtonHomeSubCommonValues</include>
-    </control>
-    <control type="button" id="90183">
-      <label>14111</label>
-      <onclick>ActivateWindow(EventLog,events://,return)</onclick>
-      <visible>system.getbool(eventlog.enabled)</visible>
-      <include>ButtonHomeSubCommonValues</include>
-    </control>
-    <control type="button" id="90184">
-      <label>14261</label>
-      <onclick>ActivateWindow(SkinSettings)</onclick>
-      <include>ButtonHomeSubCommonValues</include>
-    </control>
-    <control type="image" id="90185">
-      <width>35</width>
-      <height>35</height>
-      <texture border="0,0,0,3">HomeSubEnd.png</texture>
-      <visible>Skin.HasSetting(MainMenuHorizontal)</visible>
-    </control>
-  </include>
   <include name="HomeSubMenuPlayDisc">
     <control type="image" id="90131">
       <width>35</width>
@@ -455,7 +433,39 @@
       <label>24001</label>
       <onclick>ActivateWindow(Pictures,Addons,return)</onclick>
     </control>
-    <control type="image" id="90149">
+    <control type="button" id="90149">
+      <label>Addon Widgets</label>
+      <onright>SetProperty(AddonWidgetMode,4,10000)</onright>
+      <onclick>SetProperty(AddonWidgetMode,4,10000)</onclick>
+      <onright>ActivateWindow(1113)</onright>
+      <onclick>ActivateWindow(1113)</onclick>
+      <include>ButtonHomeSubCommonValues</include>
+      <visible>!Skin.HasSetting(MainMenuHorizontal) + [!String.IsEmpty(Skin.String(HomePictureButton1))|!String.IsEmpty(Skin.String(HomePictureButton2))|!String.IsEmpty(Skin.String(HomePictureButton3))|!String.IsEmpty(Skin.String(HomePictureButton4))|!String.IsEmpty(Skin.String(HomePictureButton5))]</visible>
+    </control>
+    <control type="image" id="90150">
+      <width>35</width>
+      <height>35</height>
+      <texture border="0,0,0,3">HomeSubEnd.png</texture>
+      <visible>Skin.HasSetting(MainMenuHorizontal)</visible>
+    </control>
+  </include>
+  <include name="HomeSubMenuPrograms">
+    <control type="image" id="90179">
+      <width>35</width>
+      <height>35</height>
+      <visible>Skin.HasSetting(MainMenuHorizontal)</visible>
+      <texture border="0,0,0,3" flipx="true">HomeSubEnd.png</texture>
+    </control>
+    <control type="button" id="90185">
+      <label>Addon Widgets</label>
+      <onclick>SetProperty(AddonWidgetMode,1,10000)</onclick>
+      <onclick>ActivateWindow(1113)</onclick>
+      <onright>SetProperty(AddonWidgetMode,1,10000)</onright>
+      <onright>ActivateWindow(1113)</onright>
+      <include>ButtonHomeSubCommonValues</include>
+      <visible>!Skin.HasSetting(MainMenuHorizontal) + [!String.IsEmpty(Skin.String(HomeProgramButton1))|!String.IsEmpty(Skin.String(HomeProgramButton2))|!String.IsEmpty(Skin.String(HomeProgramButton3))|!String.IsEmpty(Skin.String(HomeProgramButton4))|!String.IsEmpty(Skin.String(HomeProgramButton5))]</visible>
+    </control>
+    <control type="image" id="90186">
       <width>35</width>
       <height>35</height>
       <texture border="0,0,0,3">HomeSubEnd.png</texture>

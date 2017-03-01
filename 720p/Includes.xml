@@ -1146,6 +1146,10 @@
     </control>
   </include>
   <include name="HomeAddonsCommonLayout">
+    <include condition="Skin.HasSetting(MainMenuHorizontal)">HomeAddonsCommonLayoutHorizontal</include>
+    <include condition="!Skin.HasSetting(MainMenuHorizontal)">HomeAddonsCommonLayoutVertical</include>
+  </include>
+  <include name="HomeAddonsCommonLayoutHorizontal">
     <include>Window_OpenClose_Animation</include>
     <animation type="Visible">
       <effect type="slide" start="0,30" end="0,0" delay="150" easing="out" tween="quadratic" time="150" />
@@ -1245,6 +1249,113 @@
         <width>180</width>
         <height>20</height>
         <font>font12</font>
+        <textcolor>grey2</textcolor>
+        <align>center</align>
+        <aligny>center</aligny>
+        <label>$INFO[ListItem.Label]</label>
+        <visible>!ControlGroup(9002).HasFocus</visible>
+      </control>
+    </focusedlayout>
+  </include>
+  <include name="HomeAddonsCommonLayoutVertical">
+    <include>Window_OpenClose_Animation</include>
+    <animation type="Visible">
+      <effect type="slide" start="0,30" end="0,0" delay="150" easing="out" tween="quadratic" time="150" />
+      <effect type="fade" start="0" end="100" delay="150" time="150" />
+    </animation>
+    <animation type="Hidden">
+      <effect type="zoom" start="100" end="70" center="auto" easing="in" tween="quadratic" time="225" />
+      <effect type="fade" start="100" end="0" time="225" />
+    </animation>
+    <left>630</left>
+    <top>20</top>
+    <width>300</width>
+    <height>680</height>
+    <pagecontrol>-</pagecontrol>
+    <scrolltime>300</scrolltime>
+    <focusposition>1</focusposition>
+    <movement>1</movement>
+    <orientation>Vertical</orientation>
+    <itemlayout height="160" width="300">
+      <control type="image">
+        <left>0</left>
+        <top>0</top>
+        <width>300</width>
+        <height>120</height>
+        <aspectratio aligny="bottom">keep</aspectratio>
+        <bordertexture border="5">button-nofocus.png</bordertexture>
+        <bordersize>3</bordersize>
+        <texture background="true">$INFO[ListItem.Icon]</texture>
+      </control>
+      <control type="image">
+        <left>5</left>
+        <top>120</top>
+        <width>300</width>
+        <height>110</height>
+        <aspectratio aligny="top">keep</aspectratio>
+        <texture diffuse="diffuse_mirror2.png" flipy="true" background="true">$INFO[ListItem.Icon]</texture>
+      </control>
+      <control type="label">
+        <left>1</left>
+        <top>125</top>
+        <width>300</width>
+        <height>20</height>
+        <font>font24_title</font>
+        <textcolor>grey2</textcolor>
+        <align>center</align>
+        <aligny>center</aligny>
+        <label>$INFO[ListItem.Label]</label>
+      </control>
+    </itemlayout>
+    <focusedlayout height="160" width="300">
+      <control type="image">
+        <left>0</left>
+        <top>0</top>
+        <width>300</width>
+        <height>120</height>
+        <aspectratio aligny="bottom">keep</aspectratio>
+        <bordertexture border="5">button-nofocus.png</bordertexture>
+        <bordersize>3</bordersize>
+        <texture background="true">$INFO[ListItem.Icon]</texture>
+        <visible>!ControlGroup(9002).HasFocus</visible>
+      </control>
+      <control type="image">
+        <left>0</left>
+        <top>0</top>
+        <width>300</width>
+        <height>120</height>
+        <aspectratio aligny="bottom">keep</aspectratio>
+        <bordertexture border="5">folder-focus.png</bordertexture>
+        <bordersize>3</bordersize>
+        <texture background="true">$INFO[ListItem.Icon]</texture>
+        <visible>ControlGroup(9002).HasFocus</visible>
+      </control>
+      <control type="image">
+        <left>5</left>
+        <top>120</top>
+        <width>290</width>
+        <height>110</height>
+        <aspectratio aligny="top">keep</aspectratio>
+        <texture diffuse="diffuse_mirror2.png" flipy="true" background="true">$INFO[ListItem.Icon]</texture>
+      </control>
+      <control type="label">
+        <left>1</left>
+        <top>125</top>
+        <width>300</width>
+        <height>20</height>
+        <font>font24_title</font>
+        <textcolor>white</textcolor>
+        <align>center</align>
+        <aligny>center</aligny>
+        <label>$INFO[ListItem.Label]</label>
+        <visible>ControlGroup(9002).HasFocus</visible>
+      </control>
+      <control type="label">
+        <left>1</left>
+        <top>125</top>
+        <width>300</width>
+        <height>20</height>
+        <font>font24_title</font>
         <textcolor>grey2</textcolor>
         <align>center</align>
         <aligny>center</aligny>
