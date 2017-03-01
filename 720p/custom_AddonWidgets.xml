@@ -51,7 +51,7 @@
       <control type="fixedlist" id="703">
         <animation effect="slide" start="0,0" end="-91,0" time="0" condition="String.IsEqual(Container(703).NumItems,2) | String.IsEqual(Container(703).NumItems,4)">conditional</animation>
         <visible>StringCompare(Window(10000).Property(AddonWidgetMode),3)</visible>
-        <onleft>Dialog.Close(1113,true)</onleft>
+        <onleft>Dialog.Close(1113)</onleft>
         <onright>703</onright>
         <onup>9001</onup>
         <ondown>20</ondown>
