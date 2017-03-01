@@ -1,3 +1,7 @@
+[B]1.0.11[/B]
+- bugfix temp label background
+- added addon widgets for main menu submenus
+
 [B]1.0.10[/B]
 - changed Home Sub Menus for Vertical Layout
 
