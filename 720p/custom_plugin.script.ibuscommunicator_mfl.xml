@@ -3,7 +3,7 @@
   <defaultcontrol>-</defaultcontrol>
   <allowoverlay>yes</allowoverlay>
   <zorder>99</zorder>
-  <visible>StringCompare(Window(10000).Property(IBUSCOMMUNICATOR_MFL_SHOW),1)</visible>
+  <visible>StringCompare(Window(10000).Property(IBUSCOMMUNICATOR_MFL_SHOW),1)|StringCompare(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)</visible>
   <coordinates>
     <system>0</system>
     <posx>0</posx>
@@ -27,8 +27,16 @@
         <posy>20</posy>
         <width>80</width>
         <height>80</height>
-        <aspectratio>keep</aspectratio>
         <texture>special://home/addons/plugin.script.ibuscommunicator/resources/skins/Default/media/icon-mfl.png</texture>
+        <visible>StringCompare(Window(10000).Property(IBUSCOMMUNICATOR_MFL_SHOW),1)</visible>
+      </control>
+      <control type="image">
+        <posx>15</posx>
+        <posy>10</posy>
+        <width>100</width>
+        <height>100</height>
+        <texture>special://home/addons/plugin.script.ibuscommunicator/resources/skins/Default/media/icon-drl.png</texture>
+        <visible>StringCompare(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)+!StringCompare(Window(10000).Property(IBUSCOMMUNICATOR_MFL_SHOW),1)</visible>
       </control>
     </control>
   </controls>

@@ -383,6 +383,27 @@
             <textcolor>grey2</textcolor>
             <focusedcolor>$VAR[TextColor5]</focusedcolor>
           </control>
+          <control_off type="button" id="121">
+            <posx>0</posx>
+            <posy>45</posy>
+            <description>Change Color</description>
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <label>Colorpicker test</label>
+            <label2>Skin.String(TextColor6)</label2>
+            <onup>313</onup>
+            <ondown>308</ondown>
+            <onclick_off>RunScript("special://skin/scripts/changecolor.py","TextColor5")</onclick_off>
+            <onleft>9000</onleft>
+            <onright>62</onright>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>Skin.String(TextColor6)</focusedcolor>
+            <onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
+            <onclick condition="System.HasAddon(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,action=colorpicker,skinstring=TextColor6,header=TextColor6)</onclick>
+          </control_off>
         </control>
         <control type="scrollbar" id="60">
           <left>1060</left>

@@ -1,3 +1,6 @@
+[B]1.0.12[/B]
+- ibus dialog for DRL
+
 [B]1.0.11[/B]
 - bugfix temp label background
 - added addon widgets for main menu submenus
