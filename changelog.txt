@@ -1,3 +1,6 @@
+[B]1.0.13[/B]
+- renamed temp label property to "IBUS_OBC_TEMP"
+
 [B]1.0.12[/B]
 - ibus dialog for DRL
 
