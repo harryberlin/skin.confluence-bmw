@@ -23,6 +23,17 @@
         <texture flipx="false" border="5,5,5,5">special://home/addons/plugin.script.ibuscommunicator/resources/skins/Default/media/OverlayDialogBackground.png</texture>
       </control>
       <control type="image">
+        <animation effect="zoom" end="55" time="300" tween="quadratic" easing="out" condition="StringCompare(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)+StringCompare(Window(10000).Property(IBUSCOMMUNICATOR_MFL_SHOW),1)" center="120,120">Conditional</animation>
+        <posx>25</posx>
+        <posy>20</posy>
+        <width>80</width>
+        <height>80</height>
+        <texture>special://home/addons/plugin.script.ibuscommunicator/resources/skins/Default/media/icon-drl.png</texture>
+        <visible_off>StringCompare(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)+!StringCompare(Window(10000).Property(IBUSCOMMUNICATOR_MFL_SHOW),1)</visible_off>
+        <visible>StringCompare(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)</visible>
+      </control>
+      <control type="image">
+        <animation effect="zoom" end="90" time="300" tween="quadratic" easing="out" condition="StringCompare(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)+StringCompare(Window(10000).Property(IBUSCOMMUNICATOR_MFL_SHOW),1)" center="-40,-20">Conditional</animation>
         <posx>25</posx>
         <posy>20</posy>
         <width>80</width>
@@ -30,14 +41,14 @@
         <texture>special://home/addons/plugin.script.ibuscommunicator/resources/skins/Default/media/icon-mfl.png</texture>
         <visible>StringCompare(Window(10000).Property(IBUSCOMMUNICATOR_MFL_SHOW),1)</visible>
       </control>
-      <control type="image">
-        <posx>15</posx>
-        <posy>10</posy>
-        <width>100</width>
-        <height>100</height>
+      <control_off type="image">
+        <posx>85</posx>
+        <posy>80</posy>
+        <width>30</width>
+        <height>30</height>
         <texture>special://home/addons/plugin.script.ibuscommunicator/resources/skins/Default/media/icon-drl.png</texture>
-        <visible>StringCompare(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)+!StringCompare(Window(10000).Property(IBUSCOMMUNICATOR_MFL_SHOW),1)</visible>
-      </control>
+        <visible>StringCompare(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)+StringCompare(Window(10000).Property(IBUSCOMMUNICATOR_MFL_SHOW),1)</visible>
+      </control_off>
     </control>
   </controls>
 </window>

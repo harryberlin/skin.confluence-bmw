@@ -1,3 +1,7 @@
+[B]1.0.14[/B]
+- renamed PDC property to "IBUS_PDC_..."
+- ibuscommunicator MFL/DRL dialog changed
+
 [B]1.0.13[/B]
 - renamed temp label property to "IBUS_OBC_TEMP"
 
