@@ -2,7 +2,8 @@
 <window type="dialog" id="100001">
   <defaultcontrol>2</defaultcontrol>
   <allowoverlay>yes</allowoverlay>
-  <visible>StringCompare(Window(10000).Property(IBUS_PDC_SHOW),1)</visible>
+  <visible_off>StringCompare(Window(10000).Property(IBUS_PDC_SHOW),1)</visible_off>
+  <visible>True</visible>
   <zorder>99</zorder>
   <coordinates>
     <posx>0</posx>
@@ -164,47 +165,47 @@
         <posy>0</posy>
         <control type="multiimage">
           <description>FLS</description>
-          <posx>58</posx>
-          <posy>62</posy>
-          <width>58</width>
-          <height>118</height>
+          <posx>45</posx>
+          <posy>60</posy>
+          <width>63</width>
+          <height>120</height>
           <fadetime>0</fadetime>
           <timeperimage>2000</timeperimage>
           <randomize>true</randomize>
-          <imagepath>$INFO[Window(10000).Property(IBUS_PDC_FLS_IMG)]</imagepath>
+          <imagepath>bmw\pdc\side\SIDE$INFO[Window(10000).Property(IBUS_PDC_FLS_IMG)].png</imagepath>
         </control>
         <control type="multiimage">
           <description>FLC</description>
-          <posx>125</posx>
+          <posx>119</posx>
           <posy>58</posy>
-          <width>58</width>
+          <width>65</width>
           <height>118</height>
           <fadetime>0</fadetime>
           <timeperimage>2000</timeperimage>
           <randomize>true</randomize>
-          <imagepath>$INFO[Window(10000).Property(IBUS_PDC_FLC_IMG)]</imagepath>
+          <imagepath>bmw\pdc\mid\MID$INFO[Window(10000).Property(IBUS_PDC_FLC_IMG)].png</imagepath>
         </control>
         <control type="multiimage">
           <description>FRC</description>
           <posx>193</posx>
           <posy>58</posy>
-          <width>58</width>
+          <width>65</width>
           <height>118</height>
           <fadetime>0</fadetime>
           <timeperimage>2000</timeperimage>
           <randomize>true</randomize>
-          <imagepath flipx="true">$INFO[Window(10000).Property(IBUS_PDC_FRC_IMG)]</imagepath>
+          <imagepath flipx="true">bmw\pdc\mid\MID$INFO[Window(10000).Property(IBUS_PDC_FRC_IMG)].png</imagepath>
         </control>
         <control type="multiimage">
           <description>FRS</description>
-          <posx>260</posx>
-          <posy>62</posy>
-          <width>58</width>
-          <height>118</height>
+          <posx>268</posx>
+          <posy>60</posy>
+          <width>63</width>
+          <height>120</height>
           <fadetime>0</fadetime>
           <timeperimage>2000</timeperimage>
           <randomize>true</randomize>
-          <imagepath flipx="true">$INFO[Window(10000).Property(IBUS_PDC_FRS_IMG)]</imagepath>
+          <imagepath flipx="true">bmw\pdc\side\SIDE$INFO[Window(10000).Property(IBUS_PDC_FRS_IMG)].png</imagepath>
         </control>
       </control>
       <control type="group">
@@ -213,49 +214,58 @@
         <posy>450</posy>
         <control type="multiimage">
           <description>RLS</description>
-          <posx>58</posx>
-          <posy>62</posy>
-          <width>58</width>
-          <height>118</height>
+          <posx>45</posx>
+          <posy>60</posy>
+          <width>63</width>
+          <height>120</height>
           <fadetime>0</fadetime>
           <timeperimage>2000</timeperimage>
           <randomize>true</randomize>
-          <imagepath flipy="true">$INFO[Window(10000).Property(IBUS_PDC_RLS_IMG)]</imagepath>
+          <imagepath flipy="true">bmw\pdc\side\SIDE$INFO[Window(10000).Property(IBUS_PDC_RLS_IMG)].png</imagepath>
         </control>
         <control type="multiimage">
           <description>RLC</description>
-          <posx>125</posx>
+          <posx>119</posx>
           <posy>64</posy>
-          <width>58</width>
+          <width>65</width>
           <height>118</height>
           <fadetime>0</fadetime>
           <timeperimage>2000</timeperimage>
           <randomize>true</randomize>
-          <imagepath flipy="true">$INFO[Window(10000).Property(IBUS_PDC_RLC_IMG)]</imagepath>
+          <imagepath flipy="true">bmw\pdc\mid\MID$INFO[Window(10000).Property(IBUS_PDC_RLC_IMG)].png</imagepath>
         </control>
         <control type="multiimage">
           <description>RRC</description>
           <posx>193</posx>
           <posy>64</posy>
-          <width>58</width>
+          <width>65</width>
           <height>118</height>
           <fadetime>0</fadetime>
           <timeperimage>2000</timeperimage>
           <randomize>true</randomize>
-          <imagepath flipx="true" flipy="true">$INFO[Window(10000).Property(IBUS_PDC_RRC_IMG)]</imagepath>
+          <imagepath flipx="true" flipy="true">bmw\pdc\mid\MID$INFO[Window(10000).Property(IBUS_PDC_RRC_IMG)].png</imagepath>
         </control>
         <control type="multiimage">
           <description>RRS</description>
-          <posx>260</posx>
-          <posy>62</posy>
-          <width>58</width>
-          <height>118</height>
+          <posx>268</posx>
+          <posy>60</posy>
+          <width>63</width>
+          <height>120</height>
           <fadetime>0</fadetime>
           <timeperimage>2000</timeperimage>
           <randomize>true</randomize>
-          <imagepath flipx="true" flipy="true">$INFO[Window(10000).Property(IBUS_PDC_RRS_IMG)]</imagepath>
+          <imagepath flipx="true" flipy="true">bmw\pdc\side\SIDE$INFO[Window(10000).Property(IBUS_PDC_RRS_IMG)].png</imagepath>
         </control>
       </control>
     </control>
   </controls>
+  <!--Set default Values on Load-->
+  <onload_off>SetProperty(IBUS_PDC_FLS_IMG,bmw\pdc\side\,10000)</onload_off>
+  <onload_off>SetProperty(IBUS_PDC_FLC_IMG,bmw\pdc\mid\,10000)</onload_off>
+  <onload_off>SetProperty(IBUS_PDC_FRC_IMG,bmw\pdc\mid\,10000)</onload_off>
+  <onload_off>SetProperty(IBUS_PDC_FRS_IMG,bmw\pdc\side\,10000)</onload_off>
+  <onload_off>SetProperty(IBUS_PDC_RLS_IMG,bmw\pdc\side\,10000)</onload_off>
+  <onload_off>SetProperty(IBUS_PDC_RLC_IMG,bmw\pdc\mid\,10000)</onload_off>
+  <onload_off>SetProperty(IBUS_PDC_RRC_IMG,bmw\pdc\mid\,10000)</onload_off>
+  <onload_off>SetProperty(IBUS_PDC_RRS_IMG,bmw\pdc\side\,10000)</onload_off>
 </window>

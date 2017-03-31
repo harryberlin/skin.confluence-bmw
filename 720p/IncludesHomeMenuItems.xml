@@ -85,7 +85,7 @@
     </item>
     <item>
       <label>TEST</label>
-      <onclick>Mute</onclick>
+      <onclick>ReloadSkin</onclick>
       <icon>-</icon>
       <thumb>-</thumb>
       <visible>true</visible>
