@@ -2,8 +2,7 @@
 <window type="dialog" id="100001">
   <defaultcontrol>2</defaultcontrol>
   <allowoverlay>yes</allowoverlay>
-  <visible_off>StringCompare(Window(10000).Property(IBUS_PDC_SHOW),1)</visible_off>
-  <visible>True</visible>
+  <visible>StringCompare(Window(10000).Property(IBUS_PDC_SHOW),1)</visible>
   <zorder>99</zorder>
   <coordinates>
     <posx>0</posx>
@@ -259,7 +258,8 @@
       </control>
     </control>
   </controls>
-  <!--Set default Values on Load-->
+  <!--Set Test-Values on Load-->
+  <visible_off>True</visible_off>
   <onload_off>SetProperty(IBUS_PDC_FLS_IMG,bmw\pdc\side\,10000)</onload_off>
   <onload_off>SetProperty(IBUS_PDC_FLC_IMG,bmw\pdc\mid\,10000)</onload_off>
   <onload_off>SetProperty(IBUS_PDC_FRC_IMG,bmw\pdc\mid\,10000)</onload_off>

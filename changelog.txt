@@ -1,3 +1,8 @@
+[B]1.0.15[/B]
+- changes for PDC
+- resized/moved the PDC graphics
+- Temp.Label on Fullscreen
+
 [B]1.0.14[/B]
 - renamed PDC property to "IBUS_PDC_..."
 - ibuscommunicator MFL/DRL dialog changed
