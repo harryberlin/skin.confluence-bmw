@@ -68,6 +68,12 @@
       <thumb>-</thumb>
       <visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
     </item>
+    <item>
+      <label>PLAYER</label>
+      <visible>Player.HasAudio | Player.HasVideo | VideoPlayer.Content(LiveTV)</visible>
+      <onclick>ActivateWindow(1135)</onclick>
+      <icon>$VAR[PlayerControlBG]</icon>
+    </item>
     <item id="14">
       <label>ON-BOARD</label>
       <onclick condition="System.HasAddon(plugin.script.helgeinterface)">XBMC.RunScript(plugin.script.helgeinterface,obc)</onclick>
