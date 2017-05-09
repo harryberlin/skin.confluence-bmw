@@ -30,7 +30,7 @@
         <width>296</width>
         <background>true</background>
         <height>580</height>
-        <texture fallback="special://home/addons/plugin.script.ibuscommunicator/resources/skins/Default/media/pdc/BGs/default.png">$INFO[Window(10000).Property(IBUS_PDC_BG_IMG)]</texture>
+        <texture fallback="bmw\pdc\BGs\default.png">$INFO[Skin.String(IBUS_PDC_BG_IMG)]</texture>
       </control>
       <!--Sensor Value Labels-->
       <control type="group">

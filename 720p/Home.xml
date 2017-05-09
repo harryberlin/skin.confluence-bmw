@@ -319,8 +319,8 @@
         <posy>120</posy>
         <visible>Playlist.IsRepeatOne | Playlist.IsRepeat</visible>
         <animation effect="slide" start="0,0" end="110,0" time="200">WindowClose</animation>
-        <animation effect="slide" start="110,0" end="0,0" time="400">WindowOpen</animation>
-        <animation effect="slide" start="110,0" end="0,0" time="400">VisibleChange</animation>
+        <animation effect="slide" start="110,0" end="0,0" time="250">WindowOpen</animation>
+        <animation effect="slide" start="110,0" end="0,0" time="250">VisibleChange</animation>
         <control type="group">
           <control type="image">
             <description>repeat background</description>

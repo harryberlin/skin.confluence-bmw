@@ -3,6 +3,8 @@
   <defaultcontrol>-</defaultcontrol>
   <controls>
     <include>CommonBackground</include>
+    <animation effect="fade" end="100" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+    <animation effect="fade" start="100" time="300" tween="quadratic" easing="out">WindowClose</animation>
     <control type="visualisation" id="2">
       <!-- FIX ME Music Visualization needs to have an id of 2 in this window to be able to lock or change preset -->
       <description>visualisation</description>

@@ -912,6 +912,28 @@
             <!-- BACK to 0 -->
             <onclick condition="Stringcompare(skin.string(background_color_diffuse),100)">skin.setstring(background_color_diffuse,0)</onclick>
           </control>
+          <control type="label" id="314">
+            <width>750</width>
+            <height>45</height>
+            <font>font30_title</font>
+            <label>PDC Background</label>
+            <textcolor>blue</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+          </control>
+          <control type="button" id="315">
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <label>Set Car for PDC Background</label>
+            <label2_off>[COLOR=selected]$INFO[Skin.String(CustomBackgroundPath)][/COLOR]</label2_off>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <onclick>Skin.SetImage(IBUS_PDC_BG_IMG,special://skin/media/bmw/pdc/BGs)</onclick>
+          </control>
         </control>
         <control type="group">
           <control type="grouplist" id="9004">
