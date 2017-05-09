@@ -12,10 +12,12 @@
       <top>0</top>
       <width>1280</width>
       <height>720</height>
+      <visible>Player.HasAudio</visible>
     </control>
     <!-- the Album Cover -->
     <control type="image">
       <description>cover image</description>
+      <visible>Player.HasAudio</visible>
       <left>20</left>
       <top>30</top>
       <width>450</width>

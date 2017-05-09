@@ -137,7 +137,7 @@
           <height>115</height>
           <align>center</align>
           <aligny>center</aligny>
-          <font>font50caps_title</font>
+          <font>font50_title</font>
           <textcolor>$INFO[Skin.String(MenuTextColor)]</textcolor>
           <label>$INFO[Player.Time]$INFO[Player.Duration,[CR]]</label>
           <visible_off>Player.Playing + !Player.Seeking + !Player.DisplayAfterSeek</visible_off>
