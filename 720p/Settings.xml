@@ -127,6 +127,13 @@
             <onclick>ActivateWindow(MediaSettings)</onclick>
             <icon>-</icon>
           </item>
+          <item id="8">
+            <label>15016</label>
+            <label2>31002</label2>
+            <onclick>ActivateWindow(GameSettings)</onclick>
+            <visible>System.GetBool(gamesgeneral.enable)</visible>
+            <icon></icon>
+          </item>
           <item id="3">
             <label>14204</label>
             <label2>31432</label2>

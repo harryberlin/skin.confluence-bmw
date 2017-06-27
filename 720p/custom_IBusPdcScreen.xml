@@ -260,12 +260,22 @@
   </controls>
   <!--Set Test-Values on Load-->
   <visible_off>True</visible_off>
-  <onload_off>SetProperty(IBUS_PDC_FLS_IMG,bmw\pdc\side\,10000)</onload_off>
-  <onload_off>SetProperty(IBUS_PDC_FLC_IMG,bmw\pdc\mid\,10000)</onload_off>
-  <onload_off>SetProperty(IBUS_PDC_FRC_IMG,bmw\pdc\mid\,10000)</onload_off>
-  <onload_off>SetProperty(IBUS_PDC_FRS_IMG,bmw\pdc\side\,10000)</onload_off>
-  <onload_off>SetProperty(IBUS_PDC_RLS_IMG,bmw\pdc\side\,10000)</onload_off>
-  <onload_off>SetProperty(IBUS_PDC_RLC_IMG,bmw\pdc\mid\,10000)</onload_off>
-  <onload_off>SetProperty(IBUS_PDC_RRC_IMG,bmw\pdc\mid\,10000)</onload_off>
-  <onload_off>SetProperty(IBUS_PDC_RRS_IMG,bmw\pdc\side\,10000)</onload_off>
+  <!--labels-->
+  <onload_off>SetProperty(IBUS_PDC_FLS,50,10000)</onload_off>
+  <onload_off>SetProperty(IBUS_PDC_FLC,40,10000)</onload_off>
+  <onload_off>SetProperty(IBUS_PDC_FRC,40,10000)</onload_off>
+  <onload_off>SetProperty(IBUS_PDC_FRS,50,10000)</onload_off>
+  <onload_off>SetProperty(IBUS_PDC_RLS,40,10000)</onload_off>
+  <onload_off>SetProperty(IBUS_PDC_RLC,30,10000)</onload_off>
+  <onload_off>SetProperty(IBUS_PDC_RRC,30,10000)</onload_off>
+  <onload_off>SetProperty(IBUS_PDC_RRS,40,10000)</onload_off>
+  <!--images-->
+  <onload_off>SetProperty(IBUS_PDC_FLS_IMG,06,10000)</onload_off>
+  <onload_off>SetProperty(IBUS_PDC_FLC_IMG,05,10000)</onload_off>
+  <onload_off>SetProperty(IBUS_PDC_FRC_IMG,02,10000)</onload_off>
+  <onload_off>SetProperty(IBUS_PDC_FRS_IMG,08,10000)</onload_off>
+  <onload_off>SetProperty(IBUS_PDC_RLS_IMG,16,10000)</onload_off>
+  <onload_off>SetProperty(IBUS_PDC_RLC_IMG,12,10000)</onload_off>
+  <onload_off>SetProperty(IBUS_PDC_RRC_IMG,18,10000)</onload_off>
+  <onload_off>SetProperty(IBUS_PDC_RRS_IMG,19,10000)</onload_off>
 </window>

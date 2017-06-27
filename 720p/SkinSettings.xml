@@ -932,7 +932,7 @@
             <focusedcolor>white</focusedcolor>
             <texturefocus>MenuItemFO.png</texturefocus>
             <texturenofocus>MenuItemNF.png</texturenofocus>
-            <onclick>Skin.SetImage(IBUS_PDC_BG_IMG,special://skin/media/bmw/pdc/BGs)</onclick>
+            <onclick>Skin.SetImage(IBUS_PDC_BG_IMG,special://skin/media/bmw/pdc/bgs)</onclick>
           </control>
         </control>
         <control type="group">

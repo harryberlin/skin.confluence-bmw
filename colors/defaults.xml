@@ -19,4 +19,5 @@
   <color name="blue (BMW ///M)" menutextcolor="true">ff0072ce</color>
   <color name="darkblue (BMW ///M)" menutextcolor="true">ff0c2340</color>
   <color name="red (BMW ///M)" menutextcolor="true">ffc8102e</color>
+  <color name="red" menutextcolor="true">ff7a0000</color>
 </colors>

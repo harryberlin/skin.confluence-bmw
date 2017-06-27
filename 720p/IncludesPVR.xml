@@ -208,6 +208,13 @@
           <aligny>center</aligny>
           <visible>Control.IsVisible(5) | Control.IsVisible(6) | Control.IsVisible(7) | Control.IsVisible(8)</visible>
         </control>
+        <control type="button" id="10">
+          <description>Watched Toggle</description>
+          <textwidth>235</textwidth>
+          <include>ButtonCommonValues</include>
+          <label>20367</label>
+          <visible>Window.IsActive(TVRecordings)</visible>
+        </control>
         <control type="radiobutton" id="5">
           <description>Group recording items by folder structure</description>
           <textwidth>235</textwidth>
