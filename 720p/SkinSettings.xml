@@ -279,6 +279,19 @@
             <selected>Skin.HasSetting(HideEPGwithRDS)</selected>
             <textwidth>690</textwidth>
           </control>
+          <control type="radiobutton" id="221">
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <label>Skin Debugging</label>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <onclick>Skin.ToggleSetting(SkinDebug)</onclick>
+            <selected>Skin.HasSetting(SkinDebug)</selected>
+            <textwidth>690</textwidth>
+          </control>
           <control type="label" id="115">
             <width>750</width>
             <height>45</height>
@@ -452,6 +465,19 @@
             <focusedcolor>white</focusedcolor>
             <onclick>Skin.ToggleSetting(MainMenuHorizontal)</onclick>
             <selected>Skin.HasSetting(MainMenuHorizontal)</selected>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
+          </control>
+          <control type="radiobutton" id="207">
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <label>Slide out Vertical Menü, after 4 seconds</label>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <onclick>Skin.ToggleSetting(MainMenuVerticalSlideOut)</onclick>
+            <selected>Skin.HasSetting(MainMenuVerticalSlideOut)</selected>
             <texturefocus>MenuItemFO.png</texturefocus>
             <texturenofocus>MenuItemNF.png</texturenofocus>
             <textwidth>690</textwidth>

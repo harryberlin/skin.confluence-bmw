@@ -92,10 +92,10 @@
     </item>
     <item>
       <label>TEST</label>
-      <onclick>ReloadSkin</onclick>
+      <onclick>ReloadSkin()</onclick>
       <icon>-</icon>
       <thumb>-</thumb>
-      <visible>true</visible>
+      <visible>Skin.HasSetting(SkinDebug)</visible>
     </item>
     <item id="6">
       <label>31958</label>
@@ -1918,6 +1918,7 @@
       <left>20</left>
       <animation effect="fade" end="100" time="300" tween="quadratic" easing="out">WindowOpen</animation>
       <animation effect="fade" start="100" time="300" tween="quadratic" easing="out">WindowClose</animation>
+      <animation effect="slide" end="0,45" time="0" tween="quadratic" easing="out" condition="!system.getbool(lookandfeel.enablerssfeeds)">Conditional</animation>
       <!--cover-->
       <control type="image">
         <description>cover image</description>
@@ -1942,20 +1943,24 @@
         <textcolor>$VAR[TextColor2]</textcolor>
         <shadowcolor>black</shadowcolor>
       </control>
+      <!-- the music title - short-->
       <control type="label">
+        <animation effect="fade" start="0" time="300" delay="200" tween="quadratic" easing="out">Visible</animation>
         <description>Title label</description>
         <left>365</left>
         <top>180r</top>
         <width>885</width>
         <height>50</height>
-        <font>font55_title</font>
         <align>right</align>
-        <scroll>true</scroll>
+        <font>font55_title</font>
         <label>$INFO[Player.Title]</label>
         <textcolor>$VAR[TextColor2]</textcolor>
         <shadowcolor>black</shadowcolor>
+        <visible>![Skin.HasSetting(MainMenuVerticalSlideOut) + System.IdleTime(4) + !ControlGroup(9001).HasFocus()]</visible>
+        <scroll>true</scroll>
       </control>
       <control type="label">
+        <animation effect="fade" start="0" time="300" delay="200" tween="quadratic" easing="out">Visible</animation>
         <description>Artist label</description>
         <left>365</left>
         <top>110r</top>
@@ -1966,6 +1971,39 @@
         <label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, - ]</label>
         <textcolor>$VAR[TextColor2]</textcolor>
         <shadowcolor>black</shadowcolor>
+        <visible>![Skin.HasSetting(MainMenuVerticalSlideOut) + System.IdleTime(4) + !ControlGroup(9001).HasFocus()]</visible>
+        <scroll>true</scroll>
+      </control>
+      <!-- the music title - wide-->
+      <control type="label">
+        <animation effect="fade" start="0" time="300" tween="quadratic" easing="out">Visible</animation>
+        <description>Title label</description>
+        <left>-10</left>
+        <top>180r</top>
+        <width>1260</width>
+        <height>50</height>
+        <align>right</align>
+        <font>font55_title</font>
+        <label>$INFO[Player.Title]</label>
+        <textcolor>$VAR[TextColor2]</textcolor>
+        <shadowcolor>black</shadowcolor>
+        <visible>Skin.HasSetting(MainMenuVerticalSlideOut) + System.IdleTime(4) + !ControlGroup(9001).HasFocus()</visible>
+        <scroll>true</scroll>
+      </control>
+      <control type="label">
+        <animation effect="fade" start="0" time="300" tween="quadratic" easing="out">Visible</animation>
+        <description>Artist label</description>
+        <left>-10</left>
+        <top>110r</top>
+        <width>1260</width>
+        <height>50</height>
+        <align>right</align>
+        <font>font35_title</font>
+        <label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, - ]</label>
+        <textcolor>$VAR[TextColor2]</textcolor>
+        <shadowcolor>black</shadowcolor>
+        <visible>Skin.HasSetting(MainMenuVerticalSlideOut) + System.IdleTime(4) + !ControlGroup(9001).HasFocus()</visible>
+        <scroll>true</scroll>
       </control>
     </control>
     <!--MAIN MENU UP-->
@@ -1973,6 +2011,7 @@
       <!--Submenu-->
       <animation effect="slide" end="-650,0" time="300" tween="quadratic" easing="out">WindowClose</animation>
       <animation effect="slide" start="-450,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
+      <animation effect="slide" end="-380,0" time="500" tween="quadratic" easing="out" condition="Skin.HasSetting(MainMenuVerticalSlideOut) + System.IdleTime(4) + !ControlGroup(9001).HasFocus()">Conditional</animation>
       <control type="group">
         <left>380</left>
         <animation effect="slide" end="-228,0" time="300" tween="quadratic" easing="out">WindowClose</animation>
