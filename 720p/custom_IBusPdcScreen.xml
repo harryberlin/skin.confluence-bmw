@@ -2,7 +2,7 @@
 <window type="dialog" id="100001">
   <defaultcontrol>2</defaultcontrol>
   <allowoverlay>yes</allowoverlay>
-  <visible>StringCompare(Window(10000).Property(IBUS_PDC_SHOW),1)</visible>
+  <visible>String.IsEqual(Window(10000).Property(IBUS_PDC_SHOW),1)</visible>
   <zorder>99</zorder>
   <coordinates>
     <posx>0</posx>
@@ -21,7 +21,7 @@
         <height>700</height>
         <colordiffuse_off>EEFFFFFF</colordiffuse_off>
         <colordiffuse_off>$INFO[Skin.String(MenuTextColor)]</colordiffuse_off>
-        <texture border="12">special://home/addons/plugin.script.ibuscommunicator/resources/skins/Default/media/OverlayDialogBackground.png</texture>
+        <texture border="12">OverlayDialogBackground.png</texture>
       </control>
       <!--Sensor Graphic Background-->
       <control type="image">
@@ -254,6 +254,131 @@
           <timeperimage>2000</timeperimage>
           <randomize>true</randomize>
           <imagepath flipx="true" flipy="true">bmw\pdc\side\SIDE$INFO[Window(10000).Property(IBUS_PDC_RRS_IMG)].png</imagepath>
+        </control>
+      </control>
+      <!--Debug Value Labels for Images-->
+      <control type="group">
+        <visible>Skin.HasSetting(SkinDebug)</visible>
+        <description>Front Sensor Labels</description>
+        <posx>0</posx>
+        <posy>85</posy>
+        <control type="label">
+          <description>FLS</description>
+          <posx>45</posx>
+          <posy>0</posy>
+          <height>30</height>
+          <width>80</width>
+          <label>$INFO[Window(10000).Property(IBUS_PDC_FLS_IMG)]</label>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>font35_title</font>
+          <textcolor>white</textcolor>
+          <shadowcolor>black</shadowcolor>
+        </control>
+        <control type="label">
+          <description>FLC</description>
+          <posx>115</posx>
+          <posy>0</posy>
+          <height>30</height>
+          <width>80</width>
+          <label>$INFO[Window(10000).Property(IBUS_PDC_FLC_IMG)]</label>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>font35_title</font>
+          <textcolor_off>white</textcolor_off>
+          <shadowcolor_off>grey2</shadowcolor_off>
+          <textcolor>white</textcolor>
+          <shadowcolor>black</shadowcolor>
+        </control>
+        <control type="label">
+          <description>FRC</description>
+          <posx>180</posx>
+          <posy>0</posy>
+          <height>30</height>
+          <width>80</width>
+          <label>$INFO[Window(10000).Property(IBUS_PDC_FRC_IMG)]</label>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>font35_title</font>
+          <textcolor>white</textcolor>
+          <shadowcolor>black</shadowcolor>
+        </control>
+        <control type="label">
+          <description>FRS</description>
+          <posx>250</posx>
+          <posy>0</posy>
+          <height>30</height>
+          <width>80</width>
+          <label>$INFO[Window(10000).Property(IBUS_PDC_FRS_IMG)]</label>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>font35_title</font>
+          <textcolor>white</textcolor>
+          <shadowcolor>black</shadowcolor>
+        </control>
+      </control>
+      <control type="group">
+        <visible>Skin.HasSetting(SkinDebug)</visible>
+        <description>Back Sensor Labels</description>
+        <posx>0</posx>
+        <posy>140r</posy>
+        <control type="label">
+          <description>RLS</description>
+          <posx>45</posx>
+          <posy>0</posy>
+          <height>30</height>
+          <width>80</width>
+          <label>$INFO[Window(10000).Property(IBUS_PDC_RLS_IMG)]</label>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>font35_title</font>
+          <textcolor>white</textcolor>
+          <shadowcolor>black</shadowcolor>
+        </control>
+        <control type="label">
+          <description>RLC</description>
+          <posx>115</posx>
+          <posy>0</posy>
+          <height>30</height>
+          <width>80</width>
+          <label>$INFO[Window(10000).Property(IBUS_PDC_RLC_IMG)]</label>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>font35_title</font>
+          <textcolor_off>white</textcolor_off>
+          <shadowcolor_off>grey2</shadowcolor_off>
+          <textcolor>white</textcolor>
+          <shadowcolor>black</shadowcolor>
+        </control>
+        <control type="label">
+          <description>RRC</description>
+          <posx>180</posx>
+          <posy>0</posy>
+          <height>30</height>
+          <width>80</width>
+          <label>$INFO[Window(10000).Property(IBUS_PDC_RRC_IMG)]</label>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>font35_title</font>
+          <textcolor_off>white</textcolor_off>
+          <shadowcolor_off>grey2</shadowcolor_off>
+          <textcolor>white</textcolor>
+          <shadowcolor>black</shadowcolor>
+        </control>
+        <control type="label">
+          <description>RRS</description>
+          <posx>250</posx>
+          <posy>0</posy>
+          <height>30</height>
+          <width>80</width>
+          <label>$INFO[Window(10000).Property(IBUS_PDC_RRS_IMG)]</label>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>font35_title</font>
+          <textcolor_off>white</textcolor_off>
+          <shadowcolor_off>grey2</shadowcolor_off>
+          <textcolor>white</textcolor>
+          <shadowcolor>black</shadowcolor>
         </control>
       </control>
     </control>

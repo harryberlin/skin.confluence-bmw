@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kodi Translation Team\n"
@@ -19,6 +19,14 @@ msgstr ""
 msgctxt "#31000"
 msgid "Change your"
 msgstr "Altere suas"
+
+msgctxt "#31001"
+msgid "GAMES"
+msgstr "JOGOS"
+
+msgctxt "#31002"
+msgid "[B]GAME SETTINGS[/B][CR][CR]Configure rewind support & options ·  Configure keyboard use and number of keyboard players"
+msgstr "[B]AJUSTES DE JOGOS [/ B] [CR] [CR]Configure o suporte a retroceder & demais opções· Configure o uso do teclado bem como o número de teclados disponíveis"
 
 msgctxt "#31003"
 msgid "Power options"
@@ -46,7 +54,7 @@ msgstr "Tela Cheia"
 
 msgctxt "#31009"
 msgid "Total duration"
-msgstr "Duração Total"
+msgstr "Duração total"
 
 msgctxt "#31010"
 msgid "Hardware decoding"
@@ -67,6 +75,14 @@ msgstr "Informação do processamento de áudio"
 msgctxt "#31014"
 msgid "Memory used"
 msgstr "Memória usada"
+
+msgctxt "#31015"
+msgid "Minute"
+msgstr "Minuto"
+
+msgctxt "#31016"
+msgid "Elapsed time"
+msgstr "Tempo decorrido"
 
 msgctxt "#31023"
 msgid "Playing"
@@ -229,12 +245,16 @@ msgid "Show recently added videos"
 msgstr "Mostrar vídeos adicionados recentemente"
 
 msgctxt "#31118"
-msgid "Home page programs submenu"
-msgstr "Submenu de programas na página principal"
+msgid "Home page \"Add-ons\" submenu"
+msgstr "Submenu \"Add-ons\" no menu principal"
 
 msgctxt "#31119"
 msgid "Hide background fanart"
 msgstr "Ocultar fanart fundo da visualização"
+
+msgctxt "#31120"
+msgid "Home page \"Games\" submenu"
+msgstr "Submenu \"Jogos\" no menu principal"
 
 msgctxt "#31122"
 msgid "Hide EPG if RDS is present on channel window"
@@ -446,31 +466,31 @@ msgstr "Selecione o perfil que será utilizado na inicialização quando a tela 
 
 msgctxt "#31430"
 msgid "[B]PLAYER SETTINGS[/B][CR][CR]Configure actions that can be used during playback · Configure how media content is played"
-msgstr "[B]AJUSTES DO REPRODUTOR[B}[CR][CR]Configurar as ações que podem ser usadas durante reprodução - Configurar o modo como o conteúdo de mída é reproduzido."
+msgstr "[B]AJUSTES DO REPRODUTOR[/B][CR][CR]Configurar as ações que podem ser usadas durante reprodução - Configurar o modo como o conteúdo de mídia é reproduzido."
 
 msgctxt "#31431"
 msgid "[B]LIBRARY SETTINGS[/B][CR][CR]Configure how the library/file views display media content ·  Configure how library lists/views are navigated · Configure the media database options"
-msgstr "[B]AJUSTES DA COLEÇÃO[BR][CR][CR]Configurar o modo como as listas de mídia são exibidas  em modo arquivo ou coleção · Configurar navegabilidade nas coleções - Configurar as opções de banco de dados"
+msgstr "[B]AJUSTES DA COLEÇÃO[/B][CR][CR]Configurar o modo como as listas de mídia são exibidas  em modo arquivo ou coleção · Configurar navegabilidade nas coleções - Configurar as opções de banco de dados"
 
 msgctxt "#31432"
 msgid "[B]PVR SETTINGS[/B][CR][CR]Configure how the channels & guide are managed  · Configure how Live TV and recordings are managed"
-msgstr "[B]AJUSTES DE PVR[B][CR][CR]Configurar como os canais % guia epg são gerenciados - Configurar como TV ao Vivo e gravações são gerenciados."
+msgstr "[B]AJUSTES DE PVR[/B][CR][CR]Configurar como os canais % guia epg são gerenciados - Configurar como TV ao Vivo e gravações são gerenciados."
 
 msgctxt "#31433"
 msgid "[B]ADD-ONS SETTINGS[/B][CR][CR]Configure your installed add-ons · Browse for and install add-ons from kodi.tv"
-msgstr "[B]AJUSTES DE ADDONS[B][CR][CR]Configure seus addons instalados - Navegue por e instale addons via kodi.tv"
+msgstr "[B]AJUSTES DE ADDONS[/B][CR][CR]Configure seus addons instalados - Navegue por e instale addons via kodi.tv"
 
 msgctxt "#31434"
 msgid "[B]SERVICES SETTINGS[/B][CR][CR]Configure & manage media sharing services · Configure web server · Configure & manage the weather service"
-msgstr "[B]AJUSTES DE SERVIÇOS[B][CR][CR]Configure & gerencie serviços de compartilhamento de mídia - Configure servidor web - Configure & gerencie serviços climáticos"
+msgstr "[B]AJUSTES DE SERVIÇOS[/B][CR][CR]Configure & gerencie serviços de compartilhamento de mídia - Configure servidor web - Configure & gerencie serviços climáticos"
 
 msgctxt "#31435"
 msgid "[B]SYSTEM SETTINGS[/B][CR][CR]Configure display · Configure audio · Configure internet access · Configure power saving· Configure logging"
-msgstr "[B]AJUSTES DE SISTEMA[B][CR][CR]Configure display - Configure áudio - Configue acesso internet - Configure economizar energia - Configure depuração"
+msgstr "[B]AJUSTES DE SISTEMA[/B][CR][CR]Configure tela - Configure áudio - Configure acesso internet - Configure gerenciar energia - Configure depuração"
 
 msgctxt "#31436"
 msgid "[B]INTERFACE SETTINGS[/B][CR][CR]Configure skin · Configure region · Configure control · Configure screensaver · Configure master lock"
-msgstr "[B]AJUSTES DE INTERFACE[BR][CR][CR]Configure skin - Configure região - Configure controles - Configure protetor de tela - Configure trava de segurança master."
+msgstr "[B]AJUSTES DE INTERFACE[/B][CR][CR]Configure skin - Configure regional - Configure controles - Configure proteção de tela - Configure bloqueio-mestre."
 
 msgctxt "#31501"
 msgid "Scheduled time"
@@ -558,15 +578,15 @@ msgstr "FILMES"
 
 msgctxt "#31955"
 msgid "TV SHOWS"
-msgstr "SÉRIES DE TV"
+msgstr "SERIADOS"
 
 msgctxt "#31956"
 msgid "MUSIC"
 msgstr "MÚSICAS"
 
 msgctxt "#31957"
-msgid "PROGRAMS"
-msgstr "PROGRAMAS"
+msgid "ADD-ONS"
+msgstr "ADD-ONS"
 
 msgctxt "#31958"
 msgid "PLAY DISC"
@@ -579,3 +599,19 @@ msgstr "SISTEMA"
 msgctxt "#31960"
 msgid "RADIO"
 msgstr "RÁDIO"
+
+msgctxt "#31961"
+msgid "Timeshift"
+msgstr "Mudança de horário"
+
+msgctxt "#31962"
+msgid "Choose kind of profile identification"
+msgstr "Escolha o tipo de identificação do perfil"
+
+msgctxt "#31963"
+msgid "Profile name"
+msgstr "Nome do Perfil"
+
+msgctxt "#31964"
+msgid "Profile avatar"
+msgstr "Imagem do perfil"

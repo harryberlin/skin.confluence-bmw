@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kodi Translation Team\n"
@@ -19,6 +19,14 @@ msgstr ""
 msgctxt "#31000"
 msgid "Change your"
 msgstr "Promijenite vaše"
+
+msgctxt "#31001"
+msgid "GAMES"
+msgstr "IGRE"
+
+msgctxt "#31002"
+msgid "[B]GAME SETTINGS[/B][CR][CR]Configure rewind support & options ·  Configure keyboard use and number of keyboard players"
+msgstr "[B]POSTAVKE IGRE[/B][CR][CR]Prilagodite mogućnosti i podršku premotavanja ·  Prilagodite upotrebu tipkovnice i broj igrača na tipkovnici"
 
 msgctxt "#31003"
 msgid "Power options"
@@ -67,6 +75,14 @@ msgstr "Informacije obrade zvuka"
 msgctxt "#31014"
 msgid "Memory used"
 msgstr "Korištenje memorije"
+
+msgctxt "#31015"
+msgid "Minute"
+msgstr "Minuta"
+
+msgctxt "#31016"
+msgid "Elapsed time"
+msgstr "Proteklo vrijeme"
 
 msgctxt "#31023"
 msgid "Playing"
@@ -229,12 +245,16 @@ msgid "Show recently added videos"
 msgstr "Prikaži nedavno dodane video snimke"
 
 msgctxt "#31118"
-msgid "Home page programs submenu"
-msgstr "Početna stranica \"Programi\" podizbornika"
+msgid "Home page \"Add-ons\" submenu"
+msgstr "Početna stranica podizbornika dodataka"
 
 msgctxt "#31119"
 msgid "Hide background fanart"
 msgstr "Sakrij pozadinu postera obožavatelja"
+
+msgctxt "#31120"
+msgid "Home page \"Games\" submenu"
+msgstr "Početna stranica podizbornika igara"
 
 msgctxt "#31122"
 msgid "Hide EPG if RDS is present on channel window"
@@ -565,8 +585,8 @@ msgid "MUSIC"
 msgstr "GLAZBA"
 
 msgctxt "#31957"
-msgid "PROGRAMS"
-msgstr "PROGRAMI"
+msgid "ADD-ONS"
+msgstr "DODACI"
 
 msgctxt "#31958"
 msgid "PLAY DISC"
@@ -579,3 +599,19 @@ msgstr "SUSTAV"
 msgctxt "#31960"
 msgid "RADIO"
 msgstr "RADIO"
+
+msgctxt "#31961"
+msgid "Timeshift"
+msgstr "Vremensko premotavanje"
+
+msgctxt "#31962"
+msgid "Choose kind of profile identification"
+msgstr "Odaberi način identifikacije profila"
+
+msgctxt "#31963"
+msgid "Profile name"
+msgstr "Naziv profila"
+
+msgctxt "#31964"
+msgid "Profile avatar"
+msgstr "Avatar profila"

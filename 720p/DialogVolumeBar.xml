@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <window>
   <defaultcontrol>1</defaultcontrol>
-  <animation condition="true" type="Conditional">
-    <effect type="zoom" start="0" end="220" time="0">Conditional</effect>
-    <effect type="slide" start="0,0" end="-575,5" time="0">Conditional</effect>
-  </animation>
   <animation effect="slide" start="0,-40" end="0,0" time="75">WindowOpen</animation>
   <animation effect="slide" start="0,0" end="0,-40" delay="300" time="75">WindowClose</animation>
   <controls>

@@ -43,8 +43,8 @@
         <top>11</top>
         <width>64</width>
         <height>32</height>
-        <label>-</label>
-        <font>-</font>
+        <label />
+        <font />
         <onclick>PreviousMenu</onclick>
         <texturefocus>DialogCloseButton-focus.png</texturefocus>
         <texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -72,7 +72,7 @@
         <onright>9001</onright>
         <onup>9000</onup>
         <ondown>9000</ondown>
-        <pagecontrol>-</pagecontrol>
+        <pagecontrol />
         <scrolltime>300</scrolltime>
         <itemlayout height="54" width="260">
           <control type="image">
@@ -87,7 +87,7 @@
             <top>0</top>
             <width>240</width>
             <height>55</height>
-            <font>font30_title</font>
+            <font>font24_title</font>
             <textcolor>grey3</textcolor>
             <align>right</align>
             <aligny>center</aligny>
@@ -107,7 +107,7 @@
             <top>0</top>
             <width>240</width>
             <height>55</height>
-            <font>font30_title</font>
+            <font>font24_title</font>
             <textcolor>white</textcolor>
             <align>right</align>
             <aligny>center</aligny>
@@ -119,20 +119,20 @@
             <label>14200</label>
             <label2>31430</label2>
             <onclick>ActivateWindow(PlayerSettings)</onclick>
-            <icon>-</icon>
+            <icon />
           </item>
           <item id="2">
             <label>14211</label>
             <label2>31431</label2>
             <onclick>ActivateWindow(MediaSettings)</onclick>
-            <icon>-</icon>
+            <icon />
           </item>
           <item id="8">
             <label>15016</label>
             <label2>31002</label2>
             <onclick>ActivateWindow(GameSettings)</onclick>
             <visible>System.GetBool(gamesgeneral.enable)</visible>
-            <icon></icon>
+            <icon />
           </item>
           <item id="3">
             <label>14204</label>
@@ -144,25 +144,31 @@
             <label>24001</label>
             <label2>31433</label2>
             <onclick>ActivateWindow(AddonBrowser)</onclick>
-            <icon>-</icon>
+            <icon />
           </item>
           <item id="5">
             <label>14036</label>
             <label2>31434</label2>
             <onclick>ActivateWindow(ServiceSettings)</onclick>
-            <icon>-</icon>
+            <icon />
           </item>
           <item id="6">
             <label>14206</label>
             <label2>31436</label2>
             <onclick>ActivateWindow(InterfaceSettings)</onclick>
-            <icon>-</icon>
+            <icon />
           </item>
           <item id="7">
             <label>13000</label>
             <label2>31435</label2>
             <onclick>ActivateWindow(SystemSettings)</onclick>
-            <icon>-</icon>
+            <icon />
+          </item>
+          <item id="8">
+            <label>Reload Skin</label>
+            <onclick>ReloadSkin</onclick>
+            <icon />
+            <visible>Skin.HasSetting(SkinDebug)</visible>
           </item>
         </content>
       </control>
@@ -186,7 +192,7 @@
         <top>20</top>
         <width>740</width>
         <height>30</height>
-        <font>font30</font>
+        <font>font16</font>
         <label>$LOCALIZE[31000] $LOCALIZE[5]</label>
         <align>center</align>
         <aligny>center</aligny>
@@ -231,12 +237,16 @@
         <top>522</top>
         <width>740</width>
         <height>98</height>
-        <font>font16</font>
+        <font>font12</font>
         <label>$INFO[Container(9000).ListItem.Label2]</label>
         <align>left</align>
         <textcolor>white</textcolor>
         <shadowcolor>black</shadowcolor>
       </control>
+    </control>
+    <control type="group">
+      <depth>DepthFooter</depth>
+      <include>CommonNowPlaying</include>
     </control>
     <include>MainWindowMouseButtons</include>
     <include>BehindDialogFadeOut</include>

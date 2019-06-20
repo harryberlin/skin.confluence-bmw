@@ -3,28 +3,24 @@
   <animation effect="fade" start="0" end="100" time="150">WindowOpen</animation>
   <animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
   <coordinates>
-    <left>760</left>
+    <left>860</left>
     <top>640</top>
   </coordinates>
   <controls>
     <control type="group">
       <depth>DepthMax</depth>
-      <animation condition="true" type="Conditional">
-        <effect type="zoom" start="0" end="200" time="0">Conditional</effect>
-        <effect type="slide" start="0,0" end="-240,-35" time="0">Conditional</effect>
-      </animation>
-      <animation_off effect="slide" start="0,0" end="-190,0" time="150" condition="Window.IsVisible(BusyDialog)">conditional</animation_off>
+      <animation effect="slide" start="0,0" end="-190,0" time="150" condition="Window.IsVisible(BusyDialog)">conditional</animation>
       <control type="image">
         <left>0</left>
         <top>0</top>
-        <width>500</width>
+        <width>400</width>
         <height>70</height>
         <colordiffuse>EEFFFFFF</colordiffuse>
         <texture border="12">OverlayDialogBackground.png</texture>
       </control>
       <control type="image" id="400">
         <description>avatar</description>
-        <left>12</left>
+        <left>20</left>
         <top>10</top>
         <width>50</width>
         <height>50</height>
@@ -34,7 +30,7 @@
         <description>Line 1 Label</description>
         <left>75</left>
         <top>15</top>
-        <width>410</width>
+        <width>310</width>
         <height>18</height>
         <font>font12_title</font>
         <textcolor>white</textcolor>
@@ -47,7 +43,7 @@
         <description>Line 2 Label</description>
         <left>75</left>
         <top>35</top>
-        <width>410</width>
+        <width>310</width>
         <height>20</height>
         <font>font12_title</font>
         <textcolor>grey2</textcolor>

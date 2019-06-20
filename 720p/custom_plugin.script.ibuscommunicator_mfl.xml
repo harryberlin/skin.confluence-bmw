@@ -3,7 +3,7 @@
   <defaultcontrol>-</defaultcontrol>
   <allowoverlay>yes</allowoverlay>
   <zorder>99</zorder>
-  <visible>StringCompare(Window(10000).Property(IBUSCOMMUNICATOR_MFL_SHOW),1)|StringCompare(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)</visible>
+  <visible>[String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_MFL_SHOW),1)|String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)]+!Skin.HasSetting(HomeObcBar)</visible>
   <coordinates>
     <system>0</system>
     <posx>0</posx>
@@ -20,34 +20,35 @@
         <posy>-30</posy>
         <width>130</width>
         <height>150</height>
-        <texture flipx="false" border="5,5,5,5">special://home/addons/plugin.script.ibuscommunicator/resources/skins/Default/media/OverlayDialogBackground.png</texture>
+        <texture_off flipx="false" border="5,5,5,5">special://home/addons/plugin.script.ibuscommunicator/resources/skins/default/media/OverlayDialogBackground.png</texture_off>
+        <texture flipx="false" border="5,5,5,5">OverlayDialogBackground.png</texture>
       </control>
       <control type="image">
-        <animation effect="zoom" end="55" time="300" tween="quadratic" easing="out" condition="StringCompare(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)+StringCompare(Window(10000).Property(IBUSCOMMUNICATOR_MFL_SHOW),1)" center="120,120">Conditional</animation>
+        <animation effect="zoom" end="55" time="300" tween="quadratic" easing="out" condition="String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)+String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_MFL_SHOW),1)" center="120,120">Conditional</animation>
         <posx>25</posx>
         <posy>20</posy>
         <width>80</width>
         <height>80</height>
-        <texture>special://home/addons/plugin.script.ibuscommunicator/resources/skins/Default/media/icon-drl.png</texture>
-        <visible_off>StringCompare(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)+!StringCompare(Window(10000).Property(IBUSCOMMUNICATOR_MFL_SHOW),1)</visible_off>
-        <visible>StringCompare(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)</visible>
+        <texture>special://home/addons/plugin.script.ibuscommunicator/resources/skins/default/media/icon-drl.png</texture>
+        <visible_off>String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)+!String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_MFL_SHOW),1)</visible_off>
+        <visible>String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)</visible>
       </control>
       <control type="image">
-        <animation effect="zoom" end="90" time="300" tween="quadratic" easing="out" condition="StringCompare(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)+StringCompare(Window(10000).Property(IBUSCOMMUNICATOR_MFL_SHOW),1)" center="-40,-20">Conditional</animation>
+        <animation effect="zoom" end="90" time="300" tween="quadratic" easing="out" condition="String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)+String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_MFL_SHOW),1)" center="-40,-20">Conditional</animation>
         <posx>25</posx>
         <posy>20</posy>
         <width>80</width>
         <height>80</height>
-        <texture>special://home/addons/plugin.script.ibuscommunicator/resources/skins/Default/media/icon-mfl.png</texture>
-        <visible>StringCompare(Window(10000).Property(IBUSCOMMUNICATOR_MFL_SHOW),1)</visible>
+        <texture>special://home/addons/plugin.script.ibuscommunicator/resources/skins/default/media/icon-mfl.png</texture>
+        <visible>String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_MFL_SHOW),1)</visible>
       </control>
       <control_off type="image">
         <posx>85</posx>
         <posy>80</posy>
         <width>30</width>
         <height>30</height>
-        <texture>special://home/addons/plugin.script.ibuscommunicator/resources/skins/Default/media/icon-drl.png</texture>
-        <visible>StringCompare(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)+StringCompare(Window(10000).Property(IBUSCOMMUNICATOR_MFL_SHOW),1)</visible>
+        <texture>special://home/addons/plugin.script.ibuscommunicator/resources/skins/default/media/icon-drl.png</texture>
+        <visible>String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)+String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_MFL_SHOW),1)</visible>
       </control_off>
     </control>
   </controls>

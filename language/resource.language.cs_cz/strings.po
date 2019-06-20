@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kodi Translation Team\n"
@@ -18,7 +18,15 @@ msgstr ""
 
 msgctxt "#31000"
 msgid "Change your"
-msgstr "Změňte vaše"
+msgstr "Změňte své"
+
+msgctxt "#31001"
+msgid "GAMES"
+msgstr "HRY"
+
+msgctxt "#31002"
+msgid "[B]GAME SETTINGS[/B][CR][CR]Configure rewind support & options ·  Configure keyboard use and number of keyboard players"
+msgstr "[B]NASTAVENÍ HER[/B][CR][CR]Konfigurujte podporu a možnosti přetáčení · Konfigurujte použití klávesnice a počet hráčů na klávesnici"
 
 msgctxt "#31003"
 msgid "Power options"
@@ -26,7 +34,7 @@ msgstr "Možnosti napájení"
 
 msgctxt "#31004"
 msgid "Working..."
-msgstr "Zpracovávání..."
+msgstr "Zpracovávání…"
 
 msgctxt "#31005"
 msgid "Hide information"
@@ -62,11 +70,19 @@ msgstr "Dekodér"
 
 msgctxt "#31013"
 msgid "Audio process information"
-msgstr "Informace o zpracování audia"
+msgstr "Informace o zpracování zvuku"
 
 msgctxt "#31014"
 msgid "Memory used"
 msgstr "Využití paměti"
+
+msgctxt "#31015"
+msgid "Minute"
+msgstr "minuta"
+
+msgctxt "#31016"
+msgid "Elapsed time"
+msgstr "Uplynulý čas"
 
 msgctxt "#31023"
 msgid "Playing"
@@ -94,7 +110,7 @@ msgstr "Plakát"
 
 msgctxt "#31029"
 msgid "Fanart"
-msgstr "Fanart"
+msgstr "Fanouškovské umění"
 
 msgctxt "#31031"
 msgid "Pic thumbs"
@@ -114,7 +130,7 @@ msgstr "Akce"
 
 msgctxt "#31040"
 msgid "Now playing"
-msgstr "Přehrává se"
+msgstr "Nyní se přehrává"
 
 msgctxt "#31042"
 msgid "PLAYING"
@@ -146,11 +162,11 @@ msgstr "Čas ukončení"
 
 msgctxt "#31050"
 msgid "Sort: Ascending"
-msgstr "Řazení: Vzestupně"
+msgstr "Řazení: vzestupně"
 
 msgctxt "#31051"
 msgid "Sort: Descending"
-msgstr "Řazení: Sestupně"
+msgstr "Řazení: sestupně"
 
 msgctxt "#31055"
 msgid "Open playlist"
@@ -210,7 +226,7 @@ msgstr "Povolit vlastní pozadí"
 
 msgctxt "#31110"
 msgid "Background path:"
-msgstr "Cesta k pozadí:"
+msgstr "Cesta k umístění pozadí:"
 
 msgctxt "#31111"
 msgid "Hide"
@@ -229,12 +245,16 @@ msgid "Show recently added videos"
 msgstr "Zobrazit nedávno přidaná videa"
 
 msgctxt "#31118"
-msgid "Home page programs submenu"
-msgstr "Podnabídka domovské stránky „Programy“"
+msgid "Home page \"Add-ons\" submenu"
+msgstr "Podnabídka domovské stránky „Doplňky“"
 
 msgctxt "#31119"
 msgid "Hide background fanart"
 msgstr "Skrýt fanart na pozadí"
+
+msgctxt "#31120"
+msgid "Home page \"Games\" submenu"
+msgstr "Podnabídka domovské stránky „Hry“"
 
 msgctxt "#31122"
 msgid "Hide EPG if RDS is present on channel window"
@@ -358,7 +378,7 @@ msgstr "Nedávno přidané"
 
 msgctxt "#31329"
 msgid "[B]Timer set![/B] [COLOR=grey2] - System auto shutdown in[/COLOR]"
-msgstr "[B]Časovač nastaven![/B] [COLOR=grey2] - Systém se automaticky vypne za[/COLOR]"
+msgstr "[B]Časovač nastaven![/B] [COLOR=grey2] – systém se automaticky vypne za[/COLOR]"
 
 msgctxt "#31330"
 msgid "Click button to play[CR][CR]movie trailer"
@@ -406,7 +426,7 @@ msgstr "Povoleno"
 
 msgctxt "#31390"
 msgid "Skin default"
-msgstr "Výchozí vzhledu"
+msgstr "Výchozí nastavení vzhledu"
 
 msgctxt "#31391"
 msgid "Skin default with no caps"
@@ -414,11 +434,11 @@ msgstr "Výchozí vzhled bez velkých písmen"
 
 msgctxt "#31392"
 msgid "Arial based"
-msgstr "Založené na Arial"
+msgstr "Založeno na Arial"
 
 msgctxt "#31411"
 msgid "First run help..."
-msgstr "Nejprve spusťte nápovědu..."
+msgstr "Nápověda při prvním spuštění…"
 
 msgctxt "#31412"
 msgid "This tab signifies that there is a menu off to the side of this window that contains extra options for this section. To access the menu, navigate to the left with your remote control or keyboard or place your mouse pointer over the tab. [CR][CR]Click \"OK\" to close this dialogue. It will not appear again."
@@ -530,7 +550,7 @@ msgstr "Předpověď"
 
 msgctxt "#31909"
 msgid "Fetching forecast info..."
-msgstr "Načítání předpovědi..."
+msgstr "Načítání předpovědi…"
 
 msgctxt "#31910"
 msgid "Maps"
@@ -565,8 +585,8 @@ msgid "MUSIC"
 msgstr "HUDBA"
 
 msgctxt "#31957"
-msgid "PROGRAMS"
-msgstr "PROGRAMY"
+msgid "ADD-ONS"
+msgstr "DOPLŇKY"
 
 msgctxt "#31958"
 msgid "PLAY DISC"
@@ -579,3 +599,19 @@ msgstr "SYSTÉM"
 msgctxt "#31960"
 msgid "RADIO"
 msgstr "RÁDIO"
+
+msgctxt "#31961"
+msgid "Timeshift"
+msgstr "Časový posun"
+
+msgctxt "#31962"
+msgid "Choose kind of profile identification"
+msgstr "Zvolte typ identifikace profilu"
+
+msgctxt "#31963"
+msgid "Profile name"
+msgstr "Název profilu"
+
+msgctxt "#31964"
+msgid "Profile avatar"
+msgstr "Avatar profilu"

@@ -49,7 +49,7 @@
         <control type="label" id="200">
           <width>250</width>
           <height>35</height>
-          <font>font30</font>
+          <font>font12</font>
           <label>31006</label>
           <textcolor>blue</textcolor>
           <align>center</align>
@@ -59,7 +59,7 @@
           <description>View As button</description>
           <textwidth>235</textwidth>
           <include>ButtonCommonValues</include>
-          <label>-</label>
+          <label />
         </control>
         <control type="button" id="3">
           <description>Sort by button</description>
@@ -70,7 +70,7 @@
           <description>Sort asc</description>
           <include>ButtonCommonValues</include>
           <alttexturefocus border="5">button-focus.png</alttexturefocus>
-          <alttexturenofocus>-</alttexturenofocus>
+          <alttexturenofocus />
           <label>31051</label>
           <altlabel>31050</altlabel>
           <usealttexture>Container.SortDirection(Ascending)</usealttexture>
@@ -93,7 +93,7 @@
         <control type="label" id="203">
           <width>250</width>
           <height>35</height>
-          <font>font30</font>
+          <font>font12</font>
           <label>31039</label>
           <textcolor>blue</textcolor>
           <align>center</align>

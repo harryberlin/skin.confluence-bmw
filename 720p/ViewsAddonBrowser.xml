@@ -17,20 +17,20 @@
         <visible>Window.IsVisible(AddonBrowser) | Container.Content(Addons)</visible>
         <pagecontrol>60</pagecontrol>
         <scrolltime>200</scrolltime>
-        <itemlayout height="60" width="580">
+        <itemlayout height="40" width="580">
           <control type="image">
             <left>0</left>
             <top>0</top>
             <width>580</width>
-            <height>61</height>
+            <height>41</height>
             <texture border="0,2,0,2">MenuItemNF.png</texture>
           </control>
           <control type="label">
             <left>10</left>
-            <top>-5</top>
+            <top>0</top>
             <width>520</width>
-            <height>60</height>
-            <font>font55_title</font>
+            <height>40</height>
+            <font>font13</font>
             <textcolor>grey2</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>left</align>
@@ -39,10 +39,10 @@
           </control>
           <control type="label">
             <left>55</left>
-            <top>-5</top>
+            <top>0</top>
             <width>500</width>
-            <height>60</height>
-            <font>font50_title</font>
+            <height>40</height>
+            <font>font12</font>
             <textcolor>grey2</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>right</align>
@@ -50,12 +50,12 @@
             <label>$VAR[AddonLabel2]</label>
           </control>
         </itemlayout>
-        <focusedlayout height="60" width="580">
+        <focusedlayout height="40" width="580">
           <control type="image">
             <left>0</left>
             <top>0</top>
             <width>580</width>
-            <height>61</height>
+            <height>41</height>
             <texture border="0,2,0,2">MenuItemNF.png</texture>
             <visible>!Control.HasFocus(550)</visible>
             <include>VisibleFadeEffect</include>
@@ -64,7 +64,7 @@
             <left>0</left>
             <top>0</top>
             <width>580</width>
-            <height>61</height>
+            <height>41</height>
             <texture border="0,2,0,2">MenuItemFO.png</texture>
             <visible>Control.HasFocus(550)</visible>
             <include>VisibleFadeEffect</include>
@@ -73,17 +73,17 @@
             <left>370</left>
             <top>5</top>
             <width>200</width>
-            <height>51</height>
+            <height>31</height>
             <texture border="0,0,14,0">MediaItemDetailBG.png</texture>
             <visible>Control.HasFocus(550) + !String.IsEmpty(ListItem.Property(Addon.Status))</visible>
           </control>
           <control type="label">
             <left>10</left>
-            <top>-5</top>
+            <top>0</top>
             <width>520</width>
-            <height>60</height>
-            <font>font55_title</font>
-            <textcolor>$VAR[TextColor2]</textcolor>
+            <height>40</height>
+            <font>font13</font>
+            <textcolor>white</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>left</align>
             <aligny>center</aligny>
@@ -91,10 +91,10 @@
           </control>
           <control type="label">
             <left>55</left>
-            <top>-5</top>
+            <top>0</top>
             <width>500</width>
-            <height>60</height>
-            <font>font50_title</font>
+            <height>40</height>
+            <font>font12</font>
             <textcolor>grey2</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>right</align>
@@ -168,7 +168,7 @@
             <top>0</top>
             <width>350</width>
             <height>25</height>
-            <label fallback="416">$INFO[ListItem.AddonCreator]</label>
+            <label fallback="10005">$INFO[ListItem.AddonCreator]</label>
             <align>left</align>
             <aligny>center</aligny>
             <font>font13</font>
@@ -193,7 +193,7 @@
             <top>30</top>
             <width>350</width>
             <height>25</height>
-            <label fallback="416">$INFO[ListItem.AddonVersion]</label>
+            <label fallback="10005">$INFO[ListItem.AddonVersion]</label>
             <align>left</align>
             <aligny>center</aligny>
             <font>font13</font>
@@ -400,7 +400,7 @@
             <top>0</top>
             <width>155</width>
             <height>25</height>
-            <label fallback="416">$INFO[ListItem.AddonCreator]</label>
+            <label fallback="10005">$INFO[ListItem.AddonCreator]</label>
             <align>left</align>
             <aligny>center</aligny>
             <font>font13</font>
@@ -425,7 +425,7 @@
             <top>30</top>
             <width>155</width>
             <height>25</height>
-            <label fallback="416">$INFO[ListItem.AddonVersion]</label>
+            <label fallback="10005">$INFO[ListItem.AddonVersion]</label>
             <align>left</align>
             <aligny>center</aligny>
             <font>font13</font>

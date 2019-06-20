@@ -66,7 +66,7 @@
         <top>70</top>
         <width>470</width>
         <height>30</height>
-        <font>font30_title</font>
+        <font>font12_title</font>
         <textcolor>selected</textcolor>
         <shadowcolor>black</shadowcolor>
         <scroll>true</scroll>
@@ -81,8 +81,8 @@
         <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
         <texturesliderbar border="2,16,2,16">ScrollBarV_bar.png</texturesliderbar>
         <texturesliderbarfocus border="2,16,2,16">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-        <textureslidernib>-</textureslidernib>
-        <textureslidernibfocus>-</textureslidernibfocus>
+        <textureslidernib />
+        <textureslidernibfocus />
         <onleft>31</onleft>
         <onright>20</onright>
         <ondown>20</ondown>
@@ -101,20 +101,20 @@
         <ondown>20</ondown>
         <pagecontrol>30</pagecontrol>
         <scrolltime>200</scrolltime>
-        <itemlayout height="60" width="540">
+        <itemlayout height="40" width="540">
           <control type="image">
             <left>0</left>
             <top>0</top>
             <width>540</width>
-            <height>61</height>
+            <height>41</height>
             <texture border="0,2,0,2">MenuItemNF.png</texture>
           </control>
           <control type="label">
             <left>0</left>
-            <top>-5</top>
+            <top>0</top>
             <width>500</width>
-            <height>60</height>
-            <font>font55_title</font>
+            <height>40</height>
+            <font>font13</font>
             <aligny>center</aligny>
             <selectedcolor>selected</selectedcolor>
             <textcolor>grey2</textcolor>
@@ -123,10 +123,10 @@
           </control>
           <control type="label">
             <left>330</left>
-            <top>-5</top>
+            <top>0</top>
             <width>200</width>
-            <height>60</height>
-            <font>font55_title</font>
+            <height>40</height>
+            <font>font12</font>
             <aligny>center</aligny>
             <selectedcolor>selected</selectedcolor>
             <textcolor>grey</textcolor>
@@ -134,12 +134,12 @@
             <info>ListItem.Label2</info>
           </control>
         </itemlayout>
-        <focusedlayout height="60" width="540">
+        <focusedlayout height="40" width="540">
           <control type="image">
             <left>0</left>
             <top>0</top>
             <width>540</width>
-            <height>61</height>
+            <height>41</height>
             <visible>!Control.HasFocus(20)</visible>
             <texture border="0,2,0,2">MenuItemNF.png</texture>
           </control>
@@ -147,7 +147,7 @@
             <left>0</left>
             <top>0</top>
             <width>540</width>
-            <height>61</height>
+            <height>41</height>
             <visible>Control.HasFocus(20)</visible>
             <texture border="0,2,0,2">MenuItemFO.png</texture>
           </control>
@@ -155,16 +155,16 @@
             <left>340</left>
             <top>5</top>
             <width>200</width>
-            <height>51</height>
+            <height>31</height>
             <texture border="0,0,14,0">MediaItemDetailBG.png</texture>
             <visible>Control.HasFocus(20) + !String.IsEmpty(ListItem.Label2)</visible>
           </control>
           <control type="label">
             <left>0</left>
-            <top>-5</top>
+            <top>0</top>
             <width>500</width>
-            <height>60</height>
-            <font>font55_title</font>
+            <height>40</height>
+            <font>font13</font>
             <aligny>center</aligny>
             <selectedcolor>selected</selectedcolor>
             <textcolor>white</textcolor>
@@ -173,10 +173,10 @@
           </control>
           <control type="label">
             <left>330</left>
-            <top>-5</top>
+            <top>0</top>
             <width>200</width>
-            <height>60</height>
-            <font>font55_title</font>
+            <height>40</height>
+            <font>font12</font>
             <aligny>center</aligny>
             <selectedcolor>selected</selectedcolor>
             <textcolor>grey</textcolor>
@@ -227,7 +227,7 @@
         <top>30</top>
         <width>470</width>
         <height>30</height>
-        <font>font30_title</font>
+        <font>font35_title</font>
         <label>B</label>
         <align>right</align>
         <aligny>center</aligny>
@@ -240,7 +240,7 @@
         <top>70</top>
         <width>470</width>
         <height>30</height>
-        <font>font30_title</font>
+        <font>font12_title</font>
         <textcolor>selected</textcolor>
         <shadowcolor>black</shadowcolor>
         <scroll>true</scroll>
@@ -255,8 +255,8 @@
         <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
         <texturesliderbar border="2,16,2,16">ScrollBarV_bar.png</texturesliderbar>
         <texturesliderbarfocus border="2,16,2,16">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-        <textureslidernib>-</textureslidernib>
-        <textureslidernibfocus>-</textureslidernibfocus>
+        <textureslidernib />
+        <textureslidernibfocus />
         <onleft>21</onleft>
         <onright>30</onright>
         <ondown>21</ondown>
@@ -275,20 +275,20 @@
         <ondown>21</ondown>
         <pagecontrol>31</pagecontrol>
         <scrolltime>200</scrolltime>
-        <itemlayout height="60">
+        <itemlayout height="40">
           <control type="image">
             <left>0</left>
             <top>0</top>
             <width>540</width>
-            <height>61</height>
+            <height>41</height>
             <texture border="0,2,0,2">MenuItemNF.png</texture>
           </control>
           <control type="label">
             <left>0</left>
-            <top>-5</top>
+            <top>0</top>
             <width>500</width>
-            <height>60</height>
-            <font>font55_title</font>
+            <height>40</height>
+            <font>font13</font>
             <aligny>center</aligny>
             <selectedcolor>selected</selectedcolor>
             <textcolor>grey2</textcolor>
@@ -297,10 +297,10 @@
           </control>
           <control type="label">
             <left>330</left>
-            <top>-5</top>
+            <top>0</top>
             <width>200</width>
-            <height>60</height>
-            <font>font55_title</font>
+            <height>40</height>
+            <font>font12</font>
             <aligny>center</aligny>
             <selectedcolor>selected</selectedcolor>
             <textcolor>grey</textcolor>
@@ -308,12 +308,12 @@
             <info>ListItem.Label2</info>
           </control>
         </itemlayout>
-        <focusedlayout height="60">
+        <focusedlayout height="40">
           <control type="image">
             <left>0</left>
             <top>0</top>
             <width>540</width>
-            <height>61</height>
+            <height>41</height>
             <visible>!Control.HasFocus(21)</visible>
             <texture border="0,2,0,2">MenuItemNF.png</texture>
           </control>
@@ -321,7 +321,7 @@
             <left>0</left>
             <top>0</top>
             <width>540</width>
-            <height>61</height>
+            <height>41</height>
             <visible>Control.HasFocus(21)</visible>
             <texture border="0,2,0,2">MenuItemFO.png</texture>
           </control>
@@ -329,16 +329,16 @@
             <left>340</left>
             <top>5</top>
             <width>200</width>
-            <height>51</height>
+            <height>31</height>
             <texture border="0,0,14,0">MediaItemDetailBG.png</texture>
             <visible>Control.HasFocus(21) + !String.IsEmpty(ListItem.Label2)</visible>
           </control>
           <control type="label">
             <left>0</left>
-            <top>-5</top>
+            <top>0</top>
             <width>500</width>
-            <height>60</height>
-            <font>font55_title</font>
+            <height>40</height>
+            <font>font13</font>
             <aligny>center</aligny>
             <selectedcolor>selected</selectedcolor>
             <textcolor>white</textcolor>
@@ -347,10 +347,10 @@
           </control>
           <control type="label">
             <left>330</left>
-            <top>-5</top>
+            <top>0</top>
             <width>200</width>
-            <height>60</height>
-            <font>font55_title</font>
+            <height>40</height>
+            <font>font12</font>
             <aligny>center</aligny>
             <selectedcolor>selected</selectedcolor>
             <textcolor>grey</textcolor>
@@ -367,7 +367,7 @@
         <left>40</left>
         <top>53r</top>
         <width>570</width>
-        <font>font30</font>
+        <font>font12</font>
         <align>left</align>
         <scroll>true</scroll>
         <textcolor>grey</textcolor>
@@ -379,7 +379,7 @@
         <right>40</right>
         <top>53r</top>
         <width>570</width>
-        <font>font30</font>
+        <font>font12</font>
         <align>right</align>
         <scroll>true</scroll>
         <textcolor>grey</textcolor>
@@ -400,7 +400,7 @@
         <width>45</width>
         <height>45</height>
         <label>1036</label>
-        <font>-</font>
+        <font />
         <onclick>back</onclick>
         <texturefocus border="5">floor_buttonFO.png</texturefocus>
         <texturenofocus border="5">floor_button.png</texturenofocus>
@@ -425,7 +425,7 @@
         <width>45</width>
         <height>45</height>
         <label>31003</label>
-        <font>-</font>
+        <font />
         <onclick>ActivateWindow(home)</onclick>
         <texturefocus border="5">floor_buttonFO.png</texturefocus>
         <texturenofocus border="5">floor_button.png</texturenofocus>

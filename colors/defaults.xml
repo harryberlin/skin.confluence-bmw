@@ -1,23 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <colors>
   <color name="white" menutextcolor="true">FFF1F1F1</color>
+  <color name="grey">FFb4b4b4</color>
+  <color name="grey2">FF999999</color>
+  <color name="grey3">FF505050</color>
+  <color name="black">FF000000</color>
   <color name="lime" menutextcolor="true">FF00D700</color>
   <color name="purple" menutextcolor="true">FFC646C6</color>
+  <color name="blue" menutextcolor="true">FF0084ff</color>
+  <color name="selected">FFEB9E17</color>
   <color name="yellow" menutextcolor="true">FFBDBD3C</color>
   <color name="slate blue" menutextcolor="true">FF737CA1</color>
   <color name="blue grey" menutextcolor="true">FF98AFC7</color>
   <color name="brown light" menutextcolor="true">FF8B745B</color>
   <color name="copper" menutextcolor="true">FFB87333</color>
-  <color name="grey">FFb4b4b4</color>
-  <color name="grey2">FF999999</color>
-  <color name="grey3">FF505050</color>
-  <color name="black">FF000000</color>
-  <color name="blue" menutextcolor="true">FF0084ff</color>
-  <color name="selected">FFEB9E17</color>
-  <color name="invalid">FFFF0000</color>
-  <color name="amber (BMW)" menutextcolor="true">FFFF7E00</color>
-  <color name="blue (BMW ///M)" menutextcolor="true">ff0072ce</color>
-  <color name="darkblue (BMW ///M)" menutextcolor="true">ff0c2340</color>
-  <color name="red (BMW ///M)" menutextcolor="true">ffc8102e</color>
   <color name="red" menutextcolor="true">ff7a0000</color>
+  <color name="red (BMW ///M)" menutextcolor="true">ffc8102e</color>
+  <color name="darkblue (BMW ///M)" menutextcolor="true">ff0c2340</color>
+  <color name="blue (BMW ///M)" menutextcolor="true">ff0072ce</color>
+  <color name="amber (BMW)" menutextcolor="true">FFFF7E00</color>
+  <color name="invalid">FFFF0000</color>
 </colors>

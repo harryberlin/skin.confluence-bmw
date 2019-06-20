@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kodi Translation Team\n"
@@ -19,6 +19,14 @@ msgstr ""
 msgctxt "#31000"
 msgid "Change your"
 msgstr "Modification des"
+
+msgctxt "#31001"
+msgid "GAMES"
+msgstr "JEUX"
+
+msgctxt "#31002"
+msgid "[B]GAME SETTINGS[/B][CR][CR]Configure rewind support & options ·  Configure keyboard use and number of keyboard players"
+msgstr "[B]PARAMÈTRES DE JEU[/B][CR][CR]Configuration de la prise en charge et des options pour revoir des parties de jeu · Configuration de l'utilisation du clavier et du nombre de joueur au clavier"
 
 msgctxt "#31003"
 msgid "Power options"
@@ -67,6 +75,14 @@ msgstr "Informations de traitement audio"
 msgctxt "#31014"
 msgid "Memory used"
 msgstr "Mémoire utilisée "
+
+msgctxt "#31015"
+msgid "Minute"
+msgstr "minute"
+
+msgctxt "#31016"
+msgid "Elapsed time"
+msgstr "Temps écoulé"
 
 msgctxt "#31023"
 msgid "Playing"
@@ -178,7 +194,7 @@ msgstr "Sélection actuelle"
 
 msgctxt "#31101"
 msgid "Home screen options"
-msgstr "Options de la page d'accueil"
+msgstr "Options de l'écran d'accueil"
 
 msgctxt "#31102"
 msgid "Background"
@@ -229,12 +245,16 @@ msgid "Show recently added videos"
 msgstr "Afficher les vidéos ajoutées récemment"
 
 msgctxt "#31118"
-msgid "Home page programs submenu"
-msgstr "Sous-menu Programmes de la page d'accueil"
+msgid "Home page \"Add-ons\" submenu"
+msgstr "Sous-menu Extensions de la page d'accueil"
 
 msgctxt "#31119"
 msgid "Hide background fanart"
 msgstr "Masquer le FanArt d'arrière-plan"
+
+msgctxt "#31120"
+msgid "Home page \"Games\" submenu"
+msgstr "Sous-menu Jeux de la page d'accueil"
 
 msgctxt "#31122"
 msgid "Hide EPG if RDS is present on channel window"
@@ -458,7 +478,7 @@ msgstr "[B]PARAMÈTRES D'ENREGISTREUR VIDÉO[/B][CR][CR]Configuration de la gest
 
 msgctxt "#31433"
 msgid "[B]ADD-ONS SETTINGS[/B][CR][CR]Configure your installed add-ons · Browse for and install add-ons from kodi.tv"
-msgstr "[B]PARAMÈTRES DES EXTENSIONS[/B][CR][CR]Configuration des extensions installées · Recherche et installation des extensions depuis kodi.tv"
+msgstr "[B]PARAMÈTRES DES EXTENSIONS[/B][CR][CR]Configuration des extensions installées · Recherche et installation des extensions depuis Kodi.tv"
 
 msgctxt "#31434"
 msgid "[B]SERVICES SETTINGS[/B][CR][CR]Configure & manage media sharing services · Configure web server · Configure & manage the weather service"
@@ -565,8 +585,8 @@ msgid "MUSIC"
 msgstr "MUSIQUE"
 
 msgctxt "#31957"
-msgid "PROGRAMS"
-msgstr "PROGRAMMES"
+msgid "ADD-ONS"
+msgstr "EXTENSIONS"
 
 msgctxt "#31958"
 msgid "PLAY DISC"
@@ -579,3 +599,19 @@ msgstr "SYSTÈME"
 msgctxt "#31960"
 msgid "RADIO"
 msgstr "RADIO"
+
+msgctxt "#31961"
+msgid "Timeshift"
+msgstr "Différé"
+
+msgctxt "#31962"
+msgid "Choose kind of profile identification"
+msgstr "Choisir le type d'identification du profil"
+
+msgctxt "#31963"
+msgid "Profile name"
+msgstr "Nom du profil"
+
+msgctxt "#31964"
+msgid "Profile avatar"
+msgstr "Avatar du profil"

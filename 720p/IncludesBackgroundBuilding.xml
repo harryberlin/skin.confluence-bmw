@@ -14,7 +14,6 @@
     <!--Weather-->
     <value condition="Window.IsVisible(Weather)">special://skin/backgrounds/weather.jpg</value>
     <!--Home-->
-    <value condition="!Window.IsVisible(Home)">$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</value>
     <!--Fallback-->
     <value>special://skin/backgrounds/SKINDEFAULT.jpg</value>
   </variable>
@@ -37,7 +36,7 @@
       <width>1280</width>
       <height>720</height>
       <aspectratio>scale</aspectratio>
-      <imagepath fallback="special://skin/backgrounds/SKINDEFAULT.jpg" background="true">$INFO[Container(9000).ListItem.Icon]</imagepath>
+      <imagepath fallback="special://skin/backgrounds/SKINDEFAULT.jpg" background="true">$INFO[Container(9000).ListItem.ActualIcon]</imagepath>
       <timeperimage>8000</timeperimage>
       <randomize>true</randomize>
       <fadetime>1000</fadetime>

@@ -6,23 +6,23 @@
     <value>special://skin/backgrounds/music.jpg</value>
   </variable>
   <variable name="TextColor1">
-    <value condition="!IsEmpty(Skin.String(TextColor1))">$INFO[Skin.String(TextColor1)]</value>
+    <value condition="!String.IsEmpty(Skin.String(TextColor1))">$INFO[Skin.String(TextColor1)]</value>
     <value>white</value>
   </variable>
   <variable name="TextColor2">
-    <value condition="!IsEmpty(Skin.String(TextColor2))">$INFO[Skin.String(TextColor2)]</value>
+    <value condition="!String.IsEmpty(Skin.String(TextColor2))">$INFO[Skin.String(TextColor2)]</value>
     <value>white</value>
   </variable>
   <variable name="TextColor3">
-    <value condition="!IsEmpty(Skin.String(TextColor3))">$INFO[Skin.String(TextColor3)]</value>
+    <value condition="!String.IsEmpty(Skin.String(TextColor3))">$INFO[Skin.String(TextColor3)]</value>
     <value>white</value>
   </variable>
   <variable name="TextColor4">
-    <value condition="!IsEmpty(Skin.String(TextColor4))">$INFO[Skin.String(TextColor4)]</value>
+    <value condition="!String.IsEmpty(Skin.String(TextColor4))">$INFO[Skin.String(TextColor4)]</value>
     <value>white</value>
   </variable>
   <variable name="TextColor5">
-    <value condition="!IsEmpty(Skin.String(TextColor5))">$INFO[Skin.String(TextColor5)]</value>
+    <value condition="!String.IsEmpty(Skin.String(TextColor5))">$INFO[Skin.String(TextColor5)]</value>
     <value>white</value>
   </variable>
   <variable name="FullscreenBG">
@@ -32,26 +32,26 @@
     <value>special://skin/backgrounds/SKINDEFAULT.jpg</value>
   </variable>
   <variable name="background_color_diffuse">
-    <value condition="Stringcompare(skin.string(background_color_diffuse),5)">0CFFFFFF</value>
-    <value condition="Stringcompare(skin.string(background_color_diffuse),10)">18FFFFFF</value>
-    <value condition="Stringcompare(skin.string(background_color_diffuse),15)">24FFFFFF</value>
-    <value condition="Stringcompare(skin.string(background_color_diffuse),20)">30FFFFFF</value>
-    <value condition="Stringcompare(skin.string(background_color_diffuse),25)">3CFFFFFF</value>
-    <value condition="Stringcompare(skin.string(background_color_diffuse),30)">48FFFFFF</value>
-    <value condition="Stringcompare(skin.string(background_color_diffuse),35)">54FFFFFF</value>
-    <value condition="Stringcompare(skin.string(background_color_diffuse),40)">60FFFFFF</value>
-    <value condition="Stringcompare(skin.string(background_color_diffuse),45)">6CFFFFFF</value>
-    <value condition="Stringcompare(skin.string(background_color_diffuse),50)">78FFFFFF</value>
-    <value condition="Stringcompare(skin.string(background_color_diffuse),55)">84FFFFFF</value>
-    <value condition="Stringcompare(skin.string(background_color_diffuse),60)">90FFFFFF</value>
-    <value condition="Stringcompare(skin.string(background_color_diffuse),65)">9CFFFFFF</value>
-    <value condition="Stringcompare(skin.string(background_color_diffuse),70)">A8FFFFFF</value>
-    <value condition="Stringcompare(skin.string(background_color_diffuse),75)">B4FFFFFF</value>
-    <value condition="Stringcompare(skin.string(background_color_diffuse),80)">C0FFFFFF</value>
-    <value condition="Stringcompare(skin.string(background_color_diffuse),85)">CCFFFFFF</value>
-    <value condition="Stringcompare(skin.string(background_color_diffuse),90)">D8FFFFFF</value>
-    <value condition="Stringcompare(skin.string(background_color_diffuse),95)">E4FFFFFF</value>
-    <value condition="Stringcompare(skin.string(background_color_diffuse),100)">FFFFFFFF</value>
+    <value condition="String.IsEqual(skin.string(background_color_diffuse),5)">0CFFFFFF</value>
+    <value condition="String.IsEqual(skin.string(background_color_diffuse),10)">18FFFFFF</value>
+    <value condition="String.IsEqual(skin.string(background_color_diffuse),15)">24FFFFFF</value>
+    <value condition="String.IsEqual(skin.string(background_color_diffuse),20)">30FFFFFF</value>
+    <value condition="String.IsEqual(skin.string(background_color_diffuse),25)">3CFFFFFF</value>
+    <value condition="String.IsEqual(skin.string(background_color_diffuse),30)">48FFFFFF</value>
+    <value condition="String.IsEqual(skin.string(background_color_diffuse),35)">54FFFFFF</value>
+    <value condition="String.IsEqual(skin.string(background_color_diffuse),40)">60FFFFFF</value>
+    <value condition="String.IsEqual(skin.string(background_color_diffuse),45)">6CFFFFFF</value>
+    <value condition="String.IsEqual(skin.string(background_color_diffuse),50)">78FFFFFF</value>
+    <value condition="String.IsEqual(skin.string(background_color_diffuse),55)">84FFFFFF</value>
+    <value condition="String.IsEqual(skin.string(background_color_diffuse),60)">90FFFFFF</value>
+    <value condition="String.IsEqual(skin.string(background_color_diffuse),65)">9CFFFFFF</value>
+    <value condition="String.IsEqual(skin.string(background_color_diffuse),70)">A8FFFFFF</value>
+    <value condition="String.IsEqual(skin.string(background_color_diffuse),75)">B4FFFFFF</value>
+    <value condition="String.IsEqual(skin.string(background_color_diffuse),80)">C0FFFFFF</value>
+    <value condition="String.IsEqual(skin.string(background_color_diffuse),85)">CCFFFFFF</value>
+    <value condition="String.IsEqual(skin.string(background_color_diffuse),90)">D8FFFFFF</value>
+    <value condition="String.IsEqual(skin.string(background_color_diffuse),95)">E4FFFFFF</value>
+    <value condition="String.IsEqual(skin.string(background_color_diffuse),100)">FFFFFFFF</value>
     <value>00FFFFFF</value>
   </variable>
 </includes>

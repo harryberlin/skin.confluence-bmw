@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kodi Translation Team\n"
@@ -19,6 +19,14 @@ msgstr ""
 msgctxt "#31000"
 msgid "Change your"
 msgstr "Verander je"
+
+msgctxt "#31001"
+msgid "GAMES"
+msgstr "SPELLEN"
+
+msgctxt "#31002"
+msgid "[B]GAME SETTINGS[/B][CR][CR]Configure rewind support & options ·  Configure keyboard use and number of keyboard players"
+msgstr "[B]SPEL INSTELLINGEN[/B][CR][CR]Configureer herhaal ondersteuning en & opties · Configureer toetsenbord gebruik en nummer van toetsenbord spelers"
 
 msgctxt "#31003"
 msgid "Power options"
@@ -68,6 +76,14 @@ msgctxt "#31014"
 msgid "Memory used"
 msgstr "Geheugen gebruikt"
 
+msgctxt "#31015"
+msgid "Minute"
+msgstr "Minuut"
+
+msgctxt "#31016"
+msgid "Elapsed time"
+msgstr "Verstreken tijd"
+
 msgctxt "#31023"
 msgid "Playing"
 msgstr "Afspelen"
@@ -90,7 +106,7 @@ msgstr "Locatie"
 
 msgctxt "#31028"
 msgid "Poster wrap"
-msgstr "Poster wrap"
+msgstr "Posterwrap"
 
 msgctxt "#31029"
 msgid "Fanart"
@@ -102,7 +118,7 @@ msgstr "Afbeelding miniaturen"
 
 msgctxt "#31032"
 msgid "Image wrap"
-msgstr "Afbeelding wrap"
+msgstr "Afbeeldingwrap"
 
 msgctxt "#31033"
 msgid "Info"
@@ -174,7 +190,7 @@ msgstr "Huidige afspeellijst"
 
 msgctxt "#31061"
 msgid "Current selected"
-msgstr "Huidige geselecteerde"
+msgstr "Nu geselecteerd"
 
 msgctxt "#31101"
 msgid "Home screen options"
@@ -229,12 +245,16 @@ msgid "Show recently added videos"
 msgstr "Toon recent toegevoegde video`s"
 
 msgctxt "#31118"
-msgid "Home page programs submenu"
-msgstr "Beginscherm Programma's submenu"
+msgid "Home page \"Add-ons\" submenu"
+msgstr "Beginpagina \"Add-ons\" submenu"
 
 msgctxt "#31119"
 msgid "Hide background fanart"
 msgstr "Fanart achtergronden verbergen"
+
+msgctxt "#31120"
+msgid "Home page \"Games\" submenu"
+msgstr "Beginpagina \"Spellen\" submenu"
 
 msgctxt "#31122"
 msgid "Hide EPG if RDS is present on channel window"
@@ -290,7 +310,7 @@ msgstr "Kies je lied"
 
 msgctxt "#31205"
 msgid "Lyrics source"
-msgstr "Songtekst bron"
+msgstr "Songtekstbron"
 
 msgctxt "#31206"
 msgid "Found"
@@ -434,7 +454,7 @@ msgstr "Log-in"
 
 msgctxt "#31421"
 msgid "Select your Kodi user profile[CR]to login and continue"
-msgstr "Selecteer jouw Kodi Gebruikersprofiel[CR]om in te loggen en door te gaan"
+msgstr "Selecteer je Kodi-gebruikersprofiel[CR]om in te loggen en door te gaan"
 
 msgctxt "#31422"
 msgid "Show or hide the login screen at startup."
@@ -490,7 +510,7 @@ msgstr "Hernoem groep"
 
 msgctxt "#31505"
 msgid "Delete group"
-msgstr "Verwijder Groep"
+msgstr "Verwijder groep"
 
 msgctxt "#31506"
 msgid "Available[CR]Groups"
@@ -502,7 +522,7 @@ msgstr "Kanaliseer groep"
 
 msgctxt "#31510"
 msgid "Timer set"
-msgstr "Timer instellen"
+msgstr "Tijdklok instellen"
 
 msgctxt "#31511"
 msgid "Channel options"
@@ -510,7 +530,7 @@ msgstr "Kanaal opties"
 
 msgctxt "#31901"
 msgid "36-hour forecast"
-msgstr "36-uurs Voorspelling"
+msgstr "36-uurs voorspelling"
 
 msgctxt "#31902"
 msgid "Hourly forecast"
@@ -518,7 +538,7 @@ msgstr "Uur voorspelling"
 
 msgctxt "#31903"
 msgid "Weekend forecast"
-msgstr "Weekend voorspelling"
+msgstr "Weekendvoorspelling"
 
 msgctxt "#31904"
 msgid "Daily forecast"
@@ -565,8 +585,8 @@ msgid "MUSIC"
 msgstr "MUZIEK"
 
 msgctxt "#31957"
-msgid "PROGRAMS"
-msgstr "PROGRAMMA'S"
+msgid "ADD-ONS"
+msgstr "ADD-ONS"
 
 msgctxt "#31958"
 msgid "PLAY DISC"
@@ -579,3 +599,19 @@ msgstr "SYSTEEM"
 msgctxt "#31960"
 msgid "RADIO"
 msgstr "RADIO"
+
+msgctxt "#31961"
+msgid "Timeshift"
+msgstr "Timeshift"
+
+msgctxt "#31962"
+msgid "Choose kind of profile identification"
+msgstr "Kies het type profielidentificatie"
+
+msgctxt "#31963"
+msgid "Profile name"
+msgstr "Profielnaam"
+
+msgctxt "#31964"
+msgid "Profile avatar"
+msgstr "Profielafbeelding"

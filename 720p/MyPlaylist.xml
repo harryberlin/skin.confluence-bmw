@@ -3,7 +3,7 @@
   <defaultcontrol always="true">50</defaultcontrol>
   <menucontrol>9000</menucontrol>
   <onload condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(1112)</onload>
-  <views>50,51,506</views>
+  <views>50,51,506,507</views>
   <controls>
     <include>CommonBackground</include>
     <include>ContentPanelBackgrounds</include>
@@ -13,7 +13,7 @@
       <include>CommonRootView</include>
       <!-- view id = 51 -->
       <include>FullWidthList</include>
-      <!-- view id = 506 -->
+      <!-- view id = 506, 507 -->
       <include>MusicInfoListView</include>
     </control>
     <control type="group">
@@ -26,11 +26,11 @@
     <include>ScrollOffsetLabel</include>
     <include content="CommonWindowHeader" condition="Window.IsActive(videoplaylist)">
       <param name="Icon" value="icon_video" />
-      <param name="Label" value="$LOCALIZE[10522]" />
+      <param name="Label" value="$LOCALIZE[31059] - $LOCALIZE[14215]" />
     </include>
     <include content="CommonWindowHeader" condition="Window.IsActive(musicplaylist)">
       <param name="Icon" value="icon_music" />
-      <param name="Label" value="$LOCALIZE[10517]" />
+      <param name="Label" value="$LOCALIZE[31059] - $LOCALIZE[14216]" />
     </include>
     <control type="group">
       <left>-250</left>
@@ -49,7 +49,7 @@
         <control type="label" id="200">
           <width>250</width>
           <height>35</height>
-          <font>font30</font>
+          <font>font12</font>
           <label>31006</label>
           <textcolor>blue</textcolor>
           <align>center</align>
@@ -59,12 +59,12 @@
           <description>View As button</description>
           <textwidth>235</textwidth>
           <include>ButtonCommonValues</include>
-          <label>-</label>
+          <label />
         </control>
         <control type="label" id="201">
           <width>250</width>
           <height>35</height>
-          <font>font30</font>
+          <font>font12</font>
           <label>31026</label>
           <textcolor>blue</textcolor>
           <align>center</align>
@@ -79,7 +79,7 @@
           <description>Repeat button</description>
           <textwidth>235</textwidth>
           <include>ButtonCommonValues</include>
-          <label>-</label>
+          <label />
         </control>
         <control type="button" id="21">
           <description>Save button</description>

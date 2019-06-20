@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kodi Translation Team\n"
@@ -19,6 +19,14 @@ msgstr ""
 msgctxt "#31000"
 msgid "Change your"
 msgstr "Zmień"
+
+msgctxt "#31001"
+msgid "GAMES"
+msgstr "GRY"
+
+msgctxt "#31002"
+msgid "[B]GAME SETTINGS[/B][CR][CR]Configure rewind support & options ·  Configure keyboard use and number of keyboard players"
+msgstr "[B]USTAWIENIA GIER[/B][CR][CR]Konfiguracja obsługi przewijania wstecz i opcje · Konfiguracja klawiatury i liczby graczy"
 
 msgctxt "#31003"
 msgid "Power options"
@@ -67,6 +75,14 @@ msgstr "Przetwarzanie dźwięku"
 msgctxt "#31014"
 msgid "Memory used"
 msgstr "Użycie pamięci"
+
+msgctxt "#31015"
+msgid "Minute"
+msgstr "Chwila"
+
+msgctxt "#31016"
+msgid "Elapsed time"
+msgstr "Czas, który upłynął"
 
 msgctxt "#31023"
 msgid "Playing"
@@ -138,7 +154,7 @@ msgstr "PRZEWIJANIE"
 
 msgctxt "#31048"
 msgid "Visualisation presets"
-msgstr "Wzorce wizualizacji"
+msgstr "Szablony wizualizacji"
 
 msgctxt "#31049"
 msgid "End time"
@@ -229,12 +245,16 @@ msgid "Show recently added videos"
 msgstr "Pokazuj wideo ostatnio dodane"
 
 msgctxt "#31118"
-msgid "Home page programs submenu"
-msgstr "Podmenu Programy ekranu startowego"
+msgid "Home page \"Add-ons\" submenu"
+msgstr "Podmenu \"Dodatki\" ekranu startowego"
 
 msgctxt "#31119"
 msgid "Hide background fanart"
 msgstr "Nie używaj fototapet w roli tła"
+
+msgctxt "#31120"
+msgid "Home page \"Games\" submenu"
+msgstr "Podmenu \"Gry\" ekranu startowego"
 
 msgctxt "#31122"
 msgid "Hide EPG if RDS is present on channel window"
@@ -565,8 +585,8 @@ msgid "MUSIC"
 msgstr "MUZYKA"
 
 msgctxt "#31957"
-msgid "PROGRAMS"
-msgstr "PROGRAMY"
+msgid "ADD-ONS"
+msgstr "DODATKI"
 
 msgctxt "#31958"
 msgid "PLAY DISC"
@@ -579,3 +599,19 @@ msgstr "SYSTEM"
 msgctxt "#31960"
 msgid "RADIO"
 msgstr "RADIO"
+
+msgctxt "#31961"
+msgid "Timeshift"
+msgstr "Przesunięcie czasowe"
+
+msgctxt "#31962"
+msgid "Choose kind of profile identification"
+msgstr "Wybierz rodzaj identyfikacji profilu"
+
+msgctxt "#31963"
+msgid "Profile name"
+msgstr "Nazwa profilu"
+
+msgctxt "#31964"
+msgid "Profile avatar"
+msgstr "Awatar profilu"

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kodi Translation Team\n"
@@ -19,6 +19,14 @@ msgstr ""
 msgctxt "#31000"
 msgid "Change your"
 msgstr "Määritä"
+
+msgctxt "#31001"
+msgid "GAMES"
+msgstr "PELIT"
+
+msgctxt "#31002"
+msgid "[B]GAME SETTINGS[/B][CR][CR]Configure rewind support & options ·  Configure keyboard use and number of keyboard players"
+msgstr "[B]PELIASETUKSET[/B][CR][CR]Muokkaa kelausasetuksia · Muokkaa näppäimistöasetuksia ja näppäimistöpelaajien määrää"
 
 msgctxt "#31003"
 msgid "Power options"
@@ -34,11 +42,11 @@ msgstr "Piilota tiedot"
 
 msgctxt "#31006"
 msgid "View options"
-msgstr "Näkymän asetukset"
+msgstr "Näkymäasetukset"
 
 msgctxt "#31007"
 msgid "Video process information"
-msgstr "Videon käsittelyn tiedot"
+msgstr "Videon tekniset tiedot"
 
 msgctxt "#31008"
 msgid "Full screen"
@@ -62,11 +70,19 @@ msgstr "Purkutapa"
 
 msgctxt "#31013"
 msgid "Audio process information"
-msgstr "Äänen käsittelyn tiedot"
+msgstr "Äänen tekniset tiedot"
 
 msgctxt "#31014"
 msgid "Memory used"
 msgstr "Käytetty muisti"
+
+msgctxt "#31015"
+msgid "Minute"
+msgstr "Minuutti"
+
+msgctxt "#31016"
+msgid "Elapsed time"
+msgstr "Kulunut aika"
 
 msgctxt "#31023"
 msgid "Playing"
@@ -190,7 +206,7 @@ msgstr "Näytä \"Tauko\" kuvaesityksessä"
 
 msgctxt "#31104"
 msgid "Play trailers in a window [COLOR=grey3](Video information dialogue only)[/COLOR]"
-msgstr "Toista trailerit ikkunassa [COLOR=grey3](Vain videon informaatiodialogi)[/COLOR]"
+msgstr "Toista trailerit ikkunassa [COLOR=grey3](Vain videotietoikkuna)[/COLOR]"
 
 msgctxt "#31106"
 msgid "Miscellaneous options"
@@ -202,15 +218,15 @@ msgstr "Piilota tiedostojen nimistä luetut merkinnät [COLOR=grey3](Blu-ray, HD
 
 msgctxt "#31108"
 msgid "Hide main menu buttons"
-msgstr "Piilota päävalikon painikkeet"
+msgstr "Piilota päävalikon osia"
 
 msgctxt "#31109"
 msgid "Enable custom background"
-msgstr "Valinnainen taustakuva käytössä"
+msgstr "Käytä omaa taustakuvaa"
 
 msgctxt "#31110"
 msgid "Background path:"
-msgstr "Taustakuvan polku:"
+msgstr "Taustakuvan sijainti:"
 
 msgctxt "#31111"
 msgid "Hide"
@@ -229,24 +245,28 @@ msgid "Show recently added videos"
 msgstr "Näytä viimeksi lisätyt videot"
 
 msgctxt "#31118"
-msgid "Home page programs submenu"
-msgstr "Päävalikon ohjelmaosion alavalikko"
+msgid "Home page \"Add-ons\" submenu"
+msgstr "Päävalikon lisäosien alavalikko"
 
 msgctxt "#31119"
 msgid "Hide background fanart"
-msgstr "Piilota taustan fanitaide"
+msgstr "Piilota fanitaide"
+
+msgctxt "#31120"
+msgid "Home page \"Games\" submenu"
+msgstr "Päävalikon peliosion alavalikko"
 
 msgctxt "#31122"
 msgid "Hide EPG if RDS is present on channel window"
-msgstr "Piilota EPG, jos RDS on nähtävillä kanavaikkunassa"
+msgstr "Piilota ohjelmatiedot kanavaikkunassa, jos RDS-tietoja on tarjolla"
 
 msgctxt "#31124"
 msgid "Show background \"Now playing\" video"
-msgstr "Näytä taustalla \"Nyt katsellaan\"-video"
+msgstr "Näytä toistettava video valikoiden taustalla"
 
 msgctxt "#31125"
 msgid "Show background \"Now playing\" visualisation"
-msgstr "Näytä taustalla \"Nyt soi\"-visualisaatio"
+msgstr "Näytä musiikkivisualisointi valikoiden taustalla"
 
 msgctxt "#31128"
 msgid "Lyrics"
@@ -274,7 +294,7 @@ msgstr "Päävalikon kuvaosion alavalikko"
 
 msgctxt "#31140"
 msgid "Music OSD"
-msgstr "Musiikki-OSD"
+msgstr "Musiikin kuvaruutuvalikko"
 
 msgctxt "#31142"
 msgid "Settings level"
@@ -565,8 +585,8 @@ msgid "MUSIC"
 msgstr "MUSIIKKI"
 
 msgctxt "#31957"
-msgid "PROGRAMS"
-msgstr "OHJELMAT"
+msgid "ADD-ONS"
+msgstr "LISÄOSAT"
 
 msgctxt "#31958"
 msgid "PLAY DISC"
@@ -579,3 +599,19 @@ msgstr "JÄRJESTELMÄ"
 msgctxt "#31960"
 msgid "RADIO"
 msgstr "RADIO"
+
+msgctxt "#31961"
+msgid "Timeshift"
+msgstr "Ajansiirto"
+
+msgctxt "#31962"
+msgid "Choose kind of profile identification"
+msgstr "Valitse näytetäänkö profiilin nimi vai kuva"
+
+msgctxt "#31963"
+msgid "Profile name"
+msgstr "Profiilin nimi"
+
+msgctxt "#31964"
+msgid "Profile avatar"
+msgstr "Profiilin kuva"

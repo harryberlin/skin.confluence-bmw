@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"Report-Msgid-Bugs-To: https://github.com/xbmc/xbmc/issues/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kodi Translation Team\n"
@@ -19,6 +19,14 @@ msgstr ""
 msgctxt "#31000"
 msgid "Change your"
 msgstr "Modificare"
+
+msgctxt "#31001"
+msgid "GAMES"
+msgstr "JOCURI"
+
+msgctxt "#31002"
+msgid "[B]GAME SETTINGS[/B][CR][CR]Configure rewind support & options ·  Configure keyboard use and number of keyboard players"
+msgstr "[B]STABILIRI JOCURI[/B][CR][CR]Configurați sprijinul pentru dereulare înapoi & opțiuni ·  Configurați folosirea tastaturii și numărul de jucători de la tastatură"
 
 msgctxt "#31003"
 msgid "Power options"
@@ -66,7 +74,15 @@ msgstr "Informații procesare audio"
 
 msgctxt "#31014"
 msgid "Memory used"
-msgstr "Folosire memorie"
+msgstr "Utilizare memorie sistem"
+
+msgctxt "#31015"
+msgid "Minute"
+msgstr "Minut"
+
+msgctxt "#31016"
+msgid "Elapsed time"
+msgstr "Timp scurs"
 
 msgctxt "#31023"
 msgid "Playing"
@@ -229,12 +245,16 @@ msgid "Show recently added videos"
 msgstr "Arată fișierele video adăugate recent"
 
 msgctxt "#31118"
-msgid "Home page programs submenu"
-msgstr "Submeniu programe în pagina inițială"
+msgid "Home page \"Add-ons\" submenu"
+msgstr "Submeniu „Suplimente” în pagina inițială"
 
 msgctxt "#31119"
 msgid "Hide background fanart"
 msgstr "Ascunde decorul (fanart) de pe fundal"
+
+msgctxt "#31120"
+msgid "Home page \"Games\" submenu"
+msgstr "Submeniu „Jocuri” în pagina inițială"
 
 msgctxt "#31122"
 msgid "Hide EPG if RDS is present on channel window"
@@ -494,7 +514,7 @@ msgstr "Ștergere grup"
 
 msgctxt "#31506"
 msgid "Available[CR]Groups"
-msgstr "[CR]Grupuri disponibile"
+msgstr "Grupuri[CR]disponibile"
 
 msgctxt "#31509"
 msgid "Channel group"
@@ -565,8 +585,8 @@ msgid "MUSIC"
 msgstr "MUZICĂ"
 
 msgctxt "#31957"
-msgid "PROGRAMS"
-msgstr "PROGRAME"
+msgid "ADD-ONS"
+msgstr "SUPLIMENTE"
 
 msgctxt "#31958"
 msgid "PLAY DISC"
@@ -579,3 +599,19 @@ msgstr "SISTEM"
 msgctxt "#31960"
 msgid "RADIO"
 msgstr "RADIO"
+
+msgctxt "#31961"
+msgid "Timeshift"
+msgstr "Decalaj temporal"
+
+msgctxt "#31962"
+msgid "Choose kind of profile identification"
+msgstr "Alegeți tipul de identificare profil"
+
+msgctxt "#31963"
+msgid "Profile name"
+msgstr "Nume profil"
+
+msgctxt "#31964"
+msgid "Profile avatar"
+msgstr "Avatar profil"

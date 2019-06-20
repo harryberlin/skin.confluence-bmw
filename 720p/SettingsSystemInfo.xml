@@ -43,8 +43,8 @@
         <top>11</top>
         <width>64</width>
         <height>32</height>
-        <label>-</label>
-        <font>-</font>
+        <label />
+        <font />
         <onclick>PreviousMenu</onclick>
         <texturefocus>DialogCloseButton-focus.png</texturefocus>
         <texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -78,7 +78,7 @@
           <textoffsetx>0</textoffsetx>
           <align>right</align>
           <aligny>center</aligny>
-          <font>font30_title</font>
+          <font>font13_title</font>
           <textcolor>grey2</textcolor>
           <focusedcolor>white</focusedcolor>
           <texturefocus border="5">MenuItemFO.png</texturefocus>
@@ -93,7 +93,7 @@
           <textoffsetx>0</textoffsetx>
           <align>right</align>
           <aligny>center</aligny>
-          <font>font30_title</font>
+          <font>font13_title</font>
           <textcolor>grey2</textcolor>
           <focusedcolor>white</focusedcolor>
           <texturefocus border="5">MenuItemFO.png</texturefocus>
@@ -108,7 +108,7 @@
           <textoffsetx>0</textoffsetx>
           <align>right</align>
           <aligny>center</aligny>
-          <font>font30_title</font>
+          <font>font13_title</font>
           <textcolor>grey2</textcolor>
           <focusedcolor>white</focusedcolor>
           <texturefocus border="5">MenuItemFO.png</texturefocus>
@@ -123,7 +123,7 @@
           <textoffsetx>0</textoffsetx>
           <align>right</align>
           <aligny>center</aligny>
-          <font>font30_title</font>
+          <font>font13_title</font>
           <textcolor>grey2</textcolor>
           <focusedcolor>white</focusedcolor>
           <texturefocus border="5">MenuItemFO.png</texturefocus>
@@ -138,7 +138,7 @@
           <textoffsetx>0</textoffsetx>
           <align>right</align>
           <aligny>center</aligny>
-          <font>font30_title</font>
+          <font>font13_title</font>
           <textcolor>grey2</textcolor>
           <focusedcolor>white</focusedcolor>
           <texturefocus border="5">MenuItemFO.png</texturefocus>
@@ -153,7 +153,7 @@
           <textoffsetx>0</textoffsetx>
           <align>right</align>
           <aligny>center</aligny>
-          <font>font30_title</font>
+          <font>font13_title</font>
           <textcolor>grey2</textcolor>
           <focusedcolor>white</focusedcolor>
           <texturefocus border="5">MenuItemFO.png</texturefocus>
@@ -168,7 +168,7 @@
           <textoffsetx>0</textoffsetx>
           <align>right</align>
           <aligny>center</aligny>
-          <font>font30_title</font>
+          <font>font13_title</font>
           <textcolor>grey2</textcolor>
           <focusedcolor>white</focusedcolor>
           <texturefocus border="5">MenuItemFO.png</texturefocus>
@@ -199,7 +199,7 @@
         <width>726</width>
         <height>30</height>
         <font>font16</font>
-        <label>-</label>
+        <label />
         <align>center</align>
         <aligny>center</aligny>
         <textcolor>white</textcolor>
@@ -213,80 +213,80 @@
           <left>0</left>
           <top>0</top>
           <width>750</width>
-          <label>-</label>
-          <font>font16</font>
+          <label />
+          <font>font13</font>
         </control>
         <control type="label" id="3">
           <description>Label 3</description>
           <left>0</left>
           <top>35</top>
           <width>750</width>
-          <label>-</label>
-          <font>font16</font>
+          <label />
+          <font>font13</font>
         </control>
         <control type="label" id="4">
           <description>Label 4</description>
           <left>0</left>
           <top>70</top>
           <width>750</width>
-          <label>-</label>
-          <font>font16</font>
+          <label />
+          <font>font13</font>
         </control>
         <control type="label" id="5">
           <description>Label 5</description>
           <left>0</left>
           <top>105</top>
           <width>750</width>
-          <label>-</label>
-          <font>font16</font>
+          <label />
+          <font>font13</font>
         </control>
         <control type="label" id="6">
           <description>Label 6</description>
           <left>0</left>
           <top>140</top>
           <width>750</width>
-          <label>-</label>
-          <font>font16</font>
+          <label />
+          <font>font13</font>
         </control>
         <control type="label" id="7">
           <description>Label 7</description>
           <left>0</left>
           <top>175</top>
           <width>750</width>
-          <label>-</label>
-          <font>font16</font>
+          <label />
+          <font>font13</font>
         </control>
         <control type="label" id="8">
           <description>Label 8</description>
           <left>0</left>
           <top>210</top>
           <width>750</width>
-          <label>-</label>
-          <font>font16</font>
+          <label />
+          <font>font13</font>
         </control>
         <control type="label" id="9">
           <description>Label 9</description>
           <left>0</left>
           <top>245</top>
           <width>750</width>
-          <label>-</label>
-          <font>font16</font>
+          <label />
+          <font>font13</font>
         </control>
         <control type="label" id="10">
           <description>Label 10</description>
           <left>0</left>
           <top>280</top>
           <width>750</width>
-          <label>-</label>
-          <font>font16</font>
+          <label />
+          <font>font13</font>
         </control>
         <control type="label" id="11">
           <description>Label 11</description>
           <left>0</left>
           <top>315</top>
           <width>750</width>
-          <label>-</label>
-          <font>font16</font>
+          <label />
+          <font>font13</font>
         </control>
         <control type="textbox" id="30">
           <description>Privacy Policy</description>
@@ -294,7 +294,7 @@
           <top>0</top>
           <width>720</width>
           <height>350</height>
-          <font>font16</font>
+          <font>font13</font>
           <align>justify</align>
           <textcolor>white</textcolor>
           <shadowcolor>black</shadowcolor>
@@ -329,7 +329,7 @@
           <aligny>center</aligny>
           <textcolor>white</textcolor>
           <shadowcolor>black</shadowcolor>
-          <font>font16</font>
+          <font>font12_title</font>
         </control>
         <control type="progress">
           <description>CPU BAR</description>
@@ -350,7 +350,7 @@
           <aligny>center</aligny>
           <textcolor>white</textcolor>
           <shadowcolor>black</shadowcolor>
-          <font>font16</font>
+          <font>font12_title</font>
         </control>
         <control type="progress">
           <description>Memory BAR</description>
@@ -374,7 +374,7 @@
             <label>$LOCALIZE[144]</label>
             <textcolor>white</textcolor>
             <shadowcolor>black</shadowcolor>
-            <font>font16</font>
+            <font>font13_title</font>
           </control>
           <control type="label" id="52">
             <description>Kodi Build Version</description>
@@ -383,7 +383,7 @@
             <width>auto</width>
             <textcolor>blue</textcolor>
             <shadowcolor>black</shadowcolor>
-            <font>font16</font>
+            <font>font13_title</font>
           </control>
         </control>
         <control type="grouplist">
@@ -400,14 +400,14 @@
             <label>$LOCALIZE[174]</label>
             <textcolor>white</textcolor>
             <shadowcolor>black</shadowcolor>
-            <font>font16</font>
+            <font>font13_title</font>
           </control>
           <control type="label" id="53">
             <description>Kodi Build Date</description>
             <width>auto</width>
             <textcolor>blue</textcolor>
             <shadowcolor>black</shadowcolor>
-            <font>font16</font>
+            <font>font13_title</font>
           </control>
         </control>
       </control>

@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<includes>
+  <include name="HomeObcBar">
+    <control type="group">
+      <posy_off>60r</posy_off>
+      <animation effect="slide" start="0,0" end="0,-80" time="200">WindowClose</animation>
+      <animation effect="slide" start="0,-80" end="0,0" time="250">WindowOpen</animation>
+      <animation effect="slide" start="0,-80" end="0,0" time="250">VisibleChange</animation>
+      <control type="image">
+        <description>something background</description>
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>1280</width>
+        <height>60</height>
+        <texture flipy="false">bmw/header_bar_fade.png</texture>
+      </control>
+      <control type="grouplist">
+        <itemgap>5</itemgap>
+        <orientation>horizontal</orientation>
+        <align_off>center</align_off>
+        <left>10</left>
+        <top>5</top>
+        <width>980</width>
+        <height>50</height>
+        <!--time label-->
+        <control type="group">
+          <width>150</width>
+          <visible>True</visible>
+          <control type="label">
+            <description>time label</description>
+            <posx_off>10</posx_off>
+            <posy>0</posy>
+            <width>250</width>
+            <height>55</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <font>font38_title</font>
+            <textcolor>$VAR[TextColor1]</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <label>$INFO[System.Time]</label>
+            <onclick>ReloadSkin()</onclick>
+            <texturefocus></texturefocus>
+          </control>
+          <!--memo icon small-->
+          <control type="image">
+            <description>memo icon</description>
+            <posx>125</posx>
+            <posy_off>5</posy_off>
+            <width>25</width>
+            <height>25</height>
+            <texture>$INFO[Window(10000).Property(IBUS_OBC_MEMO_ICON)]</texture>
+          </control>
+        </control>
+        <!--MFL Icon-->
+        <control type="image">
+          <description>MFL icon</description>
+          <posx_off>165</posx_off>
+          <posy>5</posy>
+          <width>50</width>
+          <height>50</height>
+          <texture>special://home/addons/plugin.script.ibuscommunicator/resources/skins/default/media/icon-mfl.png</texture>
+          <visible_off>String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_MFL_SHOW),1)</visible_off>
+          <visible>True</visible>
+        </control>
+        <!--DRL Icon-->
+        <control type="image">
+          <description>drl icon</description>
+          <posx_off>225</posx_off>
+          <posy>5</posy>
+          <width>50</width>
+          <height>50</height>
+          <texture>special://home/addons/plugin.script.ibuscommunicator/resources/skins/default/media/icon-drl.png</texture>
+          <visible_off>String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)</visible_off>
+          <visible>True</visible>
+        </control>
+        <!--oil temp-->
+        <control type="group">
+          <width min="5" max="225">auto</width>
+          <control type="image">
+            <description>coolant icon</description>
+            <posx>0</posx>
+            <posy_off>5</posy_off>
+            <width>50</width>
+            <height>50</height>
+            <texture>$INFO[Window(10000).Property(IBUS_OBC_OILTEMP_ICON)]</texture>
+          </control>
+          <control type="label">
+            <description>something label</description>
+            <posx>215</posx>
+            <posy>0</posy>
+            <width min="5" max="170">auto</width>
+            <height>55</height>
+            <align>right</align>
+            <aligny>center</aligny>
+            <font>font38_title</font>
+            <textcolor>$VAR[TextColor1]</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <label_off>+120°C</label_off>
+            <label>$INFO[Window(10000).Property(IBUS_OBC_OILTEMP)]</label>
+          </control>
+        </control>
+        <!--coolant temp-->
+        <control type="group">
+          <width min="5" max="225">auto</width>
+          <control type="image">
+            <description>coolant icon</description>
+            <posx>0</posx>
+            <posy_off>5</posy_off>
+            <width>50</width>
+            <height>50</height>
+            <texture>$INFO[Window(10000).Property(IBUS_OBC_COOLANTTEMP_ICON)]</texture>
+          </control>
+          <control type="label">
+            <description>coolant label</description>
+            <posx>215</posx>
+            <posy>0</posy>
+            <width min="5" max="170">auto</width>
+            <height>55</height>
+            <align>right</align>
+            <aligny>center</aligny>
+            <font>font38_title</font>
+            <textcolor>$VAR[TextColor1]</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <label>$INFO[Window(10000).Property(IBUS_OBC_COOLANTTEMP)]</label>
+          </control>
+        </control>
+        <!--Fuel Label-->
+        <control type="label">
+          <description>fuel label</description>
+          <posx_off>825</posx_off>
+          <posy>0</posy>
+          <width min="5" max="200">auto</width>
+          <height>55</height>
+          <align_off>right</align_off>
+          <aligny>center</aligny>
+          <font>font38_title</font>
+          <textcolor>$VAR[TextColor1]</textcolor>
+          <shadowcolor>black</shadowcolor>
+          <label_off>99 L</label_off>
+          <label>$INFO[Window(10000).Property(IBUS_OBC_FUEL)]</label>
+        </control>
+        <!--Range Label-->
+        <control type="label">
+          <description>range label</description>
+          <posx_off>1020</posx_off>
+          <posy>0</posy>
+          <width min="5" max="200">auto</width>
+          <height>55</height>
+          <align_off>right</align_off>
+          <aligny>center</aligny>
+          <font>font38_title</font>
+          <textcolor>$VAR[TextColor1]</textcolor>
+          <shadowcolor>black</shadowcolor>
+          <label_off>9999 KM</label_off>
+          <label>$INFO[Window(10000).Property(IBUS_OBC_RANGE)]</label>
+        </control>
+      </control>
+      <!--Date Label-->
+      <control type="label">
+        <description>date label normal font</description>
+        <posx>1270</posx>
+        <posy>5</posy>
+        <width>300</width>
+        <height>55</height>
+        <align>right</align>
+        <aligny>center</aligny>
+        <font>font38_title</font>
+        <textcolor>$VAR[TextColor1]</textcolor>
+        <shadowcolor>black</shadowcolor>
+        <label>$INFO[System.Date(dd.mm.yyyy)]</label>
+        <onclick>ReloadSkin()</onclick>
+        <texturefocus></texturefocus>
+      </control>
+    </control>
+  </include>
+  <include name="HomeObcBarNew">
+    <control type="group">
+      <control type="group">
+        <posy_off>60r</posy_off>
+        <animation effect="slide" start="0,0" end="0,-80" time="200">WindowClose</animation>
+        <animation effect="slide" start="0,-80" end="0,0" time="250">WindowOpen</animation>
+        <animation effect="slide" start="0,-80" end="0,0" time="250">VisibleChange</animation>
+        <control_off type="image">
+          <description>something background</description>
+          <posx>850r</posx>
+          <posy>0</posy>
+          <width>900</width>
+          <height>60</height>
+          <texture flipx="true" border="32,0,0,0">bmw/header.png</texture>
+        </control_off>
+        <control type="image">
+          <description>something background</description>
+          <posx>0</posx>
+          <posy>0</posy>
+          <width>1280</width>
+          <height>60</height>
+          <texture flipy="false">bmw/header_bar.png</texture>
+        </control>
+        <control_off type="label">
+          <description>something label</description>
+          <posx>810r</posx>
+          <posy>0</posy>
+          <width>805</width>
+          <height>55</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>font38_title</font>
+          <textcolor>$VAR[TextColor1]</textcolor>
+          <shadowcolor>black</shadowcolor>
+          <label>$INFO[Window(10000).Property(IBUS_RADIO_MODE)]/$INFO[Window(10000).Property(IBUS_OBC_TEMP)]/$INFO[System.Time]/$INFO[System.Date(dd.mm.yyyy)]</label>
+        </control_off>
+        <!--MFL Icon-->
+        <control type="image">
+          <description>MFL icon</description>
+          <posx>165</posx>
+          <posy>5</posy>
+          <width>50</width>
+          <height>50</height>
+          <texture>special://home/addons/plugin.script.ibuscommunicator/resources/skins/default/media/icon-mfl.png</texture>
+          <visible_off>String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_MFL_SHOW),1)</visible_off>
+          <visible>True</visible>
+        </control>
+        <!--DRL Icon-->
+        <control type="image">
+          <description>drl icon</description>
+          <posx>225</posx>
+          <posy>5</posy>
+          <width>50</width>
+          <height>50</height>
+          <texture>special://home/addons/plugin.script.ibuscommunicator/resources/skins/default/media/icon-drl.png</texture>
+          <visible_off>String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)</visible_off>
+          <visible>True</visible>
+        </control>
+        <!--memo icon-->
+        <control_off type="image">
+          <description>memo icon</description>
+          <posx>330</posx>
+          <posy>5</posy>
+          <width>50</width>
+          <height>50</height>
+          <texture>$INFO[Window(10000).Property(IBUS_OBC_MEMO_ICON)]</texture>
+        </control_off>
+        <!--oil temp-->
+        <control type="group">
+          <posx>280</posx>
+          <control type="image">
+            <description>coolant icon</description>
+            <posx>0</posx>
+            <posy>5</posy>
+            <width>50</width>
+            <height>50</height>
+            <texture>$INFO[Window(10000).Property(IBUS_OBC_OILTEMP_ICON)]</texture>
+          </control>
+          <control type="label">
+            <description>something label</description>
+            <posx>215</posx>
+            <posy>0</posy>
+            <width>170</width>
+            <height>55</height>
+            <align>right</align>
+            <aligny>center</aligny>
+            <font>font38_title</font>
+            <textcolor>$VAR[TextColor1]</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <label_off>+120°C</label_off>
+            <label>$INFO[Window(10000).Property(IBUS_OBC_OILTEMP)]</label>
+          </control>
+        </control>
+        <!--coolant temp-->
+        <control type="group">
+          <posx>505</posx>
+          <control type="image">
+            <description>coolant icon</description>
+            <posx>0</posx>
+            <posy>5</posy>
+            <width>50</width>
+            <height>50</height>
+            <texture>$INFO[Window(10000).Property(IBUS_OBC_COOLANTTEMP_ICON)]</texture>
+          </control>
+          <control type="label">
+            <description>coolant label</description>
+            <posx>215</posx>
+            <posy>0</posy>
+            <width>170</width>
+            <height>55</height>
+            <align>right</align>
+            <aligny>center</aligny>
+            <font>font38_title</font>
+            <textcolor>$VAR[TextColor1]</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <label>$INFO[Window(10000).Property(IBUS_OBC_COOLANTTEMP)]</label>
+          </control>
+        </control>
+        <!--Fuel Label-->
+        <control type="label">
+          <description>fuel label</description>
+          <posx>825</posx>
+          <posy>0</posy>
+          <width>200</width>
+          <height>55</height>
+          <align>right</align>
+          <aligny>center</aligny>
+          <font>font38_title</font>
+          <textcolor>$VAR[TextColor1]</textcolor>
+          <shadowcolor>black</shadowcolor>
+          <label_off>99 L</label_off>
+          <label>$INFO[Window(10000).Property(IBUS_OBC_FUEL)]</label>
+        </control>
+        <!--Range Label-->
+        <control type="label">
+          <description>range label</description>
+          <posx>1020</posx>
+          <posy>0</posy>
+          <width>200</width>
+          <height>55</height>
+          <align>right</align>
+          <aligny>center</aligny>
+          <font>font38_title</font>
+          <textcolor>$VAR[TextColor1]</textcolor>
+          <shadowcolor>black</shadowcolor>
+          <label_off>9999 KM</label_off>
+          <label>$INFO[Window(10000).Property(IBUS_OBC_RANGE)]</label>
+        </control>
+      </control>
+      <control type="group">
+        <posy>60</posy>
+        <animation effect="slide" start="0,0" end="0,-140" time="200">WindowClose</animation>
+        <animation effect="slide" start="0,-140" end="0,0" time="250">WindowOpen</animation>
+        <animation effect="slide" start="0,-140" end="0,0" time="250">VisibleChange</animation>
+        <control_off type="image">
+          <description>something background</description>
+          <posx>850r</posx>
+          <posy>0</posy>
+          <width>900</width>
+          <height>60</height>
+          <texture flipx="true" border="32,0,0,0">bmw/header.png</texture>
+        </control_off>
+        <control type="image">
+          <description>something background</description>
+          <posx>0</posx>
+          <posy>0</posy>
+          <width>1280</width>
+          <height>60</height>
+          <texture flipy="false">bmw/header_bar.png</texture>
+        </control>
+        <control_off type="label">
+          <description>something label</description>
+          <posx>810r</posx>
+          <posy>0</posy>
+          <width>805</width>
+          <height>55</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>font38_title</font>
+          <textcolor>$VAR[TextColor1]</textcolor>
+          <shadowcolor>black</shadowcolor>
+          <label>$INFO[Window(10000).Property(IBUS_RADIO_MODE)]/$INFO[Window(10000).Property(IBUS_OBC_TEMP)]/$INFO[System.Time]/$INFO[System.Date(dd.mm.yyyy)]</label>
+        </control_off>
+        <!--time label-->
+        <control type="button">
+          <description>time label</description>
+          <posx>10</posx>
+          <posy>0</posy>
+          <width>250</width>
+          <height>55</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>font38_title</font>
+          <textcolor>$VAR[TextColor1]</textcolor>
+          <shadowcolor>black</shadowcolor>
+          <label>$INFO[System.Time]</label>
+          <onclick>ReloadSkin()</onclick>
+          <texturefocus></texturefocus>
+        </control>
+        <!--memo icon small-->
+        <control type="image">
+          <description>memo icon</description>
+          <posx>135</posx>
+          <posy>5</posy>
+          <width>25</width>
+          <height>25</height>
+          <texture>$INFO[Window(10000).Property(IBUS_OBC_MEMO_ICON)]</texture>
+        </control>
+        <!--Date Label-->
+        <control type="label">
+          <description>date label normal font</description>
+          <posx>10r</posx>
+          <posy>0</posy>
+          <width>300</width>
+          <height>55</height>
+          <align>right</align>
+          <aligny>center</aligny>
+          <font>font38_title</font>
+          <textcolor>$VAR[TextColor1]</textcolor>
+          <shadowcolor>black</shadowcolor>
+          <label>$INFO[System.Date(dd.mm.yyyy)]</label>
+        </control>
+      </control>
+    </control>
+  </include>
+</includes>

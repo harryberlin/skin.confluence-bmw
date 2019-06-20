@@ -27,7 +27,7 @@
       <width>590</width>
       <height>98</height>
       <align>left</align>
-      <label></label>
+      <label />
       <font>font13</font>
       <autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
     </control>
@@ -51,37 +51,37 @@
         <description>OK button</description>
         <width>200</width>
         <height>40</height>
-        <onup>right</onup>
-        <ondown>left</ondown>
         <label>107</label>
         <font>font12_title</font>
         <textcolor>white</textcolor>
         <focusedcolor>white</focusedcolor>
         <align>center</align>
+        <onup>right</onup>
+        <ondown>left</ondown>
       </control>
       <control type="button" id="10">
         <description>Cancel button</description>
         <width>200</width>
         <height>40</height>
-        <onup>right</onup>
-        <ondown>left</ondown>
         <label>106</label>
         <font>font12_title</font>
         <textcolor>white</textcolor>
         <focusedcolor>white</focusedcolor>
         <align>center</align>
+        <onup>right</onup>
+        <ondown>left</ondown>
       </control>
       <control type="button" id="12">
         <description>Custom button</description>
         <width>200</width>
         <height>40</height>
-        <onup>right</onup>
-        <ondown>left</ondown>
         <label>106</label>
         <font>font12_title</font>
         <textcolor>white</textcolor>
         <focusedcolor>white</focusedcolor>
         <align>center</align>
+        <onup>right</onup>
+        <ondown>left</ondown>
       </control>
     </control>
   </controls>
