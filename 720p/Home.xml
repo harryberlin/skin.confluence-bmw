@@ -46,9 +46,10 @@
       <top />
       <bottom>0</bottom>
       <width>1320</width>
-      <height>90</height>
+      <height>50</height>
       <texture>floor.png</texture>
-      <animation effect="rotatex" end="45" time="0" center="620,0" condition="true">Conditional</animation>
+      <visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+      <animation effect="rotatex" end="45" time="0" center="670,0" condition="true">Conditional</animation>
       <animation effect="slide" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
       <animation effect="slide" time="200" condition="Window.Next(Home)">WindowClose</animation>
     </control>
@@ -849,7 +850,7 @@
         </content>
       </control>
     </control_off>
-    <control type="group" id="10">
+    <control_off type="group" id="10">
       <depth>DepthFooter</depth>
       <left>20</left>
       <top>55r</top>
@@ -904,7 +905,7 @@
         <aspectratio>keep</aspectratio>
         <texture>icon_power.png</texture>
       </control>
-    </control>
+    </control_off>
     <!--Weather-->
     <control type="group">
       <left>5</left>

@@ -5,6 +5,10 @@
     <left>215</left>
     <top>60</top>
   </coordinates>
+  <animation condition="true" type="Conditional">
+    <effect type="zoom" start="0" end="145" time="0">Conditional</effect>
+    <effect type="slide" start="0,0" end="-190,-65" time="0">Conditional</effect>
+  </animation>
   <include>dialogeffect</include>
   <controls>
     <control type="group">
@@ -12,7 +16,7 @@
       <animation effect="fade" start="100" end="0" time="300" condition="[Window.Is(osdaudiosettings) | Window.Is(osdvideosettings)] + [Window.IsVisible(SliderDialog) |  Window.IsVisible(FileBrowser)]">Conditional</animation>
       <include content="DialogBackgroundCommons">
         <param name="DialogBackgroundWidth" value="850" />
-        <param name="DialogBackgroundHeight" value="600" />
+        <param name="DialogBackgroundHeight" value="505" />
         <param name="DialogHeaderWidth" value="720" />
         <param name="DialogHeaderId" value="2" />
         <param name="CloseButtonLeft" value="760" />
@@ -29,17 +33,17 @@
         <orientation>horizontal</orientation>
         <onleft>3</onleft>
         <onright>3</onright>
-        <onup>9001</onup>
+        <onup>3</onup>
         <ondown>5</ondown>
       </control>
       <control type="button" id="10">
         <description>Default Category Button</description>
-        <width>186</width>
+        <width>330</width>
         <height>40</height>
         <textoffsetx>20</textoffsetx>
         <align>center</align>
         <aligny>center</aligny>
-        <font>font12_title</font>
+        <font>font24_title</font>
         <pulseonselect>false</pulseonselect>
       </control>
       <control type="image">
@@ -65,7 +69,7 @@
         <left>40</left>
         <top>120</top>
         <width>770</width>
-        <height>380</height>
+        <height>320</height>
         <itemgap>5</itemgap>
         <pagecontrol>60</pagecontrol>
         <onup>3</onup>
@@ -77,7 +81,7 @@
         <left>815</left>
         <top>120</top>
         <width>25</width>
-        <height>380</height>
+        <height>320</height>
         <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
         <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
         <texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -144,7 +148,7 @@
         <shadowcolor>black</shadowcolor>
       </control>
       <control type="grouplist" id="9001">
-        <top>535</top>
+        <top>445</top>
         <left>95</left>
         <width>660</width>
         <align>center</align>
@@ -157,11 +161,11 @@
           <height>40</height>
           <align>center</align>
           <aligny>center</aligny>
-          <font>font12_title</font>
+          <font>font24_title</font>
           <onleft>30</onleft>
           <onright>29</onright>
           <onup>5</onup>
-          <ondown>5</ondown>
+          <ondown>28</ondown>
         </control>
         <control type="button" id="29">
           <description>Cancel Button</description>
@@ -170,12 +174,12 @@
           <height>40</height>
           <align>center</align>
           <aligny>center</aligny>
-          <font>font12_title</font>
+          <font>font24_title</font>
           <label />
           <onleft>28</onleft>
           <onright>30</onright>
           <onup>5</onup>
-          <ondown>5</ondown>
+          <ondown>29</ondown>
         </control>
         <control type="button" id="30">
           <description>Settings Button</description>
@@ -184,11 +188,11 @@
           <height>40</height>
           <align>center</align>
           <aligny>center</aligny>
-          <font>font12_title</font>
+          <font>font24_title</font>
           <onleft>29</onleft>
           <onright>28</onright>
           <onup>5</onup>
-          <ondown>5</ondown>
+          <ondown>30</ondown>
         </control>
       </control>
     </control>
