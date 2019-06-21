@@ -794,15 +794,15 @@
   </include>
   <include name="SideBladeLeft">
     <depth>DepthSideBlade</depth>
-    <animation effect="slide" start="0,0" end="250,0" time="300" tween="quadratic" easing="out" condition="[ControlGroup(9000).HasFocus | Control.HasFocus(9001) | Control.HasFocus(8999)] + ![Window.IsActive(PVRGuideInfo) | Window.IsActive(PVRRadioRDSInfo)]">Conditional</animation>
-    <animation effect="slide" start="0,0" end="-300,0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | Control.HasFocus(9001)">WindowClose</animation>
-    <animation effect="slide" start="0,0" end="-50,0" time="225" tween="quadratic" easing="out" condition="![ControlGroup(9000).HasFocus | Control.HasFocus(9001)]">WindowClose</animation>
-    <animation effect="slide" start="-50,0" end="0,0" time="225" tween="quadratic" easing="out">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="450,0" time="300" tween="quadratic" easing="out" condition="[ControlGroup(9000).HasFocus | Control.HasFocus(9001) | Control.HasFocus(8999)] + ![Window.IsActive(PVRGuideInfo) | Window.IsActive(PVRRadioRDSInfo)]">Conditional</animation>
+    <animation effect="slide" start="-200,0" end="-700,0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | Control.HasFocus(9001)">WindowClose</animation>
+    <animation effect="slide" start="-200,0" end="-250,0" time="225" tween="quadratic" easing="out" condition="![ControlGroup(9000).HasFocus | Control.HasFocus(9001)]">WindowClose</animation>
+    <animation effect="slide" start="-250,0" end="-200,0" time="225" tween="quadratic" easing="out">WindowOpen</animation>
     <control type="button" id="8999">
       <description>Fake button for mouse control</description>
       <left>0</left>
       <top>0</top>
-      <width>250</width>
+      <width>450</width>
       <height>720</height>
       <label />
       <font />
@@ -811,7 +811,7 @@
       <visible>true</visible>
     </control>
     <control type="button" id="9001">
-      <left>250</left>
+      <left>450</left>
       <top>260</top>
       <width>42</width>
       <height>128</height>
@@ -822,13 +822,13 @@
     <control type="image">
       <left>-20</left>
       <top>0</top>
-      <width>280</width>
+      <width>480</width>
       <height>720</height>
       <texture border="0,0,10,0">MediaBladeSub.png</texture>
     </control>
     <control type="image">
       <description>LOGO</description>
-      <left>15</left>
+      <left>115</left>
       <top>0</top>
       <width>220</width>
       <height>80</height>
@@ -1273,9 +1273,9 @@
   </include>
   <include name="CommonNowPlaying_Controls">
     <control type="label" id="202">
-      <width>250</width>
-      <height>35</height>
-      <font>font12</font>
+      <width>450</width>
+      <height>40</height>
+      <font>font30_title</font>
       <label>31023</label>
       <textcolor>blue</textcolor>
       <align>center</align>
@@ -1292,8 +1292,9 @@
       <visible>VideoPlayer.Content(LiveTV)</visible>
       <include>VisibleFadeEffect</include>
       <control type="grouplist" id="9006">
-        <width>250</width>
-        <height>45</height>
+        <top>-5</top>
+        <width>450</width>
+        <height>60</height>
         <itemgap>1</itemgap>
         <orientation>horizontal</orientation>
         <onright>50</onright>
@@ -1301,24 +1302,24 @@
         <onup>610</onup>
         <ondown>611</ondown>
         <control type="button" id="600">
-          <width>39</width>
-          <height>39</height>
+          <width>60</width>
+          <height>60</height>
           <label />
           <texturefocus>OSDChannelUPFO.png</texturefocus>
           <texturenofocus>OSDChannelUPNF.png</texturenofocus>
           <onclick>ChannelDown</onclick>
         </control>
         <control type="button" id="601">
-          <width>39</width>
-          <height>39</height>
+          <width>60</width>
+          <height>60</height>
           <label />
           <texturefocus>OSDChannelDownFO.png</texturefocus>
           <texturenofocus>OSDChannelDownNF.png</texturenofocus>
           <onclick>ChannelUp</onclick>
         </control>
         <control type="button" id="603">
-          <width>39</width>
-          <height>39</height>
+          <width>60</width>
+          <height>60</height>
           <label />
           <texturefocus>OSDStopFO.png</texturefocus>
           <texturenofocus>OSDStopNF.png</texturenofocus>
@@ -1326,8 +1327,8 @@
           <onclick>PlayerControl(Stop)</onclick>
         </control>
         <control type="togglebutton" id="604">
-          <width>39</width>
-          <height>39</height>
+          <width>60</width>
+          <height>60</height>
           <label />
           <texturefocus>OSDPauseFO.png</texturefocus>
           <texturenofocus>OSDPauseNF.png</texturenofocus>
@@ -1339,8 +1340,8 @@
           <animation effect="fade" start="100" end="30" time="75" condition="!Player.PauseEnabled">Conditional</animation>
         </control>
         <control type="button" id="605">
-          <width>39</width>
-          <height>39</height>
+          <width>60</width>
+          <height>60</height>
           <label />
           <texturefocus>OSDRecordOffFO.png</texturefocus>
           <texturenofocus>OSDRecordOffNF.png</texturenofocus>
@@ -1349,8 +1350,8 @@
           <animation effect="fade" start="100" end="30" time="75" condition="!PVR.CanRecordPlayingChannel">Conditional</animation>
         </control>
         <control type="button" id="606">
-          <width>39</width>
-          <height>39</height>
+          <width>60</width>
+          <height>60</height>
           <label />
           <visible>RDS.HasRadiotextPlus</visible>
           <texturefocus>OSDRadioRDSFO.png</texturefocus>
@@ -1358,8 +1359,8 @@
           <onclick>ActivateWindow(PVRRadioRDSInfo)</onclick>
         </control>
         <control type="button" id="622">
-          <width>39</width>
-          <height>39</height>
+          <width>60</width>
+          <height>60</height>
           <label />
           <visible>!RDS.HasRadiotextPlus</visible>
           <texturefocus>OSDChannelListFO.png</texturefocus>
@@ -1372,10 +1373,11 @@
       <visible>Player.HasMedia</visible>
       <visible>!VideoPlayer.Content(LiveTV)</visible>
       <include>VisibleFadeEffect</include>
-      <height>45</height>
+      <height>55</height>
       <control type="grouplist" id="9005">
-        <width>250</width>
-        <height>45</height>
+        <top>-5</top>
+        <width>450</width>
+        <height>60</height>
         <itemgap>1</itemgap>
         <orientation>horizontal</orientation>
         <onright>50</onright>
@@ -1384,16 +1386,16 @@
         <ondown>611</ondown>
         <defaultcontrol always="true">603</defaultcontrol>
         <control type="button" id="700">
-          <width>39</width>
-          <height>39</height>
+          <width>60</width>
+          <height>60</height>
           <label />
           <texturefocus>OSDPrevTrackFO.png</texturefocus>
           <texturenofocus>OSDPrevTrackNF.png</texturenofocus>
           <onclick>PlayerControl(Previous)</onclick>
         </control>
         <control type="button" id="706">
-          <width>39</width>
-          <height>39</height>
+          <width>60</width>
+          <height>60</height>
           <label />
           <texturefocus>OSDRewindFO.png</texturefocus>
           <texturenofocus>OSDRewindNF.png</texturenofocus>
@@ -1401,8 +1403,8 @@
           <visible>Window.IsVisible(MusicPlaylist) | Window.IsVisible(VideoPlaylist) | Player.HasVideo</visible>
         </control>
         <control type="togglebutton" id="703">
-          <width>39</width>
-          <height>39</height>
+          <width>60</width>
+          <height>60</height>
           <label />
           <texturefocus>OSDPauseFO.png</texturefocus>
           <texturenofocus>OSDPauseNF.png</texturenofocus>
@@ -1412,8 +1414,8 @@
           <onclick>PlayerControl(Play)</onclick>
         </control>
         <control type="button" id="701">
-          <width>39</width>
-          <height>39</height>
+          <width>60</width>
+          <height>60</height>
           <label />
           <texturefocus>OSDStopFO.png</texturefocus>
           <texturenofocus>OSDStopNF.png</texturenofocus>
@@ -1421,8 +1423,8 @@
           <onclick>PlayerControl(Stop)</onclick>
         </control>
         <control type="button" id="707">
-          <width>39</width>
-          <height>39</height>
+          <width>60</width>
+          <height>60</height>
           <label />
           <texturefocus>OSDForwardFO.png</texturefocus>
           <texturenofocus>OSDForwardNF.png</texturenofocus>
@@ -1430,19 +1432,19 @@
           <visible>Window.IsVisible(MusicPlaylist) | Window.IsVisible(VideoPlaylist) | Player.HasVideo</visible>
         </control>
         <control type="button" id="702">
-          <width>39</width>
-          <height>39</height>
+          <width>60</width>
+          <height>60</height>
           <label />
           <texturefocus>OSDNextTrackFO.png</texturefocus>
           <texturenofocus>OSDNextTrackNF.png</texturenofocus>
           <onclick>PlayerControl(Next)</onclick>
         </control>
         <control type="group" id="799">
-          <width>39</width>
-          <height>39</height>
+          <width>60</width>
+          <height>60</height>
           <control type="button" id="704">
-            <width>39</width>
-            <height>39</height>
+            <width>60</width>
+            <height>60</height>
             <label />
             <texturefocus />
             <texturenofocus />
@@ -1452,15 +1454,15 @@
             <visible>!Window.IsVisible(MusicPlaylist) + !Window.IsVisible(VideoPlaylist) + !Player.HasVideo</visible>
           </control>
           <control type="image" id="713">
-            <width>39</width>
-            <height>39</height>
+            <width>60</width>
+            <height>60</height>
             <texture>$VAR[PlayerControlsRepeatImageVar]</texture>
             <visible>!Window.IsVisible(MusicPlaylist) + !Window.IsVisible(VideoPlaylist) + !Player.HasVideo</visible>
           </control>
         </control>
         <control type="togglebutton" id="705">
-          <width>39</width>
-          <height>39</height>
+          <width>60</width>
+          <height>60</height>
           <label />
           <texturefocus>OSDRandomOffFO.png</texturefocus>
           <texturenofocus>OSDRandomOffNF.png</texturenofocus>
@@ -1474,7 +1476,7 @@
     </control>
     <control type="radiobutton" id="611">
       <description>Go to fullscreen Playback</description>
-      <include>ButtonCommonValues</include>
+      <include>SideBladeButtonCommonValues</include>
       <label>31008</label>
       <onclick>fullscreen</onclick>
       <textureradioonfocus>GoFullscreen.png</textureradioonfocus>
@@ -1482,13 +1484,15 @@
       <textureradioofffocus>GoFullscreen.png</textureradioofffocus>
       <textureradiooffnofocus>GoFullscreen.png</textureradiooffnofocus>
       <visible>Player.HasMedia</visible>
+      <height>40</height>
     </control>
     <control type="button" id="612">
       <description>Go to playlist</description>
-      <include>ButtonCommonValues</include>
+      <include>SideBladeButtonCommonValues</include>
       <label>13350</label>
       <onclick>$VAR[PlayList]</onclick>
       <visible>[Window.IsActive(Videos) + !String.IsEqual(Playlist.Length(video),0)] | [Window.IsActive(Music) + !String.IsEqual(Playlist.Length(music),0)]</visible>
+      <height>40</height>
     </control>
   </include>
   <include name="ScrollOffsetLabel">
@@ -2135,6 +2139,17 @@
     </item>
   </include>
   <!--changes for skin.confluence-bmw-->
+  <include name="SideBladeButtonCommonValues">
+    <height>45</height>
+    <width>450</width>
+    <textoffsetx>10</textoffsetx>
+    <textwidth>430</textwidth>
+    <aligny>center</aligny>
+    <font>font30_title</font>
+    <texturefocus border="5">button-focus.png</texturefocus>
+    <texturenofocus>-</texturenofocus>
+    <pulseonselect>false</pulseonselect>
+  </include>
   <include file="variable.xml"></include>
   <include file="IncludesHomeObcBar.xml" />
 </includes>

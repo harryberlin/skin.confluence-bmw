@@ -35,20 +35,20 @@
         <pagecontrol>60</pagecontrol>
         <scrolltime>200</scrolltime>
         <visible>$PARAM[visible]</visible>
-        <itemlayout height="40" width="780">
+        <itemlayout height="60" width="780">
           <control type="image">
             <left>0</left>
             <top>0</top>
             <width>780</width>
-            <height>41</height>
+            <height>61</height>
             <texture border="0,2,0,2">MenuItemNF.png</texture>
           </control>
           <control type="label">
             <left>10</left>
-            <top>0</top>
+            <top>-5</top>
             <width>730</width>
-            <height>40</height>
-            <font>font13</font>
+            <height>60</height>
+            <font>font55_title</font>
             <textcolor>grey2</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>left</align>
@@ -59,8 +59,8 @@
             <left>60</left>
             <top>0</top>
             <width>700</width>
-            <height>40</height>
-            <font>font12</font>
+            <height>60</height>
+            <font>font24_title</font>
             <textcolor>grey2</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>right</align>
@@ -68,12 +68,12 @@
             <label>$INFO[ListItem.Label2]</label>
           </control>
         </itemlayout>
-        <focusedlayout height="40" width="760">
+        <focusedlayout height="60" width="760">
           <control type="image">
             <left>0</left>
             <top>0</top>
             <width>760</width>
-            <height>41</height>
+            <height>61</height>
             <texture border="0,2,0,2">MenuItemNF.png</texture>
             <visible>!Control.HasFocus($PARAM[control_id])</visible>
             <include>VisibleFadeEffect</include>
@@ -82,7 +82,7 @@
             <left>0</left>
             <top>0</top>
             <width>780</width>
-            <height>41</height>
+            <height>61</height>
             <texture border="0,2,0,2">MenuItemFO.png</texture>
             <visible>Control.HasFocus($PARAM[control_id])</visible>
             <include>VisibleFadeEffect</include>
@@ -91,17 +91,17 @@
             <left>580</left>
             <top>5</top>
             <width>200</width>
-            <height>31</height>
+            <height>51</height>
             <texture border="0,0,14,0">MediaItemDetailBG.png</texture>
             <visible>Control.HasFocus($PARAM[control_id]) + !String.IsEmpty(ListItem.Label2)</visible>
           </control>
           <control type="label">
             <left>10</left>
-            <top>0</top>
+            <top>-5</top>
             <width>730</width>
-            <height>40</height>
-            <font>font13</font>
-            <textcolor>white</textcolor>
+            <height>60</height>
+            <font>font55_title</font>
+            <textcolor>$VAR[TextColor2]</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>left</align>
             <aligny>center</aligny>
@@ -111,8 +111,8 @@
             <left>60</left>
             <top>0</top>
             <width>700</width>
-            <height>40</height>
-            <font>font12</font>
+            <height>60</height>
+            <font>font24_title</font>
             <textcolor>grey2</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>right</align>

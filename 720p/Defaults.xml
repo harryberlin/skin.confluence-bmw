@@ -89,8 +89,8 @@
     <top>160</top>
     <width>300</width>
     <height>42</height>
-    <spinwidth>33</spinwidth>
-    <spinheight>22</spinheight>
+    <spinwidth>36</spinwidth>
+    <spinheight>24</spinheight>
     <texturefocus>button-focus.png</texturefocus>
     <texturenofocus />
     <textureup>scroll-up-2.png</textureup>

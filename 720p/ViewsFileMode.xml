@@ -509,19 +509,19 @@
         <viewtype label="537">list</viewtype>
         <pagecontrol>60</pagecontrol>
         <scrolltime>200</scrolltime>
-        <itemlayout height="40" width="1080">
+        <itemlayout height="60" width="1080">
           <control type="image">
             <left>0</left>
             <top>0</top>
             <width>1080</width>
-            <height>41</height>
+            <height>61</height>
             <texture border="0,2,0,2">MenuItemNF.png</texture>
           </control>
           <control type="image">
-            <left>10</left>
-            <top>4</top>
-            <width>40</width>
-            <height>32</height>
+            <left>1</left>
+            <top>1</top>
+            <width>58</width>
+            <height>58</height>
             <texture background="true">$INFO[ListItem.Icon]</texture>
             <aspectratio>keep</aspectratio>
           </control>
@@ -529,8 +529,8 @@
             <left>60</left>
             <top>0</top>
             <width>950</width>
-            <height>40</height>
-            <font>font13</font>
+            <height>60</height>
+            <font>font55_title</font>
             <textcolor>grey2</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>left</align>
@@ -541,8 +541,8 @@
             <left>60</left>
             <top>0</top>
             <width>1000</width>
-            <height>40</height>
-            <font>font12</font>
+            <height>60</height>
+            <font>font24_title</font>
             <textcolor>grey2</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>right</align>
@@ -554,8 +554,8 @@
             <left>65</left>
             <top>0</top>
             <width>940</width>
-            <height>40</height>
-            <font>font12</font>
+            <height>60</height>
+            <font>font24_title</font>
             <textcolor>grey2</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>right</align>
@@ -567,8 +567,8 @@
           <control type="image">
             <left>1010</left>
             <top>8</top>
-            <width>40</width>
-            <height>26</height>
+            <width>54</width>
+            <height>46</height>
             <texture>$VAR[MediaInfoOverlayVar]</texture>
             <aspectratio>keep</aspectratio>
             <visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Sets) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
@@ -576,27 +576,27 @@
           <control type="image">
             <left>1050</left>
             <top>14</top>
-            <width>16</width>
-            <height>16</height>
+            <width>44</width>
+            <height>44</height>
             <texture>OverlayWatching.png</texture>
             <visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
           </control>
           <control type="image">
             <left>1050</left>
             <top>14</top>
-            <width>20</width>
-            <height>16</height>
+            <width>50</width>
+            <height>44</height>
             <texture>$INFO[ListItem.Overlay]</texture>
             <aspectratio>keep</aspectratio>
             <visible>Window.IsVisible(Videos)</visible>
           </control>
         </itemlayout>
-        <focusedlayout height="40" width="1080">
+        <focusedlayout height="60" width="1080">
           <control type="image">
             <left>0</left>
             <top>0</top>
             <width>1080</width>
-            <height>41</height>
+            <height>61</height>
             <texture border="0,2,0,2">MenuItemNF.png</texture>
             <visible>!Control.HasFocus(51)</visible>
             <include>VisibleFadeEffect</include>
@@ -605,7 +605,7 @@
             <left>0</left>
             <top>0</top>
             <width>1080</width>
-            <height>41</height>
+            <height>61</height>
             <texture border="0,2,0,2">MenuItemFO.png</texture>
             <visible>Control.HasFocus(51)</visible>
             <include>VisibleFadeEffect</include>
@@ -614,15 +614,15 @@
             <left>875</left>
             <top>5</top>
             <width>200</width>
-            <height>31</height>
+            <height>51</height>
             <texture border="0,0,14,0">MediaItemDetailBG.png</texture>
             <visible>Control.HasFocus(51) + !String.IsEmpty(ListItem.Label2)</visible>
           </control>
           <control type="image">
-            <left>10</left>
-            <top>4</top>
-            <width>40</width>
-            <height>32</height>
+            <left>1</left>
+            <top>1</top>
+            <width>58</width>
+            <height>58</height>
             <texture background="true">$INFO[ListItem.Icon]</texture>
             <aspectratio>keep</aspectratio>
           </control>
@@ -630,9 +630,9 @@
             <left>60</left>
             <top>0</top>
             <width>950</width>
-            <height>40</height>
-            <font>font13</font>
-            <textcolor>white</textcolor>
+            <height>60</height>
+            <font>font55_title</font>
+            <textcolor>$VAR[TextColor2]</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>left</align>
             <aligny>center</aligny>
@@ -642,8 +642,8 @@
             <left>60</left>
             <top>0</top>
             <width>1000</width>
-            <height>40</height>
-            <font>font12</font>
+            <height>60</height>
+            <font>font24_title</font>
             <textcolor>grey2</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>right</align>
@@ -655,8 +655,8 @@
             <left>65</left>
             <top>0</top>
             <width>940</width>
-            <height>40</height>
-            <font>font12</font>
+            <height>60</height>
+            <font>font24_title</font>
             <textcolor>grey2</textcolor>
             <selectedcolor>selected</selectedcolor>
             <align>right</align>
@@ -668,8 +668,8 @@
           <control type="image">
             <left>1010</left>
             <top>8</top>
-            <width>40</width>
-            <height>26</height>
+            <width>54</width>
+            <height>46</height>
             <texture>$VAR[MediaInfoOverlayVar]</texture>
             <aspectratio>keep</aspectratio>
             <visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Sets) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
@@ -677,16 +677,16 @@
           <control type="image">
             <left>1050</left>
             <top>14</top>
-            <width>16</width>
-            <height>16</height>
+            <width>44</width>
+            <height>44</height>
             <texture>OverlayWatching.png</texture>
             <visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
           </control>
           <control type="image">
             <left>1050</left>
             <top>14</top>
-            <width>20</width>
-            <height>16</height>
+            <width>50</width>
+            <height>44</height>
             <texture>$INFO[ListItem.Overlay]</texture>
             <aspectratio>keep</aspectratio>
             <visible>Window.IsVisible(Videos)</visible>

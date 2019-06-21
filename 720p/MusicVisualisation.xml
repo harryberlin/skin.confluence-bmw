@@ -27,7 +27,7 @@
       <fadetime>600</fadetime>
     </control_off>
     <!-- media infos -->
-    <control type="group">
+    <control_off type="group">
       <depth>DepthOSD</depth>
       <animation effect="fade" time="150">VisibleChange</animation>
       <visible>[Player.ShowInfo | Window.IsActive(MusicOSD)] + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(Addon)]</visible>
@@ -221,6 +221,68 @@
           <label>$INFO[Player.Duration(hh:mm:ss)]</label>
         </control>
       </control>
+    </control_off>
+    <!-- the Album Cover -->
+    <control type="image">
+      <description>cover image</description>
+      <visible>Player.HasAudio</visible>
+      <left>20</left>
+      <top>30</top>
+      <width>450</width>
+      <height>450</height>
+      <texture fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture>
+      <bordertexture border="8">ThumbShadow.png</bordertexture>
+      <bordersize>8</bordersize>
+    </control>
+    <control type="group">
+      <left>20</left>
+      <!-- the music title -->
+      <control type="label">
+        <top>230r</top>
+        <width>1240</width>
+        <height>50</height>
+        <font>font55_title</font>
+        <align>left</align>
+        <label>$INFO[Player.Title]</label>
+        <textcolor>$VAR[TextColor2]</textcolor>
+        <shadowcolor>black</shadowcolor>
+        <scroll>true</scroll>
+      </control>
+      <control type="label" id="1">
+        <description>Artist label</description>
+        <top>160r</top>
+        <width>1240</width>
+        <height>50</height>
+        <align>left</align>
+        <font>font35_title</font>
+        <label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, - ]</label>
+        <textcolor>$VAR[TextColor2]</textcolor>
+        <shadowcolor>black</shadowcolor>
+      </control>
+    </control>
+    <!-- the progress bar -->
+    <control type="progress">
+      <left>5</left>
+      <top>75r</top>
+      <description>Progressbar</description>
+      <width>1270</width>
+      <height>70</height>
+      <info>Player.Progress</info>
+      <texturebg border="6,6,6,6">OSDProgressBack.png</texturebg>
+      <midtexture border="6,6,6,6" colordiffuse="$VAR[TextColor3]">OSDProgressMid.png</midtexture>
+    </control>
+    <!-- the duration label -->
+    <control type="label">
+      <left>0</left>
+      <top>75r</top>
+      <width>1280</width>
+      <height>70</height>
+      <font>font50_title</font>
+      <align>center</align>
+      <aligny>center</aligny>
+      <label>$INFO[Player.Time(hh:mm:ss)] / $INFO[Player.Duration(hh:mm:ss)]</label>
+      <textcolor>$VAR[TextColor2]</textcolor>
+      <shadowcolor>black</shadowcolor>
     </control>
   </controls>
 </window>
