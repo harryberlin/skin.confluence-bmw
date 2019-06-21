@@ -53,6 +53,365 @@
       <animation effect="slide" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
       <animation effect="slide" time="200" condition="Window.Next(Home)">WindowClose</animation>
     </control>
+    <!--Ousidetemp / Clock / Date / Repeat-->
+    <control type="group">
+      <visible>!Skin.HasSetting(HomeObcBar)</visible>
+      <depth>DepthHeader</depth>
+      <control_off type="group">
+        <left>20</left>
+        <top>0</top>
+        <visible>Skin.HasSetting(homepageWeatherinfo) + !String.IsEmpty(Weather.Plugin)</visible>
+        <include>Window_OpenClose_Animation</include>
+        <control type="image">
+          <description>Weather image</description>
+          <left>0</left>
+          <top>0</top>
+          <width>60</width>
+          <height>60</height>
+          <aspectratio>keep</aspectratio>
+          <texture>$INFO[Weather.Conditions]</texture>
+        </control>
+        <control type="label">
+          <description>Location label</description>
+          <left>65</left>
+          <top>5</top>
+          <width>500</width>
+          <height>15</height>
+          <align>left</align>
+          <aligny>center</aligny>
+          <font>font10</font>
+          <textcolor>white</textcolor>
+          <shadowcolor>black</shadowcolor>
+          <label>$INFO[Window(Weather).Property(Location)]</label>
+        </control>
+        <control type="grouplist">
+          <left>65</left>
+          <top>20</top>
+          <width>1000</width>
+          <height>30</height>
+          <orientation>horizontal</orientation>
+          <align>left</align>
+          <itemgap>0</itemgap>
+          <control type="label">
+            <description>Temp label</description>
+            <width min="0" max="300">auto</width>
+            <height>30</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <font>font28_title</font>
+            <textcolor>white</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <label>[B]$INFO[Window(Weather).Property(Current.Temperature)][/B]</label>
+          </control>
+          <control type="label">
+            <description>Temp Units</description>
+            <width min="0" max="100">auto</width>
+            <height>22</height>
+            <font>font10</font>
+            <aligny>center</aligny>
+            <label>$INFO[System.TemperatureUnits]</label>
+            <textcolor>white</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <visible>!String.IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
+          </control>
+          <control type="label">
+            <description>Conditions Label</description>
+            <width>500</width>
+            <height>22</height>
+            <font>font10</font>
+            <aligny>center</aligny>
+            <label>$INFO[Window(Weather).Property(Current.Condition),  ]</label>
+            <textcolor>grey2</textcolor>
+            <shadowcolor>black</shadowcolor>
+          </control>
+        </control>
+      </control_off>
+      <!--SOMETHING-->
+      <control type="group">
+        <visible>Skin.HasSetting(SkinDebug)</visible>
+        <animation effect="slide" start="0,0" end="900,0" delay="0" time="400">WindowClose</animation>
+        <animation effect="slide" start="900,0" end="0,0" delay="0" time="400">WindowOpen</animation>
+        <control type="image">
+          <animation condition="Skin.HasSetting(MainMenuVerticalSlideOut) + System.IdleTime(4) + !ControlGroup(9001).HasFocus()">Conditional<effect type="zoom" start="100,100" end="180,100" center="0,0" time="225" /><effect type="slide" start="0,0" end="-410,0" time="225"></effect></animation>
+          <description>something background</description>
+          <posx>890r</posx>
+          <posy>0</posy>
+          <width>520</width>
+          <height>60</height>
+          <texture flipx="true" border="32,0,0,0">bmw/header_bar_fade.png</texture>
+        </control>
+        <control_off type="image">
+          <description>something background</description>
+          <posx>890r</posx>
+          <posy>0</posy>
+          <width>450</width>
+          <height>70</height>
+          <texture flipx="true" border="0,0,0,10">bmw/MediaInfoBackUpper.png</texture>
+        </control_off>
+        <control type="group">
+          <posx>400</posx>
+          <animation condition="Skin.HasSetting(MainMenuVerticalSlideOut) + System.IdleTime(4) + !ControlGroup(9001).HasFocus()">Conditional<effect type="slide" start="0,0" end="-390,0" time="225"></effect></animation>
+          <animation_off effect="slide" start="750" end="-700" time="15000" loop="true" condition="Skin.HasSetting(MainMenuVerticalSlideOut) + System.IdleTime(4)">conditional</animation_off>
+          <animation effect="slide" start="450" end="-1000" time="10000" loop="true" condition="![Skin.HasSetting(MainMenuVerticalSlideOut) + System.IdleTime(4)]" reversible="false">conditional</animation>
+          <!--oil temp-->
+          <control type="group">
+            <posx>0</posx>
+            <control type="image">
+              <description>coolant icon</description>
+              <posx>0</posx>
+              <posy>5</posy>
+              <width>50</width>
+              <height>50</height>
+              <texture>$INFO[Window(10000).Property(IBUS_OBC_OILTEMP_ICON)]</texture>
+            </control>
+            <control type="label">
+              <description>something label</description>
+              <posx>55</posx>
+              <posy>0</posy>
+              <width>170</width>
+              <height>55</height>
+              <align>left</align>
+              <aligny>center</aligny>
+              <font>font38_title</font>
+              <textcolor>$VAR[TextColor1]</textcolor>
+              <shadowcolor>black</shadowcolor>
+              <label_off>+120°C</label_off>
+              <label>$INFO[Window(10000).Property(IBUS_OBC_OILTEMP)]</label>
+            </control>
+          </control>
+          <!--coolant temp-->
+          <control type="group">
+            <posx>220</posx>
+            <control type="image">
+              <description>coolant icon</description>
+              <posx>0</posx>
+              <posy>5</posy>
+              <width>50</width>
+              <height>50</height>
+              <texture>$INFO[Window(10000).Property(IBUS_OBC_COOLANTTEMP_ICON)]</texture>
+            </control>
+            <control type="label">
+              <description>coolant label</description>
+              <posx>55</posx>
+              <posy>0</posy>
+              <width>170</width>
+              <height>55</height>
+              <align>left</align>
+              <aligny>center</aligny>
+              <font>font38_title</font>
+              <textcolor>$VAR[TextColor1]</textcolor>
+              <shadowcolor>black</shadowcolor>
+              <label>$INFO[Window(10000).Property(IBUS_OBC_COOLANTTEMP)]</label>
+            </control>
+          </control>
+          <!--Fuel Label-->
+          <control type="group">
+            <posx>420</posx>
+            <control type="image">
+              <description>fuel icon</description>
+              <posx>0</posx>
+              <posy>10</posy>
+              <width>40</width>
+              <height>40</height>
+              <texture>special://home/addons/plugin.script.ibuscommunicator/resources/skins/default/media/icon-reserve-grey.png</texture>
+              <visible>!String.IsEmpty(Window(10000).Property(IBUS_OBC_FUEL))</visible>
+            </control>
+            <control type="label">
+              <description>fuel label</description>
+              <posx>50</posx>
+              <posy>0</posy>
+              <width>200</width>
+              <height>55</height>
+              <align>left</align>
+              <aligny>center</aligny>
+              <font>font38_title</font>
+              <textcolor>$VAR[TextColor1]</textcolor>
+              <shadowcolor>black</shadowcolor>
+              <label_off>99 L</label_off>
+              <label>$INFO[Window(10000).Property(IBUS_OBC_FUEL)]</label>
+            </control>
+          </control>
+          <!--Range Label-->
+          <control type="group">
+            <posx>590</posx>
+            <control type="image">
+              <description>fuel icon</description>
+              <posx>0</posx>
+              <posy>10</posy>
+              <width>50</width>
+              <height>40</height>
+              <texture>special://home/addons/plugin.script.ibuscommunicator/resources/skins/default/media/icon-range-grey.png</texture>
+              <visible>!String.IsEmpty(Window(10000).Property(IBUS_OBC_RANGE))</visible>
+            </control>
+            <control type="label">
+              <description>range label</description>
+              <posx>60</posx>
+              <posy>0</posy>
+              <width>200</width>
+              <height>55</height>
+              <align>left</align>
+              <aligny>center</aligny>
+              <font>font38_title</font>
+              <textcolor>$VAR[TextColor1]</textcolor>
+              <shadowcolor>black</shadowcolor>
+              <label_off>9999 KM</label_off>
+              <label>$INFO[Window(10000).Property(IBUS_OBC_RANGE)]</label>
+            </control>
+          </control>
+          <control_off type="label">
+            <description>something label</description>
+            <posx>860r</posx>
+            <posy>0</posy>
+            <width>800</width>
+            <height>55</height>
+            <align>left</align>
+            <aligny>center</aligny>
+            <font>font38_title</font>
+            <textcolor>$VAR[TextColor1]</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <label>xxxxxxxxxxxxxxx $INFO[Window(10000).Property(IBUS_RADIO_MODE)] xxxxxxxxxxxxxxx</label>
+          </control_off>
+        </control>
+      </control>
+      <!--OUTSIDETEMP-->
+      <control type="group">
+        <visible>!String.IsEmpty(Window(10000).Property(IBUS_OBC_TEMP))</visible>
+        <animation effect="slide" start="0,0" end="-90,0" delay="0" time="300" condition="Player.Muted">conditional</animation>
+        <animation effect="slide" start="490,0" end="0,0" delay="0" time="200">VisibleChange</animation>
+        <animation effect="slide" start="0,0" end="460,0" delay="0" time="400">WindowClose</animation>
+        <animation effect="slide" start="460,0" end="0,0" delay="0" time="400">WindowOpen</animation>
+        <control type="image">
+          <description>temp background</description>
+          <posx>465r</posx>
+          <posy>0</posy>
+          <width>560</width>
+          <height>60</height>
+          <texture flipx="true" border="32,0,0,0">bmw/header.png</texture>
+        </control>
+        <control type="label">
+          <description>temp label</description>
+          <posx>450r</posx>
+          <posy>0</posy>
+          <width>190</width>
+          <height>55</height>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>font38_title</font>
+          <textcolor>$VAR[TextColor1]</textcolor>
+          <shadowcolor>black</shadowcolor>
+          <label>$INFO[Window(10000).Property(IBUS_OBC_TEMP)]</label>
+        </control>
+      </control>
+      <!--Clock-->
+      <include_off>Clock</include_off>
+      <control type="group">
+        <posx>210r</posx>
+        <posy>60</posy>
+        <animation effect="slide" start="0,0" end="300,0" delay="0" time="300" condition="Window.Next(Home) | Window.IsActive(Home) + ![Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation)]">WindowClose</animation>
+        <animation effect="slide" start="300,0" end="0,0" delay="0" time="300" condition="Window.Previous(Home) | Window.IsVisible(Home) + ![Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation)]">WindowOpen</animation>
+        <control type="image">
+          <animation effect="slide" start="0,0" end="-70,0" delay="0" time="300" condition="!String.IsEmpty(System.Time(xx))">conditional</animation>
+          <description>time background</description>
+          <posx>160r</posx>
+          <posy>0</posy>
+          <width>260</width>
+          <height>60</height>
+          <texture flipx="true" border="32,0,0,0">bmw/header.png</texture>
+        </control>
+        <control type="label">
+          <description>time label</description>
+          <posx>5r</posx>
+          <posy>0</posy>
+          <width>200</width>
+          <height>55</height>
+          <align>right</align>
+          <aligny>center</aligny>
+          <font>font38_title</font>
+          <textcolor>$VAR[TextColor1]</textcolor>
+          <shadowcolor>black</shadowcolor>
+          <label>$INFO[System.Time]</label>
+        </control>
+      </control>
+      <!--Date-->
+      <control_off type="label">
+        <description>Date label</description>
+        <right>20</right>
+        <top>35</top>
+        <width>300</width>
+        <height>15</height>
+        <align>right</align>
+        <aligny>center</aligny>
+        <font>font10</font>
+        <textcolor>white</textcolor>
+        <shadowcolor>black</shadowcolor>
+        <label>$INFO[System.Date]</label>
+        <include>Window_OpenClose_Animation</include>
+        <animation effect="slide" start="0,0" end="-40,0" time="75" condition="Player.Muted">conditional</animation>
+      </control_off>
+      <control type="group">
+        <posx>430r</posx>
+        <posy>0</posy>
+        <animation effect="slide" start="0,0" end="-90,0" delay="0" time="300" condition="Player.Muted">conditional</animation>
+        <animation effect="slide" start="0,0" end="500,0" delay="0" time="300">WindowClose</animation>
+        <animation effect="slide" start="500,0" end="0,0" delay="0" time="300">WindowOpen</animation>
+        <control type="image">
+          <description>date background</description>
+          <posx>150</posx>
+          <posy>0</posy>
+          <width>620</width>
+          <height>60</height>
+          <texture flipx="true" flipy="false" border="32,0,0,0">bmw/header.png</texture>
+        </control>
+        <control type="label">
+          <description>date label normal font</description>
+          <posx>5r</posx>
+          <posy>0</posy>
+          <width>500</width>
+          <height>55</height>
+          <align>right</align>
+          <aligny>center</aligny>
+          <font>font38_title</font>
+          <textcolor>$VAR[TextColor1]</textcolor>
+          <shadowcolor>black</shadowcolor>
+          <label>$INFO[System.Date(dd.mm.yyyy)]</label>
+        </control>
+      </control>
+      <!--Repeat-->
+      <control type="group">
+        <posx>1180</posx>
+        <posy>120</posy>
+        <visible>Playlist.IsRepeatOne | Playlist.IsRepeat</visible>
+        <animation effect="slide" start="0,0" end="110,0" time="200">WindowClose</animation>
+        <animation effect="slide" start="110,0" end="0,0" time="250">WindowOpen</animation>
+        <animation effect="slide" start="110,0" end="0,0" time="250">VisibleChange</animation>
+        <control type="group">
+          <control type="image">
+            <description>repeat background</description>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>100</width>
+            <height>60</height>
+            <texture flipx="true" border="32,0,0,0">bmw/header.png</texture>
+          </control>
+          <control type="image">
+            <posx>30</posx>
+            <posy>-2</posy>
+            <width>60</width>
+            <height>60</height>
+            <texture>OSDRepeatAllNF.png</texture>
+            <visible>!Playlist.IsRepeatOne</visible>
+          </control>
+          <control type="image">
+            <posx>30</posx>
+            <posy>-2</posy>
+            <width>60</width>
+            <height>60</height>
+            <texture>OSDRepeatOneNF.png</texture>
+            <visible>Playlist.IsRepeatOne</visible>
+          </control>
+        </control>
+      </control>
+    </control>
     <!--VERTICAL-->
     <include>MainMenuVertical</include>
     <!-- Music Info -->
@@ -983,256 +1342,6 @@
           <label>$INFO[Window(Weather).Property(Current.Condition),  ]</label>
           <textcolor>grey2</textcolor>
           <shadowcolor>black</shadowcolor>
-        </control>
-      </control>
-    </control>
-    <!--Ousidetemp / Clock / Date / Repeat-->
-    <control type="group">
-      <visible>!Skin.HasSetting(HomeObcBar)</visible>
-      <depth>DepthHeader</depth>
-      <control_off type="group">
-        <left>20</left>
-        <top>0</top>
-        <visible>Skin.HasSetting(homepageWeatherinfo) + !String.IsEmpty(Weather.Plugin)</visible>
-        <include>Window_OpenClose_Animation</include>
-        <control type="image">
-          <description>Weather image</description>
-          <left>0</left>
-          <top>0</top>
-          <width>60</width>
-          <height>60</height>
-          <aspectratio>keep</aspectratio>
-          <texture>$INFO[Weather.Conditions]</texture>
-        </control>
-        <control type="label">
-          <description>Location label</description>
-          <left>65</left>
-          <top>5</top>
-          <width>500</width>
-          <height>15</height>
-          <align>left</align>
-          <aligny>center</aligny>
-          <font>font10</font>
-          <textcolor>white</textcolor>
-          <shadowcolor>black</shadowcolor>
-          <label>$INFO[Window(Weather).Property(Location)]</label>
-        </control>
-        <control type="grouplist">
-          <left>65</left>
-          <top>20</top>
-          <width>1000</width>
-          <height>30</height>
-          <orientation>horizontal</orientation>
-          <align>left</align>
-          <itemgap>0</itemgap>
-          <control type="label">
-            <description>Temp label</description>
-            <width min="0" max="300">auto</width>
-            <height>30</height>
-            <align>left</align>
-            <aligny>center</aligny>
-            <font>font28_title</font>
-            <textcolor>white</textcolor>
-            <shadowcolor>black</shadowcolor>
-            <label>[B]$INFO[Window(Weather).Property(Current.Temperature)][/B]</label>
-          </control>
-          <control type="label">
-            <description>Temp Units</description>
-            <width min="0" max="100">auto</width>
-            <height>22</height>
-            <font>font10</font>
-            <aligny>center</aligny>
-            <label>$INFO[System.TemperatureUnits]</label>
-            <textcolor>white</textcolor>
-            <shadowcolor>black</shadowcolor>
-            <visible>!String.IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
-          </control>
-          <control type="label">
-            <description>Conditions Label</description>
-            <width>500</width>
-            <height>22</height>
-            <font>font10</font>
-            <aligny>center</aligny>
-            <label>$INFO[Window(Weather).Property(Current.Condition),  ]</label>
-            <textcolor>grey2</textcolor>
-            <shadowcolor>black</shadowcolor>
-          </control>
-        </control>
-      </control_off>
-      <!--SOMETHING-->
-      <control type="group">
-        <visible>Skin.HasSetting(SkinDebug)</visible>
-        <animation effect="slide" start="0,0" end="900,0" delay="0" time="400">WindowClose</animation>
-        <animation effect="slide" start="900,0" end="0,0" delay="0" time="400">WindowOpen</animation>
-        <control type="image">
-          <animation condition="Skin.HasSetting(MainMenuVerticalSlideOut) + System.IdleTime(4) + !ControlGroup(9001).HasFocus()">Conditional<effect type="zoom" start="100,100" end="180,100" center="0,0" time="225" /><effect type="slide" start="0,0" end="-410,0" time="225"></effect></animation>
-          <description>something background</description>
-          <posx>890r</posx>
-          <posy>0</posy>
-          <width>520</width>
-          <height>60</height>
-          <texture flipx="true" border="32,0,0,0">bmw/header_bar_fade.png</texture>
-        </control>
-        <control_off type="image">
-          <description>something background</description>
-          <posx>890r</posx>
-          <posy>0</posy>
-          <width>450</width>
-          <height>70</height>
-          <texture flipx="true" border="0,0,0,10">bmw/MediaInfoBackUpper.png</texture>
-        </control_off>
-        <control type="label">
-          <animation condition="Skin.HasSetting(MainMenuVerticalSlideOut) + System.IdleTime(4) + !ControlGroup(9001).HasFocus()">Conditional<effect type="slide" start="0,0" end="-390,0" time="225"></effect></animation>
-          <description>something label</description>
-          <posx>860r</posx>
-          <posy>0</posy>
-          <width min="600" max="400">auto</width>
-          <width_off>590</width_off>
-          <height>55</height>
-          <align>left</align>
-          <aligny>center</aligny>
-          <font>font38_title</font>
-          <textcolor>$VAR[TextColor1]</textcolor>
-          <shadowcolor>black</shadowcolor>
-          <label>xxxxxxxxxxxxxxx $INFO[Window(10000).Property(IBUS_RADIO_MODE)] xxxxxxxxxxxxxxx</label>
-        </control>
-      </control>
-      <!--OUTSIDETEMP-->
-      <control type="group">
-        <visible>!String.IsEmpty(Window(10000).Property(IBUS_OBC_TEMP))</visible>
-        <animation effect="slide" start="0,0" end="-90,0" delay="0" time="300" condition="Player.Muted">conditional</animation>
-        <animation effect="slide" start="490,0" end="0,0" delay="0" time="200">VisibleChange</animation>
-        <animation effect="slide" start="0,0" end="460,0" delay="0" time="400">WindowClose</animation>
-        <animation effect="slide" start="460,0" end="0,0" delay="0" time="400">WindowOpen</animation>
-        <control type="image">
-          <description>temp background</description>
-          <posx>465r</posx>
-          <posy>0</posy>
-          <width>560</width>
-          <height>60</height>
-          <texture flipx="true" border="32,0,0,0">bmw/header.png</texture>
-        </control>
-        <control type="label">
-          <description>temp label</description>
-          <posx>450r</posx>
-          <posy>0</posy>
-          <width>190</width>
-          <height>55</height>
-          <align>center</align>
-          <aligny>center</aligny>
-          <font>font38_title</font>
-          <textcolor>$VAR[TextColor1]</textcolor>
-          <shadowcolor>black</shadowcolor>
-          <label>$INFO[Window(10000).Property(IBUS_OBC_TEMP)]</label>
-        </control>
-      </control>
-      <!--Clock-->
-      <include_off>Clock</include_off>
-      <control type="group">
-        <posx>210r</posx>
-        <posy>60</posy>
-        <animation effect="slide" start="0,0" end="300,0" delay="0" time="300" condition="Window.Next(Home) | Window.IsActive(Home) + ![Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation)]">WindowClose</animation>
-        <animation effect="slide" start="300,0" end="0,0" delay="0" time="300" condition="Window.Previous(Home) | Window.IsVisible(Home) + ![Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation)]">WindowOpen</animation>
-        <control type="image">
-          <animation effect="slide" start="0,0" end="-70,0" delay="0" time="300" condition="!String.IsEmpty(System.Time(xx))">conditional</animation>
-          <description>time background</description>
-          <posx>160r</posx>
-          <posy>0</posy>
-          <width>260</width>
-          <height>60</height>
-          <texture flipx="true" border="32,0,0,0">bmw/header.png</texture>
-        </control>
-        <control type="label">
-          <description>time label</description>
-          <posx>5r</posx>
-          <posy>0</posy>
-          <width>200</width>
-          <height>55</height>
-          <align>right</align>
-          <aligny>center</aligny>
-          <font>font38_title</font>
-          <textcolor>$VAR[TextColor1]</textcolor>
-          <shadowcolor>black</shadowcolor>
-          <label>$INFO[System.Time]</label>
-        </control>
-      </control>
-      <!--Date-->
-      <control_off type="label">
-        <description>Date label</description>
-        <right>20</right>
-        <top>35</top>
-        <width>300</width>
-        <height>15</height>
-        <align>right</align>
-        <aligny>center</aligny>
-        <font>font10</font>
-        <textcolor>white</textcolor>
-        <shadowcolor>black</shadowcolor>
-        <label>$INFO[System.Date]</label>
-        <include>Window_OpenClose_Animation</include>
-        <animation effect="slide" start="0,0" end="-40,0" time="75" condition="Player.Muted">conditional</animation>
-      </control_off>
-      <control type="group">
-        <posx>430r</posx>
-        <posy>0</posy>
-        <animation effect="slide" start="0,0" end="-90,0" delay="0" time="300" condition="Player.Muted">conditional</animation>
-        <animation effect="slide" start="0,0" end="500,0" delay="0" time="300">WindowClose</animation>
-        <animation effect="slide" start="500,0" end="0,0" delay="0" time="300">WindowOpen</animation>
-        <control type="image">
-          <description>date background</description>
-          <posx>150</posx>
-          <posy>0</posy>
-          <width>620</width>
-          <height>60</height>
-          <texture flipx="true" flipy="false" border="32,0,0,0">bmw/header.png</texture>
-        </control>
-        <control type="label">
-          <description>date label normal font</description>
-          <posx>5r</posx>
-          <posy>0</posy>
-          <width>500</width>
-          <height>55</height>
-          <align>right</align>
-          <aligny>center</aligny>
-          <font>font38_title</font>
-          <textcolor>$VAR[TextColor1]</textcolor>
-          <shadowcolor>black</shadowcolor>
-          <label>$INFO[System.Date(dd.mm.yyyy)]</label>
-        </control>
-      </control>
-      <!--Repeat-->
-      <control type="group">
-        <posx>1180</posx>
-        <posy>120</posy>
-        <visible>Playlist.IsRepeatOne | Playlist.IsRepeat</visible>
-        <animation effect="slide" start="0,0" end="110,0" time="200">WindowClose</animation>
-        <animation effect="slide" start="110,0" end="0,0" time="250">WindowOpen</animation>
-        <animation effect="slide" start="110,0" end="0,0" time="250">VisibleChange</animation>
-        <control type="group">
-          <control type="image">
-            <description>repeat background</description>
-            <posx>0</posx>
-            <posy>0</posy>
-            <width>100</width>
-            <height>60</height>
-            <texture flipx="true" border="32,0,0,0">bmw/header.png</texture>
-          </control>
-          <control type="image">
-            <posx>30</posx>
-            <posy>-2</posy>
-            <width>60</width>
-            <height>60</height>
-            <texture>OSDRepeatAllNF.png</texture>
-            <visible>!Playlist.IsRepeatOne</visible>
-          </control>
-          <control type="image">
-            <posx>30</posx>
-            <posy>-2</posy>
-            <width>60</width>
-            <height>60</height>
-            <texture>OSDRepeatOneNF.png</texture>
-            <visible>Playlist.IsRepeatOne</visible>
-          </control>
         </control>
       </control>
     </control>
