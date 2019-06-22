@@ -150,9 +150,10 @@
         </control_off>
         <control type="group">
           <posx>400</posx>
+          <animation effect="fade" start="100" end="0" delay="0" time="150">WindowClose</animation>
           <animation condition="Skin.HasSetting(MainMenuVerticalSlideOut) + System.IdleTime(4) + !ControlGroup(9001).HasFocus()">Conditional<effect type="slide" start="0,0" end="-390,0" time="225"></effect></animation>
           <animation_off effect="slide" start="750" end="-700" time="15000" loop="true" condition="Skin.HasSetting(MainMenuVerticalSlideOut) + System.IdleTime(4)">conditional</animation_off>
-          <animation effect="slide" start="450" end="-1000" time="10000" loop="true" condition="![Skin.HasSetting(MainMenuVerticalSlideOut) + System.IdleTime(4)]" reversible="false">conditional</animation>
+          <animation effect="slide" start="450" end="-1000" time="20000" loop="true" condition="![Skin.HasSetting(MainMenuVerticalSlideOut) + System.IdleTime(4) + !ControlGroup(9001).HasFocus()]" reversible="false">conditional</animation>
           <!--oil temp-->
           <control type="group">
             <posx>0</posx>
@@ -189,6 +190,7 @@
               <width>50</width>
               <height>50</height>
               <texture>$INFO[Window(10000).Property(IBUS_OBC_COOLANTTEMP_ICON)]</texture>
+              <visible>!String.IsEmpty(Window(10000).Property(IBUS_OBC_COOLANTTEMP))</visible>
             </control>
             <control type="label">
               <description>coolant label</description>
@@ -202,60 +204,65 @@
               <textcolor>$VAR[TextColor1]</textcolor>
               <shadowcolor>black</shadowcolor>
               <label>$INFO[Window(10000).Property(IBUS_OBC_COOLANTTEMP)]</label>
+              <visible>!String.IsEmpty(Window(10000).Property(IBUS_OBC_COOLANTTEMP))</visible>
             </control>
-          </control>
-          <!--Fuel Label-->
-          <control type="group">
-            <posx>420</posx>
-            <control type="image">
-              <description>fuel icon</description>
-              <posx>0</posx>
-              <posy>10</posy>
-              <width>40</width>
-              <height>40</height>
-              <texture>special://home/addons/plugin.script.ibuscommunicator/resources/skins/default/media/icon-reserve-grey.png</texture>
-              <visible>!String.IsEmpty(Window(10000).Property(IBUS_OBC_FUEL))</visible>
-            </control>
-            <control type="label">
-              <description>fuel label</description>
-              <posx>50</posx>
-              <posy>0</posy>
-              <width>200</width>
-              <height>55</height>
-              <align>left</align>
-              <aligny>center</aligny>
-              <font>font38_title</font>
-              <textcolor>$VAR[TextColor1]</textcolor>
-              <shadowcolor>black</shadowcolor>
-              <label_off>99 L</label_off>
-              <label>$INFO[Window(10000).Property(IBUS_OBC_FUEL)]</label>
-            </control>
-          </control>
-          <!--Range Label-->
-          <control type="group">
-            <posx>590</posx>
-            <control type="image">
-              <description>fuel icon</description>
-              <posx>0</posx>
-              <posy>10</posy>
-              <width>50</width>
-              <height>40</height>
-              <texture>special://home/addons/plugin.script.ibuscommunicator/resources/skins/default/media/icon-range-grey.png</texture>
-              <visible>!String.IsEmpty(Window(10000).Property(IBUS_OBC_RANGE))</visible>
-            </control>
-            <control type="label">
-              <description>range label</description>
-              <posx>60</posx>
-              <posy>0</posy>
-              <width>200</width>
-              <height>55</height>
-              <align>left</align>
-              <aligny>center</aligny>
-              <font>font38_title</font>
-              <textcolor>$VAR[TextColor1]</textcolor>
-              <shadowcolor>black</shadowcolor>
-              <label_off>9999 KM</label_off>
-              <label>$INFO[Window(10000).Property(IBUS_OBC_RANGE)]</label>
+            <!--Fuel Label-->
+            <control type="group">
+              <posx_off>420</posx_off>
+              <animation effect="slide" start="0" end="220" time="0" condition="!String.IsEmpty(Window(10000).Property(IBUS_OBC_COOLANTTEMP))">conditional</animation>
+              <control type="image">
+                <description>fuel icon</description>
+                <posx>0</posx>
+                <posy>10</posy>
+                <width>40</width>
+                <height>40</height>
+                <texture>special://home/addons/plugin.script.ibuscommunicator/resources/skins/default/media/icon-reserve-grey.png</texture>
+                <visible>!String.IsEmpty(Window(10000).Property(IBUS_OBC_FUEL))</visible>
+              </control>
+              <control type="label">
+                <description>fuel label</description>
+                <posx>50</posx>
+                <posy>0</posy>
+                <width>200</width>
+                <height>55</height>
+                <align>left</align>
+                <aligny>center</aligny>
+                <font>font38_title</font>
+                <textcolor>$VAR[TextColor1]</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <label_off>99 L</label_off>
+                <label>$INFO[Window(10000).Property(IBUS_OBC_FUEL)]</label>
+                <visible>!String.IsEmpty(Window(10000).Property(IBUS_OBC_FUEL))</visible>
+              </control>
+              <!--Range Label-->
+              <control type="group">
+                <posx_off>590</posx_off>
+                <animation effect="slide" start="0" end="170" time="0" condition="!String.IsEmpty(Window(10000).Property(IBUS_OBC_FUEL))">conditional</animation>
+                <control type="image">
+                  <description>fuel icon</description>
+                  <posx>0</posx>
+                  <posy>10</posy>
+                  <width>50</width>
+                  <height>40</height>
+                  <texture>special://home/addons/plugin.script.ibuscommunicator/resources/skins/default/media/icon-range-grey.png</texture>
+                  <visible>!String.IsEmpty(Window(10000).Property(IBUS_OBC_RANGE))</visible>
+                </control>
+                <control type="label">
+                  <description>range label</description>
+                  <posx>60</posx>
+                  <posy>0</posy>
+                  <width>200</width>
+                  <height>55</height>
+                  <align>left</align>
+                  <aligny>center</aligny>
+                  <font>font38_title</font>
+                  <textcolor>$VAR[TextColor1]</textcolor>
+                  <shadowcolor>black</shadowcolor>
+                  <label_off>9999 KM</label_off>
+                  <label>$INFO[Window(10000).Property(IBUS_OBC_RANGE)]</label>
+                  <visible>!String.IsEmpty(Window(10000).Property(IBUS_OBC_RANGE))</visible>
+                </control>
+              </control>
             </control>
           </control>
           <control_off type="label">
