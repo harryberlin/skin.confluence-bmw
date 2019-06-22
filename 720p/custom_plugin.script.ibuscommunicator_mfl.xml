@@ -3,7 +3,7 @@
   <defaultcontrol>-</defaultcontrol>
   <allowoverlay>yes</allowoverlay>
   <zorder>99</zorder>
-  <visible>[String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_MFL_SHOW),1)|String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)]+!Skin.HasSetting(HomeObcBar)</visible>
+  <visible>[String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_MFL_SHOW),1)|String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)]+!Skin.HasSetting(HomeObcBar)+!Skin.HasSetting(SkinDebug)</visible>
   <coordinates>
     <system>0</system>
     <posx>0</posx>
