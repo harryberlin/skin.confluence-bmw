@@ -126,7 +126,7 @@
           </control>
         </control>
       </control_off>
-      <!--SOMETHING-->
+      <!--OBC Bar-->
       <control type="group">
         <visible>Skin.HasSetting(HomeObcBar)</visible>
         <animation effect="slide" start="0,0" end="900,0" delay="0" time="400">WindowClose</animation>
@@ -151,14 +151,14 @@
         <control type="group">
           <posx>400</posx>
           <animation effect="fade" start="100" end="0" delay="0" time="150">WindowClose</animation>
-          <animation condition="Skin.HasSetting(MainMenuVerticalSlideOut) + System.IdleTime(4) + !ControlGroup(9001).HasFocus()">Conditional<effect type="slide" start="0,0" end="-390,0" time="225"></effect></animation>
+          <animation condition="Skin.HasSetting(MainMenuVerticalSlideOut) + System.IdleTime(4) + !ControlGroup(9001).HasFocus()">Conditional<effect type="slide" start="0,0" end="-380,0" time="225"></effect></animation>
           <animation_off effect="slide" start="750" end="-700" time="15000" loop="true" condition="Skin.HasSetting(MainMenuVerticalSlideOut) + System.IdleTime(4)">conditional</animation_off>
-          <animation effect="slide" start="780" end="-1000" time="25000" loop="true" condition="[Skin.HasSetting(MainMenuVerticalSlideOut) + System.IdleTime(4) + !ControlGroup(9001).HasFocus()]" reversible="false">conditional</animation>
-          <animation effect="slide" start="450" end="-1000" time="20000" loop="true" condition="![Skin.HasSetting(MainMenuVerticalSlideOut) + System.IdleTime(4) + !ControlGroup(9001).HasFocus()]" reversible="false">conditional</animation>
           <control type="group">
-            <posx>10</posx>
+            <posx>80</posx>
+            <animation effect="slide" start="780" end="-1000" time="25000" loop="true" condition="[Skin.HasSetting(MainMenuVerticalSlideOut) + System.IdleTime(4) + !ControlGroup(9001).HasFocus()]" reversible="false">conditional</animation>
+            <animation effect="slide" start="450" end="-1000" time="20000" loop="true" condition="![Skin.HasSetting(MainMenuVerticalSlideOut) + System.IdleTime(4) + !ControlGroup(9001).HasFocus()]" reversible="false">conditional</animation>
             <control type="image">
-              <description>coolant icon</description>
+              <description>drl icon</description>
               <posx>0</posx>
               <posy>-5</posy>
               <width>65</width>
@@ -295,6 +295,33 @@
             <shadowcolor>black</shadowcolor>
             <label>xxxxxxxxxxxxxxx $INFO[Window(10000).Property(IBUS_RADIO_MODE)] xxxxxxxxxxxxxxx</label>
           </control_off>
+          <control type="image">
+            <description>obc icon</description>
+            <posx>-15</posx>
+            <posy>0</posy>
+            <width>300</width>
+            <height>57</height>
+            <texture flipx_off="true" border="0,0,20,0" colordiffuse="FFFFFFFF">SideFade.png</texture>
+            <visible_off>String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)</visible_off>
+          </control>
+          <control_off_e39icon type="image">
+            <description>obc icon</description>
+            <posx>-10</posx>
+            <posy>-7</posy>
+            <width>75</width>
+            <height>75</height>
+            <texture colordiffuse="$VAR[TextColor1]">special://home/addons/plugin.script.ibuscommunicator/resources/skins/default/media/icon-obc0.png</texture>
+            <visible_off>String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)</visible_off>
+          </control_off_e39icon>
+          <control type="image">
+            <description>obc icon</description>
+            <posx>-5</posx>
+            <posy>0</posy>
+            <width>65</width>
+            <height>65</height>
+            <texture colordiffuse="$VAR[TextColor1]">special://home/addons/plugin.script.ibuscommunicator/resources/skins/default/media/icon-obc2.png</texture>
+            <visible_off>String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)</visible_off>
+          </control>
         </control>
       </control>
       <!--OUTSIDETEMP-->
