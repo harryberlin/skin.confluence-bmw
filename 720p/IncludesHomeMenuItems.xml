@@ -169,6 +169,12 @@
       <include>ButtonHomeSubCommonValues</include>
       <visible>!Skin.HasSetting(MainMenuHorizontal) + [!String.IsEmpty(Skin.String(HomeVideosButton1))|!String.IsEmpty(Skin.String(HomeVideosButton2))|!String.IsEmpty(Skin.String(HomeVideosButton3))|!String.IsEmpty(Skin.String(HomeVideosButton4))|!String.IsEmpty(Skin.String(HomeVideosButton5))]</visible>
     </control>
+    <control type="button" id="90109">
+      <include>ButtonHomeSubCommonValues</include>
+      <label>31059</label>
+      <onclick>ActivateWindow(videoplaylist)</onclick>
+      <visible>Player.HasVideo</visible>
+    </control>
   </include>
   <include name="HomeSubMenuMovies">
     <control type="button" id="90162">
@@ -288,6 +294,12 @@
       <onclick>ActivateWindow(1113)</onclick>
       <include>ButtonHomeSubCommonValues</include>
       <visible>!Skin.HasSetting(MainMenuHorizontal) + [!String.IsEmpty(Skin.String(HomeMusicButton1))|!String.IsEmpty(Skin.String(HomeMusicButton2))|!String.IsEmpty(Skin.String(HomeMusicButton3))|!String.IsEmpty(Skin.String(HomeMusicButton4))|!String.IsEmpty(Skin.String(HomeMusicButton5))]</visible>
+    </control>
+    <control type="button" id="90118">
+      <include>ButtonHomeSubCommonValues</include>
+      <label>31059</label>
+      <onclick>ActivateWindow(musicplaylist)</onclick>
+      <visible>Player.HasAudio</visible>
     </control>
   </include>
   <include name="HomeSubMenuSystem">
