@@ -9,7 +9,7 @@
     <top>0</top>
   </coordinates>
   <controls>
-    <control type="button">
+    <control_off type="button">
       <description>Close Window button</description>
       <left>84r</left>
       <top>0</top>
@@ -23,6 +23,13 @@
       <texturenofocus>DialogCloseButton.png</texturenofocus>
       <animation effect="fade" time="150">VisibleChange</animation>
       <animation effect="slide" start="0,0" end="-30,0" time="0" condition="Player.Muted">conditional</animation>
+      <visible>system.getbool(input.enablemouse) + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(Addon)]</visible>
+    </control_off>
+    <control type="image">
+      <animation_off effect="slide" start="0,0" end="0,200" time="0" condition="Player.Muted">conditional</animation_off>
+      <width>1280</width>
+      <height>90</height>
+      <texture>bmw/MediaInfoBackUpper.png</texture>
       <visible>system.getbool(input.enablemouse) + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(Addon)]</visible>
     </control>
     <control type="slider" id="87">
@@ -43,7 +50,7 @@
     </control>
     <control type="grouplist" id="100">
       <left>0</left>
-      <top>150r</top>
+      <top>5</top>
       <orientation>horizontal</orientation>
       <itemgap>0</itemgap>
       <animation effect="zoom" time="0" condition="true" end="130">Conditional</animation>
@@ -368,6 +375,20 @@
         <texturenofocus>OSDRecordOffNF.png</texturenofocus>
         <onclick>PVR.ToggleRecordPlayingChannel</onclick>
         <visible>PVR.CanRecordPlayingChannel</visible>
+        <onup>right</onup>
+        <ondown>left</ondown>
+      </control>
+      <control type="button" id="706">
+        <description>Close Window button</description>
+        <width>55</width>
+        <height>55</height>
+        <label />
+        <font />
+        <onclick>Dialog.Close(MusicOSD,true)</onclick>
+        <onclick>FullScreen</onclick>
+        <texturefocus>osdclosefo.png</texturefocus>
+        <texturenofocus>osdclosenf.png</texturenofocus>
+        <visible>system.getbool(input.enablemouse) + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(Addon)]</visible>
         <onup>right</onup>
         <ondown>left</ondown>
       </control>
