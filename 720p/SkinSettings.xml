@@ -418,6 +418,28 @@
             <onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
             <onclick condition="System.HasAddon(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,action=colorpicker,skinstring=TextColor6,header=TextColor6)</onclick>
           </control_off>
+          <control type="label" id="115">
+            <width>750</width>
+            <height>45</height>
+            <font>font24_title</font>
+            <label>Update</label>
+            <textcolor>blue</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+          </control>
+          <control type="button" id="116">
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <label>Execute Skin Update</label>
+            <label2>$INFO[Skin.String(github_commit_date)]</label2>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <onclick>RunScript("special://skin/scripts/skin_update.py")</onclick>
+          </control>
         </control>
         <control type="scrollbar" id="60">
           <left>1060</left>

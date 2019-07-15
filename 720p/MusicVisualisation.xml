@@ -1,8 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <window>
-  <defaultcontrol />
-  <onload_off>ActivateWindow(fullscreenvideo, ,home)</onload_off>
+  <defaultcontrol always="true">3</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <onload_off>setfocus(100)</onload_off>
   <controls>
+    <control type="button" id="3">
+      <visible allowhiddenfocus="true">no</visible>
+      <texturefocus border="5">button-focus.png</texturefocus>
+      <texturenofocus border="5">button-nofocus.png</texturenofocus>
+      <!--Skip-->
+      <onleft>PlayerControl(Previous)</onleft>
+      <onright>PlayerControl(Next)</onright>
+      <!--Seeking-->
+      <onclick condition="!Player.Playing">PlayerControl(Play)</onclick>
+    </control>
     <include>CommonBackground</include>
     <animation effect="fade" end="100" time="300" tween="quadratic" easing="out">WindowOpen</animation>
     <animation effect="fade" start="100" time="300" tween="quadratic" easing="out">WindowClose</animation>
@@ -284,5 +295,18 @@
       <textcolor>$VAR[TextColor2]</textcolor>
       <shadowcolor>black</shadowcolor>
     </control>
+    <control_off type="button" id="1000">
+      <width>1</width>
+      <height>1</height>
+      <label></label>
+      <font />
+      <texturefocus></texturefocus>
+      <texturenofocus></texturenofocus>
+      <onclick>Dialog.Open(MusicOSD,true)</onclick>
+      <onup>none</onup>
+      <ondown>none</ondown>
+      <onleft>none</onleft>
+      <onright>none</onright>
+    </control_off>
   </controls>
 </window>
