@@ -120,8 +120,8 @@ def get_last_commit_datetime(owner, repo, branch='master'):
 
         print sha
 
-        #if xbmc.getInfoLabel('Skin.String(github_sha)') == sha:
-        #    raise Exception('No Update required')
+        if xbmc.getInfoLabel('Skin.String(github_sha)') == sha:
+            raise Exception('No Update required')
 
         print 'downloading file'
         #download_file('https://github.com/harryberlin/skin.confluence-bmw/zipball/kodi_18', "%s\skin.confluence-bmw.zip" % (os.path.join('C:\\', 'temp')))
