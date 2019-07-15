@@ -120,8 +120,8 @@ def get_last_commit_datetime(owner, repo, branch='master'):
 
         print sha
 
-        if xbmc.getInfoLabel('Skin.String(github_sha)') == sha:
-            raise Exception('No Update required')
+        #if xbmc.getInfoLabel('Skin.String(github_sha)') == sha:
+        #    raise Exception('No Update required')
 
         print 'downloading file'
         #download_file('https://github.com/harryberlin/skin.confluence-bmw/zipball/kodi_18', "%s\skin.confluence-bmw.zip" % (os.path.join('C:\\', 'temp')))
@@ -132,7 +132,8 @@ def get_last_commit_datetime(owner, repo, branch='master'):
 
         dp.update(10, 'Downloading...', ' ', '10%')
         url = "https://github.com/%s/%s/archive/%s.zip" % (owner, repo, sha)
-        target_path = os.path.join(ADDON_USER_PATH, "skin.confluence-bmw-%s.zip" % sha)
+        #target_path = os.path.join(ADDON_USER_PATH, "skin.confluence-bmw-%s.zip" % sha)
+        target_path = os.path.join(ADDON_USER_PATH, ADDON_ZIP_NAME)
 
         urllib.urlretrieve(url, target_path, lambda nb, bs, fs, url=url: _pbhook(nb, bs, fs, url, dp))
 
@@ -144,7 +145,7 @@ def get_last_commit_datetime(owner, repo, branch='master'):
         if ret is not None:
             raise Exception('Zipfile is bad')
 
-        dp.update(50, 'Checked Zipfile', ' ', '52%')
+        dp.update(50, 'Checked Zipfile', ' ', '50%')
 
         zip_count = 0
         zip_max_count = len(the_zip_file.infolist())
@@ -158,10 +159,13 @@ def get_last_commit_datetime(owner, repo, branch='master'):
                 #the_zip_file.extract(zipinfo, os.path.join(ADDON_PATH, 'test'))
                 the_zip_file.extract(zipinfo, ADDON_PATH)
 
+        the_zip_file.close()
+
         xbmc.executebuiltin("Skin.SetString(github_sha,%s)" % sha)
         xbmc.sleep(200)
-        date_string = datetime.datetime.strptime(commit_date, '%Y-%m-%dT%H:%M:%SZ')
-        xbmc.executebuiltin("Skin.SetString(github_commit_date,%s)".encode('utf-8') % date_string)
+        #date_string = datetime.datetime.strptime(commit_date, '%Y-%m-%dT%H:%M:%SZ')
+
+        xbmc.executebuiltin("Skin.SetString(github_commit_date,%s)" % (commit_date.replace('T', ' ').replace('Z', ' ')))
         xbmc.sleep(1000)
         xbmc.executebuiltin("ReloadSkin()")
         xbmc.executebuiltin("Notification(Skin Updater,Update erfolgreich!,5000)")
