@@ -7,13 +7,13 @@
 
 # 'https://github.com/harryberlin/skin.confluence-bmw/zipball/kodi_18'
 # "https://codeload.github.com/harryberlin/skin.confluence-bmw/legacy.zip/kodi_18"
-
+#url = 'https://github.com/harryberlin/skin.confluence-bmw/zipball/kodi_18'
 # https://github.com/harryberlin/skin.confluence-bmw/archive/ed9854b0a6329463aee099697d2d5dbd1acaef48.zip
 
 import os
 import json
 import urllib, urllib2
-import datetime
+#import datetime
 import zipfile
 
 import xbmc, xbmcgui, xbmcaddon
@@ -25,12 +25,6 @@ ADDON_ZIP_NAME = 'skin.confluence-bmw.zip'
 ADDON_URL = 'https://github.com/harryberlin/skin.confluence-bmw/archive/kodi_18.zip'
 ADDON_PATH = ADDON.getAddonInfo('path')
 ADDON_USER_PATH = os.path.join(xbmc.translatePath('special://userdata'), 'addon_data', ADDON_ID)
-
-def DownloaderClass(url, dest):
-    dp = xbmcgui.DialogProgress()
-    dp.create('Updating %s' % ADDON_ID, 'Check Connection...')
-    dp.update(0, 'Check Connection...', '', '0%')
-    urllib.urlretrieve(url, dest, lambda nb, bs, fs, url=url: _pbhook(nb, bs, fs, url, dp))
 
 
 def _pbhook(numblocks, blocksize, filesize, url=None, dp=None):
@@ -52,39 +46,6 @@ def _pbhook(numblocks, blocksize, filesize, url=None, dp=None):
         #dp.update(percent)
 
 
-
-
-#url = 'https://github.com/harryberlin/skin.confluence-bmw/zipball/kodi_18'
-
-
-
-
-def update(LocalDir, REMOTE_PATH, Title, localFileName):
-    logger.info(Title + " from: " + REMOTE_PATH)
-
-    cDownload().download(REMOTE_PATH, localFileName, False, Title)
-
-    updateFile = zipfile.ZipFile(os.path.join(profilePath, localFileName))
-
-    removeFilesNotInRepo(updateFile, LocalDir)
-
-    for index, n in enumerate(updateFile.namelist()):
-        if n[-1] != "/":
-            dest = os.path.join(LocalDir, "/".join(n.split("/")[1:]))
-            destdir = os.path.dirname(dest)
-            if not os.path.isdir(destdir):
-                os.makedirs(destdir)
-            data = updateFile.read(n)
-            if os.path.exists(dest):
-                os.remove(dest)
-            f = open(dest, 'wb')
-            f.write(data)
-            f.close()
-    updateFile.close()
-    xbmc.executebuiltin("XBMC.UpdateLocalAddons()")
-    logger.info("Update Successful")
-
-
 def is_internet_available():
     try:
         urllib2.urlopen('http://216.58.192.142', timeout=1)
@@ -93,7 +54,7 @@ def is_internet_available():
         return False
 
 
-def get_last_commit_datetime(owner, repo, branch='master'):
+def update(owner, repo, branch='master'):
     dp = xbmcgui.DialogProgress()
     dp.create('Updating %s' % ADDON_ID, 'Check Connection...')
     dp.update(1, 'Check Connection...', ' ', '1%')
@@ -156,7 +117,11 @@ def get_last_commit_datetime(owner, repo, branch='master'):
                 #%s' % os.path.split(zipinfo.filename)[1]
                 zipinfo.filename = zipinfo.filename.replace('skin.confluence-bmw-%s' % sha, '')
                 dp.update(int(50+int(float(zip_count)/float(zip_max_count)*100)*0.50), 'Extracting Files...', '%s / %s / %s%%' % (zip_count, zip_max_count, int(float(zip_count)/float(zip_max_count)*100)), '%s%%' % int(50+int(float(zip_count)/float(zip_max_count)*100)*0.50))
+
+                # for testing to don't overwrite myself
                 #the_zip_file.extract(zipinfo, os.path.join(ADDON_PATH, 'test'))
+
+                # for working release
                 the_zip_file.extract(zipinfo, ADDON_PATH)
 
         the_zip_file.close()
@@ -167,8 +132,10 @@ def get_last_commit_datetime(owner, repo, branch='master'):
 
         xbmc.executebuiltin("Skin.SetString(github_commit_date,%s)" % (commit_date.replace('T', ' ').replace('Z', ' ')))
         xbmc.sleep(1000)
+
         xbmc.executebuiltin("ReloadSkin()")
         xbmc.executebuiltin("Notification(Skin Updater,Update erfolgreich!,5000)")
+        xbmc.executebuiltin("XBMC.UpdateLocalAddons()")
 
     except Exception as e:
         #dp.update(0, e.message, ' ', ' ')
@@ -183,7 +150,7 @@ def get_last_commit_datetime(owner, repo, branch='master'):
 
 
 def main():
-    get_last_commit_datetime('harryberlin', 'skin.confluence-bmw', 'kodi_18')
+    update('harryberlin', 'skin.confluence-bmw', 'kodi_18')
 
 
 if __name__ == '__main__':
