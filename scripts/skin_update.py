@@ -152,7 +152,7 @@ def get_last_commit_datetime(owner, repo, branch='master'):
 
         for zipinfo in the_zip_file.infolist():
             zip_count += 1
-            if zipinfo.filename.startswith('skin.confluence-bmw-%s' % (sha)):
+            if zipinfo.filename.startswith('skin.confluence-bmw'):
                 #%s' % os.path.split(zipinfo.filename)[1]
                 zipinfo.filename = zipinfo.filename.replace('skin.confluence-bmw-%s' % sha, '')
                 dp.update(int(50+int(float(zip_count)/float(zip_max_count)*100)*0.50), 'Extracting Files...', '%s / %s / %s%%' % (zip_count, zip_max_count, int(float(zip_count)/float(zip_max_count)*100)), '%s%%' % int(50+int(float(zip_count)/float(zip_max_count)*100)*0.50))
