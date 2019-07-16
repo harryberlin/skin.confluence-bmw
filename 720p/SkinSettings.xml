@@ -432,8 +432,8 @@
             <width>750</width>
             <height>40</height>
             <font>font24_title</font>
-            <label>Execute Skin Update</label>
-            <label2>$INFO[Skin.String(github_commit_date)]</label2>
+            <label>Run Skin Update</label>
+            <label2>commit:$INFO[Skin.String(github_commit_date)]</label2>
             <textcolor>grey2</textcolor>
             <focusedcolor>white</focusedcolor>
             <texturefocus>MenuItemFO.png</texturefocus>

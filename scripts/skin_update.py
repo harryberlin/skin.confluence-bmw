@@ -54,6 +54,11 @@ def is_internet_available():
         return False
 
 
+def log(string):
+    if xbmc.getCondVisibility('Skin.HasSetting(SkinDebug)'):
+        xbmc.log('%s: %s' % (ADDON_ID, string), xbmc.LOGNOTICE)
+
+
 def update(owner, repo, branch='master'):
     dp = xbmcgui.DialogProgress()
     dp.create('Updating %s' % ADDON_ID, 'Check Connection...')
@@ -70,6 +75,7 @@ def update(owner, repo, branch='master'):
             url = 'https://api.github.com/repos/%s/%s/git/refs/heads/%s' % (owner, repo, branch)
 
             res = json.loads(urllib2.urlopen(url).read())
+            log(res)
 
             sha_url = res['object']['url']
 
@@ -146,7 +152,6 @@ def update(owner, repo, branch='master'):
     finally:
         #the_zip_file.close()
         dp.close()
-
 
 
 def main():
