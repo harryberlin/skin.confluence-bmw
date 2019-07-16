@@ -124,11 +124,14 @@ def update(owner, repo, branch='master'):
                 zipinfo.filename = zipinfo.filename.replace('skin.confluence-bmw-%s' % sha, '')
                 dp.update(int(50+int(float(zip_count)/float(zip_max_count)*100)*0.50), 'Extracting Files...', '%s / %s / %s%%' % (zip_count, zip_max_count, int(float(zip_count)/float(zip_max_count)*100)), '%s%%' % int(50+int(float(zip_count)/float(zip_max_count)*100)*0.50))
 
-                # for testing to don't overwrite myself
-                #the_zip_file.extract(zipinfo, os.path.join(ADDON_PATH, 'test'))
+                try:
+                    import test
+                    # for testing to don't overwrite myself
+                    the_zip_file.extract(zipinfo, os.path.join(ADDON_PATH, 'test'))
+                except ImportError:
+                    # for working release
+                    the_zip_file.extract(zipinfo, ADDON_PATH)
 
-                # for working release
-                the_zip_file.extract(zipinfo, ADDON_PATH)
 
         the_zip_file.close()
 
