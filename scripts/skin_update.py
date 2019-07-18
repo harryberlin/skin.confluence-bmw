@@ -119,6 +119,8 @@ def update(owner, repo, branch='master'):
 
         for zipinfo in the_zip_file.infolist():
             zip_count += 1
+            if zipinfo.filename.endswith('.gitignore'):
+                continue
             if zipinfo.filename.startswith('skin.confluence-bmw'):
                 #%s' % os.path.split(zipinfo.filename)[1]
                 zipinfo.filename = zipinfo.filename.replace('skin.confluence-bmw-%s' % sha, '')
