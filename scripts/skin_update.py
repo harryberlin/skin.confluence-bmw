@@ -59,6 +59,14 @@ def log(string):
         xbmc.log('%s: %s' % (ADDON_ID, string), xbmc.LOGNOTICE)
 
 
+def dialog_progressbar_timeout(dp, line_1, line_2, line_3, timeout=3000):
+    for _ in range(100, 0, -1):
+        if dp.iscanceled():
+            break
+        dp.update(_, line_1, line_2, line_3)
+        xbmc.sleep(timeout/100)
+
+
 def update(owner, repo, branch='master'):
     dp = xbmcgui.DialogProgress()
     dp.create('Updating %s' % ADDON_ID, 'Check Connection...')
@@ -102,6 +110,8 @@ def update(owner, repo, branch='master'):
         #target_path = os.path.join(ADDON_USER_PATH, "skin.confluence-bmw-%s.zip" % sha)
         target_path = os.path.join(ADDON_USER_PATH, ADDON_ZIP_NAME)
 
+        # https://www.programcreek.com/python/example/663/urllib.urlretrieve
+
         urllib.urlretrieve(url, target_path, lambda nb, bs, fs, url=url: _pbhook(nb, bs, fs, url, dp))
 
         dp.update(50, 'Check Zipfile...', ' ', '50%')
@@ -142,17 +152,21 @@ def update(owner, repo, branch='master'):
         #date_string = datetime.datetime.strptime(commit_date, '%Y-%m-%dT%H:%M:%SZ')
 
         xbmc.executebuiltin("Skin.SetString(github_commit_date,%s)" % (commit_date.replace('T', ' ').replace('Z', ' ')))
-        xbmc.sleep(1000)
 
+        dialog_progressbar_timeout(dp, 'Update finished', 'Reloading Skin...', ' ', 3000)
+
+        #xbmc.executebuiltin("Notification(Skin Updater,Update erfolgreich!,5000)")
         xbmc.executebuiltin("ReloadSkin()")
-        xbmc.executebuiltin("Notification(Skin Updater,Update erfolgreich!,5000)")
         xbmc.executebuiltin("XBMC.UpdateLocalAddons()")
 
     except Exception as e:
         #dp.update(0, e.message, ' ', ' ')
-        #xbmc.sleep(2000)
 
-        xbmc.executebuiltin("Notification(Skin Updater,%s,7000)" % e.message)
+        #for _ in range(10,0,-1):
+        #    dp.update(_*10, e.message, ' ', ' ')
+        #    xbmc.sleep(300)
+        dialog_progressbar_timeout(dp, e.message, ' ', ' ', 7000)
+        #xbmc.executebuiltin("Notification(Skin Updater,%s,7000)" % e.message)
 
     finally:
         #the_zip_file.close()
