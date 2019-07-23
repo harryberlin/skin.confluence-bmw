@@ -148,7 +148,7 @@ def update(owner, repo, branch='master'):
         the_zip_file.close()
 
         xbmc.executebuiltin("Skin.SetString(github_sha,%s)" % sha)
-        xbmc.sleep(200)
+        xbmc.sleep(400)
         #date_string = datetime.datetime.strptime(commit_date, '%Y-%m-%dT%H:%M:%SZ')
 
         xbmc.executebuiltin("Skin.SetString(github_commit_date,%s)" % (commit_date.replace('T', ' ').replace('Z', ' ')))

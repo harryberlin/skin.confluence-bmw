@@ -63,7 +63,7 @@
           <top>20</top>
           <width>595</width>
           <height>30</height>
-          <font>font13_title</font>
+          <font>font24_title</font>
           <label>1023</label>
           <align>center</align>
           <aligny>center</aligny>
@@ -159,40 +159,40 @@
           <ondown>450</ondown>
           <pagecontrol>60</pagecontrol>
           <scrolltime>200</scrolltime>
-          <itemlayout height="40" width="620">
+          <itemlayout height="60" width="620">
             <control type="image">
               <left>0</left>
               <top>0</top>
               <width>620</width>
-              <height>41</height>
+              <height>61</height>
               <texture border="5">MenuItemNF.png</texture>
             </control>
             <control type="image">
-              <left>10</left>
-              <top>2</top>
-              <width>38</width>
-              <height>38</height>
+              <left>5</left>
+              <top>1</top>
+              <width>58</width>
+              <height>58</height>
               <texture>$INFO[ListItem.Icon]</texture>
               <aspectratio>keep</aspectratio>
             </control>
             <control type="label">
-              <left>55</left>
+              <left>62</left>
               <top>0</top>
               <width>560</width>
-              <height>40</height>
-              <font>font13</font>
+              <height>60</height>
+              <font>font24_title</font>
               <align>left</align>
               <aligny>center</aligny>
               <selectedcolor>green</selectedcolor>
               <info>ListItem.Label</info>
             </control>
           </itemlayout>
-          <focusedlayout height="40" width="620">
+          <focusedlayout height="60" width="620">
             <control type="image">
               <left>0</left>
               <top>0</top>
               <width>620</width>
-              <height>41</height>
+              <height>61</height>
               <visible>!Control.HasFocus(450)</visible>
               <texture border="5">MenuItemNF.png</texture>
             </control>
@@ -200,24 +200,24 @@
               <left>0</left>
               <top>0</top>
               <width>620</width>
-              <height>41</height>
+              <height>61</height>
               <visible>Control.HasFocus(450)</visible>
               <texture border="5">MenuItemFO.png</texture>
             </control>
             <control type="image">
-              <left>10</left>
-              <top>2</top>
-              <width>38</width>
-              <height>38</height>
+              <left>0</left>
+              <top>1</top>
+              <width>58</width>
+              <height>58</height>
               <texture>$INFO[ListItem.Icon]</texture>
               <aspectratio>keep</aspectratio>
             </control>
             <control type="label">
-              <left>55</left>
+              <left>65</left>
               <top>0</top>
-              <width>560</width>
-              <height>40</height>
-              <font>font13</font>
+              <width>550</width>
+              <height>60</height>
+              <font>font24_title</font>
               <align>left</align>
               <aligny>center</aligny>
               <selectedcolor>green</selectedcolor>
@@ -236,40 +236,40 @@
           <ondown>451</ondown>
           <pagecontrol>60</pagecontrol>
           <scrolltime>200</scrolltime>
-          <itemlayout height="40" width="620">
+          <itemlayout height="60" width="620">
             <control type="image">
               <left>0</left>
               <top>0</top>
               <width>620</width>
-              <height>41</height>
+              <height>61</height>
               <texture border="5">MenuItemNF.png</texture>
             </control>
             <control type="image">
-              <left>10</left>
-              <top>2</top>
-              <width>38</width>
-              <height>38</height>
+              <left>0</left>
+              <top>1</top>
+              <width>58</width>
+              <height>58</height>
               <texture>$INFO[ListItem.Icon]</texture>
               <aspectratio>keep</aspectratio>
             </control>
             <control type="label">
-              <left>55</left>
+              <left>65</left>
               <top>0</top>
-              <width>560</width>
-              <height>40</height>
-              <font>font13</font>
+              <width>550</width>
+              <height>60</height>
+              <font>font24_title</font>
               <align>left</align>
               <aligny>center</aligny>
               <selectedcolor>green</selectedcolor>
               <info>ListItem.Label</info>
             </control>
           </itemlayout>
-          <focusedlayout height="40" width="620">
+          <focusedlayout height="60" width="620">
             <control type="image">
               <left>0</left>
               <top>0</top>
               <width>620</width>
-              <height>41</height>
+              <height>61</height>
               <visible>!Control.HasFocus(451)</visible>
               <texture border="5">MenuItemNF.png</texture>
             </control>
@@ -277,24 +277,24 @@
               <left>0</left>
               <top>0</top>
               <width>620</width>
-              <height>41</height>
+              <height>61</height>
               <visible>Control.HasFocus(451)</visible>
               <texture border="5">MenuItemFO.png</texture>
             </control>
             <control type="image">
-              <left>10</left>
-              <top>2</top>
-              <width>38</width>
-              <height>38</height>
+              <left>0</left>
+              <top>1</top>
+              <width>58</width>
+              <height>58</height>
               <texture>$INFO[ListItem.Icon]</texture>
               <aspectratio>keep</aspectratio>
             </control>
             <control type="label">
-              <left>55</left>
+              <left>65</left>
               <top>0</top>
-              <width>560</width>
-              <height>40</height>
-              <font>font13</font>
+              <width>550</width>
+              <height>60</height>
+              <font>font24_title</font>
               <align>left</align>
               <aligny>center</aligny>
               <selectedcolor>green</selectedcolor>
