@@ -2,17 +2,19 @@
 <window>
   <defaultcontrol always="true">3</defaultcontrol>
   <allowoverlay>no</allowoverlay>
-  <onload_off>setfocus(100)</onload_off>
+  <onload>setfocus(3)</onload>
   <controls>
     <control type="button" id="3">
       <visible allowhiddenfocus="true">no</visible>
       <texturefocus border="5">button-focus.png</texturefocus>
       <texturenofocus border="5">button-nofocus.png</texturenofocus>
       <!--Skip-->
+      <onup>Seek(10)</onup>
+      <ondown>Seek(-10)</ondown>
       <onleft>PlayerControl(Previous)</onleft>
       <onright>PlayerControl(Next)</onright>
       <!--Seeking-->
-      <onclick condition="!Player.Playing">PlayerControl(Play)</onclick>
+      <onclick>ActivateWindow(MusicOSD)</onclick>
     </control>
     <include>CommonBackground</include>
     <animation effect="fade" end="100" time="300" tween="quadratic" easing="out">WindowOpen</animation>
