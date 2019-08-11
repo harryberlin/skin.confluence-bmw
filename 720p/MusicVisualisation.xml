@@ -239,8 +239,8 @@
     <control type="image">
       <description>cover image</description>
       <visible>Player.HasAudio</visible>
-      <left>20</left>
-      <top>30</top>
+      <left>15</left>
+      <top>15</top>
       <width>450</width>
       <height>450</height>
       <texture fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture>
@@ -251,7 +251,7 @@
       <left>20</left>
       <!-- the music title -->
       <control type="label">
-        <top>230r</top>
+        <top>260r</top>
         <width>1240</width>
         <height>50</height>
         <font>font55_title</font>
@@ -262,8 +262,9 @@
         <scroll>true</scroll>
       </control>
       <control type="label" id="1">
+        <animation effect="slide" start="0,0" end="0,-10" time="100" condition="Window.IsVisible(MusicOSD)">conditional</animation>
         <description>Artist label</description>
-        <top>160r</top>
+        <top>180r</top>
         <width>1240</width>
         <height>50</height>
         <align>left</align>
@@ -271,31 +272,35 @@
         <label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, - ]</label>
         <textcolor>$VAR[TextColor2]</textcolor>
         <shadowcolor>black</shadowcolor>
+        <scroll>true</scroll>
       </control>
     </control>
-    <!-- the progress bar -->
-    <control type="progress">
-      <left>5</left>
-      <top>75r</top>
-      <description>Progressbar</description>
-      <width>1270</width>
-      <height>70</height>
-      <info>Player.Progress</info>
-      <texturebg border="6,6,6,6">OSDProgressBack.png</texturebg>
-      <midtexture border="6,6,6,6" colordiffuse="$VAR[TextColor3]">OSDProgressMid.png</midtexture>
-    </control>
-    <!-- the duration label -->
-    <control type="label">
-      <left>0</left>
-      <top>75r</top>
-      <width>1280</width>
-      <height>70</height>
-      <font>font50_title</font>
-      <align>center</align>
-      <aligny>center</aligny>
-      <label>$INFO[Player.Time(hh:mm:ss)] / $INFO[Player.Duration(hh:mm:ss)]</label>
-      <textcolor>$VAR[TextColor2]</textcolor>
-      <shadowcolor>black</shadowcolor>
+    <control type="group">
+      <animation effect="zoom" start="100,100" end="100,60" time="100" condition="Window.IsVisible(MusicOSD)" center="0,500">conditional</animation>
+      <!-- the progress bar -->
+      <control type="progress">
+        <left>5</left>
+        <top>75r</top>
+        <description>Progressbar</description>
+        <width>1270</width>
+        <height>70</height>
+        <info>Player.Progress</info>
+        <texturebg border="6,6,6,6">OSDProgressBack.png</texturebg>
+        <midtexture border="6,6,6,6" colordiffuse="$VAR[TextColor3]">OSDProgressMid.png</midtexture>
+      </control>
+      <!-- the duration label -->
+      <control type="label">
+        <left>0</left>
+        <top>75r</top>
+        <width>1280</width>
+        <height>70</height>
+        <font>font50_title</font>
+        <align>center</align>
+        <aligny>center</aligny>
+        <label>$INFO[Player.Time(hh:mm:ss)] / $INFO[Player.Duration(hh:mm:ss)]</label>
+        <textcolor>$VAR[TextColor2]</textcolor>
+        <shadowcolor>black</shadowcolor>
+      </control>
     </control>
     <control_off type="button" id="1000">
       <width>1</width>
