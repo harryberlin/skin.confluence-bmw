@@ -10,7 +10,7 @@
   <controls>
     <control type="group">
       <visible>Window.IsVisible(FullscreenVideo) + ![Player.HasGame | VideoPlayer.HasEpg]</visible>
-      <left>850r</left>
+      <left>705r</left>
       <top>-6</top>
       <include>VisibleFadeEffect</include>
       <control type="image">
@@ -49,8 +49,8 @@
     </control>
     <control type="group">
       <visible>player.chaptercount + Window.IsVisible(FullScreenVideo)</visible>
-      <left>705r</left>
-      <top>-6</top>
+      <left>340r</left>
+      <top>60</top>
       <include>VisibleFadeEffect</include>
       <control type="image">
         <left>0</left>
