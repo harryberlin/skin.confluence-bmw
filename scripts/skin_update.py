@@ -48,7 +48,7 @@ def _pbhook(numblocks, blocksize, filesize, url=None, dp=None):
 
 def is_internet_available():
     try:
-        urllib2.urlopen('http://216.58.192.142', timeout=1)
+        urllib2.urlopen('http://216.58.192.142', timeout=5)
         return True
     except:
         return False
@@ -137,7 +137,7 @@ def update(owner, repo, branch='master'):
                 dp.update(int(50+int(float(zip_count)/float(zip_max_count)*100)*0.50), 'Extracting Files...', '%s / %s / %s%%' % (zip_count, zip_max_count, int(float(zip_count)/float(zip_max_count)*100)), '%s%%' % int(50+int(float(zip_count)/float(zip_max_count)*100)*0.50))
 
                 try:
-                    import test
+                    import test_skin
                     # for testing to don't overwrite myself
                     the_zip_file.extract(zipinfo, os.path.join(ADDON_PATH, 'test'))
                 except ImportError:
