@@ -388,7 +388,7 @@
         <label />
         <font />
         <onclick>Dialog.Close(MusicOSD,true)</onclick>
-        <onclick>FullScreen</onclick>
+        <onclick_off>FullScreen</onclick_off>
         <texturefocus>osdclosefo.png</texturefocus>
         <texturenofocus>osdclosenf.png</texturenofocus>
         <visible>system.getbool(input.enablemouse) + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(Addon)]</visible>

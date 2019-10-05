@@ -321,7 +321,7 @@
         <label />
         <font />
         <onclick>Dialog.Close(VideoOSD,true)</onclick>
-        <onclick>FullScreen</onclick>
+        <onclick_off>FullScreen</onclick_off>
         <texturefocus>osdclosefo.png</texturefocus>
         <texturenofocus>osdclosenf.png</texturenofocus>
         <visible>system.getbool(input.enablemouse) + ![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDSubtitleSettings) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
