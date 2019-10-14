@@ -3,7 +3,7 @@
   <defaultcontrol>-</defaultcontrol>
   <allowoverlay>yes</allowoverlay>
   <zorder>99</zorder>
-  <visible>[String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_MFL_SHOW),1)|String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)]+!Skin.HasSetting(HomeObcBar)+!Skin.HasSetting(SkinDebug)</visible>
+  <visible>[String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_MFL_SHOW),1)|String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)+!Skin.HasSetting(HomeObcBar)]</visible>
   <coordinates>
     <system>0</system>
     <posx>0</posx>
@@ -31,10 +31,10 @@
         <height>80</height>
         <texture>special://home/addons/plugin.script.ibuscommunicator/resources/skins/default/media/icon-drl.png</texture>
         <visible_off>String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)+!String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_MFL_SHOW),1)</visible_off>
-        <visible>String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)</visible>
+        <visible>String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)+!Skin.HasSetting(HomeObcBar)</visible>
       </control>
       <control type="image">
-        <animation effect="zoom" end="90" time="300" tween="quadratic" easing="out" condition="String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)+String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_MFL_SHOW),1)" center="-40,-20">Conditional</animation>
+        <animation effect="zoom" end="90" time="300" tween="quadratic" easing="out" condition="[String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_DRL_SHOW),1)+!Skin.HasSetting(HomeObcBar)]+String.IsEqual(Window(10000).Property(IBUSCOMMUNICATOR_MFL_SHOW),1)" center="-40,-20">Conditional</animation>
         <posx>25</posx>
         <posy>20</posy>
         <width>80</width>
