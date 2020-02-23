@@ -75,28 +75,30 @@ def update(owner, repo, branch='master'):
     try:
 
         if not is_internet_available():
-            #xbmc.executebuiltin("Notification(Skin Updater,VERBINDUNGSFEHLER!,500)")
             raise Exception('No Internet connection')
-
         dp.update(5, 'Check for new Version on github...', ' ', '5%')
         try:
             url = 'https://api.github.com/repos/%s/%s/git/refs/heads/%s' % (owner, repo, branch)
-
             res = json.loads(urllib2.urlopen(url).read())
             log(res)
-
             sha_url = res['object']['url']
-
             res = json.loads(urllib2.urlopen(sha_url).read())
             commit_date = res['committer']['date']
+            try:
+                commit_message = res['message']
+            except:
+                commit_message = '---------'
+
             sha = res['sha']
         except:
             raise Exception('Try again later')
 
-        print sha
-
-        if xbmc.getInfoLabel('Skin.String(github_sha)') == sha:
-            raise Exception('No Update required')
+        log(sha)
+        try:
+            import resources.lib.test
+        except ImportError:
+            if xbmc.getInfoLabel('Skin.String(github_sha)') == sha:
+                raise Exception('No Update required')
 
         print 'downloading file'
         #download_file('https://github.com/harryberlin/skin.confluence-bmw/zipball/kodi_18', "%s\skin.confluence-bmw.zip" % (os.path.join('C:\\', 'temp')))
