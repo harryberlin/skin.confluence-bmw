@@ -506,6 +506,20 @@
             <textwidth>690</textwidth>
             <visible_off>System.HasAddon(plugin.script.ibuscommunicator)</visible_off>
           </control>
+          <control type="radiobutton" id="241">
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <label>Show Dateformat [MM/DD/YYYY]</label>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <onclick>Skin.ToggleSetting(date_format_us)</onclick>
+            <selected>Skin.HasSetting(date_format_us)</selected>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
+            <visible_off>System.HasAddon(plugin.script.ibuscommunicator)</visible_off>
+          </control>
           <control type="radiobutton" id="203">
             <description>enable video info</description>
             <width>750</width>

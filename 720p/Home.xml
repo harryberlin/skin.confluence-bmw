@@ -425,6 +425,21 @@
           <textcolor>$VAR[TextColor1]</textcolor>
           <shadowcolor>black</shadowcolor>
           <label>$INFO[System.Date(dd.mm.yyyy)]</label>
+          <visible>!Skin.HasSetting(date_format_us)</visible>
+        </control>
+        <control type="label">
+          <description>date label normal font</description>
+          <posx>5r</posx>
+          <posy>0</posy>
+          <width>500</width>
+          <height>55</height>
+          <align>right</align>
+          <aligny>center</aligny>
+          <font>font38_title</font>
+          <textcolor>$VAR[TextColor1]</textcolor>
+          <shadowcolor>black</shadowcolor>
+          <label>$INFO[System.Date(mm/dd/yyyy)]</label>
+          <visible>Skin.HasSetting(date_format_us)</visible>
         </control>
       </control>
       <!--Repeat-->
