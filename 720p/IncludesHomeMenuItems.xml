@@ -83,6 +83,14 @@
       <thumb>-</thumb>
       <visible>System.HasAddon(plugin.script.ibuscommunicator)</visible>
     </item>
+    <item>
+      <label>TPMS</label>
+      <label_off>$ADDON[script.service.tpms 32071]</label_off>
+      <onclick condition="System.HasAddon(script.service.tpms)">XBMC.RunScript(script.service.tpms,opengui)</onclick>
+      <icon>special://home/addons/script.service.tpms/fanart.jpg</icon>
+      <thumb>-</thumb>
+      <visible>System.HasAddon(script.service.tpms)</visible>
+    </item>
     <item id="18">
       <label>SERVICES</label>
       <onclick>XBMC.RunScript(script.bmwdsa)</onclick>
