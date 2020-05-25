@@ -520,6 +520,20 @@
             <textwidth>690</textwidth>
             <visible_off>System.HasAddon(plugin.script.ibuscommunicator)</visible_off>
           </control>
+          <control type="radiobutton" id="242">
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <label>Show Navigation Information</label>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <onclick>Skin.ToggleSetting(obc_nav_info)</onclick>
+            <selected>Skin.HasSetting(obc_nav_info)</selected>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
+            <visible>System.HasAddon(plugin.script.ibuscommunicator)</visible>
+          </control>
           <control type="radiobutton" id="203">
             <description>enable video info</description>
             <width>750</width>
