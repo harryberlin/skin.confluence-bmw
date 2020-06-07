@@ -504,7 +504,7 @@
             <texturefocus>MenuItemFO.png</texturefocus>
             <texturenofocus>MenuItemNF.png</texturenofocus>
             <textwidth>690</textwidth>
-            <visible_off>System.HasAddon(plugin.script.ibuscommunicator)</visible_off>
+            <visible>System.HasAddon(plugin.script.ibuscommunicator)</visible>
           </control>
           <control type="radiobutton" id="241">
             <width>750</width>

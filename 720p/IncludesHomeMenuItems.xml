@@ -38,6 +38,13 @@
       <thumb>-</thumb>
       <visible>PVR.HasTVChannels</visible>
     </item>
+    <item>
+      <label>14204</label>
+      <onclick>ActivateWindow(TVGuide)</onclick>
+      <icon>special://skin/backgrounds/tv.jpg</icon>
+      <thumb>-</thumb>
+      <visible>System.HasPVRAddon</visible>
+    </item>
     <item id="2">
       <label>31953</label>
       <onclick condition="String.IsEqual(Window.Property(VideosDirectLink),True)">ActivateWindow(Videos)</onclick>
