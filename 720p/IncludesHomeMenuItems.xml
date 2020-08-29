@@ -118,6 +118,43 @@
       <icon>special://skin/backgrounds/settings.jpg</icon>
       <thumb>-</thumb>
     </item>
+    <!--Custom Items Start-->
+    <item>
+      <label>$INFO[Skin.String(HomeCustomMainButton1)]</label>
+      <onclick>RunScript("special://skin/scripts/kodi_actions.py","exec;HomeCustomMainFunction1")</onclick>
+      <icon>$INFO[Skin.String(HomeCustomMainIcon1)]</icon>
+      <thumb>-</thumb>
+      <visible>Skin.HasSetting(HomeNoCustomMainButton1) + !String.IsEmpty(Skin.String(HomeCustomMainButton1))</visible>
+    </item>
+    <item>
+      <label>$INFO[Skin.String(HomeCustomMainButton2)]</label>
+      <onclick>RunScript("special://skin/scripts/kodi_actions.py","exec;HomeCustomMainFunction2")</onclick>
+      <icon>$INFO[Skin.String(HomeCustomMainIcon2)]</icon>
+      <thumb>-</thumb>
+      <visible>Skin.HasSetting(HomeNoCustomMainButton2) + !String.IsEmpty(Skin.String(HomeCustomMainButton2))</visible>
+    </item>
+    <item>
+      <label>$INFO[Skin.String(HomeCustomMainButton3)]</label>
+      <onclick>RunScript("special://skin/scripts/kodi_actions.py","exec;HomeCustomMainFunction3")</onclick>
+      <icon>$INFO[Skin.String(HomeCustomMainIcon3)] + !String.IsEmpty(Skin.String(HomeCustomMainButton3))</icon>
+      <thumb>-</thumb>
+      <visible>Skin.HasSetting(HomeNoCustomMainButton3)</visible>
+    </item>
+    <item>
+      <label>$INFO[Skin.String(HomeCustomMainButton4)]</label>
+      <onclick>RunScript("special://skin/scripts/kodi_actions.py","exec;HomeCustomMainFunction4")</onclick>
+      <icon>$INFO[Skin.String(HomeCustomMainIcon4)]</icon>
+      <thumb>-</thumb>
+      <visible>Skin.HasSetting(HomeNoCustomMainButton4) + !String.IsEmpty(Skin.String(HomeCustomMainButton4))</visible>
+    </item>
+    <item>
+      <label>$INFO[Skin.String(HomeCustomMainButton5)]</label>
+      <onclick>RunScript("special://skin/scripts/kodi_actions.py","exec;HomeCustomMainFunction5")</onclick>
+      <icon>$INFO[Skin.String(HomeCustomMainIcon5)]</icon>
+      <thumb>-</thumb>
+      <visible>Skin.HasSetting(HomeNoCustomMainButton5) + !String.IsEmpty(Skin.String(HomeCustomMainButton5))</visible>
+    </item>
+    <!--Custom Items End-->
     <item id="15">
       <label>[UPPERCASE]$LOCALIZE[1036][/UPPERCASE]</label>
       <onclick>ActivateWindow(Favourites)</onclick>

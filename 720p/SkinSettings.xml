@@ -824,6 +824,312 @@
             <texturenofocus>MenuItemNF.png</texturenofocus>
             <textwidth>690</textwidth>
           </control>
+          <!--Custom buttons -->
+          <control type="label" id="243">
+            <width>750</width>
+            <height>45</height>
+            <font>font24_title</font>
+            <label>Custom Menu Entries</label>
+            <textcolor>blue</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+          </control>
+          <control type="radiobutton" id="244">
+            <description>Hide Custom Button 1</description>
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>$LOCALIZE[31111] - Custom 1</label>
+            <onclick>Skin.ToggleSetting(HomeNoCustomMainButton1)</onclick>
+            <selected>!Skin.HasSetting(HomeNoCustomMainButton1)</selected>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
+          </control>
+          <control type="button" id="245">
+            <description>Hide Custom 1</description>
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>- Label</label>
+            <label2>$INFO[Skin.String(HomeCustomMainButton1)]</label2>
+            <onclick>Skin.SetString(HomeCustomMainButton1)</onclick>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
+            <visible>Skin.HasSetting(HomeNoCustomMainButton1)</visible>
+          </control>
+          <control type="button" id="246">
+            <description>Hide Custom Button 1</description>
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>- Function</label>
+            <label2>$INFO[Skin.String(HomeCustomMainFunction1)]</label2>
+            <onclick>RunScript("special://skin/scripts/kodi_actions.py","set;HomeCustomMainFunction1")</onclick>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
+            <visible>Skin.HasSetting(HomeNoCustomMainButton1)</visible>
+          </control>
+          <control type="button" id="247">
+            <description>Image Custom Button 1</description>
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>- Background</label>
+            <label2>$INFO[Skin.String(HomeCustomMainIcon1)]</label2>
+            <onclick>Skin.SetImage(HomeCustomMainIcon1)</onclick>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
+            <visible>Skin.HasSetting(HomeNoCustomMainButton1)</visible>
+          </control>
+          <control type="radiobutton" id="248">
+            <description>Hide Custom Button 2</description>
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>$LOCALIZE[31111] - Custom 2</label>
+            <onclick>Skin.ToggleSetting(HomeNoCustomMainButton2)</onclick>
+            <selected>!Skin.HasSetting(HomeNoCustomMainButton2)</selected>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
+          </control>
+          <control type="button" id="249">
+            <description>Hide Custom 2</description>
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>- Label</label>
+            <label2>$INFO[Skin.String(HomeCustomMainButton2)]</label2>
+            <onclick>Skin.SetString(HomeCustomMainButton2)</onclick>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
+            <visible>Skin.HasSetting(HomeNoCustomMainButton2)</visible>
+          </control>
+          <control type="button" id="250">
+            <description>Hide Custom Button 2</description>
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>- Function</label>
+            <label2>$INFO[Skin.String(HomeCustomMainFunction2)]</label2>
+            <onclick>RunScript("special://skin/scripts/kodi_actions.py","set;HomeCustomMainFunction2")</onclick>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
+            <visible>Skin.HasSetting(HomeNoCustomMainButton2)</visible>
+          </control>
+          <control type="button" id="251">
+            <description>Image Custom Button 2</description>
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>- Background</label>
+            <label2>$INFO[Skin.String(HomeCustomMainIcon2)]</label2>
+            <onclick>Skin.SetImage(HomeCustomMainIcon2)</onclick>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
+            <visible>Skin.HasSetting(HomeNoCustomMainButton2)</visible>
+          </control>
+          <control type="radiobutton" id="252">
+            <description>Hide Custom Button 3</description>
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>$LOCALIZE[31111] - Custom 3</label>
+            <onclick>Skin.ToggleSetting(HomeNoCustomMainButton3)</onclick>
+            <selected>!Skin.HasSetting(HomeNoCustomMainButton3)</selected>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
+          </control>
+          <control type="button" id="253">
+            <description>Hide Custom 3</description>
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>- Label</label>
+            <label2>$INFO[Skin.String(HomeCustomMainButton3)]</label2>
+            <onclick>Skin.SetString(HomeCustomMainButton3)</onclick>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
+            <visible>Skin.HasSetting(HomeNoCustomMainButton3)</visible>
+          </control>
+          <control type="button" id="254">
+            <description>Hide Custom Button 3</description>
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>- Function</label>
+            <label2>$INFO[Skin.String(HomeCustomMainFunction3)]</label2>
+            <onclick>RunScript("special://skin/scripts/kodi_actions.py","set;HomeCustomMainFunction3")</onclick>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
+            <visible>Skin.HasSetting(HomeNoCustomMainButton3)</visible>
+          </control>
+          <control type="button" id="255">
+            <description>Image Custom Button 3</description>
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>- Background</label>
+            <label2>$INFO[Skin.String(HomeCustomMainIcon3)]</label2>
+            <onclick>Skin.SetImage(HomeCustomMainIcon3)</onclick>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
+            <visible>Skin.HasSetting(HomeNoCustomMainButton3)</visible>
+          </control>
+          <control type="radiobutton" id="256">
+            <description>Hide Custom Button 4</description>
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>$LOCALIZE[31111] - Custom 4</label>
+            <onclick>Skin.ToggleSetting(HomeNoCustomMainButton4)</onclick>
+            <selected>!Skin.HasSetting(HomeNoCustomMainButton4)</selected>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
+          </control>
+          <control type="button" id="257">
+            <description>Hide Custom 4</description>
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>- Label</label>
+            <label2>$INFO[Skin.String(HomeCustomMainButton4)]</label2>
+            <onclick>Skin.SetString(HomeCustomMainButton4)</onclick>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
+            <visible>Skin.HasSetting(HomeNoCustomMainButton4)</visible>
+          </control>
+          <control type="button" id="258">
+            <description>Hide Custom Button 4</description>
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>- Function</label>
+            <label2>$INFO[Skin.String(HomeCustomMainFunction4)]</label2>
+            <onclick>RunScript("special://skin/scripts/kodi_actions.py","set;HomeCustomMainFunction4")</onclick>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
+            <visible>Skin.HasSetting(HomeNoCustomMainButton4)</visible>
+          </control>
+          <control type="button" id="259">
+            <description>Image Custom Button 4</description>
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>- Background</label>
+            <label2>$INFO[Skin.String(HomeCustomMainIcon4)]</label2>
+            <onclick>Skin.SetImage(HomeCustomMainIcon4)</onclick>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
+            <visible>Skin.HasSetting(HomeNoCustomMainButton4)</visible>
+          </control>
+          <control type="radiobutton" id="260">
+            <description>Hide Custom Button 5</description>
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>$LOCALIZE[31111] - Custom 5</label>
+            <onclick>Skin.ToggleSetting(HomeNoCustomMainButton5)</onclick>
+            <selected>!Skin.HasSetting(HomeNoCustomMainButton5)</selected>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
+          </control>
+          <control type="button" id="261">
+            <description>Hide Custom 5</description>
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>- Label</label>
+            <label2>$INFO[Skin.String(HomeCustomMainButton5)]</label2>
+            <onclick>Skin.SetString(HomeCustomMainButton5)</onclick>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
+            <visible>Skin.HasSetting(HomeNoCustomMainButton5)</visible>
+          </control>
+          <control type="button" id="262">
+            <description>Hide Custom Button 5</description>
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>- Function</label>
+            <label2>$INFO[Skin.String(HomeCustomMainFunction5)]</label2>
+            <onclick>RunScript("special://skin/scripts/kodi_actions.py","set;HomeCustomMainFunction5")</onclick>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
+            <visible>Skin.HasSetting(HomeNoCustomMainButton5)</visible>
+          </control>
+          <control type="button" id="263">
+            <description>Image Custom Button 5</description>
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>- Background</label>
+            <label2>$INFO[Skin.String(HomeCustomMainIcon5)]</label2>
+            <onclick>Skin.SetImage(HomeCustomMainIcon5)</onclick>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+            <textwidth>690</textwidth>
+            <visible>Skin.HasSetting(HomeNoCustomMainButton5)</visible>
+          </control>
           <!-- Playlist buttons -->
           <control type="label" id="225">
             <width>750</width>
