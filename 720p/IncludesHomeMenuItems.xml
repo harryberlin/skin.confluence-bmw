@@ -136,9 +136,9 @@
     <item>
       <label>$INFO[Skin.String(HomeCustomMainButton3)]</label>
       <onclick>RunScript("special://skin/scripts/kodi_actions.py","exec;HomeCustomMainFunction3")</onclick>
-      <icon>$INFO[Skin.String(HomeCustomMainIcon3)] + !String.IsEmpty(Skin.String(HomeCustomMainButton3))</icon>
+      <icon>$INFO[Skin.String(HomeCustomMainIcon3)]</icon>
       <thumb>-</thumb>
-      <visible>Skin.HasSetting(HomeNoCustomMainButton3)</visible>
+      <visible>Skin.HasSetting(HomeNoCustomMainButton3) + !String.IsEmpty(Skin.String(HomeCustomMainButton3))</visible>
     </item>
     <item>
       <label>$INFO[Skin.String(HomeCustomMainButton4)]</label>
