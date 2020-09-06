@@ -371,6 +371,7 @@
           <texture flipx="true" border="32,0,0,0">bmw/header.png</texture>
         </control>
         <control type="image">
+          <animation effect="slide" start="0,0" end="-70,0" delay="0" time="300" condition="!String.IsEmpty(System.Time(xx))">conditional</animation>
           <description>wifi connected</description>
           <posx>210r</posx>
           <posy>2</posy>
