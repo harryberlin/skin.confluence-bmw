@@ -53,11 +53,15 @@ def set_skin_string(skin_string):
 
     favmusicpath = 'Favorite Music Path'
     favvideopath = 'Favorite Video Path'
+    musicaddon = 'Music Addon'
+    videoaddon = 'Video Addon'
     custom = '-- CUSTOM --'
     reset = '---- RESET ---'
     kodi_actions = sorted(KODI_ACTIONS.keys())
     kodi_actions.extend([favmusicpath,
                          favvideopath,
+                         musicaddon,
+                         videoaddon,
                          custom,
                          reset])
     selected = xbmcgui.Dialog().select('Choose Kodi Function', kodi_actions)
@@ -79,6 +83,26 @@ def set_skin_string(skin_string):
             if response == '':
                 return
             xbmc.executebuiltin("Skin.SetString(%s,%s)" % (skin_string, 'ActivateWindow(Video,%s)' % response))
+        elif kodi_actions[selected] == musicaddon or kodi_actions[selected] == videoaddon:
+            import json
+            if kodi_actions[selected] == musicaddon:
+                response = xbmc.executeJSONRPC('{"jsonrpc": "2.0", "method": "Addons.GetAddons","params":{"type":"xbmc.addon.audio"}, "id": "1"}')
+            else:
+                response = xbmc.executeJSONRPC('{"jsonrpc": "2.0", "method": "Addons.GetAddons","params":{"type":"xbmc.addon.video"}, "id": "1"}')
+            if not 'addonid' in response:
+                return
+
+            response = json.loads(response)
+
+            addonlist = []
+            for _ in response["result"]["addons"]:
+                addonlist.append(_['addonid'])
+
+            selected = xbmcgui.Dialog().select('Choose Addon', addonlist)
+            if selected == -1:
+                return
+
+            xbmc.executebuiltin("Skin.SetString(%s,%s)" % (skin_string, 'RunAddon(%s)' % addonlist[selected]))
         else:
             xbmc.executebuiltin("Skin.SetString(%s,%s)" % (skin_string, kodi_actions[selected]))
 
