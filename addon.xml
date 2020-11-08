@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <addon id="skin.confluence-bmw" version="1.1.0" name="Confluence-BMW" provider-name="harryberlin (Jezz_X, Team Kodi)">
   <requires>
-    <import addon="xbmc.gui" version="5.14.0" />
+    <import_leia addon="xbmc.gui" version="5.14.0" />
+    <import_matrix addon="xbmc.gui" version="5.15.0" />
   </requires>
   <extension point="xbmc.gui.skin" debugging="false" effectslowdown="1.0">
     <res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
