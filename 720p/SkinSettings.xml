@@ -718,6 +718,45 @@
             <texturenofocus>MenuItemNF.png</texturenofocus>
           </control>
           <control type="radiobutton" id="217">
+            <description>Hide Radio Button</description>
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>$LOCALIZE[31111] - $LOCALIZE[31960]</label>
+            <onclick>Skin.ToggleSetting(HomeMenuNoRadioButton)</onclick>
+            <selected>Skin.HasSetting(HomeMenuNoRadioButton)</selected>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+          </control>
+          <control type="radiobutton" id="218">
+            <description>Hide TV Button</description>
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>$LOCALIZE[31111] - $LOCALIZE[31952]</label>
+            <onclick>Skin.ToggleSetting(HomeMenuNoTVButton)</onclick>
+            <selected>Skin.HasSetting(HomeMenuNoTVButton)</selected>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+          </control>
+          <control type="radiobutton" id="219">
+            <description>Hide TV Guide Button</description>
+            <width>750</width>
+            <height>40</height>
+            <font>font24_title</font>
+            <textcolor>grey2</textcolor>
+            <focusedcolor>white</focusedcolor>
+            <label>$LOCALIZE[31111] - $LOCALIZE[4]</label>
+            <onclick>Skin.ToggleSetting(HomeMenuNoTvGuideButton)</onclick>
+            <selected>Skin.HasSetting(HomeMenuNoTvGuideButton)</selected>
+            <texturefocus>MenuItemFO.png</texturefocus>
+            <texturenofocus>MenuItemNF.png</texturenofocus>
+          </control>
+          <control type="radiobutton" id="220">
             <description>Hide Pictures Button</description>
             <width>750</width>
             <height>40</height>
@@ -730,7 +769,7 @@
             <texturefocus>MenuItemFO.png</texturefocus>
             <texturenofocus>MenuItemNF.png</texturenofocus>
           </control>
-          <control type="radiobutton" id="218">
+          <control type="radiobutton" id="221">
             <description>Hide Programs Button</description>
             <width>750</width>
             <height>40</height>
@@ -743,7 +782,7 @@
             <texturefocus>MenuItemFO.png</texturefocus>
             <texturenofocus>MenuItemNF.png</texturenofocus>
           </control>
-          <control type="radiobutton" id="219">
+          <control type="radiobutton" id="222">
             <description>Hide Weather Button</description>
             <width>750</width>
             <height>40</height>
@@ -756,7 +795,7 @@
             <texturefocus>MenuItemFO.png</texturefocus>
             <texturenofocus>MenuItemNF.png</texturenofocus>
           </control>
-          <control type="radiobutton" id="220">
+          <control type="radiobutton" id="223">
             <description>Hide Games Button</description>
             <width>750</width>
             <height>40</height>
@@ -769,7 +808,7 @@
             <texturefocus>MenuItemFO.png</texturefocus>
             <texturenofocus>MenuItemNF.png</texturenofocus>
           </control>
-          <control type="radiobutton" id="221">
+          <control type="radiobutton" id="224">
             <description>Hide Settings Button</description>
             <width>750</width>
             <height>40</height>
@@ -782,7 +821,7 @@
             <texturefocus>MenuItemFO.png</texturefocus>
             <texturenofocus>MenuItemNF.png</texturenofocus>
           </control>
-          <control type="radiobutton" id="222">
+          <control type="radiobutton" id="225">
             <description>Hide Favourites Button</description>
             <width>750</width>
             <height>40</height>
@@ -796,7 +835,7 @@
             <texturenofocus>MenuItemNF.png</texturenofocus>
             <textwidth>690</textwidth>
           </control>
-          <control type="radiobutton" id="223">
+          <control type="radiobutton" id="226">
             <description>Hide Volume Button</description>
             <width>750</width>
             <height>40</height>
@@ -810,14 +849,14 @@
             <texturenofocus>MenuItemNF.png</texturenofocus>
             <textwidth>690</textwidth>
           </control>
-          <control type="radiobutton" id="224">
+          <control type="radiobutton" id="227">
             <description>Hide Power Button</description>
             <width>750</width>
             <height>40</height>
             <font>font24_title</font>
             <textcolor>grey2</textcolor>
             <focusedcolor>white</focusedcolor>
-            <label>$LOCALIZE[31111] - $LOCALIZE[33060]</label>
+            <label>$LOCALIZE[31111] - $LOCALIZE[22020]</label>
             <onclick>Skin.ToggleSetting(HomeMenuNoPowerButton)</onclick>
             <selected>Skin.HasSetting(HomeMenuNoPowerButton)</selected>
             <texturefocus>MenuItemFO.png</texturefocus>
