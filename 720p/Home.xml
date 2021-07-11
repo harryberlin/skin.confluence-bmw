@@ -379,7 +379,7 @@
           <height>55</height>
           <align>right</align>
           <aligny>center</aligny>
-          <texture flipy="false">bmw/wifion.png</texture>
+          <texture flipy="false">bmw/ineton.png</texture>
           <visible>!String.IsEmpty(Network.IPAddress)</visible>
         </control>
         <control type="image">
@@ -390,7 +390,7 @@
           <height>55</height>
           <align>right</align>
           <aligny>center</aligny>
-          <texture flipy="false">bmw/wifioff.png</texture>
+          <texture flipy="false">bmw/inetoff.png</texture>
           <visible>String.IsEmpty(Network.IPAddress)</visible>
         </control>
         <!--Time-->
