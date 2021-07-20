@@ -48,7 +48,8 @@ def _pbhook(numblocks, blocksize, filesize, url=None, dp=None):
 
 def is_internet_available():
     try:
-        urllib2.urlopen('http://216.58.192.142', timeout=5)
+        urllib2.urlopen(ADDON_URL, timeout=5)
+        #urllib2.urlopen('http://216.58.192.142', timeout=5)
         return True
     except:
         return False

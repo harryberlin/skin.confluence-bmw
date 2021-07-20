@@ -53,7 +53,7 @@
       <animation effect="slide" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
       <animation effect="slide" time="200" condition="Window.Next(Home)">WindowClose</animation>
     </control>
-    <!--Ousidetemp / Clock / Date / Repeat-->
+    <!--Ousidetemp / Clock / Date / Repeat / Internet-->
     <control type="group">
       <visible_off>!Skin.HasSetting(HomeObcBar)</visible_off>
       <depth>DepthHeader</depth>
@@ -353,14 +353,14 @@
           <label>$INFO[Window(10000).Property(IBUS_OBC_TEMP)]</label>
         </control>
       </control>
-      <!--Clock-->
+      <!--Clock / Internet-->
       <include_off>Clock</include_off>
       <control type="group">
         <posx>210r</posx>
         <posy>60</posy>
         <animation effect="slide" start="0,0" end="300,0" delay="0" time="300" condition="Window.Next(Home) | Window.IsActive(Home) + ![Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation)]">WindowClose</animation>
         <animation effect="slide" start="300,0" end="0,0" delay="0" time="300" condition="Window.Previous(Home) | Window.IsVisible(Home) + ![Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation)]">WindowOpen</animation>
-        <!-- WIFI-->
+        <!--Internet-->
         <control type="image">
           <animation effect="slide" start="0,0" end="-70,0" delay="0" time="300" condition="!String.IsEmpty(System.Time(xx))">conditional</animation>
           <description>time background</description>
@@ -380,7 +380,7 @@
           <align>right</align>
           <aligny>center</aligny>
           <texture flipy="false">bmw/ineton.png</texture>
-          <visible>!String.IsEmpty(Network.IPAddress)</visible>
+          <visible>String.IsEqual(System.InternetState,$LOCALIZE[15207])</visible>
         </control>
         <control type="image">
           <description>wifi disconnected</description>
@@ -391,8 +391,21 @@
           <align>right</align>
           <aligny>center</aligny>
           <texture flipy="false">bmw/inetoff.png</texture>
-          <visible>String.IsEmpty(Network.IPAddress)</visible>
+          <visible>!String.IsEqual(System.InternetState,$LOCALIZE[15207])</visible>
         </control>
+        <control_off type="label">
+          <description>test label internet</description>
+          <posx>500r</posx>
+          <posy>2</posy>
+          <width>650</width>
+          <height>55</height>
+          <align>right</align>
+          <aligny>center</aligny>
+          <font>font38_title</font>
+          <textcolor>$VAR[TextColor1]</textcolor>
+          <shadowcolor>black</shadowcolor>
+          <label>$LOCALIZE[15207]|$INFO[System.InternetState]</label>
+        </control_off>
         <!--Time-->
         <control type="image">
           <animation effect="slide" start="0,0" end="-70,0" delay="0" time="300" condition="!String.IsEmpty(System.Time(xx))">conditional</animation>
