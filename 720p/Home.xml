@@ -380,7 +380,7 @@
           <align>right</align>
           <aligny>center</aligny>
           <texture flipy="false">bmw/ineton.png</texture>
-          <visible>String.IsEqual(System.InternetState,$LOCALIZE[13296])</visible>
+          <visible>System.InternetState</visible>
         </control>
         <control type="image">
           <description>wifi disconnected</description>
@@ -391,21 +391,8 @@
           <align>right</align>
           <aligny>center</aligny>
           <texture flipy="false">bmw/inetoff.png</texture>
-          <visible>!String.IsEqual(System.InternetState,$LOCALIZE[13296])</visible>
+          <visible>!System.InternetState</visible>
         </control>
-        <control_off type="label">
-          <description>test label internet</description>
-          <posx>500r</posx>
-          <posy>2</posy>
-          <width>950</width>
-          <height>55</height>
-          <align>right</align>
-          <aligny>center</aligny>
-          <font>font38_title</font>
-          <textcolor>$VAR[TextColor1]</textcolor>
-          <shadowcolor>black</shadowcolor>
-          <label>$LOCALIZE[13296]|$INFO[System.InternetState]</label>
-        </control_off>
         <!--Time-->
         <control type="image">
           <animation effect="slide" start="0,0" end="-70,0" delay="0" time="300" condition="!String.IsEmpty(System.Time(xx))">conditional</animation>

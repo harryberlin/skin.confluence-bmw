@@ -20,4 +20,5 @@
   <color name="blue (BMW ///M)" menutextcolor="true">ff0072ce</color>
   <color name="amber (BMW)" menutextcolor="true">FFFF7E00</color>
   <color name="invalid">FFFF0000</color>
+  <color name="button_focus">FF12A0C7</color>
 </colors>

@@ -236,59 +236,7 @@
       </control>
     </control_off>
     <!-- the Album Cover -->
-    <control type="image">
-      <description>cover image</description>
-      <visible>Player.HasAudio</visible>
-      <left>15</left>
-      <top>15</top>
-      <width>450</width>
-      <height>450</height>
-      <texture fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture>
-      <bordertexture border="8">ThumbShadow.png</bordertexture>
-      <bordersize>8</bordersize>
-    </control>
     <control type="group">
-      <left>20</left>
-      <!-- the music title -->
-      <control type="label">
-        <top>260r</top>
-        <width>1240</width>
-        <height>50</height>
-        <font>font55_title</font>
-        <align>left</align>
-        <label>$INFO[Player.Title]</label>
-        <textcolor>$VAR[TextColor2]</textcolor>
-        <shadowcolor>black</shadowcolor>
-        <scroll>true</scroll>
-      </control>
-      <control type="label" id="1">
-        <animation effect="slide" start="0,0" end="0,-10" time="100" condition="Window.IsVisible(MusicOSD)">conditional</animation>
-        <description>Artist label</description>
-        <top>180r</top>
-        <width>1240</width>
-        <height>50</height>
-        <align>left</align>
-        <font>font35_title</font>
-        <label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, - ]</label>
-        <textcolor>$VAR[TextColor2]</textcolor>
-        <shadowcolor>black</shadowcolor>
-        <scroll>true</scroll>
-      </control>
-    </control>
-    <control type="group">
-      <animation effect="zoom" start="100,100" end="100,60" time="100" condition="Window.IsVisible(MusicOSD)" center="0,500">conditional</animation>
-      <!-- the progress bar -->
-      <control type="progress">
-        <left>5</left>
-        <top>75r</top>
-        <description>Progressbar</description>
-        <width>1270</width>
-        <height>70</height>
-        <info>Player.Progress</info>
-        <texturebg border="6,6,6,6">OSDProgressBack.png</texturebg>
-        <midtexture border="6,6,6,6" colordiffuse="$VAR[TextColor3]">OSDProgressMid.png</midtexture>
-      </control>
-      <!-- the duration label -->
       <control type="label">
         <left>0</left>
         <top>75r</top>
@@ -301,19 +249,291 @@
         <textcolor>$VAR[TextColor2]</textcolor>
         <shadowcolor>black</shadowcolor>
       </control>
+      <control type="image">
+        <description>cover image</description>
+        <visible>Player.HasAudio</visible>
+        <left>15</left>
+        <top>15</top>
+        <width>450</width>
+        <height>450</height>
+        <texture fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture>
+        <bordertexture border="8">ThumbShadow.png</bordertexture>
+        <bordersize>8</bordersize>
+      </control>
+      <control type="group">
+        <left>20</left>
+        <!-- the music title -->
+        <control type="label">
+          <top>260r</top>
+          <width>1240</width>
+          <height>50</height>
+          <font>font55_title</font>
+          <align>left</align>
+          <label>$INFO[Player.Title]</label>
+          <textcolor>$VAR[TextColor2]</textcolor>
+          <shadowcolor>black</shadowcolor>
+          <scroll>true</scroll>
+        </control>
+        <control type="label" id="1">
+          <animation effect="slide" start="0,0" end="0,-10" time="100" condition="Window.IsVisible(MusicOSD)">conditional</animation>
+          <description>Artist label</description>
+          <top>180r</top>
+          <width>1240</width>
+          <height>50</height>
+          <align>left</align>
+          <font>font35_title</font>
+          <label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, - ]</label>
+          <textcolor>$VAR[TextColor2]</textcolor>
+          <shadowcolor>black</shadowcolor>
+          <scroll>true</scroll>
+        </control>
+        <control type="label">
+          <animation effect="fade" end="100" time="300" tween="quadratic" easing="out" condition="!Window.IsVisible(MusicOSD)">conditional</animation>
+          <description>Artist label</description>
+          <top>135r</top>
+          <width>1240</width>
+          <height>50</height>
+          <align>left</align>
+          <font>font30_title</font>
+          <label>$VAR[OSDNextLabelVar]</label>
+          <textcolor>$VAR[TextColor2]</textcolor>
+          <shadowcolor>black</shadowcolor>
+          <scroll>true</scroll>
+        </control>
+      </control>
+      <control type="group">
+        <animation effect="zoom" start="100,100" end="100,60" time="100" condition="Window.IsVisible(MusicOSD)" center="0,500">conditional</animation>
+        <!-- the progress bar -->
+        <control type="progress">
+          <left>5</left>
+          <top>75r</top>
+          <description>Progressbar</description>
+          <width>1270</width>
+          <height>70</height>
+          <info>Player.Progress</info>
+          <texturebg border="6,6,6,6">OSDProgressBack.png</texturebg>
+          <midtexture border="6,6,6,6" colordiffuse="$VAR[TextColor3]">OSDProgressMid.png</midtexture>
+        </control>
+        <!-- the duration label -->
+        <control type="label">
+          <left>0</left>
+          <top>75r</top>
+          <width>1280</width>
+          <height>70</height>
+          <font>font50_title</font>
+          <align>center</align>
+          <aligny>center</aligny>
+          <label>$INFO[Player.Time(hh:mm:ss)] / $INFO[Player.Duration(hh:mm:ss)]</label>
+          <textcolor>$VAR[TextColor2]</textcolor>
+          <shadowcolor>black</shadowcolor>
+        </control>
+      </control>
+      <control_off type="button" id="1000">
+        <width>1</width>
+        <height>1</height>
+        <label></label>
+        <font />
+        <texturefocus></texturefocus>
+        <texturenofocus></texturenofocus>
+        <onclick>Dialog.Open(MusicOSD,true)</onclick>
+        <onup>none</onup>
+        <ondown>none</ondown>
+        <onleft>none</onleft>
+        <onright>none</onright>
+      </control_off>
+      <control type="grouplist">
+        <left>465</left>
+        <top>15</top>
+        <width>120</width>
+        <height>450</height>
+        <align>left</align>
+        <orientation>vertical</orientation>
+        <itemgap>10</itemgap>
+        <visible_off>Player.ShowInfo + !Player.ChannelPreviewActive + Window.IsActive(visualisation)</visible_off>
+        <animation effect="fade" start="0" end="100" time="200" delay="1000">Visible</animation>
+        <include content="MediaFlag">
+          <param name="texture" value="flags/rds/rds.png" />
+          <param name="visible" value="RDS.HasRDS" />
+        </include>
+        <include content="MediaFlag">
+          <param name="texture" value="$INFO[MusicPlayer.Codec,flags/audiocodec/,.png]" />
+        </include>
+        <include content="MediaFlag">
+          <param name="texture" value="$INFO[MusicPlayer.Channels,flags/audiochannel/,.png]" />
+        </include>
+        <control type="group">
+          <visible>!String.IsEmpty(MusicPlayer.SampleRate)</visible>
+          <width>115</width>
+          <control type="label">
+            <width>115</width>
+            <height>60</height>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[MusicPlayer.SampleRate, ,kHz]</label>
+            <font>font_flag</font>
+          </control>
+          <include content="MediaFlag">
+            <param name="texture" value="flags/flag.png" />
+          </include>
+          <height>60</height>
+        </control>
+        <control type="group">
+          <visible>!String.IsEmpty(MusicPlayer.BitRate)</visible>
+          <width>115</width>
+          <control type="label">
+            <width>115</width>
+            <height>60</height>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[MusicPlayer.BitRate, ,kbps ]</label>
+            <font>font_flag</font>
+          </control>
+          <include content="MediaFlag">
+            <param name="texture" value="flags/flag.png" />
+          </include>
+          <height>60</height>
+        </control>
+        <control type="group">
+          <visible>!String.IsEmpty(MusicPlayer.BitsPerSample)</visible>
+          <width>115</width>
+          <control type="label">
+            <width>115</width>
+            <height>60</height>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[MusicPlayer.BitsPerSample, ,bit]</label>
+            <font>font_flag</font>
+          </control>
+          <include content="MediaFlag">
+            <param name="texture" value="flags/flag.png" />
+          </include>
+          <height>60</height>
+        </control>
+        <control_off type="image">
+          <description>Audio Codec Image</description>
+          <width>110</width>
+          <height>40</height>
+          <texture>$INFO[MusicPlayer.Codec,flagging/audio/,.png]</texture>
+          <visible>!Player.ChannelPreviewActive</visible>
+        </control_off>
+        <control_off type="image">
+          <description>Audio Channel Image</description>
+          <width>110</width>
+          <height>40</height>
+          <texture>$INFO[MusicPlayer.Channels,flagging/audio/,.png]</texture>
+          <visible>!Player.ChannelPreviewActive</visible>
+        </control_off>
+      </control>
     </control>
-    <control_off type="button" id="1000">
-      <width>1</width>
-      <height>1</height>
-      <label></label>
-      <font />
-      <texturefocus></texturefocus>
-      <texturenofocus></texturenofocus>
-      <onclick>Dialog.Open(MusicOSD,true)</onclick>
-      <onup>none</onup>
-      <ondown>none</ondown>
-      <onleft>none</onleft>
-      <onright>none</onright>
-    </control_off>
+    <control_new type="group">
+      <visible>[Player.ShowInfo | Window.IsActive(musicosd)] + !MusicPlayer.Content(livetv)</visible>
+      <height>460</height>
+      <include>OpenClose_Left</include>
+      <include>Visible_Left</include>
+      <bottom>0</bottom>
+      <control type="image">
+        <left>0</left>
+        <width>120%</width>
+        <height>280</height>
+        <texture colordiffuse="80FFFFFF">dialogs/dialog-bg-nobo.png</texture>
+      </control>
+      <control type="image">
+        <left>20</left>
+        <top>-140</top>
+        <include>Visible_Left</include>
+        <visible>[Player.ShowInfo | Window.IsActive(musicosd)] + !MusicPlayer.Content(livetv)</visible>
+        <width>400</width>
+        <height>400</height>
+        <fadetime>400</fadetime>
+        <aspectratio aligny="bottom">keep</aspectratio>
+        <texture fallback="DefaultAlbumCover.png" border="2">$INFO[MusicPlayer.Cover]</texture>
+        <bordertexture colordiffuse="border_alpha">colors/black.png</bordertexture>
+        <bordersize>4</bordersize>
+      </control>
+      <control type="group">
+        <visible>[Player.ShowInfo | Window.IsActive(musicosd)] + ![Window.IsActive(playerprocessinfo) | MusicPlayer.Content(livetv)]</visible>
+        <include>Visible_Left</include>
+        <left>440</left>
+        <top>10</top>
+        <control type="label">
+          <top>10</top>
+          <width>1450</width>
+          <height>50</height>
+          <aligny>center</aligny>
+          <label>[B]$INFO[MusicPlayer.TrackNumber,,. ]$INFO[Player.Title][/B]</label>
+          <font>font45_title</font>
+          <shadowcolor>black</shadowcolor>
+          <scroll>true</scroll>
+        </control>
+        <control type="label">
+          <top>65</top>
+          <width>1450</width>
+          <height>50</height>
+          <aligny>center</aligny>
+          <label>$INFO[MusicPlayer.Artist]</label>
+          <font>font45_title</font>
+          <shadowcolor>black</shadowcolor>
+          <scroll>true</scroll>
+        </control>
+        <control type="grouplist">
+          <top>120</top>
+          <width>1450</width>
+          <height>40</height>
+          <align>left</align>
+          <orientation>horizontal</orientation>
+          <itemgap>20</itemgap>
+          <control type="label">
+            <width>100</width>
+            <height>40</height>
+            <label>$INFO[MusicPlayer.Year]</label>
+            <font>font40_title</font>
+            <shadowcolor>black</shadowcolor>
+            <aligny>center</aligny>
+            <align>left</align>
+            <visible>!String.IsEmpty(MusicPlayer.Year)</visible>
+          </control>
+          <control type="label">
+            <width min="0" max="1130">auto</width>
+            <height>40</height>
+            <label>$INFO[MusicPlayer.Genre]</label>
+            <font>font40_title</font>
+            <shadowcolor>black</shadowcolor>
+            <aligny>center</aligny>
+            <align>left</align>
+            <scroll>true</scroll>
+            <visible>!String.IsEmpty(MusicPlayer.Genre)</visible>
+          </control>
+          <control type="image">
+            <width>190</width>
+            <height>40</height>
+            <texture fallback="flags/starrating/0.png">$INFO[MusicPlayer.UserRating,flags/starrating/,.png]</texture>
+            <aspectratio>keep</aspectratio>
+            <aligny>center</aligny>
+            <align>left</align>
+          </control>
+        </control>
+        <control type="label">
+          <top>165</top>
+          <width>1450</width>
+          <height>40</height>
+          <aligny>center</aligny>
+          <label>$INFO[MusicPlayer.Album]$VAR[MultiDiscVar]</label>
+          <font>font40_title</font>
+          <shadowcolor>black</shadowcolor>
+          <scroll>true</scroll>
+        </control>
+        <control type="label">
+          <top>210</top>
+          <width>1450</width>
+          <height>40</height>
+          <aligny>center</aligny>
+          <label>$VAR[OSDNextLabelVar]</label>
+          <font>font38_title</font>
+          <shadowcolor>black</shadowcolor>
+          <scroll>true</scroll>
+          <visible>Integer.IsGreater(Playlist.Length(music),1)</visible>
+        </control>
+      </control>
+    </control_new>
   </controls>
 </window>
