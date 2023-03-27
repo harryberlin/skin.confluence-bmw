@@ -1,7 +1,7 @@
 # Skin `skin.confluence-bmw` for Kodi
 
 ## Download
-Latest from Branch "kodi_18": [Download](https://github.com/harryberlin/skin.confluence-bmw/archive/refs/heads/skin.confluence-bmw_kodi_18.zip)
+Latest from Branch "skin.confluence-bmw_kodi_18": [Download](https://github.com/harryberlin/skin.confluence-bmw/archive/refs/heads/skin.confluence-bmw_kodi_18.zip)
 
 
 ## Donation
