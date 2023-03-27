@@ -17,6 +17,7 @@ PY2 = sys.version_info[0] == 2
 
 import os
 import json
+#import requests
 
 import xbmc, xbmcgui, xbmcaddon
 
@@ -57,7 +58,7 @@ def _pbhook(numblocks, blocksize, filesize, url=None, dp=None):
         if PY2:
             dp.update(int(10+percent*0.4), 'Downloading...', teststr, '%s%%' % int(10+percent*0.4))
         else:
-            dp.update(int(10 + percent * 0.4), 'Downloading...\n%s%%' % (teststr, int(10 + percent * 0.4)))
+            dp.update(int(10 + percent * 0.4), 'Downloading...\n%s\n%s%%' % (teststr, int(10 + percent * 0.4)))
     except:
         pass
         #percent = 100
@@ -144,6 +145,10 @@ def update(owner, repo, branch='master'):
         target_path = os.path.join(ADDON_USER_PATH, ADDON_ZIP_NAME)
 
         # https://www.programcreek.com/python/example/663/urllib.urlretrieve
+        #response = requests.head(url, allow_redirects=True)
+
+        #size = int(response.headers.get('content-length', -1))
+        #log('filesize:%s' % size)
 
         urlretrieve(url, target_path, lambda nb, bs, fs, url=url: _pbhook(nb, bs, fs, url, dp))
 
@@ -208,7 +213,7 @@ def update(owner, repo, branch='master'):
         if PY2:
             dialog_progressbar_timeout(dp, e.message, ' ', ' ', 7000)
         else:
-            dialog_progressbar_timeout(dp, e.args, ' ', ' ', 7000)
+            dialog_progressbar_timeout(dp, ''.join(e.args), ' ', ' ', 7000)
         #xbmc.executebuiltin("Notification(Skin Updater,%s,7000)" % e.message)
 
     finally:
